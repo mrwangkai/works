@@ -999,6 +999,11 @@ footer {
         display: block;
     }
 
+    .project-main-content {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
     /* Hide table of contents on mobile */
     .table-of-contents {
         display: none;
