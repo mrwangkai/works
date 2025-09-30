@@ -994,9 +994,7 @@ footer {
 
     .project-sidebar {
         position: static;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
+        display: block;
     }
 
     /* Hide table of contents on mobile */
@@ -1004,9 +1002,23 @@ footer {
         display: none;
     }
 
-    /* Show project meta header on mobile */
+    /* Show project meta header on mobile - move to top and make non-sticky */
     .project-meta-header {
         display: flex;
+        order: -1;
+    }
+
+    /* Sidebar sections for recipient quick send page */
+    .sidebar-section {
+        margin-bottom: 1.5rem;
+    }
+
+    .sidebar-metric {
+        margin-bottom: 1rem;
+    }
+
+    .sidebar-divider {
+        margin: 1.5rem 0;
     }
 
     .project-header h1 {
