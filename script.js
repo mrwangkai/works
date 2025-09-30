@@ -168,3 +168,49 @@ document.addEventListener('DOMContentLoaded', () => {
         updateActiveLink();
     }
 });
+
+// Contact Modal Functions
+function openContactModal() {
+    const modal = document.getElementById('contactModal');
+    if (modal) {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+}
+
+function closeContactModal() {
+    const modal = document.getElementById('contactModal');
+    if (modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+}
+
+// Close modal when clicking outside
+window.addEventListener('click', (event) => {
+    const modal = document.getElementById('contactModal');
+    if (event.target === modal) {
+        closeContactModal();
+    }
+});
+
+// Handle modal form submission
+document.addEventListener('DOMContentLoaded', () => {
+    const modalForm = document.getElementById('modalContactForm');
+
+    if (modalForm) {
+        modalForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const formData = {
+                email: document.getElementById('modalEmail').value,
+                message: document.getElementById('modalMessage').value
+            };
+
+            console.log('Form submitted:', formData);
+            alert('Thank you for your message! I will get back to you soon.');
+            closeContactModal();
+            modalForm.reset();
+        });
+    }
+});

@@ -48,53 +48,25 @@
         <section class="about-details">
             <div class="detail-section">
                 <h2>Background</h2>
-                <p>With a background in [Your Background], I've spent [X] years crafting user-centered design solutions for web and mobile applications. My approach combines strategic thinking with hands-on design execution to deliver products that users love.</p>
+                <p>Product designer currently based in Seattle. I craft experiences that balance user needs with business impact, specializing in fintech and consumer products.</p>
             </div>
 
             <div class="detail-section">
-                <h2>Design Philosophy</h2>
-                <p>I believe great design is invisible—it solves problems so elegantly that users don't have to think about it. My process is rooted in research, iteration, and collaboration with cross-functional teams to ensure every design decision serves both user needs and business goals.</p>
+                <h2>Approach</h2>
+                <p>I focus on understanding the problem first, then designing solutions that feel inevitable. Research, iteration, and close collaboration with cross-functional teams guide every decision.</p>
             </div>
 
             <div class="detail-section">
-                <h2>Skills & Expertise</h2>
-                <div class="skills-grid">
-                    <div class="skill-category">
-                        <h3>Design</h3>
-                        <ul>
-                            <li>User Research</li>
-                            <li>Wireframing & Prototyping</li>
-                            <li>Visual Design</li>
-                            <li>Interaction Design</li>
-                            <li>Design Systems</li>
-                        </ul>
-                    </div>
-                    <div class="skill-category">
-                        <h3>Tools</h3>
-                        <ul>
-                            <li>Figma</li>
-                            <li>Sketch</li>
-                            <li>Adobe Creative Suite</li>
-                            <li>Principle</li>
-                            <li>InVision</li>
-                        </ul>
-                    </div>
-                    <div class="skill-category">
-                        <h3>Methods</h3>
-                        <ul>
-                            <li>Design Thinking</li>
-                            <li>Agile/Scrum</li>
-                            <li>Usability Testing</li>
-                            <li>A/B Testing</li>
-                            <li>Analytics</li>
-                        </ul>
-                    </div>
-                </div>
+                <h2>Experience</h2>
+                <p>Led design initiatives at Remitly and CarMax, working across mobile and web platforms. Experience spans from early-stage concepts to scaled products serving millions of users.</p>
             </div>
 
-            <div class="detail-section">
-                <h2>Beyond Design</h2>
-                <p>When I'm not designing, you can find me [your hobbies/interests]. I'm also passionate about [other interests] and love exploring [activities you enjoy].</p>
+            <div class="cta-section">
+                <button class="cta-button" onclick="openContactModal()">Let's connect!</button>
+            </div>
+
+            <div class="credits">
+                <p>This site was built with <a href="https://claude.ai/code" target="_blank" rel="noopener">Claude Code</a>, designed in Figma, and set in Crimson Pro and Work Sans.</p>
             </div>
         </section>
     </main>
@@ -102,6 +74,28 @@
     <footer>
         <p>&copy; 2025 Product Design Portfolio. All rights reserved.</p>
     </footer>
+
+    <!-- Contact Modal -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeContactModal()">&times;</span>
+            <h2>Let's Connect</h2>
+            <form id="modalContactForm" class="modal-form">
+                <div class="form-group">
+                    <label for="modalEmail">Your Email</label>
+                    <input type="email" id="modalEmail" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="modalMessage">Message</label>
+                    <textarea id="modalMessage" name="message" rows="6" required></textarea>
+                </div>
+                <div class="form-group captcha-placeholder">
+                    <div class="captcha-box">Captcha goes here</div>
+                </div>
+                <button type="submit" class="submit-button">Send Message</button>
+            </form>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>

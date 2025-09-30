@@ -175,11 +175,38 @@
                 <span class="nav-title">← 360 Degrees Viewer</span>
             </a>
         </div>
-    </main>
+
+                <div class="cta-section">
+                    <button class="cta-button" onclick="openContactModal()">Let's connect!</button>
+                </div>
+            </main>
 
     <footer>
         <p>&copy; 2025 Product Design Portfolio. All rights reserved.</p>
     </footer>
+
+
+    <!-- Contact Modal -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeContactModal()">&times;</span>
+            <h2>Let's Connect</h2>
+            <form id="modalContactForm" class="modal-form">
+                <div class="form-group">
+                    <label for="modalEmail">Your Email</label>
+                    <input type="email" id="modalEmail" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="modalMessage">Message</label>
+                    <textarea id="modalMessage" name="message" rows="6" required></textarea>
+                </div>
+                <div class="form-group captcha-placeholder">
+                    <div class="captcha-box">Captcha goes here</div>
+                </div>
+                <button type="submit" class="submit-button">Send Message</button>
+            </form>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
