@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipient Quick Send - Product Design Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-text">
+                    <span class="logo-name">Kai Wang</span>
+                    <span class="logo-subtitle">Product Designer</span>
+                </div>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link active">Projects</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="resume.html" class="nav-link">Resume</a></li>
+                <li><a href="connect.html" class="nav-link">Connect</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container project-detail">
+        <a href="index.html" class="back-link">← Back to Projects</a>
+
+        <header class="project-header">
+            <div class="project-tags">
+                <span class="tag">Remitly</span>
+                <span class="tag">UX Design</span>
+            </div>
+            <h1>Recipient Quick Send</h1>
+            <p class="project-subtitle">Streamlined repeat transfer experience for Remitly users, enabling faster transactions to saved recipients</p>
+        </header>
+
+        <div class="project-hero-image">
+            <img src="https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?w=1200&h=600&fit=crop" alt="Recipient Quick Send">
+        </div>
+
+        <div class="project-content-grid">
+            <aside class="project-sidebar">
+                <div class="sidebar-section project-meta-section">
+                    <h3>Role</h3>
+                    <p>Product Designer</p>
+                </div>
+                <div class="sidebar-section project-meta-section">
+                    <h3>Timeline</h3>
+                    <p>4 months</p>
+                </div>
+                <div class="sidebar-section project-meta-section">
+                    <h3>Team</h3>
+                    <p>2 Designers, 4 Engineers, 1 PM</p>
+                </div>
+                <div class="sidebar-section project-meta-section">
+                    <h3>Platform</h3>
+                    <p>iOS, Android</p>
+                </div>
+
+                <div class="sidebar-divider"></div>
+
+                <div class="sidebar-section">
+                    <h3>Impact</h3>
+                </div>
+                <div class="sidebar-section sidebar-metric">
+                    <h4>+0.55%</h4>
+                    <p>Profit per user increase</p>
+                </div>
+                <div class="sidebar-section sidebar-metric">
+                    <h4>+0.66%</h4>
+                    <p>Completed transfers per user</p>
+                </div>
+                <div class="sidebar-section sidebar-metric">
+                    <h4>51.9%</h4>
+                    <p>Feature interaction rate</p>
+                </div>
+                <div class="sidebar-section sidebar-metric">
+                    <h4>$3.4M</h4>
+                    <p>Annualized profit opportunity</p>
+                </div>
+            </aside>
+
+            <article class="project-main-content">
+                <section class="content-section">
+                    <h2>Overview</h2>
+                    <p>Send shortcuts make it easier for customers to quickly send transfers. Currently Remitly had one send shortcut: the "send again" button on completed transfer cards. However, this shortcut was modeled on a transfer-first mindset, while research and analysis showed that Remitly users actually have a recipient-first mindset.</p>
+                    <p>The Recipient Quick Send project introduced recipient-focused shortcuts to the Home screen, with the hypothesis that these shortcuts would particularly benefit our most active customers who often have multiple recipients they send to regularly.</p>
+                </section>
+
+                <section class="content-section">
+                    <h2>Problem</h2>
+                    <p>Sending shortcuts to repeat similar transfers were effective, yet they were not modeled and placed in a way customers expected. Analysis revealed:</p>
+                    <ul>
+                        <li>Users in the 11+ transfers state represented a <strong>$7.34M/quarter profit opportunity gap</strong> between average and top quartile profitability</li>
+                        <li><strong>88% of top quartile users</strong> with 11+ transfers had more than 1 recipient (76% had >2, 64% had >3)</li>
+                        <li>Research showed customers' mental model for sending was <strong>centered on recipients</strong>, not transfers or corridors</li>
+                        <li>While 52% of users queued transfers to the same recipient, <strong>only 26% used 'Send Again'</strong> - especially pronounced with frequent senders</li>
+                        <li>19% of users queued to recipients that fell outside of recent transfer history (send again not available on home screen)</li>
+                    </ul>
+                </section>
+
+                <section class="content-section">
+                    <h2>Goals</h2>
+                    <ul>
+                        <li>Increase next best action rate (send again) for frequent senders with multiple recipients</li>
+                        <li>Improve send again order rate when no transfers are in flight, especially for Nth - No Active Txn (11+ txn) state customers</li>
+                        <li>Match customers' recipient-first mental model for sending</li>
+                        <li>Capture potential repeat transfers that fall outside of available transfer cards on the home screen</li>
+                    </ul>
+                </section>
+
+                <section class="content-section">
+                    <h2>Process</h2>
+                    <h3>Discovery & Analysis</h3>
+                    <p>Analyzed next best action rates across customer states and sending behavior to identify opportunities:</p>
+                    <ul>
+                        <li>Conducted behavioral analysis showing that frequent senders (11+ transfers) had multiple recipients, yet 'Send Again' was underutilized</li>
+                        <li>Reviewed data showing 52% of users queued transfers to the same recipient, but only 26% used 'Send Again'</li>
+                        <li>Identified $7.34M/quarter profit opportunity gap for frequent senders</li>
+                        <li>Validated through research that customers' mental model for sending is centered on recipients, not transfers</li>
+                    </ul>
+
+                    <h3>Design & Testing Strategy</h3>
+                    <p>Developed a multi-treatment experiment to test recipient-focused shortcuts:</p>
+                    <ul>
+                        <li><strong>Treatment 1:</strong> Recipient shortcuts shown above transfer cards</li>
+                        <li><strong>Treatment 2:</strong> Recipient shortcuts shown below transfer cards</li>
+                        <li><strong>Treatment 3:</strong> Recipient shortcuts shown above transfer cards with reduced transfer card count</li>
+                        <li>Horizontal orientation to maximize recipients shown without excessive vertical space</li>
+                        <li>Recipients ranked by most recent successful send, prioritizing current corridor</li>
+                    </ul>
+
+                    <h3>Validation</h3>
+                    <p>Ran a 14-day A/B test across app and web with multiple treatments, measuring revenue per user, order rate, and completion rate. Treatment 3 emerged as the winning variant.</p>
+                </section>
+
+                <section class="content-section">
+                    <h2>Solution</h2>
+                    <p>The final design (Treatment 3) featured recipient-focused shortcuts prominently placed on the Home screen:</p>
+                    <ul>
+                        <li><strong>Recipient Quick Send Section:</strong> Horizontally scrollable list showing up to 10 recent recipients, ranked by most recent successful send</li>
+                        <li><strong>Recipient Cards:</strong> Each card displays recipient initials, name, delivery method, and last sent date</li>
+                        <li><strong>Strategic Placement:</strong> Positioned above transfer cards when no active transfers, with only 1 inactive transfer card shown to maximize Quick Send visibility</li>
+                        <li><strong>Smart Pre-population:</strong> Clicking a recipient opens send flow with all details from last transfer (recipient info, corridor, send amount, delivery method, payment method)</li>
+                        <li><strong>Cross-corridor Support (Web):</strong> Recipients from other corridors shown with country flag indicator, enabling seamless corridor switching</li>
+                        <li><strong>"Send to New Recipient" option:</strong> Quick access to add new recipients without leaving the home screen</li>
+                    </ul>
+
+                    <div class="design-gallery">
+                        <div class="gallery-scroll">
+                            <div class="gallery-item">
+                                <div class="gallery-image">
+                                    <img src="https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?w=375&h=812&fit=crop" alt="Screen 1">
+                                </div>
+                                <p class="gallery-caption">Home screen with recipient quick send shortcuts</p>
+                            </div>
+                            <div class="gallery-item">
+                                <div class="gallery-image">
+                                    <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=375&h=812&fit=crop" alt="Screen 2">
+                                </div>
+                                <p class="gallery-caption">Recipient selection showing recent send amounts</p>
+                            </div>
+                            <div class="gallery-item">
+                                <div class="gallery-image">
+                                    <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=375&h=812&fit=crop" alt="Screen 3">
+                                </div>
+                                <p class="gallery-caption">Pre-filled transfer details with smart defaults</p>
+                            </div>
+                            <div class="gallery-item">
+                                <div class="gallery-image">
+                                    <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=375&h=812&fit=crop" alt="Screen 4">
+                                </div>
+                                <p class="gallery-caption">Simplified review screen with editable fields</p>
+                            </div>
+                            <div class="gallery-item">
+                                <div class="gallery-image">
+                                    <img src="https://images.unsplash.com/photo-1586243287039-23f4c8416be9?w=375&h=812&fit=crop" alt="Screen 5">
+                                </div>
+                                <p class="gallery-caption">Biometric authentication for quick verification</p>
+                            </div>
+                            <div class="gallery-item">
+                                <div class="gallery-image">
+                                    <img src="https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?w=375&h=812&fit=crop" alt="Screen 6">
+                                </div>
+                                <p class="gallery-caption">Success confirmation with transfer details</p>
+                            </div>
+                            <div class="gallery-item">
+                                <div class="gallery-image">
+                                    <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=375&h=812&fit=crop" alt="Screen 7">
+                                </div>
+                                <p class="gallery-caption">Transfer tracking and receipt</p>
+                            </div>
+                            <div class="gallery-item">
+                                <div class="gallery-image">
+                                    <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=375&h=812&fit=crop" alt="Screen 8">
+                                </div>
+                                <p class="gallery-caption">Updated home screen showing completed transfer</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="content-section">
+                    <h2>Results</h2>
+                    <p>Treatment 3 (recipient shortcuts above 1 transfer card) showed statistically significant positive results:</p>
+                    <ul>
+                        <li><strong>+0.55% profit per user increase</strong> for frequent senders (Nth with 11+ transfers)</li>
+                        <li><strong>+0.66% completed transfers per user</strong>, indicating increased sending frequency</li>
+                        <li><strong>51.9% feature interaction rate</strong> among exposed users, demonstrating strong adoption</li>
+                        <li><strong>$3.4M annualized profit opportunity</strong> from the feature improvement</li>
+                        <li>Revenue per user stayed flat or increased across all test segments, validating the hypothesis</li>
+                        <li>Strong performance particularly among users with multiple recipients, the primary target segment</li>
+                    </ul>
+                </section>
+
+                <section class="content-section">
+                    <h2>Learnings</h2>
+                    <p>Key takeaways from this project:</p>
+                    <ul>
+                        <li><strong>Mental models matter:</strong> Aligning features with how users think (recipient-first vs. transfer-first) dramatically improves adoption and effectiveness</li>
+                        <li><strong>Small improvements, big impact:</strong> Even modest increases (+0.55% profit per user) can generate millions in annualized value when applied to the right customer segments</li>
+                        <li><strong>Placement is critical:</strong> Treatment 3 outperformed others by reducing visual competition—showing fewer transfer cards increased Quick Send visibility and usage</li>
+                        <li><strong>Test what matters:</strong> Multi-treatment testing revealed that not just the feature, but its positioning relative to existing elements, determined success</li>
+                        <li><strong>Data-driven segmentation:</strong> Targeting frequent senders with multiple recipients (88% of top quartile users) ensured we solved for the highest-value use case</li>
+                        <li><strong>Technical constraints shape design:</strong> Ranking by most recent send (vs. most frequent) was technically feasible and still delivered strong results, proving that perfect can be the enemy of good</li>
+                    </ul>
+                </section>
+            </article>
+        </div>
+
+        <div class="project-navigation">
+            <a href="project-self-service-amendment.html" class="nav-project">
+                <span class="nav-label">Previous Project</span>
+                <span class="nav-title">← Self Service Amendment</span>
+            </a>
+            <a href="project-360-viewer.html" class="nav-project">
+                <span class="nav-label">Next Project</span>
+                <span class="nav-title">360 Degrees Viewer →</span>
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Product Design Portfolio. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
