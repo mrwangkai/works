@@ -214,3 +214,111 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+// Mobile Progress Bar Navigation
+document.addEventListener('DOMContentLoaded', () => {
+    const progressBar = document.querySelector('.mobile-progress-bar');
+
+    if (!progressBar) return; // Only run on pages with progress bar
+
+    const markers = document.querySelectorAll('.progress-marker');
+    const progressLine = document.querySelector('.progress-line');
+    const sections = [];
+
+    // Build sections array from markers
+    markers.forEach(marker => {
+        const sectionId = marker.getAttribute('data-section');
+        const section = document.getElementById(sectionId);
+        if (section) {
+            sections.push({
+                id: sectionId,
+                element: section,
+                marker: marker
+            });
+        }
+    });
+
+    if (sections.length === 0) return;
+
+    // Click handler for markers
+    markers.forEach(marker => {
+        marker.addEventListener('click', () => {
+            const sectionId = marker.getAttribute('data-section');
+            const section = document.getElementById(sectionId);
+
+            if (section) {
+                const navbarHeight = document.querySelector('.navbar')?.offsetHeight || 0;
+                const progressBarHeight = progressBar.offsetHeight || 0;
+                const offset = navbarHeight + progressBarHeight + 20;
+
+                const elementPosition = section.getBoundingClientRect().top + window.pageYOffset;
+                const offsetPosition = elementPosition - offset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    // Intersection Observer for scroll tracking
+    const observerOptions = {
+        rootMargin: '-100px 0px -50% 0px',
+        threshold: 0
+    };
+
+    const updateProgress = () => {
+        const scrollPosition = window.scrollY;
+        const windowHeight = window.innerHeight;
+        const documentHeight = document.documentElement.scrollHeight;
+
+        let activeIndex = -1;
+
+        // Find the active section
+        sections.forEach((section, index) => {
+            const rect = section.element.getBoundingClientRect();
+            const navbarHeight = document.querySelector('.navbar')?.offsetHeight || 0;
+            const progressBarHeight = progressBar.offsetHeight || 0;
+            const threshold = navbarHeight + progressBarHeight + 100;
+
+            if (rect.top <= threshold && rect.bottom > threshold) {
+                activeIndex = index;
+            }
+        });
+
+        // Update marker states
+        markers.forEach((marker, index) => {
+            marker.classList.remove('active', 'completed');
+
+            if (index < activeIndex) {
+                marker.classList.add('completed');
+            } else if (index === activeIndex) {
+                marker.classList.add('active');
+            }
+        });
+
+        // Update progress line width
+        if (activeIndex >= 0) {
+            const progressPercent = (activeIndex / (sections.length - 1)) * 100;
+            progressLine.style.setProperty('--progress-width', `${progressPercent}%`);
+        } else {
+            progressLine.style.setProperty('--progress-width', '0%');
+        }
+    };
+
+    // Throttle scroll events
+    let ticking = false;
+    window.addEventListener('scroll', () => {
+        if (!ticking) {
+            window.requestAnimationFrame(() => {
+                updateProgress();
+                ticking = false;
+            });
+            ticking = true;
+        }
+    });
+
+    // Initial update
+    updateProgress();
+});

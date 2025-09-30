@@ -1570,6 +1570,123 @@ footer {
     box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
 }
 
+/* Mobile Progress Bar */
+.mobile-progress-bar {
+    display: none;
+    position: sticky;
+    top: 70px;
+    background: var(--bg-color);
+    padding: 1rem 0;
+    z-index: 999;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.progress-markers {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 1rem;
+    position: relative;
+}
+
+.progress-line {
+    position: absolute;
+    top: 2rem;
+    left: 1rem;
+    right: 1rem;
+    height: 2px;
+    background: var(--border-color);
+    z-index: 0;
+}
+
+.progress-line::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: var(--primary-color);
+    transition: width 0.3s ease;
+    width: var(--progress-width, 0%);
+}
+
+.progress-marker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    flex: 1;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    padding: 0.5rem;
+    min-width: 44px;
+    touch-action: manipulation;
+}
+
+.marker-dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 2px solid var(--border-color);
+    background: var(--bg-color);
+    transition: all 0.3s ease;
+}
+
+.progress-marker.active .marker-dot {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    transform: scale(1.2);
+}
+
+.progress-marker.completed .marker-dot {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.marker-label {
+    font-size: 0.75rem;
+    color: var(--text-light);
+    text-align: center;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.progress-marker.active .marker-label {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* Show only on mobile */
+@media (max-width: 768px) {
+    .mobile-progress-bar {
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    .marker-label {
+        font-size: 0.65rem;
+    }
+
+    .marker-dot {
+        width: 14px;
+        height: 14px;
+    }
+
+    .progress-markers {
+        padding: 0 0.5rem;
+    }
+
+    .progress-line {
+        left: 0.5rem;
+        right: 0.5rem;
+    }
+}
+
 /* Process Carousel */
 .process-carousel {
     margin: 2rem 0;
