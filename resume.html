@@ -32,119 +32,118 @@
         </div>
     </nav>
 
-    <main class="container resume-container">
-        <section class="resume-header">
+    <main class="container project-detail">
+        <div class="resume-header-section">
             <h1>Resume</h1>
             <div class="resume-actions">
-                <a href="https://www.linkedin.com/in/yourprofile" target="_blank" class="linkedin-link" aria-label="LinkedIn Profile">
+                <a href="https://www.linkedin.com/in/hellokai" target="_blank" class="resume-button linkedin-button" aria-label="LinkedIn Profile">
                     <svg class="linkedin-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
                     </svg>
                     <span>LinkedIn</span>
                 </a>
-                <button class="btn-download">Download PDF</button>
+                <button class="resume-button download-button">Download PDF</button>
             </div>
-        </section>
+        </div>
 
-        <section class="resume-section">
-            <h2>Experience</h2>
-            <div class="resume-item">
-                <div class="resume-item-header">
-                    <div>
-                        <h3>Senior Product Designer</h3>
-                        <p class="company">Company Name</p>
+        <div class="project-content-grid">
+
+            <aside class="project-sidebar">
+                <nav class="table-of-contents">
+                    <h3>Contents</h3>
+                    <ul>
+                        <li><a href="#experience" class="toc-link active">Experience</a></li>
+                        <li><a href="#education" class="toc-link">Education</a></li>
+                        <li><a href="#skills" class="toc-link">Skills</a></li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <article class="project-main-content">
+                <section class="content-section" id="experience">
+                    <h2>Experience</h2>
+
+                    <div class="resume-item">
+                        <div class="resume-item-header">
+                            <div>
+                                <h3>Independent</h3>
+                                <p class="company">Seattle, WA</p>
+                            </div>
+                            <p class="date">2024 - Present</p>
+                        </div>
+                        <p class="resume-description-single">Product design consulting for startups and established companies</p>
                     </div>
-                    <p class="date">2022 - Present</p>
-                </div>
-                <ul class="resume-description">
-                    <li>Led end-to-end design for [product/feature], resulting in [quantifiable outcome]</li>
-                    <li>Collaborated with cross-functional teams to define product strategy and roadmap</li>
-                    <li>Established and maintained design system used across 5+ products</li>
-                    <li>Conducted user research and usability testing to inform design decisions</li>
-                </ul>
-            </div>
 
-            <div class="resume-item">
-                <div class="resume-item-header">
-                    <div>
-                        <h3>Product Designer</h3>
-                        <p class="company">Company Name</p>
+                    <div class="resume-item">
+                        <div class="resume-item-header">
+                            <div>
+                                <h3>Product Designer</h3>
+                                <p class="company">Remitly</p>
+                            </div>
+                            <p class="date">2020 - 2024</p>
+                        </div>
+                        <ul class="resume-description">
+                            <li>Led design for Self Service Amendment, reducing support tickets by 65% and improving customer satisfaction by 18 points</li>
+                            <li>Designed Recipient Quick Send feature, driving $3.4M annualized profit opportunity with 51.9% interaction rate</li>
+                            <li>Collaborated with cross-functional teams across compliance, operations, and engineering</li>
+                            <li>Launched features across 8+ international markets on iOS, Android, and web platforms</li>
+                        </ul>
                     </div>
-                    <p class="date">2020 - 2022</p>
-                </div>
-                <ul class="resume-description">
-                    <li>Designed web and mobile interfaces for [type of product]</li>
-                    <li>Improved user engagement by [percentage] through redesign of key features</li>
-                    <li>Collaborated with engineers to ensure high-quality implementation</li>
-                    <li>Created prototypes and conducted A/B tests to validate design decisions</li>
-                </ul>
-            </div>
 
-            <div class="resume-item">
-                <div class="resume-item-header">
-                    <div>
-                        <h3>UX/UI Designer</h3>
-                        <p class="company">Company Name</p>
+                    <div class="resume-item">
+                        <div class="resume-item-header">
+                            <div>
+                                <h3>Product Designer</h3>
+                                <p class="company">CarMax</p>
+                            </div>
+                            <p class="date">2017 - 2020</p>
+                        </div>
+                        <ul class="resume-description">
+                            <li>Created 360 Degrees Viewer, revolutionizing online vehicle inspection with immersive experience</li>
+                            <li>Redesigned Finance Based Shopping experience centered around monthly payments</li>
+                            <li>Established design patterns and systems used across web and mobile platforms</li>
+                            <li>Conducted extensive user research and testing to validate design decisions</li>
+                        </ul>
                     </div>
-                    <p class="date">2018 - 2020</p>
-                </div>
-                <ul class="resume-description">
-                    <li>Designed user interfaces for web applications serving [number] users</li>
-                    <li>Conducted user interviews and created personas to guide design strategy</li>
-                    <li>Worked closely with developers to implement pixel-perfect designs</li>
-                </ul>
-            </div>
-        </section>
+                </section>
 
-        <section class="resume-section">
-            <h2>Education</h2>
-            <div class="resume-item">
-                <div class="resume-item-header">
-                    <div>
-                        <h3>Bachelor of Arts in Design</h3>
-                        <p class="company">University Name</p>
+                <section class="content-section" id="education">
+                    <h2>Education</h2>
+                    <div class="resume-item">
+                        <div class="resume-item-header">
+                            <div>
+                                <h3>Bachelor's Degree</h3>
+                                <p class="company">Indiana University Bloomington</p>
+                            </div>
+                            <p class="date">2013 - 2017</p>
+                        </div>
                     </div>
-                    <p class="date">2014 - 2018</p>
-                </div>
-                <p class="resume-description-single">Specialized in Interaction Design and Human-Computer Interaction</p>
-            </div>
-        </section>
+                </section>
 
-        <section class="resume-section">
-            <h2>Skills</h2>
-            <div class="skills-resume">
-                <div class="skill-group">
-                    <h4>Design Tools</h4>
-                    <p>Figma, Sketch, Adobe XD, Photoshop, Illustrator, Principle, Framer</p>
-                </div>
-                <div class="skill-group">
-                    <h4>Design Skills</h4>
-                    <p>User Research, Wireframing, Prototyping, Visual Design, Interaction Design, Information Architecture, Design Systems</p>
-                </div>
-                <div class="skill-group">
-                    <h4>Other</h4>
-                    <p>HTML/CSS, JavaScript basics, Agile/Scrum, User Testing, Analytics (Google Analytics, Mixpanel)</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="resume-section">
-            <h2>Awards & Recognition</h2>
-            <div class="resume-item">
-                <div class="resume-item-header">
-                    <div>
-                        <h3>Design Award Name</h3>
-                        <p class="company">Organization Name</p>
+                <section class="content-section" id="skills">
+                    <h2>Skills</h2>
+                    <div class="skills-resume">
+                        <div class="skill-group">
+                            <h4>Design</h4>
+                            <p>User Research, Wireframing, Prototyping, Visual Design, Interaction Design, Design Systems, Usability Testing</p>
+                        </div>
+                        <div class="skill-group">
+                            <h4>Tools</h4>
+                            <p>Figma, Sketch, Adobe Creative Suite, Principle, InVision</p>
+                        </div>
+                        <div class="skill-group">
+                            <h4>Methods</h4>
+                            <p>Design Thinking, Agile/Scrum, A/B Testing, Analytics, Experimentation</p>
+                        </div>
                     </div>
-                    <p class="date">2023</p>
-                </div>
-            </div>
-        </section>
+                </section>
 
                 <div class="cta-section">
                     <button class="cta-button" onclick="openContactModal()">Let's connect!</button>
                 </div>
-            </main>
+            </article>
+        </div>
+    </main>
 
     <footer>
         <p>&copy; 2025 Product Design Portfolio. All rights reserved.</p>
