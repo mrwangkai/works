@@ -845,7 +845,7 @@ footer {
     padding: 0.5rem 0;
     padding-left: 1rem;
     border-left: 2px solid transparent;
-    transition: var(--transition);
+    transition: all 0.3s ease;
 }
 
 .toc-link:hover {
@@ -996,6 +996,16 @@ footer {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
+    }
+
+    /* Hide table of contents on mobile */
+    .table-of-contents {
+        display: none;
+    }
+
+    /* Show project meta header on mobile */
+    .project-meta-header {
+        display: flex;
     }
 
     .project-header h1 {
