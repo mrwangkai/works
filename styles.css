@@ -1274,6 +1274,67 @@ footer {
     box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
 }
 
+/* About Page Centered Layout */
+.about-container {
+    max-width: 800px;
+}
+
+.about-hero-centered {
+    text-align: center;
+    padding: 3rem 0;
+}
+
+.about-hero-centered .about-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 2rem;
+    box-shadow: var(--shadow);
+}
+
+.about-hero-centered .about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-hero-centered h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+}
+
+.about-hero-centered .intro {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-light);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.about-details-centered {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.about-details-centered .detail-section {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.about-details-centered .detail-section h2 {
+    font-size: 1.75rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.about-details-centered .detail-section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-light);
+}
+
 /* Values Section */
 .values-section {
     text-align: center;
