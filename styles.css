@@ -1178,7 +1178,7 @@ footer {
 }
 
 .gallery-caption {
-    font-size: 0.95rem;
+    font-size: 0.75rem;
     color: var(--text-light);
     text-align: center;
     max-width: 280px;
@@ -1219,7 +1219,7 @@ footer {
 
     .gallery-caption {
         max-width: 240px;
-        font-size: 0.875rem;
+        font-size: 0.75rem;
     }
 }
 
