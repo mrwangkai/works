@@ -75,50 +75,64 @@
             <img src="https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?w=1200&h=600&fit=crop" alt="Recipient Quick Send">
         </div>
 
-        <div class="project-content-grid">
-            <aside class="project-sidebar">
-                <div class="sidebar-section project-meta-section">
-                    <h3>Role</h3>
-                    <p>Product Designer</p>
-                </div>
-                <div class="sidebar-section project-meta-section">
-                    <h3>Timeline</h3>
-                    <p>4 months</p>
-                </div>
-                <div class="sidebar-section project-meta-section">
-                    <h3>Team</h3>
-                    <p>2 Designers, 4 Engineers, 1 PM</p>
-                </div>
-                <div class="sidebar-section project-meta-section">
-                    <h3>Platform</h3>
-                    <p>iOS, Android</p>
-                </div>
-
-                <div class="sidebar-divider"></div>
-
-                <div class="sidebar-section">
-                    <h3>Impact</h3>
-                </div>
-                <div class="sidebar-section sidebar-metric">
-                    <h4>+0.55%</h4>
+        <section class="impact-metrics-section minimal" id="impactMetrics">
+            <div class="impact-metrics-container">
+                <div class="impact-metric">
+                    <h3>+0.55%</h3>
                     <p>Profit per user increase</p>
                 </div>
-                <div class="sidebar-section sidebar-metric">
-                    <h4>+0.66%</h4>
+                <div class="impact-metric">
+                    <h3>+0.66%</h3>
                     <p>Completed transfers per user</p>
                 </div>
-                <div class="sidebar-section sidebar-metric">
-                    <h4>51.9%</h4>
+                <div class="impact-metric">
+                    <h3>51.9%</h3>
                     <p>Feature interaction rate</p>
                 </div>
-                <div class="sidebar-section sidebar-metric">
-                    <h4>$3.4M</h4>
+                <div class="impact-metric">
+                    <h3>$3.4M</h3>
                     <p>Annualized profit opportunity</p>
                 </div>
+            </div>
+        </section>
+
+        <div class="project-content-grid">
+            <aside class="project-sidebar">
+                <nav class="table-of-contents">
+                    <h3>Contents</h3>
+                    <ul>
+                        <li><a href="#overview" class="toc-link active">Overview</a></li>
+                        <li><a href="#problem" class="toc-link">Problem</a></li>
+                        <li><a href="#goals" class="toc-link">Goals</a></li>
+                        <li><a href="#process" class="toc-link">Process</a></li>
+                        <li><a href="#solution" class="toc-link">Solution</a></li>
+                        <li><a href="#results" class="toc-link">Results</a></li>
+                        <li><a href="#learnings" class="toc-link">Learnings</a></li>
+                    </ul>
+                </nav>
             </aside>
 
             <article class="project-main-content">
-                <section class="content-section">
+                <div class="project-meta-header">
+                    <div class="meta-item">
+                        <span class="meta-label">Role:</span>
+                        <span class="meta-value">Product Designer</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Timeline:</span>
+                        <span class="meta-value">4 months</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Team:</span>
+                        <span class="meta-value">2 Designers, 4 Engineers, 1 PM</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Platform:</span>
+                        <span class="meta-value">iOS, Android</span>
+                    </div>
+                </div>
+
+                <section class="content-section" id="overview">
                     <h2>Overview</h2>
                     <p>Send shortcuts make it easier for customers to quickly send transfers. Currently Remitly had one send shortcut: the "send again" button on completed transfer cards. However, this shortcut was modeled on a transfer-first mindset, while research and analysis showed that Remitly users actually have a recipient-first mindset.</p>
                     <p>The Recipient Quick Send project introduced recipient-focused shortcuts to the Home screen, with the hypothesis that these shortcuts would particularly benefit our most active customers who often have multiple recipients they send to regularly.</p>
@@ -136,7 +150,7 @@
                     </ul>
                 </section>
 
-                <section class="content-section">
+                <section class="content-section" id="goals">
                     <h2>Goals</h2>
                     <ul>
                         <li>Increase next best action rate (send again) for frequent senders with multiple recipients</li>
