@@ -44,10 +44,6 @@
                 <div class="marker-dot"></div>
                 <span class="marker-label">Challenge</span>
             </div>
-            <div class="progress-marker" data-section="goals">
-                <div class="marker-dot"></div>
-                <span class="marker-label">Goals</span>
-            </div>
             <div class="progress-marker" data-section="solution">
                 <div class="marker-dot"></div>
                 <span class="marker-label">Solution</span>
@@ -55,6 +51,10 @@
             <div class="progress-marker" data-section="results">
                 <div class="marker-dot"></div>
                 <span class="marker-label">Results</span>
+            </div>
+            <div class="progress-marker" data-section="explorations">
+                <div class="marker-dot"></div>
+                <span class="marker-label">Explorations</span>
             </div>
         </div>
     </div>
@@ -255,7 +255,11 @@
                 <section class="content-section" id="explorations">
                     <h2>Explorations</h2>
                     <p>We figured out the <em>what</em> – a recipient-first send shortcut. Next was figuring out the <em>where</em> and <em>how</em>: what it would look like, and where it would live on the home screen. These explorations focus on visual design and placement options.</p>
-                    <div class="design-gallery">
+
+                    <button class="toggle-explorations" onclick="toggleExplorations()">Expand</button>
+
+                    <div class="explorations-content" style="display: none;">
+                        <div class="design-gallery">
                         <div class="gallery-scroll">
                             <div class="gallery-item">
                                 <div class="gallery-image">
@@ -288,6 +292,7 @@
                                 <p class="gallery-caption">Payment confirmation screen</p>
                             </div>
                         </div>
+                    </div>
                     </div>
                 </section>
 

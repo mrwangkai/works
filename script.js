@@ -215,6 +215,20 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+// Toggle Explorations Section
+function toggleExplorations() {
+    const content = document.querySelector('.explorations-content');
+    const button = document.querySelector('.toggle-explorations');
+
+    if (content.style.display === 'none') {
+        content.style.display = 'block';
+        button.textContent = 'Collapse';
+    } else {
+        content.style.display = 'none';
+        button.textContent = 'Expand';
+    }
+}
+
 // Mobile Progress Bar Navigation
 document.addEventListener('DOMContentLoaded', () => {
     const progressBar = document.querySelector('.mobile-progress-bar');
