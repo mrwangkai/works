@@ -42,15 +42,15 @@
             </div>
             <div class="progress-marker" data-section="overview">
                 <div class="marker-dot"></div>
-                <span class="marker-label">Overview</span>
+                <span class="marker-label">Challenge</span>
             </div>
             <div class="progress-marker" data-section="goals">
                 <div class="marker-dot"></div>
                 <span class="marker-label">Goals</span>
             </div>
-            <div class="progress-marker" data-section="process">
+            <div class="progress-marker" data-section="solution">
                 <div class="marker-dot"></div>
-                <span class="marker-label">Process</span>
+                <span class="marker-label">Solution</span>
             </div>
             <div class="progress-marker" data-section="results">
                 <div class="marker-dot"></div>
@@ -101,12 +101,10 @@
                 <nav class="table-of-contents">
                     <h3>Contents</h3>
                     <ul>
-                        <li><a href="#shipped" class="toc-link active">Shipped Experience</a></li>                        
-                        <li><a href="#overview" class="toc-link">Overview</a></li>
-                        <li><a href="#opportunity" class="toc-link">Opportunity</a></li>
+                        <li><a href="#shipped" class="toc-link active">Shipped Experience</a></li>
+                        <li><a href="#overview" class="toc-link">The Challenge</a></li>
                         <li><a href="#goals" class="toc-link">Goals</a></li>
-                        <li><a href="#process" class="toc-link">Process</a></li>
-                        <li><a href="#solution" class="toc-link">Solution</a></li>
+                        <li><a href="#solution" class="toc-link">The Solution</a></li>
                         <li><a href="#results" class="toc-link">Results</a></li>
                         <li><a href="#learnings" class="toc-link">Learnings</a></li>
                     </ul>
@@ -136,23 +134,9 @@
 
 
                 <section class="content-section" id="overview">
-                    <h2>Opportunity</h2>
-
-                    <p>Remitly's existing experience was built around a <b>transaction-first model</b> – shortcuts focused on repeating previous transfers rather than sending to specific recipients. Analysis revealed this approach was misaligned with customer behavior and left significant value on the table:</p>
-                    <h3>The mental model mismatch:</h3>
-                    <ul>
-                        <li>Research showed customers come to Remitly with a <b>specific recipient</b> in mind, not a previous transaction</li>
-                        <li>Yet the current experience required them to navigate through recent transfer cards to find the person they wanted to send money to</li>
-                    </ul>
-
-                    <h3>The performance gap:</h3>
-                    <ul>
-                        <li>Users in the 11+ transfers segment represented a <b>$7.34M quarterly profit opportunity</b> between average and top-performing customers</li>
-                        <li><b>88% of top performers</b> send to multiple recipients (76% to 2+, 64% to 3+ recipients)</li>
-                        <li>Despite <b>52% of transfers going to the same recipient</b>, transaction-focused shortcuts only captured 26% of these repeat sends</li>
-                        <li><b>19% of transfers</b> went to recipients outside recent history, making existing shortcuts unavailable entirely</li>
-                    </ul>
-                    <p>Recipient send again aims to address this opportunity by shifting to a <b>recipient-first model</b>. </p>
+                    <h2>The Challenge</h2>
+                    <p>Remitly customers have a recipient-first mindset when sending money, yet our Home screen was transfer-focused. The existing "Send Again" feature was underutilized by frequent senders with multiple recipients.</p>
+                    <p><strong>Key Finding:</strong> 52% of users sent to the same recipient but only 26% used "Send Again" – and 19% wanted to send to recipients outside their recent transfer history.</p>
                 </section>
 
               
@@ -161,37 +145,35 @@
                     <h2>Goals</h2>
                     <p>By introducing recipient-focused shortcuts prominently on the Home screen—where sending starts with <em>who</em> customers want to help, not <em>what</em> transaction they last completed—we aimed to:</p>
 
-                    <div class="goals-grid">
-                        <div class="goal-card">
+                    <div class="goals-metrics-grid">
+                        <div class="goal-metric">
                             <h4>Increase next best action rate</h4>
                             <p>Drive send again usage for frequent senders with multiple recipients</p>
                         </div>
-                        <div class="goal-card">
+                        <div class="goal-metric">
                             <h4>Improve send again order rate</h4>
-                            <p>Especially for Nth - No Active Txn (11+ txn) state customers when no transfers are in flight</p>
+                            <p>Especially for Nth - No Active Txn (11+ txn) state customers</p>
                         </div>
-                        <div class="goal-card">
+                        <div class="goal-metric">
                             <h4>Match mental models</h4>
-                            <p>Align with customers' recipient-first thinking for sending</p>
+                            <p>Align with recipient-first thinking</p>
                         </div>
-                        <div class="goal-card">
+                        <div class="goal-metric">
                             <h4>Capture missed opportunities</h4>
-                            <p>Enable repeat transfers that fall outside available transfer cards on home screen</p>
+                            <p>Enable transfers outside recent history</p>
                         </div>
                     </div>
                 </section>
 
 
                 <section class="content-section" id="solution">
-                    <h2>Solution</h2>
-                    <p>The final design (Treatment 3) featured recipient-focused shortcuts prominently placed on the Home screen:</p>
+                    <h2>The Solution</h2>
+                    <p>I designed Recipient Quick Send – a prominent shortcut section on the Home screen featuring:</p>
                     <ul>
-                        <li><strong>Recipient Quick Send Section:</strong> Horizontally scrollable list showing up to 10 recent recipients, ranked by most recent successful send</li>
-                        <li><strong>Recipient Cards:</strong> Each card displays recipient initials, name, delivery method, and last sent date</li>
-                        <li><strong>Strategic Placement:</strong> Positioned above transfer cards when no active transfers, with only 1 inactive transfer card shown to maximize Quick Send visibility</li>
-                        <li><strong>Smart Pre-population:</strong> Clicking a recipient opens send flow with all details from last transfer (recipient info, corridor, send amount, delivery method, payment method)</li>
-                        <li><strong>Cross-corridor Support (Web):</strong> Recipients from other corridors shown with country flag indicator, enabling seamless corridor switching</li>
-                        <li><strong>"Send to New Recipient" option:</strong> Quick access to add new recipients without leaving the home screen</li>
+                        <li>Horizontally scrollable recipient cards showing up to 10 recent recipients</li>
+                        <li>Smart ranking by most recent successful send</li>
+                        <li>One-tap access that pre-populates the entire send flow with last transfer details</li>
+                        <li>Strategic placement above transfer cards to match users' mental model</li>
                     </ul>
 
                     <div class="design-gallery">
@@ -271,36 +253,6 @@
 
                 
 
-                <section class="content-section" id="process">
-                    <h2>Process</h2>
-                    <h3>Discovery & Analysis</h3>
-                    <p>Analyzed next best action rates across customer states and sending behavior to identify opportunities:</p>
-                    <ul>
-                        <li>Conducted behavioral analysis showing that frequent senders (11+ transfers) had multiple recipients, yet 'Send Again' was underutilized</li>
-                        <li>Reviewed data showing 52% of users queued transfers to the same recipient, but only 26% used 'Send Again'</li>
-                        <li>Identified $7.34M/quarter profit opportunity gap for frequent senders</li>
-                        <li>Validated through research that customers' mental model for sending is centered on recipients, not transfers</li>
-                    </ul>
-
-                    <h3>Design & Testing Strategy</h3>
-                    <p>Developed a multi-treatment experiment to test recipient-focused shortcuts:</p>
-                    <ul>
-                        <li><strong>Treatment 1:</strong> Recipient shortcuts shown above transfer cards</li>
-                        <li><strong>Treatment 2:</strong> Recipient shortcuts shown below transfer cards</li>
-                        <li><strong>Treatment 3:</strong> Recipient shortcuts shown above transfer cards with reduced transfer card count</li>
-                        <li>Horizontal orientation to maximize recipients shown without excessive vertical space</li>
-                        <li>Recipients ranked by most recent successful send, prioritizing current corridor</li>
-                    </ul>
-
-                    <h3>Validation</h3>
-                    <p>Ran a 14-day A/B test across app and web with multiple treatments, measuring revenue per user, order rate, and completion rate. Treatment 3 emerged as the winning variant.</p>
-                </section>
-
-                <section class="content-section" id="explorations">
-                    <h2>Explorations</h2>
-                    <p>The opportunity is clear – we want to better serve our customer by mapping the experience closer to their mental model of how they send. The next step is to figure out where the experience will live, and what it will look like.</p>
-                    <p></p>
-                </section>
             </article>
 
           
