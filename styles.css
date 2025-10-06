@@ -26,6 +26,21 @@ body {
     background-color: var(--bg-color);
 }
 
+/* Global link styles */
+a {
+    color: var(--text-color);
+    text-decoration: underline;
+    transition: var(--transition);
+}
+
+a:visited {
+    color: var(--text-light);
+}
+
+a:hover {
+    color: var(--primary-color);
+}
+
 /* Apply serif font to all headers */
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Crimson Pro', Georgia, 'Times New Roman', Times, serif;
@@ -1253,6 +1268,15 @@ footer {
     margin: 4rem 0 2rem;
     padding: 3rem 0;
     border-top: 1px solid var(--border-color);
+}
+
+.cta-text {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .cta-button {
