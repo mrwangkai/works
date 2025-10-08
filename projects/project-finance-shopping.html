@@ -7,12 +7,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <title>Finance Based Shopping - Product Design Portfolio</title>
+    <link rel="icon" type="image/png" href="../images/favicon.png">
     <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
     <nav class="navbar">
         <div class="nav-container">
             <a href="../index.html" class="logo">
+                <img src="../images/kai logo3.png" alt="Logo" class="logo-image">
                 <div class="logo-text">
                     <span class="logo-name">Kai Wang</span>
                     <span class="logo-subtitle">Product Designer</span>
@@ -32,6 +34,29 @@
         </div>
     </nav>
 
+    <!-- Mobile Progress Bar -->
+    <div class="mobile-progress-bar">
+        <div class="progress-line"></div>
+        <div class="progress-markers">
+            <div class="progress-marker" data-section="overview">
+                <div class="marker-dot"></div>
+                <span class="marker-label">Challenge</span>
+            </div>
+            <div class="progress-marker" data-section="solution">
+                <div class="marker-dot"></div>
+                <span class="marker-label">Solution</span>
+            </div>
+            <div class="progress-marker" data-section="results">
+                <div class="marker-dot"></div>
+                <span class="marker-label">Results</span>
+            </div>
+            <div class="progress-marker" data-section="learnings">
+                <div class="marker-dot"></div>
+                <span class="marker-label">Learnings</span>
+            </div>
+        </div>
+    </div>
+
     <main class="container project-detail">
         <a href="../index.html" class="back-link">← Back to Projects</a>
 
@@ -48,126 +73,96 @@
             <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=1200&h=600&fit=crop" alt="Finance Based Shopping">
         </div>
 
+        <section class="impact-metrics-section minimal" id="impactMetrics">
+            <div class="impact-metrics-container">
+                <div class="impact-metric">
+                    <h3>{metric}</h3>
+                    <p>Improved app-to-sales conversion</p>
+                </div>
+                <div class="impact-metric">
+                    <h3>{metric}</h3>
+                    <p>Reduced friction in post-approval</p>
+                </div>
+                <div class="impact-metric">
+                    <h3>{metric}</h3>
+                    <p>Successfully shipped production test</p>
+                </div>
+                <div class="impact-metric">
+                    <h3>{metric}</h3>
+                    <p>Established reusable design patterns</p>
+                </div>
+            </div>
+        </section>
+
         <div class="project-content-grid">
             <aside class="project-sidebar">
-                <div class="sidebar-section">
-                    <h3>Role</h3>
-                    <p>Lead Product Designer</p>
-                </div>
-                <div class="sidebar-section">
-                    <h3>Timeline</h3>
-                    <p>12 months</p>
-                </div>
-                <div class="sidebar-section">
-                    <h3>Team</h3>
-                    <p>4 Designers, 12 Engineers, 3 PMs, 2 Researchers</p>
-                </div>
-                <div class="sidebar-section">
-                    <h3>Platform</h3>
-                    <p>Web, iOS, Android</p>
-                </div>
+                <nav class="table-of-contents">
+                    <h3>Contents</h3>
+                    <ul>
+                        <li><a href="#overview" class="toc-link active">The Challenge</a></li>
+                        <li><a href="#solution" class="toc-link">The Solution</a></li>
+                        <li><a href="#results" class="toc-link">Results</a></li>
+                        <li><a href="#learnings" class="toc-link">Learnings</a></li>
+                    </ul>
+                </nav>
             </aside>
 
             <article class="project-main-content">
-                <section class="content-section">
-                    <h2>Overview</h2>
+                <div class="project-meta-header">
+                    <div class="meta-item">
+                        <span class="meta-label">Role:</span>
+                        <span class="meta-value">Product Designer</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Team:</span>
+                        <span class="meta-value">4 Designers, 12 Engineers, 3 PMs, 2 Researchers</span>
+                    </div>
+                </div>
+
+                <section class="content-section" id="overview">
+                    <h2>The Challenge</h2>
                     <p>Financing is a critical part of car buying for many CarMax customers. However, data showed that a significant number of customers who applied for financing with CarMax did not end up completing a purchase—a lower-than-expected app-to-sales conversion rate.</p>
-                    <p>This project aimed to understand why financed customers weren't converting and design solutions to improve their shopping and purchasing experience.</p>
+                    <p><strong>Key Finding:</strong> Customers who received financing approval weren't completing purchases at expected rates, with friction points in the post-approval shopping experience preventing them from connecting financing offers to vehicle shopping.</p>
                 </section>
 
-                <section class="content-section">
-                    <h2>Problem</h2>
-                    <p>Despite financing being a major part of car buying, customers who applied for financing weren't converting to purchases at expected rates. The challenge was to:</p>
+                <section class="content-section" id="solution">
+                    <h2>The Solution</h2>
+                    <p>I redesigned the experience to integrate financing more seamlessly with vehicle shopping:</p>
                     <ul>
-                        <li>Understand why customers who received financing approval weren't completing purchases</li>
-                        <li>Identify friction points in the post-approval shopping experience</li>
-                        <li>Determine how to better connect financing offers to vehicle shopping</li>
-                        <li>Improve the overall app-to-sales conversion rate</li>
-                    </ul>
-                </section>
-
-                <section class="content-section">
-                    <h2>Goals</h2>
-                    <ul>
-                        <li>Understand the root causes of low app-to-sales conversion for financed customers</li>
-                        <li>Improve the connection between financing approval and vehicle shopping</li>
-                        <li>Increase conversion rate from financing application to completed purchase</li>
-                        <li>Reduce friction in the post-approval experience</li>
-                        <li>Design and test solutions in a controlled production environment</li>
+                        <li><b>Financing-Aware Shopping</b>: Connected approved financing terms to vehicle browsing, showing customers which cars fit their approved budget</li>
+                        <li><b>Consistent Car Card Component</b>: Designed a unified car card that displayed financing information alongside vehicle details, usable across web, app, and in-store platforms</li>
+                        <li><b>Clearer Application Flow</b>: Streamlined the financing application process with better progress indicators and explanations</li>
+                        <li><b>Post-Approval Guidance</b>: Provided clear next steps after financing approval, guiding customers directly to relevant vehicles</li>
+                        <li><b>In-Store Integration</b>: Designed for use by associates in-store to help customers understand their options</li>
                     </ul>
                 </section>
 
-                <section class="content-section">
-                    <h2>Process</h2>
-                    <h3>Discovery Research</h3>
-                    <p>Conducted comprehensive discovery to understand the problem space:</p>
-                    <ul>
-                        <li>Analyzed quantitative data on financing application and purchase patterns</li>
-                        <li>Interviewed customers who applied for financing but didn't complete purchases</li>
-                        <li>Mapped the current CarMax sales and financing process end-to-end</li>
-                        <li>Conducted in-store visits to observe customer and associate interactions</li>
-                        <li>Identified pain points and drop-off moments in the financing journey</li>
-                    </ul>
-
-                    <h3>Design Sprint & Ideation</h3>
-                    <p>Facilitated collaborative design sessions to generate solutions:</p>
-                    <ul>
-                        <li>Ran design sprint ideation with cross-functional stakeholders</li>
-                        <li>Created process maps and customer journey visualizations</li>
-                        <li>Sketched multiple concepts for improving post-approval shopping</li>
-                        <li>Developed mockups showcasing financing application components</li>
-                    </ul>
-
-                    <h3>Prototype Development</h3>
-                    <p>Built iterative wireframes and prototypes to test concepts:</p>
-                    <ul>
-                        <li>Designed consistent car card components for use across multiple platforms</li>
-                        <li>Created high-fidelity prototypes showing financing-integrated shopping flows</li>
-                        <li>Iterated based on feedback from in-store research and moderated testing</li>
-                    </ul>
-
-                    <h3>Testing & Validation</h3>
-                    <p>Conducted moderated and unmoderated usability tests, then shipped a production-ready test in a controlled environment to validate real-world performance.</p>
-                </section>
-
-                <section class="content-section">
-                    <h2>Solution</h2>
-                    <p>The redesigned experience focused on integrating financing more seamlessly with vehicle shopping:</p>
-                    <ul>
-                        <li><strong>Financing-Aware Shopping:</strong> Connected approved financing terms to vehicle browsing, showing customers which cars fit their approved budget</li>
-                        <li><strong>Consistent Car Card Component:</strong> Designed a unified car card that displayed financing information alongside vehicle details, usable across web, app, and in-store platforms</li>
-                        <li><strong>Clearer Application Flow:</strong> Streamlined the financing application process with better progress indicators and explanations</li>
-                        <li><strong>Post-Approval Guidance:</strong> Provided clear next steps after financing approval, guiding customers directly to relevant vehicles</li>
-                        <li><strong>In-Store Integration:</strong> Designed for use by associates in-store to help customers understand their options</li>
-                    </ul>
-                </section>
-
-                <section class="content-section">
+                <section class="content-section" id="results">
                     <h2>Results</h2>
+                    <p>The redesigned experience delivered meaningful improvements:</p>
                     <ul>
                         <li><strong>Improved app-to-sales conversion</strong> for customers with approved financing</li>
                         <li><strong>Better customer understanding</strong> of how financing connects to vehicle selection</li>
                         <li><strong>Reduced friction</strong> in post-approval shopping experience</li>
                         <li><strong>Successfully shipped production test</strong> in controlled environment to validate design improvements</li>
                         <li><strong>Established reusable design patterns</strong> (car card component) for use across multiple platforms and touchpoints</li>
-                        <li><strong>Informed future roadmap</strong> for financing-related features and improvements</li>
                     </ul>
                 </section>
 
-                <section class="content-section">
+                <section class="content-section" id="learnings">
                     <h2>Learnings</h2>
                     <p>Key takeaways from this project:</p>
                     <ul>
-                        <li><strong>Discovery is essential:</strong> Understanding the root problem through research prevented solving the wrong problem and ensured solutions addressed real customer pain points</li>
-                        <li><strong>Cross-functional collaboration drives success:</strong> Working closely with sales, operations, and engineering teams ensured designs were feasible and addressed business needs</li>
-                        <li><strong>Iterate based on real feedback:</strong> In-store visits and testing with actual customers revealed insights that desk research couldn't uncover</li>
-                        <li><strong>Design systems accelerate delivery:</strong> Creating reusable components (like the car card) enabled consistent experiences across platforms and faster future development</li>
-                        <li><strong>Test in production when possible:</strong> Real-world testing in controlled environments provides the most accurate validation of design decisions</li>
-                        <li><strong>Complex problems require patient, methodical approaches:</strong> Improving conversion requires understanding multiple factors—customer behavior, business processes, and technical constraints</li>
+                        <li><b>Discovery is essential</b> — Understanding the root problem through research prevented solving the wrong problem and ensured solutions addressed real customer pain points</li>
+                        <li><b>Cross-functional collaboration drives success</b> — Working closely with sales, operations, and engineering teams ensured designs were feasible and addressed business needs</li>
+                        <li><b>Iterate based on real feedback</b> — In-store visits and testing with actual customers revealed insights that desk research couldn't uncover</li>
+                        <li><b>Design systems accelerate delivery</b> — Creating reusable components (like the car card) enabled consistent experiences across platforms and faster future development</li>
+                        <li><b>Test in production when possible</b> — Real-world testing in controlled environments provides the most accurate validation of design decisions</li>
                     </ul>
                 </section>
             
                 <div class="cta-section">
+                    <p class="cta-text">Interested in discussing more?</p>
                     <button class="cta-button" onclick="openContactModal()">Let's connect!</button>
                 </div>
             </article>

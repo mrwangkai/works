@@ -7,13 +7,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <title>Self Service Amendment - Product Design Portfolio</title>
+    <link rel="icon" type="image/png" href="../images/favicon.png">
     <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
     <nav class="navbar">
         <div class="nav-container">
             <a href="../index.html" class="logo">
-                <img src="../images/kai logo2.png" alt="Logo" class="logo-image">
+                <img src="../images/kai logo3.png" alt="Logo" class="logo-image">
                 <div class="logo-text">
                     <span class="logo-name">Kai Wang</span>
                     <span class="logo-subtitle">Product Designer</span>
@@ -37,6 +38,10 @@
     <div class="mobile-progress-bar">
         <div class="progress-line"></div>
         <div class="progress-markers">
+            <div class="progress-marker" data-section="shipped">
+                <div class="marker-dot"></div>
+                <span class="marker-label">Shipped experience</span>
+            </div>
             <div class="progress-marker" data-section="overview">
                 <div class="marker-dot"></div>
                 <span class="marker-label">Challenge</span>
@@ -98,7 +103,8 @@
                 <nav class="table-of-contents">
                     <h3>Contents</h3>
                     <ul>
-                        <li><a href="#overview" class="toc-link active">The Challenge</a></li>
+                        <li><a href="#shipped" class="toc-link active">Shipped Experience</a></li>
+                        <li><a href="#overview" class="toc-link">The Challenge</a></li>
                         <li><a href="#solution" class="toc-link">The Solution</a></li>
                         <li><a href="#results" class="toc-link">Results</a></li>
                         <li><a href="#learnings" class="toc-link">Learnings</a></li>
@@ -107,7 +113,7 @@
             </aside>
 
             <article class="project-main-content">
-                <div class="project-meta-header">
+                <!-- <div class="project-meta-header">
                     <div class="meta-item">
                         <span class="meta-label">Role:</span>
                         <span class="meta-value">Product Designer</span>
@@ -116,12 +122,26 @@
                         <span class="meta-label">Team:</span>
                         <span class="meta-value">1 PM, 5 Engineers, 1 Researcher</span>
                     </div>
-                </div>
+                </div> --><!-- IGNORE -->
+
+                <section class="content-section" id="shipped">
+                    <h2>Shipped Experience</h2> 
+                    <p>The following <a href="https://www.figma.com/proto/BX4rcdUUTuTbIYM9CptAR5/Kai-s-Projects?page-id=0%3A1&node-id=356-57624&viewport=1452%2C-330%2C0.06&t=wUoCNyPgubLetJyp-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=356%3A57580">Figma</a> prototype is the shipped experience that is live on the app today. You may also explore the <a href="#solution">screens below</a>.</p>
+                    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="414" height="896" src="https://embed.figma.com/proto/BX4rcdUUTuTbIYM9CptAR5/Kai-s-Projects?page-id=0%3A1&node-id=356-57624&viewport=1452%2C-330%2C0.06&scaling=scale-down&content-scaling=fixed&starting-point-node-id=356%3A57580&embed-host=share" allowfullscreen></iframe>                    
+
+                </section>
 
                 <section class="content-section" id="overview">
                     <h2>The Challenge</h2>
-                    <p>At Remitly, customers frequently needed to modify their money transfers after submission—whether changing recipient details, delivery methods, or transfer amounts. These amendments required contacting customer support, creating friction and increasing operational costs.</p>
-                    <p><strong>Key Finding:</strong> ~20% of customer support tickets were related to transfer amendments, with users experiencing frustration with wait times and process complexity.</p>
+                    <p>At Remitly, transfer issues requiring amendments arose from two sources: customer-initiated changes and business-initiated holds due to compliance, security, or data errors.</p>
+                        <h3>In practice, this meant:</h3>
+                        <ul>
+                            <li>34% of customer support contacts were related to transfer errors</li>
+                            <li>71% of these issues could be self-resolved by customers</li>
+                            <li>41% of all transfer errors led to cancellation (~$4 cost each)</li>
+                            <li>An additional ~20% of support tickets were proactive customer amendment requests</li>
+                        </ul>
+                    <p><b>The Impact</b>: These "killer events"—whether flagged by Remitly's systems or initiated by customers—created friction, increased operational costs, and significantly reduced retention. The existing amendment process required contacting support, causing frustration with wait times and complexity for issues customers could often resolve themselves.</p>
                 </section>
 
                 <section class="content-section" id="solution">
@@ -129,6 +149,7 @@
                     <p>I designed Self Service Amendment – empowering customers to modify transfers independently with:</p>
                     <ul>
                         <li><b>Amendment Hub</b>: Centralized access point from transaction details</li>
+                        <li><b>Opinionated options</b>: Provide amendment flows specific to the customer's transfer</li>
                         <li><b>Eligibility Checker</b>: Real-time validation of what can be amended</li>
                         <li><b>Guided Flow</b>: Step-by-step amendment process with inline validation</li>
                         <li><b>Confirmation System</b>: Clear communication of changes with email/push notifications</li>
@@ -138,43 +159,50 @@
                         <div class="gallery-scroll">
                             <div class="gallery-item">
                                 <div class="gallery-image">
-                                    <img src="../images/selfserviceamendment/flow/01.png" alt="Screen 1">
+                                    <img src="../images/selfserviceamendment/flow/updated/00.png" alt="Screen 0">
+                                </div>
+                                <p class="gallery-caption">Customer gets notified about issue with their transfer</p>
+                            </div>
+
+                            <div class="gallery-item">
+                                <div class="gallery-image">
+                                    <img src="../images/selfserviceamendment/flow/updated/02.png" alt="Screen 1">
                                 </div>
                                 <p class="gallery-caption">Transaction details with amendment entry point</p>
                             </div>
                             <div class="gallery-item">
                                 <div class="gallery-image">
-                                    <img src="../images/selfserviceamendment/flow/02.png" alt="Screen 2">
+                                    <img src="../images/selfserviceamendment/flow/updated/03.png" alt="Screen 2">
                                 </div>
                                 <p class="gallery-caption">Amendment options showing what can be changed</p>
                             </div>
                             <div class="gallery-item">
                                 <div class="gallery-image">
-                                    <img src="../images/selfserviceamendment/flow/03.png" alt="Screen 3">
+                                    <img src="../images/selfserviceamendment/flow/updated/04 expanded drawer.png" alt="Screen 3">
                                 </div>
                                 <p class="gallery-caption">Guided amendment flow with inline validation</p>
                             </div>
                             <div class="gallery-item">
                                 <div class="gallery-image">
-                                    <img src="../images/selfserviceamendment/flow/04.png" alt="Screen 4">
+                                    <img src="../images/selfserviceamendment/flow/updated/05.png" alt="Screen 4">
                                 </div>
                                 <p class="gallery-caption">Review changes before submission</p>
                             </div>
                             <div class="gallery-item">
                                 <div class="gallery-image">
-                                    <img src="../images/selfserviceamendment/flow/05.png" alt="Screen 5">
+                                    <img src="../images/selfserviceamendment/flow/updated/06.png" alt="Screen 5">
                                 </div>
                                 <p class="gallery-caption">Confirmation step to verify changes</p>
                             </div>
                             <div class="gallery-item">
                                 <div class="gallery-image">
-                                    <img src="../images/selfserviceamendment/flow/06.png" alt="Screen 6">
+                                    <img src="../images/selfserviceamendment/flow/updated/07.png" alt="Screen 6">
                                 </div>
                                 <p class="gallery-caption">Success confirmation with updated details</p>
                             </div>
                             <div class="gallery-item">
                                 <div class="gallery-image">
-                                    <img src="../images/selfserviceamendment/flow/07.png" alt="Screen 7">
+                                    <img src="../images/selfserviceamendment/flow/updated/08.png" alt="Screen 7">
                                 </div>
                                 <p class="gallery-caption">Updated transaction showing amended information</p>
                             </div>
@@ -184,7 +212,7 @@
 
                 <section class="content-section" id="results">
                     <h2>Results</h2>
-                    <p>Self Service Amendment delivered strong results across all metrics:</p>
+                    <p>Self Service Amendment delivered strong results across all metrics, and was called for experiment. We are excited to bring this step level improvement for our customers.</p>
                     <ul>
                         <li><strong>65% reduction in amendment-related support tickets</strong> (exceeded goal of 60%)</li>
                         <li><strong>3.5 minutes average completion time</strong>, well within the 5-minute target</li>
@@ -198,7 +226,6 @@
                     <p>Key takeaways from this project:</p>
                     <ul>
                         <li><b>Autonomy with guardrails</b> — Balancing user empowerment with regulatory compliance</li>
-                        <li><b>Cross-functional is key</b> — Close collaboration with compliance and operations enabled success</li>
                         <li><b>Progressive disclosure works</b> — Simplified complex scenarios without overwhelming users</li>
                         <li><b>Listen to support data</b> — Support ticket trends guided continuous iteration</li>
                     </ul>

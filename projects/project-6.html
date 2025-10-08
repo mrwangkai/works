@@ -7,12 +7,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <title>Project Title 6 - Product Design Portfolio</title>
+    <link rel="icon" type="image/png" href="../images/favicon.png">
     <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
     <nav class="navbar">
         <div class="nav-container">
             <a href="../index.html" class="logo">
+                <img src="../images/kai logo3.png" alt="Logo" class="logo-image">
                 <div class="logo-text">
                     <span class="logo-name">Kai Wang</span>
                     <span class="logo-subtitle">Product Designer</span>
@@ -32,6 +34,29 @@
         </div>
     </nav>
 
+    <!-- Mobile Progress Bar -->
+    <div class="mobile-progress-bar">
+        <div class="progress-line"></div>
+        <div class="progress-markers">
+            <div class="progress-marker" data-section="overview">
+                <div class="marker-dot"></div>
+                <span class="marker-label">Challenge</span>
+            </div>
+            <div class="progress-marker" data-section="solution">
+                <div class="marker-dot"></div>
+                <span class="marker-label">Solution</span>
+            </div>
+            <div class="progress-marker" data-section="results">
+                <div class="marker-dot"></div>
+                <span class="marker-label">Results</span>
+            </div>
+            <div class="progress-marker" data-section="learnings">
+                <div class="marker-dot"></div>
+                <span class="marker-label">Learnings</span>
+            </div>
+        </div>
+    </div>
+
     <main class="container project-detail">
         <a href="../index.html" class="back-link">← Back to Projects</a>
 
@@ -48,48 +73,90 @@
             <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=600&fit=crop" alt="Project 6">
         </div>
 
+        <section class="impact-metrics-section minimal" id="impactMetrics">
+            <div class="impact-metrics-container">
+                <div class="impact-metric">
+                    <h3>{metric}</h3>
+                    <p>{description}</p>
+                </div>
+                <div class="impact-metric">
+                    <h3>{metric}</h3>
+                    <p>{description}</p>
+                </div>
+                <div class="impact-metric">
+                    <h3>{metric}</h3>
+                    <p>{description}</p>
+                </div>
+                <div class="impact-metric">
+                    <h3>{metric}</h3>
+                    <p>{description}</p>
+                </div>
+            </div>
+        </section>
+
         <div class="project-content-grid">
             <aside class="project-sidebar">
-                <div class="sidebar-section">
-                    <h3>Role</h3>
-                    <p>Product Designer</p>
-                </div>
-                <div class="sidebar-section">
-                    <h3>Timeline</h3>
-                    <p>4 months</p>
-                </div>
-                <div class="sidebar-section">
-                    <h3>Team</h3>
-                    <p>2 Designers, 4 Engineers, 1 PM</p>
-                </div>
-                <div class="sidebar-section">
-                    <h3>Platform</h3>
-                    <p>Web, Mobile</p>
-                </div>
+                <nav class="table-of-contents">
+                    <h3>Contents</h3>
+                    <ul>
+                        <li><a href="#overview" class="toc-link active">The Challenge</a></li>
+                        <li><a href="#solution" class="toc-link">The Solution</a></li>
+                        <li><a href="#results" class="toc-link">Results</a></li>
+                        <li><a href="#learnings" class="toc-link">Learnings</a></li>
+                    </ul>
+                </nav>
             </aside>
 
             <article class="project-main-content">
-                <section class="content-section">
-                    <h2>Overview</h2>
+                <div class="project-meta-header">
+                    <div class="meta-item">
+                        <span class="meta-label">Role:</span>
+                        <span class="meta-value">Product Designer</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Team:</span>
+                        <span class="meta-value">2 Designers, 4 Engineers, 1 PM</span>
+                    </div>
+                </div>
+
+                <section class="content-section" id="overview">
+                    <h2>The Challenge</h2>
                     <p>This is a placeholder project. Replace this content with your actual project details, including the problem you solved, your design process, and the outcomes achieved.</p>
+                    <p><strong>Key Finding:</strong> Describe the key insight or problem that needed to be addressed.</p>
                 </section>
 
-                <section class="content-section">
-                    <h2>Problem</h2>
-                    <p>Describe the problem or challenge you were addressing in this project.</p>
+                <section class="content-section" id="solution">
+                    <h2>The Solution</h2>
+                    <p>Explain the solution you designed and the key features or approaches you took:</p>
+                    <ul>
+                        <li><b>Feature 1</b>: Description of the first key feature or approach</li>
+                        <li><b>Feature 2</b>: Description of the second key feature or approach</li>
+                        <li><b>Feature 3</b>: Description of the third key feature or approach</li>
+                    </ul>
                 </section>
 
-                <section class="content-section">
-                    <h2>Solution</h2>
-                    <p>Explain the solution you designed and the key features or approaches you took.</p>
-                </section>
-
-                <section class="content-section">
+                <section class="content-section" id="results">
                     <h2>Results</h2>
-                    <p>Share the measurable outcomes and impact of your design work.</p>
+                    <p>Share the measurable outcomes and impact of your design work:</p>
+                    <ul>
+                        <li><strong>Metric 1</strong>: Description of the first result</li>
+                        <li><strong>Metric 2</strong>: Description of the second result</li>
+                        <li><strong>Metric 3</strong>: Description of the third result</li>
+                    </ul>
+                </section>
+
+                <section class="content-section" id="learnings">
+                    <h2>Learnings</h2>
+                    <p>Key takeaways from this project:</p>
+                    <ul>
+                        <li><b>Learning 1</b> — Description of the first key insight</li>
+                        <li><b>Learning 2</b> — Description of the second key insight</li>
+                        <li><b>Learning 3</b> — Description of the third key insight</li>
+                    </ul>
                 </section>
             
                 <div class="cta-section">
+                    <p class="cta-text">Interested in discussing more?</p>
                     <button class="cta-button" onclick="openContactModal()">Let's connect!</button>
                 </div>
             </article>

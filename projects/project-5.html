@@ -7,12 +7,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <title>Service Blueprint - Product Design Portfolio</title>
+    <link rel="icon" type="image/png" href="../images/favicon.png">
     <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
     <nav class="navbar">
         <div class="nav-container">
             <a href="../index.html" class="logo">
+                <img src="../images/kai logo3.png" alt="Logo" class="logo-image">
                 <div class="logo-text">
                     <span class="logo-name">Kai Wang</span>
                     <span class="logo-subtitle">Product Designer</span>
@@ -32,6 +34,29 @@
         </div>
     </nav>
 
+    <!-- Mobile Progress Bar -->
+    <div class="mobile-progress-bar">
+        <div class="progress-line"></div>
+        <div class="progress-markers">
+            <div class="progress-marker" data-section="overview">
+                <div class="marker-dot"></div>
+                <span class="marker-label">Challenge</span>
+            </div>
+            <div class="progress-marker" data-section="solution">
+                <div class="marker-dot"></div>
+                <span class="marker-label">Solution</span>
+            </div>
+            <div class="progress-marker" data-section="results">
+                <div class="marker-dot"></div>
+                <span class="marker-label">Results</span>
+            </div>
+            <div class="progress-marker" data-section="learnings">
+                <div class="marker-dot"></div>
+                <span class="marker-label">Learnings</span>
+            </div>
+        </div>
+    </div>
+
     <main class="container project-detail">
         <a href="../index.html" class="back-link">← Back to Projects</a>
 
@@ -49,112 +74,97 @@
             <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&h=600&fit=crop" alt="Service Blueprint">
         </div>
 
+        <section class="impact-metrics-section minimal" id="impactMetrics">
+            <div class="impact-metrics-container">
+                <div class="impact-metric">
+                    <h3>{metric}</h3>
+                    <p>Strategic clarity and alignment</p>
+                </div>
+                <div class="impact-metric">
+                    <h3>{metric}</h3>
+                    <p>Evidence-based planning</p>
+                </div>
+                <div class="impact-metric">
+                    <h3>{metric}</h3>
+                    <p>Cross-functional alignment</p>
+                </div>
+                <div class="impact-metric">
+                    <h3>{metric}</h3>
+                    <p>Reduced wasted effort</p>
+                </div>
+            </div>
+        </section>
+
         <div class="project-content-grid">
             <aside class="project-sidebar">
-                <div class="sidebar-section">
-                    <h3>Role</h3>
-                    <p>UX Researcher & Designer</p>
-                </div>
-                <div class="sidebar-section">
-                    <h3>Timeline</h3>
-                    <p>6 weeks</p>
-                </div>
-                <div class="sidebar-section">
-                    <h3>Stakeholders</h3>
-                    <p>Sales, Underwriting, Product Leadership</p>
-                </div>
-                <div class="sidebar-section">
-                    <h3>Deliverable</h3>
-                    <p>Service Blueprint</p>
-                </div>
+                <nav class="table-of-contents">
+                    <h3>Contents</h3>
+                    <ul>
+                        <li><a href="#overview" class="toc-link active">The Challenge</a></li>
+                        <li><a href="#solution" class="toc-link">The Solution</a></li>
+                        <li><a href="#results" class="toc-link">Results</a></li>
+                        <li><a href="#learnings" class="toc-link">Learnings</a></li>
+                    </ul>
+                </nav>
             </aside>
 
             <article class="project-main-content">
-                <section class="content-section">
-                    <h2>Overview</h2>
+                <div class="project-meta-header">
+                    <div class="meta-item">
+                        <span class="meta-label">Role:</span>
+                        <span class="meta-value">Product Designer</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Team:</span>
+                        <span class="meta-value">Sales, Underwriting, Product Leadership</span>
+                    </div>
+                </div>
+
+                <section class="content-section" id="overview">
+                    <h2>The Challenge</h2>
                     <p>Capital One's Small Business Card team needed a strategic tool to ensure new product features directly addressed real customer pain points across the engagement journey. Without a unified understanding of user experiences across sales, underwriting, and small business owner touchpoints, teams risked building features disconnected from actual needs.</p>
-                    <p>This service blueprint project mapped the complete customer journey across three user groups—sales, underwriting, and small business owners—to identify experience gaps and align the product roadmap with strategic opportunities.</p>
+                    <p><strong>Key Finding:</strong> No shared understanding of the end-to-end customer journey across different user groups, making it difficult to connect proposed features to actual customer pain points and experience gaps.</p>
                 </section>
 
-                <section class="content-section">
-                    <h2>Challenge</h2>
-                    <p>The Small Business Card product team faced critical alignment challenges:</p>
+                <section class="content-section" id="solution">
+                    <h2>The Solution</h2>
+                    <p>I created a comprehensive service blueprint that mapped the complete customer journey:</p>
                     <ul>
-                        <li>No shared understanding of the end-to-end customer journey across different user groups</li>
-                        <li>Difficulty connecting proposed features to actual customer pain points and experience gaps</li>
-                        <li>Lack of a common strategic tool for leadership to communicate roadmap priorities</li>
-                        <li>Multiple touchpoints and processes needed to be understood holistically</li>
-                        <li>Need for a living artifact that could evolve as experiments shipped and insights emerged</li>
-                    </ul>
-                </section>
-
-                <section class="content-section">
-                    <h2>Process</h2>
-                    <h3>Discovery Sessions</h3>
-                    <p>Conducted in-depth discovery sessions with three key user groups to understand their experiences, processes, and emotional journeys:</p>
-                    <ul>
-                        <li><strong>Sales teams:</strong> Mapped their workflows, tools, and pain points in customer acquisition</li>
-                        <li><strong>Underwriting staff:</strong> Documented approval processes, decision criteria, and operational challenges</li>
-                        <li><strong>Small business owners:</strong> Captured application experiences, expectations, and frustrations</li>
-                    </ul>
-
-                    <h3>Synthesis & Mapping</h3>
-                    <p>Translated discovery insights into a comprehensive service blueprint:</p>
-                    <ul>
-                        <li>Articulated user processes and emotional journeys across touchpoints</li>
-                        <li>Grouped events into new categories to reveal patterns and opportunities</li>
-                        <li>Identified key moments where experience gaps created friction or drop-off</li>
-                        <li>Consulted product leadership to validate findings and prioritize opportunities</li>
-                    </ul>
-
-                    <h3>Strategic Artifact Creation</h3>
-                    <p>Designed the blueprint as a strategic planning tool rather than a static deliverable:</p>
-                    <ul>
-                        <li>Created clear connections between experience gaps and product/feature opportunities</li>
-                        <li>Built in flexibility for quarterly updates as experiments shipped</li>
-                        <li>Designed for leadership communication and roadmap alignment</li>
-                    </ul>
-                </section>
-
-                <section class="content-section">
-                    <h2>Deliverable</h2>
-                    <p>The service blueprint became a foundational strategic tool:</p>
-                    <ul>
-                        <li><strong>Journey Visualization:</strong> End-to-end view of small business card engagement across all user groups</li>
-                        <li><strong>Experience Gap Identification:</strong> Clear documentation of pain points and friction throughout the journey</li>
-                        <li><strong>Opportunity Mapping:</strong> Direct connections between gaps and potential features/products</li>
-                        <li><strong>Living Artifact:</strong> Quarterly updates tracking experiment impacts and evolving insights</li>
-                        <li><strong>Leadership Alignment Tool:</strong> Shared resource for strategy communication and roadmap discussions</li>
+                        <li><b>Journey Visualization</b>: End-to-end view of small business card engagement across all user groups (sales, underwriting, small business owners)</li>
+                        <li><b>Experience Gap Identification</b>: Clear documentation of pain points and friction throughout the journey</li>
+                        <li><b>Opportunity Mapping</b>: Direct connections between gaps and potential features/products</li>
+                        <li><b>Living Artifact</b>: Quarterly updates tracking experiment impacts and evolving insights</li>
+                        <li><b>Leadership Alignment Tool</b>: Shared resource for strategy communication and roadmap discussions</li>
                     </ul>
                     <p>View the full blueprint in <a href="https://www.figma.com/file/WImY7WtGkEfJfX1mbcppc2/Untitled?node-id=2%3A96" target="_blank">Figma</a>.</p>
                 </section>
 
-                <section class="content-section">
-                    <h2>Impact</h2>
+                <section class="content-section" id="results">
+                    <h2>Results</h2>
+                    <p>The service blueprint became a foundational strategic tool:</p>
                     <ul>
-                        <li><strong>Strategic clarity:</strong> Created urgency and alignment around product roadmap priorities</li>
-                        <li><strong>Evidence-based planning:</strong> Ensured every proposed feature had clear connection to customer pain points</li>
-                        <li><strong>Cross-functional alignment:</strong> Provided common language and understanding across sales, underwriting, and product teams</li>
-                        <li><strong>Continuous improvement:</strong> Quarterly updates allowed teams to track experiment outcomes and adjust strategy</li>
-                        <li><strong>Leadership communication:</strong> Became the central tool for communicating product strategy and roadmap rationale</li>
-                        <li><strong>Reduced wasted effort:</strong> Prevented building features disconnected from real user needs</li>
+                        <li><strong>Strategic clarity</strong>: Created urgency and alignment around product roadmap priorities</li>
+                        <li><strong>Evidence-based planning</strong>: Ensured every proposed feature had clear connection to customer pain points</li>
+                        <li><strong>Cross-functional alignment</strong>: Provided common language and understanding across sales, underwriting, and product teams</li>
+                        <li><strong>Continuous improvement</strong>: Quarterly updates allowed teams to track experiment outcomes and adjust strategy</li>
+                        <li><strong>Leadership communication</strong>: Became the central tool for communicating product strategy and roadmap rationale</li>
                     </ul>
                 </section>
 
-                <section class="content-section">
+                <section class="content-section" id="learnings">
                     <h2>Learnings</h2>
                     <p>Key insights from creating a strategic service blueprint:</p>
                     <ul>
-                        <li><strong>Research as strategy:</strong> Service blueprints aren't just documentation—they're strategic tools that drive product decisions and organizational alignment</li>
-                        <li><strong>Multiple perspectives reveal opportunities:</strong> Mapping journeys across different user groups (sales, underwriting, customers) surfaced gaps no single perspective would catch</li>
-                        <li><strong>Make artifacts living documents:</strong> Building in quarterly updates ensured the blueprint remained relevant and reflected evolving insights from shipped experiments</li>
-                        <li><strong>Connect features to pain points:</strong> The blueprint's power came from explicitly linking every proposed feature to a documented experience gap</li>
-                        <li><strong>Design for your audience:</strong> Leadership needed a communication tool, not just a research deliverable—designing for that use case increased impact</li>
-                        <li><strong>Synthesis drives urgency:</strong> Visualizing the complete journey and its gaps created shared urgency that accelerated roadmap alignment</li>
+                        <li><b>Research as strategy</b> — Service blueprints aren't just documentation—they're strategic tools that drive product decisions and organizational alignment</li>
+                        <li><b>Multiple perspectives reveal opportunities</b> — Mapping journeys across different user groups (sales, underwriting, customers) surfaced gaps no single perspective would catch</li>
+                        <li><b>Make artifacts living documents</b> — Building in quarterly updates ensured the blueprint remained relevant and reflected evolving insights from shipped experiments</li>
+                        <li><b>Connect features to pain points</b> — The blueprint's power came from explicitly linking every proposed feature to a documented experience gap</li>
+                        <li><b>Design for your audience</b> — Leadership needed a communication tool, not just a research deliverable—designing for that use case increased impact</li>
                     </ul>
                 </section>
             
                 <div class="cta-section">
+                    <p class="cta-text">Interested in discussing more?</p>
                     <button class="cta-button" onclick="openContactModal()">Let's connect!</button>
                 </div>
             </article>

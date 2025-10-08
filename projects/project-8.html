@@ -7,12 +7,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <title>The Plan - Product Design Portfolio</title>
+    <link rel="icon" type="image/png" href="../images/favicon.png">
     <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
     <nav class="navbar">
         <div class="nav-container">
             <a href="../index.html" class="logo">
+                <img src="../images/kai logo3.png" alt="Logo" class="logo-image">
                 <div class="logo-text">
                     <span class="logo-name">Kai Wang</span>
                     <span class="logo-subtitle">Product Designer</span>
@@ -32,6 +34,29 @@
         </div>
     </nav>
 
+    <!-- Mobile Progress Bar -->
+    <div class="mobile-progress-bar">
+        <div class="progress-line"></div>
+        <div class="progress-markers">
+            <div class="progress-marker" data-section="overview">
+                <div class="marker-dot"></div>
+                <span class="marker-label">Challenge</span>
+            </div>
+            <div class="progress-marker" data-section="solution">
+                <div class="marker-dot"></div>
+                <span class="marker-label">Solution</span>
+            </div>
+            <div class="progress-marker" data-section="results">
+                <div class="marker-dot"></div>
+                <span class="marker-label">Results</span>
+            </div>
+            <div class="progress-marker" data-section="learnings">
+                <div class="marker-dot"></div>
+                <span class="marker-label">Learnings</span>
+            </div>
+        </div>
+    </div>
+
     <main class="container project-detail">
         <a href="../index.html" class="back-link">← Back to Projects</a>
 
@@ -49,75 +74,96 @@
             <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1200&h=600&fit=crop" alt="The Plan">
         </div>
 
+        <section class="impact-metrics-section minimal" id="impactMetrics">
+            <div class="impact-metrics-container">
+                <div class="impact-metric">
+                    <h3>{metric}</h3>
+                    <p>User research foundations</p>
+                </div>
+                <div class="impact-metric">
+                    <h3>{metric}</h3>
+                    <p>Information architecture clarity</p>
+                </div>
+                <div class="impact-metric">
+                    <h3>{metric}</h3>
+                    <p>Mobile-first thinking</p>
+                </div>
+                <div class="impact-metric">
+                    <h3>{metric}</h3>
+                    <p>Iterative design process</p>
+                </div>
+            </div>
+        </section>
+
         <div class="project-content-grid">
             <aside class="project-sidebar">
-                <div class="sidebar-section">
-                    <h3>Role</h3>
-                    <p>UX Designer</p>
-                </div>
-                <div class="sidebar-section">
-                    <h3>Timeline</h3>
-                    <p>Academic Project</p>
-                </div>
-                <div class="sidebar-section">
-                    <h3>School</h3>
-                    <p>Indiana University Bloomington</p>
-                </div>
-                <div class="sidebar-section">
-                    <h3>Platform</h3>
-                    <p>Mobile (iOS)</p>
-                </div>
-                <div class="sidebar-section">
-                    <h3>External Link</h3>
-                    <p><a href="https://www.behance.net/gallery/54753933/The-Plan" target="_blank">View on Behance</a></p>
-                </div>
+                <nav class="table-of-contents">
+                    <h3>Contents</h3>
+                    <ul>
+                        <li><a href="#overview" class="toc-link active">The Challenge</a></li>
+                        <li><a href="#solution" class="toc-link">The Solution</a></li>
+                        <li><a href="#results" class="toc-link">Results</a></li>
+                        <li><a href="#learnings" class="toc-link">Learnings</a></li>
+                    </ul>
+                </nav>
             </aside>
 
             <article class="project-main-content">
-                <section class="content-section">
-                    <h2>Overview</h2>
-                    <p>The Plan is a mobile app concept designed to help Indiana University students navigate their academic journey. The project focused on simplifying course planning, schedule management, and degree progress tracking for undergraduate students.</p>
-                    <p>As a student project, this work demonstrates early explorations in mobile UX design, user research, and interaction design principles applied to solving real student pain points.</p>
+                <div class="project-meta-header">
+                    <div class="meta-item">
+                        <span class="meta-label">Role:</span>
+                        <span class="meta-value">Product Designer</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Team:</span>
+                        <span class="meta-value">Indiana University Bloomington, Academic Project</span>
+                    </div>
+                </div>
+
+                <section class="content-section" id="overview">
+                    <h2>The Challenge</h2>
+                    <p>University students face complexity when planning their academic paths. The project focused on simplifying course planning, schedule management, and degree progress tracking for undergraduate students at Indiana University.</p>
+                    <p><strong>Key Finding:</strong> Students struggled to navigate course catalogs, plan multi-semester schedules, and visualize degree progress—existing university systems were fragmented and not mobile-friendly.</p>
                 </section>
 
-                <section class="content-section">
-                    <h2>Challenge</h2>
-                    <p>University students face complexity when planning their academic paths:</p>
+                <section class="content-section" id="solution">
+                    <h2>The Solution</h2>
+                    <p>I designed The Plan—a mobile app providing an intuitive interface for academic planning:</p>
                     <ul>
-                        <li>Course catalogs are difficult to navigate and understand prerequisite requirements</li>
-                        <li>Planning multi-semester schedules requires juggling multiple systems and spreadsheets</li>
-                        <li>Students struggle to visualize degree progress and remaining requirements</li>
-                        <li>Existing university systems are fragmented and not mobile-friendly</li>
-                        <li>Course scheduling conflicts and availability issues arise late in the registration process</li>
-                    </ul>
-                </section>
-
-                <section class="content-section">
-                    <h2>Solution</h2>
-                    <p>The Plan provides an intuitive mobile interface for academic planning:</p>
-                    <ul>
-                        <li><strong>Visual Degree Progress:</strong> Clear visualization of completed, in-progress, and remaining degree requirements</li>
-                        <li><strong>Smart Course Search:</strong> Searchable course catalog with filters for requirements, time slots, and instructor ratings</li>
-                        <li><strong>Multi-Semester Planning:</strong> Drag-and-drop interface for planning future semesters with automatic prerequisite validation</li>
-                        <li><strong>Schedule Builder:</strong> Visual calendar view showing course times, locations, and potential conflicts</li>
-                        <li><strong>Registration Alerts:</strong> Notifications for course availability, registration deadlines, and schedule changes</li>
+                        <li><b>Visual Degree Progress</b>: Clear visualization of completed, in-progress, and remaining degree requirements</li>
+                        <li><b>Smart Course Search</b>: Searchable course catalog with filters for requirements, time slots, and instructor ratings</li>
+                        <li><b>Multi-Semester Planning</b>: Drag-and-drop interface for planning future semesters with automatic prerequisite validation</li>
+                        <li><b>Schedule Builder</b>: Visual calendar view showing course times, locations, and potential conflicts</li>
+                        <li><b>Registration Alerts</b>: Notifications for course availability, registration deadlines, and schedule changes</li>
                     </ul>
                     <p>View the full project on <a href="https://www.behance.net/gallery/54753933/The-Plan" target="_blank">Behance</a>.</p>
                 </section>
 
-                <section class="content-section">
+                <section class="content-section" id="results">
+                    <h2>Results</h2>
+                    <p>As an academic project, The Plan demonstrated foundational UX design skills:</p>
+                    <ul>
+                        <li><strong>User research foundations</strong>: Successfully identified pain points through student interviews</li>
+                        <li><strong>Information architecture</strong>: Organized complex academic requirements into digestible formats</li>
+                        <li><strong>Mobile-first thinking</strong>: Prioritized essential features for mobile experience</li>
+                        <li><strong>Iterative process</strong>: Refined concepts through multiple rounds of feedback and testing</li>
+                    </ul>
+                </section>
+
+                <section class="content-section" id="learnings">
                     <h2>Learnings</h2>
                     <p>Key takeaways from this academic project:</p>
                     <ul>
-                        <li><strong>User research foundations:</strong> Interviewing fellow students revealed pain points I hadn't personally experienced, emphasizing the importance of research over assumptions</li>
-                        <li><strong>Information architecture:</strong> Organizing complex academic requirements into digestible, scannable formats required multiple iterations and user testing</li>
-                        <li><strong>Mobile-first thinking:</strong> Designing for mobile forced prioritization of essential features and clear visual hierarchy</li>
-                        <li><strong>Interaction design patterns:</strong> Learned when to use familiar patterns versus custom solutions for unique problems</li>
-                        <li><strong>Iterative process:</strong> Early concepts needed significant refinement based on feedback and usability testing</li>
+                        <li><b>User research foundations</b> — Interviewing fellow students revealed pain points I hadn't personally experienced, emphasizing the importance of research over assumptions</li>
+                        <li><b>Information architecture matters</b> — Organizing complex academic requirements into digestible, scannable formats required multiple iterations and user testing</li>
+                        <li><b>Mobile-first thinking</b> — Designing for mobile forced prioritization of essential features and clear visual hierarchy</li>
+                        <li><b>Interaction design patterns</b> — Learned when to use familiar patterns versus custom solutions for unique problems</li>
+                        <li><b>Iterative process is essential</b> — Early concepts needed significant refinement based on feedback and usability testing</li>
                     </ul>
                 </section>
             
                 <div class="cta-section">
+                    <p class="cta-text">Interested in discussing more?</p>
                     <button class="cta-button" onclick="openContactModal()">Let's connect!</button>
                 </div>
             </article>
