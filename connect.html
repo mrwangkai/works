@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Contact - Product Design Portfolio</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/kai logo3.png" alt="Logo" class="logo-image">
+                <div class="logo-text">
+                    <span class="logo-name">Kai Wang</span>
+                    <span class="logo-subtitle">Product Designer</span>
+                </div>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Projects</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="resume.html" class="nav-link">Resume</a></li>
+                <li><a href="connect.html" class="nav-link active">Connect</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container connect-container">
+        <section class="connect-hero">
+            <h1>Contact</h1>
+            <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
+        </section>
+
+        <section class="connect-content">
+            <div class="contact-form-wrapper">
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+                    </div>
+
+                    <div class="form-group captcha-placeholder">
+                        <div class="captcha-box">Captcha goes here</div>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Send Message</button>
+                </form>
+            </div>
+
+            <div class="contact-info">
+                <div class="info-card">
+                    <h3>Availability</h3>
+                    <p>Schedule a time to chat</p>
+                    <div class="calendly-placeholder">
+                        <p><a href="https://calendly.com/yourprofile" target="_blank">Book a call</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Product Design Portfolio. All rights reserved.</p>
+    </footer>
+
+
+    <!-- Contact Modal -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeContactModal()">&times;</span>
+            <h2>Let's Connect</h2>
+            <form id="modalContactForm" class="modal-form">
+                <div class="form-group">
+                    <label for="modalEmail">Your Email</label>
+                    <input type="email" id="modalEmail" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="modalMessage">Message</label>
+                    <textarea id="modalMessage" name="message" rows="6" required></textarea>
+                </div>
+                <div class="form-group captcha-placeholder">
+                    <div class="captcha-box">Captcha goes here</div>
+                </div>
+                <button type="submit" class="submit-button">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

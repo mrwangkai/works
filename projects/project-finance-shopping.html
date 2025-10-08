@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Finance Based Shopping - Product Design Portfolio</title>
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">
+                <img src="../images/kai logo3.png" alt="Logo" class="logo-image">
+                <div class="logo-text">
+                    <span class="logo-name">Kai Wang</span>
+                    <span class="logo-subtitle">Product Designer</span>
+                </div>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link active">Projects</a></li>
+                <li><a href="../about.html" class="nav-link">About</a></li>
+                <li><a href="../resume.html" class="nav-link">Resume</a></li>
+                <li><a href="../connect.html" class="nav-link">Connect</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Progress Bar -->
+    <div class="mobile-progress-bar">
+        <div class="progress-line"></div>
+        <div class="progress-markers">
+            <div class="progress-marker" data-section="overview">
+                <div class="marker-dot"></div>
+                <span class="marker-label">Challenge</span>
+            </div>
+            <div class="progress-marker" data-section="solution">
+                <div class="marker-dot"></div>
+                <span class="marker-label">Solution</span>
+            </div>
+            <div class="progress-marker" data-section="results">
+                <div class="marker-dot"></div>
+                <span class="marker-label">Results</span>
+            </div>
+            <div class="progress-marker" data-section="learnings">
+                <div class="marker-dot"></div>
+                <span class="marker-label">Learnings</span>
+            </div>
+        </div>
+    </div>
+
+    <main class="container project-detail">
+        <a href="../index.html" class="back-link">← Back to Projects</a>
+
+        <header class="project-header">
+            <div class="project-tags">
+                <span class="tag">CarMax</span>
+                <span class="tag">Product Strategy</span>
+            </div>
+            <h1>Shop through Financing</h1>
+            <p class="project-subtitle">Redesigning the car shopping experience to improve conversion for customers who apply for financing but don't complete their purchase</p>
+        </header>
+
+        <div class="project-hero-image">
+            <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=1200&h=600&fit=crop" alt="Finance Based Shopping">
+        </div>
+
+        <section class="impact-metrics-section minimal" id="impactMetrics">
+            <div class="impact-metrics-container">
+                <div class="impact-metric">
+                    <h3>{metric}</h3>
+                    <p>Improved app-to-sales conversion</p>
+                </div>
+                <div class="impact-metric">
+                    <h3>{metric}</h3>
+                    <p>Reduced friction in post-approval</p>
+                </div>
+                <div class="impact-metric">
+                    <h3>{metric}</h3>
+                    <p>Successfully shipped production test</p>
+                </div>
+                <div class="impact-metric">
+                    <h3>{metric}</h3>
+                    <p>Established reusable design patterns</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="project-content-grid">
+            <aside class="project-sidebar">
+                <nav class="table-of-contents">
+                    <h3>Contents</h3>
+                    <ul>
+                        <li><a href="#overview" class="toc-link active">The Challenge</a></li>
+                        <li><a href="#solution" class="toc-link">The Solution</a></li>
+                        <li><a href="#results" class="toc-link">Results</a></li>
+                        <li><a href="#learnings" class="toc-link">Learnings</a></li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <article class="project-main-content">
+                <div class="project-meta-header">
+                    <div class="meta-item">
+                        <span class="meta-label">Role:</span>
+                        <span class="meta-value">Product Designer</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Team:</span>
+                        <span class="meta-value">4 Designers, 12 Engineers, 3 PMs, 2 Researchers</span>
+                    </div>
+                </div>
+
+                <section class="content-section" id="overview">
+                    <h2>The Challenge</h2>
+                    <p>Financing is a critical part of car buying for many CarMax customers. However, data showed that a significant number of customers who applied for financing with CarMax did not end up completing a purchase—a lower-than-expected app-to-sales conversion rate.</p>
+                    <p><strong>Key Finding:</strong> Customers who received financing approval weren't completing purchases at expected rates, with friction points in the post-approval shopping experience preventing them from connecting financing offers to vehicle shopping.</p>
+                </section>
+
+                <section class="content-section" id="solution">
+                    <h2>The Solution</h2>
+                    <p>I redesigned the experience to integrate financing more seamlessly with vehicle shopping:</p>
+                    <ul>
+                        <li><b>Financing-Aware Shopping</b>: Connected approved financing terms to vehicle browsing, showing customers which cars fit their approved budget</li>
+                        <li><b>Consistent Car Card Component</b>: Designed a unified car card that displayed financing information alongside vehicle details, usable across web, app, and in-store platforms</li>
+                        <li><b>Clearer Application Flow</b>: Streamlined the financing application process with better progress indicators and explanations</li>
+                        <li><b>Post-Approval Guidance</b>: Provided clear next steps after financing approval, guiding customers directly to relevant vehicles</li>
+                        <li><b>In-Store Integration</b>: Designed for use by associates in-store to help customers understand their options</li>
+                    </ul>
+                </section>
+
+                <section class="content-section" id="results">
+                    <h2>Results</h2>
+                    <p>The redesigned experience delivered meaningful improvements:</p>
+                    <ul>
+                        <li><strong>Improved app-to-sales conversion</strong> for customers with approved financing</li>
+                        <li><strong>Better customer understanding</strong> of how financing connects to vehicle selection</li>
+                        <li><strong>Reduced friction</strong> in post-approval shopping experience</li>
+                        <li><strong>Successfully shipped production test</strong> in controlled environment to validate design improvements</li>
+                        <li><strong>Established reusable design patterns</strong> (car card component) for use across multiple platforms and touchpoints</li>
+                    </ul>
+                </section>
+
+                <section class="content-section" id="learnings">
+                    <h2>Learnings</h2>
+                    <p>Key takeaways from this project:</p>
+                    <ul>
+                        <li><b>Discovery is essential</b> — Understanding the root problem through research prevented solving the wrong problem and ensured solutions addressed real customer pain points</li>
+                        <li><b>Cross-functional collaboration drives success</b> — Working closely with sales, operations, and engineering teams ensured designs were feasible and addressed business needs</li>
+                        <li><b>Iterate based on real feedback</b> — In-store visits and testing with actual customers revealed insights that desk research couldn't uncover</li>
+                        <li><b>Design systems accelerate delivery</b> — Creating reusable components (like the car card) enabled consistent experiences across platforms and faster future development</li>
+                        <li><b>Test in production when possible</b> — Real-world testing in controlled environments provides the most accurate validation of design decisions</li>
+                    </ul>
+                </section>
+            
+                <div class="cta-section">
+                    <p class="cta-text">Interested in discussing more?</p>
+                    <button class="cta-button" onclick="openContactModal()">Let's connect!</button>
+                </div>
+            </article>
+        </div>
+
+        <div class="project-navigation">
+            <a href="project-360-viewer.html" class="nav-project">
+                <span class="nav-label">Previous Project</span>
+                <span class="nav-title">← 360 Degrees Viewer</span>
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Product Design Portfolio. All rights reserved.</p>
+    </footer>
+
+
+    <!-- Contact Modal -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeContactModal()">&times;</span>
+            <h2>Let's Connect</h2>
+            <form id="modalContactForm" class="modal-form">
+                <div class="form-group">
+                    <label for="modalEmail">Your Email</label>
+                    <input type="email" id="modalEmail" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="modalMessage">Message</label>
+                    <textarea id="modalMessage" name="message" rows="6" required></textarea>
+                </div>
+                <div class="form-group captcha-placeholder">
+                    <div class="captcha-box">Captcha goes here</div>
+                </div>
+                <button type="submit" class="submit-button">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>

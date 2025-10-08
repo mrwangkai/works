@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>About - Product Design Portfolio</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/kai logo3.png" alt="Logo" class="logo-image">
+                <div class="logo-text">
+                    <span class="logo-name">Kai Wang</span>
+                    <span class="logo-subtitle">Product Designer</span>
+                </div>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Projects</a></li>
+                <li><a href="about.html" class="nav-link active">About</a></li>
+                <li><a href="resume.html" class="nav-link">Resume</a></li>
+                <li><a href="connect.html" class="nav-link">Connect</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container about-container">
+        <section class="about-hero-centered">
+            <div class="about-image">
+                <img src="https://via.placeholder.com/400x400/667eea/ffffff?text=Your+Photo" alt="Profile Photo">
+            </div>
+            <h1>Hi there, I'm Kai</h1>
+            <p class="intro">Product designer based in Seattle. I craft experiences that balance user needs with business impact, specializing in fintech and consumer products. My focus is on understanding problems first, then designing solutions that feel inevitable—working closely with cross-functional teams to solve real business and customer challenges.</p>
+        </section>
+
+        <section class="about-details-centered">
+            <div class="detail-section">
+                <h2>Experience</h2>
+                <p>I've led design initiatives at Remitly and CarMax, working across mobile and web platforms. My work spans from early-stage concepts to scaled products serving millions of users—always focused on solving real business and customer problems through thoughtful, research-driven design.</p>
+            </div>
+
+            <div class="values-section">
+                <div class="value-icons">
+                    <span class="value-icon" title="Curiosity">🔍</span>
+                    <span class="value-icon" title="Collaboration">🤝</span>
+                    <span class="value-icon" title="Impact">⚡</span>
+                    <span class="value-icon" title="Balance">⚖️</span>
+                </div>
+            </div>
+
+            <div class="cta-section">
+                <p class="cta-text">Interested in discussing more?</p>
+                <button class="cta-button" onclick="openContactModal()">Let's connect!</button>
+            </div>
+
+            <div class="credits">
+                <p>This site was built with <a href="https://claude.ai/code" target="_blank" rel="noopener">Claude Code</a>, designed in Figma, and set in Crimson Pro and Work Sans.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Product Design Portfolio. All rights reserved.</p>
+    </footer>
+
+    <!-- Contact Modal -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeContactModal()">&times;</span>
+            <h2>Let's Connect</h2>
+            <form id="modalContactForm" class="modal-form">
+                <div class="form-group">
+                    <label for="modalEmail">Your Email</label>
+                    <input type="email" id="modalEmail" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="modalMessage">Message</label>
+                    <textarea id="modalMessage" name="message" rows="6" required></textarea>
+                </div>
+                <div class="form-group captcha-placeholder">
+                    <div class="captcha-box">Captcha goes here</div>
+                </div>
+                <button type="submit" class="submit-button">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
