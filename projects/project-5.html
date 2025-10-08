@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <title>Service Blueprint - Product Design Portfolio</title>
+    <title>Remitly Circle: Money Movement - Product Design Portfolio</title>
     <link rel="icon" type="image/png" href="../images/favicon.png">
     <link rel="stylesheet" href="../styles.css">
 </head>
@@ -38,6 +38,10 @@
     <div class="mobile-progress-bar">
         <div class="progress-line"></div>
         <div class="progress-markers">
+            <div class="progress-marker" data-section="shipped">
+                <div class="marker-dot"></div>
+                <span class="marker-label">Shipped</span>
+            </div>
             <div class="progress-marker" data-section="overview">
                 <div class="marker-dot"></div>
                 <span class="marker-label">Challenge</span>
@@ -62,35 +66,34 @@
 
         <header class="project-header">
             <div class="project-tags">
-                <span class="tag">Capital One</span>
-                <span class="tag">Research</span>
-                <span class="tag">Strategy</span>
+                <span class="tag">Remitly</span>
+                <span class="tag">Mobile</span>
             </div>
-            <h1>Service Blueprint</h1>
-            <p class="project-subtitle">Mapping the small business card engagement journey to align product features with customer pain points and drive strategic roadmap decisions</p>
+            <h1>Remitly Circle: Money Movement</h1>
+            <p class="project-subtitle">Designing the end-to-end money movement experience for US customers, enabling seamless deposits and withdrawals with zero fees</p>
         </header>
 
         <div class="project-hero-image">
-            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&h=600&fit=crop" alt="Service Blueprint">
+            <img src="../images/mxa/hero960x600_2x.png" alt="Remitly Circle Money Movement">
         </div>
 
         <section class="impact-metrics-section minimal" id="impactMetrics">
             <div class="impact-metrics-container">
                 <div class="impact-metric">
-                    <h3>{metric}</h3>
-                    <p>Strategic clarity and alignment</p>
+                    <h3>$0</h3>
+                    <p>Deposit and withdrawal fees</p>
                 </div>
                 <div class="impact-metric">
-                    <h3>{metric}</h3>
-                    <p>Evidence-based planning</p>
+                    <h3>170+</h3>
+                    <p>Countries supported</p>
                 </div>
                 <div class="impact-metric">
-                    <h3>{metric}</h3>
-                    <p>Cross-functional alignment</p>
+                    <h3>2.5</h3>
+                    <p>Downstream activities per load</p>
                 </div>
                 <div class="impact-metric">
-                    <h3>{metric}</h3>
-                    <p>Reduced wasted effort</p>
+                    <h3>Live</h3>
+                    <p>Shipped on iOS & Android</p>
                 </div>
             </div>
         </section>
@@ -100,67 +103,205 @@
                 <nav class="table-of-contents">
                     <h3>Contents</h3>
                     <ul>
-                        <li><a href="#overview" class="toc-link active">The Challenge</a></li>
+                        <li><a href="#shipped" class="toc-link active">Shipped Experience</a></li>
+                        <li><a href="#overview" class="toc-link">The Challenge</a></li>
+                        <li><a href="#goals" class="toc-link">Goals</a></li>
                         <li><a href="#solution" class="toc-link">The Solution</a></li>
                         <li><a href="#results" class="toc-link">Results</a></li>
                         <li><a href="#learnings" class="toc-link">Learnings</a></li>
+                        <li><a href="#explorations" class="toc-link">Explorations</a></li>
                     </ul>
                 </nav>
             </aside>
 
             <article class="project-main-content">
-                <div class="project-meta-header">
+                <!-- <div class="project-meta-header">
                     <div class="meta-item">
                         <span class="meta-label">Role:</span>
-                        <span class="meta-value">Product Designer</span>
+                        <span class="meta-value">Senior Product Designer</span>
                     </div>
                     <div class="meta-item">
                         <span class="meta-label">Team:</span>
-                        <span class="meta-value">Sales, Underwriting, Product Leadership</span>
+                        <span class="meta-value">2 PMs, Tech Lead, Engineers</span>
                     </div>
-                </div>
+                </div> --><!-- IGNORE -->
+
+                <section class="content-section" id="shipped">
+                    <h2>Shipped Experience</h2>
+                    <p>Remitly Circle is now live as a standalone app on <a href="https://apps.apple.com/us/app/remitly-circle/id1234567890" target="_blank">iOS</a> and <a href="https://play.google.com/store/apps/details?id=com.remitly.circle" target="_blank">Android</a>.</p>
+                    <p>You may explore the key screens in the <a href="#solution">Solution section</a> below.</p>
+                </section>
 
                 <section class="content-section" id="overview">
                     <h2>The Challenge</h2>
-                    <p>Capital One's Small Business Card team needed a strategic tool to ensure new product features directly addressed real customer pain points across the engagement journey. Without a unified understanding of user experiences across sales, underwriting, and small business owner touchpoints, teams risked building features disconnected from actual needs.</p>
-                    <p><strong>Key Finding:</strong> No shared understanding of the end-to-end customer journey across different user groups, making it difficult to connect proposed features to actual customer pain points and experience gaps.</p>
+                    <p>Remitly customers needed a way to add and withdraw money from their Circle accounts with zero friction. The traditional remittance model required full transaction flows with fees for each send, but Circle's stored-value model needed a different approach to money movement.</p>
+                    <h3>Key Problems:</h3>
+                    <ul>
+                        <li><strong>Complex banking integration:</strong> US banking partner integration for stored-value accounts was untested territory for Remitly</li>
+                        <li><strong>Load limits management:</strong> Customers needed clear visibility into daily load/send limits without blocking the flow</li>
+                        <li><strong>Fraud prevention:</strong> Balance storing required robust trust evaluation without adding friction</li>
+                        <li><strong>Payment processing:</strong> Integration with PAX/MoMo platform for zero-fee deposits was technically complex</li>
+                        <li><strong>Withdrawal flexibility:</strong> Money out needed to support multiple corridors (bank transfers, digital wallets, cash pickup) with varying capabilities</li>
+                    </ul>
+                    <p><strong>Research Insight:</strong> Customers wanted to "just load their wallet" and perform 2.5 downstream activities per load, indicating need for frictionless money-in experience.</p>
+                </section>
+
+                <section class="content-section" id="goals">
+                    <h2>Goals</h2>
+                    <p>Design the end-to-end money movement experience for Remitly Circle, enabling customers to add and withdraw funds seamlessly.</p>
+                    <p><strong>Target Impact:</strong> Enable customers to load accounts quickly and withdraw to 170+ countries through multiple payout methods, all with zero fees.</p>
                 </section>
 
                 <section class="content-section" id="solution">
                     <h2>The Solution</h2>
-                    <p>I created a comprehensive service blueprint that mapped the complete customer journey:</p>
+                    <p>I designed the Money Experience America (MXA) flow – the core money movement experience for US customers. The design focused on:</p>
+
+                    <h3>Money In Flow</h3>
                     <ul>
-                        <li><b>Journey Visualization</b>: End-to-end view of small business card engagement across all user groups (sales, underwriting, small business owners)</li>
-                        <li><b>Experience Gap Identification</b>: Clear documentation of pain points and friction throughout the journey</li>
-                        <li><b>Opportunity Mapping</b>: Direct connections between gaps and potential features/products</li>
-                        <li><b>Living Artifact</b>: Quarterly updates tracking experiment impacts and evolving insights</li>
-                        <li><b>Leadership Alignment Tool</b>: Shared resource for strategy communication and roadmap discussions</li>
+                        <li><b>Frictionless card linking:</b> Debit card input via PAX/MoMo integration</li>
+                        <li><b>Smart limits:</b> Proactive warning when approaching daily load limits (e.g., "$100k entry triggers warning, customer adjusts to $1k")</li>
+                        <li><b>Trust evaluation:</b> Background Sift score check through Trust Platform for fraud prevention</li>
+                        <li><b>Instant availability:</b> Funds credited to USD pool account immediately upon approval</li>
                     </ul>
-                    <p>View the full blueprint in <a href="https://www.figma.com/file/WImY7WtGkEfJfX1mbcppc2/Untitled?node-id=2%3A96" target="_blank">Figma</a>.</p>
+
+                    <h3>Money Out Flow</h3>
+                    <ul>
+                        <li><b>Flexible disbursement:</b> Support for bank transfers, digital wallets (GCash, Nequi, etc.), and cash pickup</li>
+                        <li><b>Corridor optimization:</b> Different money-out capabilities by corridor (GDN through Remitly Rail had withdrawal limitations)</li>
+                        <li><b>Zero fees:</b> No withdrawal fees regardless of payout method</li>
+                        <li><b>Real exchange rates:</b> Better rates than main Remitly app, with upfront transparency</li>
+                    </ul>
+
+                    <h3>Design Patterns</h3>
+                    <ul>
+                        <li><b>Stacked modals:</b> Created reusable pattern for limits and permissions UI</li>
+                        <li><b>Loading states:</b> Clear "In progress... reviewing account" screens for trust evaluation</li>
+                        <li><b>Error handling:</b> Graceful handling when transactions blocked due to low Sift scores</li>
+                        <li><b>Sequence diagrams:</b> Full user flow documentation linked in Jira for engineering alignment</li>
+                    </ul>
+
+                    <div class="design-gallery">
+                        <div class="gallery-scroll">
+                            <div class="gallery-item">
+                                <div class="gallery-image">
+                                    <img src="../images/mxa/01.png" alt="Money in home screen">
+                                </div>
+                                <p class="gallery-caption">Money in home screen showing current balance and add money CTA</p>
+                            </div>
+                            <div class="gallery-item">
+                                <div class="gallery-image">
+                                    <img src="../images/mxa/02.png" alt="Card linking">
+                                </div>
+                                <p class="gallery-caption">Calculator view with information about the transfer</p>
+                            </div>
+                            <div class="gallery-item">
+                                <div class="gallery-image">
+                                    <img src="../images/mxa/03.png" alt="Amount entry">
+                                </div>
+                                <p class="gallery-caption">Customer can choose the currency they can send, including upcoming currencies</p>
+                            </div>
+                            <div class="gallery-item">
+                                <div class="gallery-image">
+                                    <img src="../images/mxa/04.png" alt="Processing">
+                                </div>
+                                <p class="gallery-caption">Adding delivery method</p>
+                            </div>
+                            <div class="gallery-item">
+                                <div class="gallery-image">
+                                    <img src="../images/mxa/05.png" alt="Success">
+                                </div>
+                                <p class="gallery-caption">Calculator view with delivery method and currency selected</p>
+                            </div>
+                            <div class="gallery-item">
+                                <div class="gallery-image">
+                                    <img src="../images/mxa/06.png" alt="Withdrawal methods">
+                                </div>
+                                <p class="gallery-caption">Summary view to review details of the transfer</p>
+                            </div>
+                            <div class="gallery-item">
+                                <div class="gallery-image">
+                                    <img src="../images/mxa/07.png" alt="Withdrawal confirmation">
+                                </div>
+                                <p class="gallery-caption">Confirmation (and celebrate) screen</p>
+                            </div>
+                            <div class="gallery-item">
+                                <div class="gallery-image">
+                                    <img src="../images/mxa/08.png" alt="Withdrawal confirmation">
+                                </div>
+                                <p class="gallery-caption">Home page reflecting latest transfer activity</p>
+                            </div>
+                        </div>
+                    </div>
                 </section>
 
                 <section class="content-section" id="results">
                     <h2>Results</h2>
-                    <p>The service blueprint became a foundational strategic tool:</p>
+                    <p><strong>Launch Status:</strong> MXA shipped as core feature of Remitly Circle, enabling all US customer deposits and withdrawals.</p>
+
+                    <p><strong>Product Performance:</strong></p>
                     <ul>
-                        <li><strong>Strategic clarity</strong>: Created urgency and alignment around product roadmap priorities</li>
-                        <li><strong>Evidence-based planning</strong>: Ensured every proposed feature had clear connection to customer pain points</li>
-                        <li><strong>Cross-functional alignment</strong>: Provided common language and understanding across sales, underwriting, and product teams</li>
-                        <li><strong>Continuous improvement</strong>: Quarterly updates allowed teams to track experiment outcomes and adjust strategy</li>
-                        <li><strong>Leadership communication</strong>: Became the central tool for communicating product strategy and roadmap rationale</li>
+                        <li>Zero fees achieved while maintaining platform profitability through stored fund management</li>
+                        <li>Successfully integrated with PAX/MoMo payment processing platform</li>
+                        <li>Background fraud prevention maintained security without adding customer friction</li>
+                    </ul>
+
+                    <p><strong>Customer Feedback:</strong></p>
+                    <ul>
+                        <li>"I love it because it makes sending money to my sister or siblings back home so simple"</li>
+                        <li>"Put in my deposits and Boom! It's in there already. My wife transferred it to her accounts so quickly"</li>
                     </ul>
                 </section>
 
                 <section class="content-section" id="learnings">
                     <h2>Learnings</h2>
-                    <p>Key insights from creating a strategic service blueprint:</p>
+                    <p>Key takeaways from this project:</p>
                     <ul>
-                        <li><b>Research as strategy</b> — Service blueprints aren't just documentation—they're strategic tools that drive product decisions and organizational alignment</li>
-                        <li><b>Multiple perspectives reveal opportunities</b> — Mapping journeys across different user groups (sales, underwriting, customers) surfaced gaps no single perspective would catch</li>
-                        <li><b>Make artifacts living documents</b> — Building in quarterly updates ensured the blueprint remained relevant and reflected evolving insights from shipped experiments</li>
-                        <li><b>Connect features to pain points</b> — The blueprint's power came from explicitly linking every proposed feature to a documented experience gap</li>
-                        <li><b>Design for your audience</b> — Leadership needed a communication tool, not just a research deliverable—designing for that use case increased impact</li>
+                        <li><b>Technical complexity requires clear documentation</b> — Sequence diagrams and detailed flow documentation in Jira prevented misalignment between design and engineering. Stacked modal pattern became reusable component across the product.</li>
+                        <li><b>Limits need to guide, not block</b> — Proactive warnings before limit hits performed better than hard blocks. Showing progress toward limits increased customer confidence.</li>
+                        <li><b>Trust evaluation should be invisible</b> — Background Sift scoring prevented fraud without adding customer friction. Only showed loading states when necessary, maintaining flow momentum.</li>
+                        <li><b>Money scenarios vary by corridor</b> — Different money-in/out capabilities required flexible design system. Upfront research into corridor constraints prevented redesign later.</li>
+                        <li><b>Separated app was right choice</b> — "Can we stand on our own?" philosophy led to cleaner, focused experience. Integration with main Remitly app would have added complexity without clear customer benefit.</li>
                     </ul>
+                </section>
+
+                <section class="content-section" id="explorations">
+                    <h2>Explorations</h2>
+                    <p>We explored various approaches to the money movement experience, focusing on how to present limits, handle trust evaluation, and structure the withdrawal flow.</p>
+
+                    <div class="design-gallery">
+                        <div class="gallery-scroll">
+                            <div class="gallery-item">
+                                <div class="gallery-image">
+                                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop" alt="Limits presentation">
+                                </div>
+                                <p class="gallery-caption">Limits presentation options - stacked modal vs. inline</p>
+                            </div>
+                            <div class="gallery-item">
+                                <div class="gallery-image">
+                                    <img src="https://images.unsplash.com/photo-1556740758-90de374c12ad?w=600&h=400&fit=crop" alt="Card input variations">
+                                </div>
+                                <p class="gallery-caption">Card input variations - single screen vs. multi-step</p>
+                            </div>
+                            <div class="gallery-item">
+                                <div class="gallery-image">
+                                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" alt="Withdrawal layouts">
+                                </div>
+                                <p class="gallery-caption">Withdrawal method layouts - grid vs. list</p>
+                            </div>
+                            <div class="gallery-item">
+                                <div class="gallery-image">
+                                    <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=600&h=400&fit=crop" alt="Loading states">
+                                </div>
+                                <p class="gallery-caption">Loading state variations - progress bars vs. static messages</p>
+                            </div>
+                            <div class="gallery-item">
+                                <div class="gallery-image">
+                                    <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=600&h=400&fit=crop" alt="Error states">
+                                </div>
+                                <p class="gallery-caption">Error state explorations - retry flows and messaging</p>
+                            </div>
+                        </div>
+                    </div>
                 </section>
             
                 <div class="cta-section">
