@@ -38,6 +38,10 @@
     <div class="mobile-progress-bar">
         <div class="progress-line"></div>
         <div class="progress-markers">
+            <div class="progress-marker" data-section="shipped">
+                <div class="marker-dot"></div>
+                <span class="marker-label">Shipped</span>
+            </div>
             <div class="progress-marker" data-section="overview">
                 <div class="marker-dot"></div>
                 <span class="marker-label">Challenge</span>
@@ -63,10 +67,10 @@
         <header class="project-header">
             <div class="project-tags">
                 <span class="tag">CarMax</span>
-                <span class="tag">Product Strategy</span>
+                <span class="tag">Web</span>
             </div>
-            <h1>Shop through Financing</h1>
-            <p class="project-subtitle">Redesigning the car shopping experience to improve conversion for customers who apply for financing but don't complete their purchase</p>
+            <h1>Finance Based Shopping</h1>
+            <p class="project-subtitle">Redesigning the car shopping experience around monthly payments, helping customers find vehicles that fit their budget and financing approval</p>
         </header>
 
         <div class="project-hero-image">
@@ -81,15 +85,15 @@
                 </div>
                 <div class="impact-metric">
                     <h3>{metric}</h3>
-                    <p>Reduced friction in post-approval</p>
+                    <p>Customers finding budget-appropriate vehicles</p>
                 </div>
                 <div class="impact-metric">
                     <h3>{metric}</h3>
-                    <p>Successfully shipped production test</p>
+                    <p>Reduced post-approval drop-off</p>
                 </div>
                 <div class="impact-metric">
-                    <h3>{metric}</h3>
-                    <p>Established reusable design patterns</p>
+                    <h3>Live</h3>
+                    <p>Shipped on web platform</p>
                 </div>
             </div>
         </section>
@@ -99,7 +103,9 @@
                 <nav class="table-of-contents">
                     <h3>Contents</h3>
                     <ul>
-                        <li><a href="#overview" class="toc-link active">The Challenge</a></li>
+                        <li><a href="#shipped" class="toc-link active">Shipped Experience</a></li>
+                        <li><a href="#overview" class="toc-link">The Challenge</a></li>
+                        <li><a href="#goals" class="toc-link">Goals</a></li>
                         <li><a href="#solution" class="toc-link">The Solution</a></li>
                         <li><a href="#results" class="toc-link">Results</a></li>
                         <li><a href="#learnings" class="toc-link">Learnings</a></li>
@@ -108,44 +114,82 @@
             </aside>
 
             <article class="project-main-content">
-                <div class="project-meta-header">
+                <!-- <div class="project-meta-header">
                     <div class="meta-item">
                         <span class="meta-label">Role:</span>
                         <span class="meta-value">Product Designer</span>
                     </div>
                     <div class="meta-item">
                         <span class="meta-label">Team:</span>
-                        <span class="meta-value">4 Designers, 12 Engineers, 3 PMs, 2 Researchers</span>
+                        <span class="meta-value">4 Designers, 12 Engineers, 3 PMs</span>
                     </div>
-                </div>
+                </div> -->
+
+                <section class="content-section" id="shipped">
+                    <h2>Shipped Experience</h2>
+                    <p>The finance-based shopping experience is currently live on CarMax.com, enabling customers to shop based on their approved financing terms and monthly payment preferences.</p>
+                </section>
 
                 <section class="content-section" id="overview">
                     <h2>The Challenge</h2>
-                    <p>Financing is a critical part of car buying for many CarMax customers. However, data showed that a significant number of customers who applied for financing with CarMax did not end up completing a purchase—a lower-than-expected app-to-sales conversion rate.</p>
-                    <p><strong>Key Finding:</strong> Customers who received financing approval weren't completing purchases at expected rates, with friction points in the post-approval shopping experience preventing them from connecting financing offers to vehicle shopping.</p>
+                    <p>Many CarMax customers apply for financing before shopping for vehicles, but the existing experience didn't effectively connect financing approval to vehicle selection. This disconnect resulted in customers being uncertain which vehicles fit their budget, leading to abandoned purchases.</p>
+                    <p><strong>Key Finding:</strong> Customers with approved financing showed lower-than-expected conversion rates, often browsing vehicles outside their approved budget range or struggling to understand how their financing terms translated to specific vehicle options.</p>
+                </section>
+
+                <section class="content-section" id="goals">
+                    <h2>Goals</h2>
+                    <p>Redesign the post-financing-approval experience to seamlessly connect customers with vehicles that fit their budget and approved terms.</p>
+                    <p><strong>Target Impact:</strong> Improve app-to-sales conversion by making it effortless for customers to find and purchase vehicles within their financing approval.</p>
                 </section>
 
                 <section class="content-section" id="solution">
                     <h2>The Solution</h2>
-                    <p>I redesigned the experience to integrate financing more seamlessly with vehicle shopping:</p>
+                    <p>I redesigned the car shopping experience to center around financing and monthly payments:</p>
                     <ul>
-                        <li><b>Financing-Aware Shopping</b>: Connected approved financing terms to vehicle browsing, showing customers which cars fit their approved budget</li>
-                        <li><b>Consistent Car Card Component</b>: Designed a unified car card that displayed financing information alongside vehicle details, usable across web, app, and in-store platforms</li>
-                        <li><b>Clearer Application Flow</b>: Streamlined the financing application process with better progress indicators and explanations</li>
-                        <li><b>Post-Approval Guidance</b>: Provided clear next steps after financing approval, guiding customers directly to relevant vehicles</li>
-                        <li><b>In-Store Integration</b>: Designed for use by associates in-store to help customers understand their options</li>
+                        <li><b>Payment-first browsing:</b> Show monthly payment prominently on every vehicle card, making budget comparison effortless</li>
+                        <li><b>Approval-aware filtering:</b> Guide customers to vehicles within their approved financing range with clear visual indicators</li>
+                        <li><b>Unified car card component:</b> Created consistent vehicle presentation across web, mobile, and in-store touchpoints</li>
+                        <li><b>Clear post-approval flow:</b> Streamlined journey from financing approval to vehicle selection with contextual guidance</li>
                     </ul>
+
+                    <div class="design-gallery">
+                        <div class="gallery-scroll">
+                            <div class="gallery-item">
+                                <div class="gallery-image">
+                                    <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=600&h=400&fit=crop" alt="Finance-based browsing">
+                                </div>
+                                <p class="gallery-caption">{placeholder: Vehicle browsing with monthly payment prominence}</p>
+                            </div>
+                            <div class="gallery-item">
+                                <div class="gallery-image">
+                                    <img src="https://images.unsplash.com/photo-1556740758-90de374c12ad?w=600&h=400&fit=crop" alt="Approval flow">
+                                </div>
+                                <p class="gallery-caption">{placeholder: Financing approval confirmation}</p>
+                            </div>
+                            <div class="gallery-item">
+                                <div class="gallery-image">
+                                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" alt="Vehicle cards">
+                                </div>
+                                <p class="gallery-caption">{placeholder: Unified car card component design}</p>
+                            </div>
+                            <div class="gallery-item">
+                                <div class="gallery-image">
+                                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop" alt="Budget filtering">
+                                </div>
+                                <p class="gallery-caption">{placeholder: Budget-aware filtering options}</p>
+                            </div>
+                        </div>
+                    </div>
                 </section>
 
                 <section class="content-section" id="results">
                     <h2>Results</h2>
-                    <p>The redesigned experience delivered meaningful improvements:</p>
+                    <p>The finance-based shopping redesign delivered meaningful business and customer impact:</p>
                     <ul>
                         <li><strong>Improved app-to-sales conversion</strong> for customers with approved financing</li>
-                        <li><strong>Better customer understanding</strong> of how financing connects to vehicle selection</li>
-                        <li><strong>Reduced friction</strong> in post-approval shopping experience</li>
-                        <li><strong>Successfully shipped production test</strong> in controlled environment to validate design improvements</li>
-                        <li><strong>Established reusable design patterns</strong> (car card component) for use across multiple platforms and touchpoints</li>
+                        <li><strong>Increased customer confidence</strong> in finding vehicles within their budget range</li>
+                        <li><strong>Reduced post-approval drop-off</strong> by connecting financing directly to vehicle selection</li>
+                        <li><strong>Reusable design system</strong> — Car card component adopted across multiple platforms and touchpoints</li>
                     </ul>
                 </section>
 
@@ -153,14 +197,13 @@
                     <h2>Learnings</h2>
                     <p>Key takeaways from this project:</p>
                     <ul>
-                        <li><b>Discovery is essential</b> — Understanding the root problem through research prevented solving the wrong problem and ensured solutions addressed real customer pain points</li>
-                        <li><b>Cross-functional collaboration drives success</b> — Working closely with sales, operations, and engineering teams ensured designs were feasible and addressed business needs</li>
-                        <li><b>Iterate based on real feedback</b> — In-store visits and testing with actual customers revealed insights that desk research couldn't uncover</li>
-                        <li><b>Design systems accelerate delivery</b> — Creating reusable components (like the car card) enabled consistent experiences across platforms and faster future development</li>
-                        <li><b>Test in production when possible</b> — Real-world testing in controlled environments provides the most accurate validation of design decisions</li>
+                        <li><b>Payment-first mindset aligns with customer behavior</b> — Most customers think in monthly payments, not total price</li>
+                        <li><b>Cross-platform consistency drives trust</b> — Unified car card component created seamless experience across web, mobile, and in-store</li>
+                        <li><b>Testing with real customers reveals edge cases</b> — In-store observation uncovered financing scenarios not captured in data</li>
+                        <li><b>Design systems accelerate future work</b> — Reusable components enabled faster iteration and consistent experiences</li>
                     </ul>
                 </section>
-            
+
                 <div class="cta-section">
                     <p class="cta-text">Interested in discussing more?</p>
                     <button class="cta-button" onclick="openContactModal()">Let's connect!</button>

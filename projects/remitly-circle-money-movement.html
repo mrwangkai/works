@@ -109,7 +109,6 @@
                         <li><a href="#solution" class="toc-link">The Solution</a></li>
                         <li><a href="#results" class="toc-link">Results</a></li>
                         <li><a href="#learnings" class="toc-link">Learnings</a></li>
-                        <li><a href="#explorations" class="toc-link">Explorations</a></li>
                     </ul>
                 </nav>
             </aside>
@@ -154,30 +153,12 @@
 
                 <section class="content-section" id="solution">
                     <h2>The Solution</h2>
-                    <p>I designed the Money Experience America (MXA) flow – the core money movement experience for US customers. The design focused on:</p>
-
-                    <h3>Money In Flow</h3>
+                    <p>I designed the end-to-end money movement experience that enables customers to add and withdraw funds with zero friction:</p>
                     <ul>
-                        <li><b>Frictionless card linking:</b> Debit card input via PAX/MoMo integration</li>
-                        <li><b>Smart limits:</b> Proactive warning when approaching daily load limits (e.g., "$100k entry triggers warning, customer adjusts to $1k")</li>
-                        <li><b>Trust evaluation:</b> Background Sift score check through Trust Platform for fraud prevention</li>
-                        <li><b>Instant availability:</b> Funds credited to USD pool account immediately upon approval</li>
-                    </ul>
-
-                    <h3>Money Out Flow</h3>
-                    <ul>
-                        <li><b>Flexible disbursement:</b> Support for bank transfers, digital wallets (GCash, Nequi, etc.), and cash pickup</li>
-                        <li><b>Corridor optimization:</b> Different money-out capabilities by corridor (GDN through Remitly Rail had withdrawal limitations)</li>
-                        <li><b>Zero fees:</b> No withdrawal fees regardless of payout method</li>
-                        <li><b>Real exchange rates:</b> Better rates than main Remitly app, with upfront transparency</li>
-                    </ul>
-
-                    <h3>Design Patterns</h3>
-                    <ul>
-                        <li><b>Stacked modals:</b> Created reusable pattern for limits and permissions UI</li>
-                        <li><b>Loading states:</b> Clear "In progress... reviewing account" screens for trust evaluation</li>
-                        <li><b>Error handling:</b> Graceful handling when transactions blocked due to low Sift scores</li>
-                        <li><b>Sequence diagrams:</b> Full user flow documentation linked in Jira for engineering alignment</li>
+                        <li><b>Instant deposits:</b> Frictionless debit card linking with smart limits that warn before hitting thresholds, preventing blocked transactions</li>
+                        <li><b>Invisible security:</b> Background fraud prevention through Sift scoring without adding customer friction</li>
+                        <li><b>Flexible withdrawals:</b> Support for bank transfers, digital wallets, and cash pickup across 170+ countries with zero fees</li>
+                        <li><b>Clear communication:</b> Transparent loading states and error handling guide customers through trust evaluation without confusion</li>
                     </ul>
 
                     <div class="design-gallery">
@@ -264,46 +245,6 @@
                     </ul>
                 </section>
 
-                <section class="content-section" id="explorations">
-                    <h2>Explorations</h2>
-                    <p>We explored various approaches to the money movement experience, focusing on how to present limits, handle trust evaluation, and structure the withdrawal flow.</p>
-
-                    <div class="design-gallery">
-                        <div class="gallery-scroll">
-                            <div class="gallery-item">
-                                <div class="gallery-image">
-                                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop" alt="Limits presentation">
-                                </div>
-                                <p class="gallery-caption">Limits presentation options - stacked modal vs. inline</p>
-                            </div>
-                            <div class="gallery-item">
-                                <div class="gallery-image">
-                                    <img src="https://images.unsplash.com/photo-1556740758-90de374c12ad?w=600&h=400&fit=crop" alt="Card input variations">
-                                </div>
-                                <p class="gallery-caption">Card input variations - single screen vs. multi-step</p>
-                            </div>
-                            <div class="gallery-item">
-                                <div class="gallery-image">
-                                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" alt="Withdrawal layouts">
-                                </div>
-                                <p class="gallery-caption">Withdrawal method layouts - grid vs. list</p>
-                            </div>
-                            <div class="gallery-item">
-                                <div class="gallery-image">
-                                    <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=600&h=400&fit=crop" alt="Loading states">
-                                </div>
-                                <p class="gallery-caption">Loading state variations - progress bars vs. static messages</p>
-                            </div>
-                            <div class="gallery-item">
-                                <div class="gallery-image">
-                                    <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=600&h=400&fit=crop" alt="Error states">
-                                </div>
-                                <p class="gallery-caption">Error state explorations - retry flows and messaging</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            
                 <div class="cta-section">
                     <p class="cta-text">Interested in discussing more?</p>
                     <button class="cta-button" onclick="openContactModal()">Let's connect!</button>
