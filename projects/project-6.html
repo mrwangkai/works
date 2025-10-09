@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <title>Project Title 6 - Product Design Portfolio</title>
+    <title>Passbook - Product Design Portfolio</title>
     <link rel="icon" type="image/png" href="../images/favicon.png">
     <link rel="stylesheet" href="../styles.css">
 </head>
@@ -38,6 +38,10 @@
     <div class="mobile-progress-bar">
         <div class="progress-line"></div>
         <div class="progress-markers">
+            <div class="progress-marker" data-section="shipped">
+                <div class="marker-dot"></div>
+                <span class="marker-label">Shipped</span>
+            </div>
             <div class="progress-marker" data-section="overview">
                 <div class="marker-dot"></div>
                 <span class="marker-label">Challenge</span>
@@ -62,34 +66,34 @@
 
         <header class="project-header">
             <div class="project-tags">
-                <span class="tag">User Testing</span>
-                <span class="tag">Analytics</span>
+                <span class="tag">Remitly</span>
+                <span class="tag">Mobile</span>
             </div>
-            <h1>Project Title 6</h1>
-            <p class="project-subtitle">Brief description of the product design project and key outcomes</p>
+            <h1>Passbook: Cash Deposit</h1>
+            <p class="project-subtitle">Enabling customers to deposit cash at retail locations to fund their Remitly digital wallet, expanding financial access for unbanked and underbanked users</p>
         </header>
 
         <div class="project-hero-image">
-            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=600&fit=crop" alt="Project 6">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=600&fit=crop" alt="Passbook Cash Deposit">
         </div>
 
         <section class="impact-metrics-section minimal" id="impactMetrics">
             <div class="impact-metrics-container">
                 <div class="impact-metric">
                     <h3>{metric}</h3>
-                    <p>{description}</p>
+                    <p>Cash deposits processed</p>
                 </div>
                 <div class="impact-metric">
                     <h3>{metric}</h3>
-                    <p>{description}</p>
+                    <p>Retail partner locations</p>
                 </div>
                 <div class="impact-metric">
                     <h3>{metric}</h3>
-                    <p>{description}</p>
+                    <p>Unbanked users served</p>
                 </div>
                 <div class="impact-metric">
-                    <h3>{metric}</h3>
-                    <p>{description}</p>
+                    <h3>Live</h3>
+                    <p>Shipped on iOS & Android</p>
                 </div>
             </div>
         </section>
@@ -99,7 +103,9 @@
                 <nav class="table-of-contents">
                     <h3>Contents</h3>
                     <ul>
-                        <li><a href="#overview" class="toc-link active">The Challenge</a></li>
+                        <li><a href="#shipped" class="toc-link active">Shipped Experience</a></li>
+                        <li><a href="#overview" class="toc-link">The Challenge</a></li>
+                        <li><a href="#goals" class="toc-link">Goals</a></li>
                         <li><a href="#solution" class="toc-link">The Solution</a></li>
                         <li><a href="#results" class="toc-link">Results</a></li>
                         <li><a href="#learnings" class="toc-link">Learnings</a></li>
@@ -108,40 +114,83 @@
             </aside>
 
             <article class="project-main-content">
-                <div class="project-meta-header">
+                <!-- <div class="project-meta-header">
                     <div class="meta-item">
                         <span class="meta-label">Role:</span>
-                        <span class="meta-value">Product Designer</span>
+                        <span class="meta-value">Senior Product Designer</span>
                     </div>
                     <div class="meta-item">
                         <span class="meta-label">Team:</span>
-                        <span class="meta-value">2 Designers, 4 Engineers, 1 PM</span>
+                        <span class="meta-value">2 PMs, Tech Lead, Engineers</span>
                     </div>
-                </div>
+                </div> -->
+
+                <section class="content-section" id="shipped">
+                    <h2>Shipped Experience</h2>
+                    <p>The Passbook cash deposit experience is currently live on Remitly's mobile app, enabling customers to add funds to their digital wallet at thousands of retail locations.</p>
+                </section>
 
                 <section class="content-section" id="overview">
                     <h2>The Challenge</h2>
-                    <p>This is a placeholder project. Replace this content with your actual project details, including the problem you solved, your design process, and the outcomes achieved.</p>
-                    <p><strong>Key Finding:</strong> Describe the key insight or problem that needed to be addressed.</p>
+                    <p>Many Remitly customers prefer or need to use cash but lacked a way to add cash to their digital wallet. Traditional banking options were inaccessible for unbanked and underbanked users, creating a barrier to using Remitly's money transfer services.</p>
+                    <p><strong>Key Finding:</strong> {Percentage} of customers had no bank account or preferred cash transactions, but existing funding methods required bank accounts or debit cards.</p>
+                </section>
+
+                <section class="content-section" id="goals">
+                    <h2>Goals</h2>
+                    <p>Design a seamless cash deposit experience that enables unbanked customers to fund their Remitly wallets at retail locations.</p>
+                    <p><strong>Target Impact:</strong> Expand financial access for cash-preferred customers while maintaining security and ease of use.</p>
                 </section>
 
                 <section class="content-section" id="solution">
                     <h2>The Solution</h2>
-                    <p>Explain the solution you designed and the key features or approaches you took:</p>
+                    <p>I designed the end-to-end cash deposit experience integrated with retail partner networks:</p>
                     <ul>
-                        <li><b>Feature 1</b>: Description of the first key feature or approach</li>
-                        <li><b>Feature 2</b>: Description of the second key feature or approach</li>
-                        <li><b>Feature 3</b>: Description of the third key feature or approach</li>
+                        <li><b>Location finder:</b> Map-based interface showing nearby retail partners accepting cash deposits</li>
+                        <li><b>Barcode generation:</b> Dynamic QR codes and barcodes for cashiers to scan at point of sale</li>
+                        <li><b>Real-time confirmation:</b> Instant notification when deposit is processed and funds are available</li>
+                        <li><b>Transaction history:</b> Clear record of all cash deposits with receipt details</li>
+                        <li><b>Multi-language support:</b> Localized experience for diverse customer base</li>
                     </ul>
+
+                    <div class="design-gallery">
+                        <div class="gallery-scroll">
+                            <div class="gallery-item">
+                                <div class="gallery-image">
+                                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop" alt="Location finder">
+                                </div>
+                                <p class="gallery-caption">{placeholder: Location finder showing nearby retail partners}</p>
+                            </div>
+                            <div class="gallery-item">
+                                <div class="gallery-image">
+                                    <img src="https://images.unsplash.com/photo-1556740758-90de374c12ad?w=600&h=400&fit=crop" alt="Barcode screen">
+                                </div>
+                                <p class="gallery-caption">{placeholder: Barcode generation for cashier scanning}</p>
+                            </div>
+                            <div class="gallery-item">
+                                <div class="gallery-image">
+                                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" alt="Confirmation">
+                                </div>
+                                <p class="gallery-caption">{placeholder: Real-time deposit confirmation}</p>
+                            </div>
+                            <div class="gallery-item">
+                                <div class="gallery-image">
+                                    <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=600&h=400&fit=crop" alt="Transaction history">
+                                </div>
+                                <p class="gallery-caption">{placeholder: Transaction history with deposit details}</p>
+                            </div>
+                        </div>
+                    </div>
                 </section>
 
                 <section class="content-section" id="results">
                     <h2>Results</h2>
-                    <p>Share the measurable outcomes and impact of your design work:</p>
+                    <p>The Passbook cash deposit feature delivered significant impact for underserved customers:</p>
                     <ul>
-                        <li><strong>Metric 1</strong>: Description of the first result</li>
-                        <li><strong>Metric 2</strong>: Description of the second result</li>
-                        <li><strong>Metric 3</strong>: Description of the third result</li>
+                        <li><strong>Expanded access</strong> to Remitly services for unbanked and underbanked customers</li>
+                        <li><strong>Increased wallet funding volume</strong> from cash-preferred users</li>
+                        <li><strong>Retail partner network</strong> established across multiple markets</li>
+                        <li><strong>Positive customer feedback</strong> on ease of use and accessibility</li>
                     </ul>
                 </section>
 
@@ -149,12 +198,13 @@
                     <h2>Learnings</h2>
                     <p>Key takeaways from this project:</p>
                     <ul>
-                        <li><b>Learning 1</b> — Description of the first key insight</li>
-                        <li><b>Learning 2</b> — Description of the second key insight</li>
-                        <li><b>Learning 3</b> — Description of the third key insight</li>
+                        <li><b>Design for cash-first users</b> — Interface patterns that work for banked users may not translate to cash-preferred customers who think differently about money movement</li>
+                        <li><b>Physical-digital bridge requires clarity</b> — Clear instructions for retail interactions prevent confusion and failed transactions</li>
+                        <li><b>Localization goes beyond translation</b> — Cultural context shapes how customers understand and trust cash deposit processes</li>
+                        <li><b>Retail partner constraints inform design</b> — POS system limitations and cashier workflows directly impact UX decisions</li>
                     </ul>
                 </section>
-            
+
                 <div class="cta-section">
                     <p class="cta-text">Interested in discussing more?</p>
                     <button class="cta-button" onclick="openContactModal()">Let's connect!</button>
@@ -163,13 +213,9 @@
         </div>
 
         <div class="project-navigation">
-            <a href="project-5.html" class="nav-project">
+            <a href="remitly-circle-money-movement.html" class="nav-project">
                 <span class="nav-label">Previous Project</span>
-                <span class="nav-title">← Project Title 5</span>
-            </a>
-            <a href="project-7.html" class="nav-project">
-                <span class="nav-label">Next Project</span>
-                <span class="nav-title">Project Title 7 →</span>
+                <span class="nav-title">← Remitly Circle: Money Movement</span>
             </a>
         </div>
     </main>

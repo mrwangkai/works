@@ -1,0 +1,709 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>5/2/22 1:1 with Cruz</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(134, 131, 126, 1);
+	fill: rgba(134, 131, 126, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(134, 131, 126, 1);
+	fill: rgba(134, 131, 126, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="278854f2-7d97-40cf-a37a-b4d45a6ac00a" class="page sans"><header><h1 class="page-title">5/2/22 1:1 with Cruz</h1><p class="page-description"></p><table class="properties"><tbody><tr class="property-row property-row-date"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/calendar_gray.svg" style="width:14px;height:14px;display:block"/></span>Date</th><td><time>@05/02/2022 11:30 AM</time></td></tr><tr class="property-row property-row-relation"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/arrow-northeast_gray.svg" style="width:14px;height:14px;display:block"/></span>Attendees</th><td></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/list_gray.svg" style="width:14px;height:14px;display:block"/></span>Topic</th><td></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/list_gray.svg" style="width:14px;height:14px;display:block"/></span>Reaction</th><td></td></tr></tbody></table></header><div class="page-body"><p id="f5a783fb-31a2-4ec7-87ed-b557dc6c327e" class="">Learn more about Cruz + experience at Remitly</p><p id="0de55e60-fdb1-42bf-8a04-83934e3dea8f" class="">
+</p><ul id="cda17ec0-48c1-4ab4-bc69-73046ebd159f" class="bulleted-list"><li style="list-style-type:disc">help those who don’t usually have experience in banking<ul id="9ffcdd10-57ca-4499-b729-5fb638b75200" class="bulleted-list"><li style="list-style-type:circle">mission helps to </li></ul></li></ul><p id="f225d0b9-0ccd-4c9b-99b3-eb929d50cce1" class="">
+</p><ul id="ae8cc3f0-f58f-4146-a354-58d3193d665a" class="bulleted-list"><li style="list-style-type:disc">Based in San Diego (100% remote)<ul id="02d223b1-f512-474a-beea-b753501f7c28" class="bulleted-list"><li style="list-style-type:circle">Goes to Mexico once a week (Tihulan); usually wed/thu</li></ul></li></ul><ul id="3b78fb2f-ba86-4440-b7df-f31eeddc1cf4" class="bulleted-list"><li style="list-style-type:disc">2 kids: 16-yr + 4-yr old<ul id="d48fd608-8cef-48ee-894f-fd1cab9d302d" class="bulleted-list"><li style="list-style-type:circle">“very blessed to have them”</li></ul><p id="46b4064f-a468-4e88-804e-a15ef15f66f4" class="">
+</p></li></ul><ul id="3887ee44-6ce8-45a8-8109-4a150f15f867" class="bulleted-list"><li style="list-style-type:disc">16-years focusing on immigrants <ul id="b825f33c-fbe5-44cf-8d7e-89f06dea5e5f" class="bulleted-list"><li style="list-style-type:circle">international transfers (remittance)<ul id="8b0a7308-4452-4754-960a-243cdedb8d77" class="bulleted-list"><li style="list-style-type:square">used to involve fax (cord phones): mum and pop shop (agent) will call a call center who will fax back and forth</li></ul><ul id="3833e11b-b51b-4a31-947e-3195eca0484c" class="bulleted-list"><li style="list-style-type:square">moved to web-based system on desktop → went online with Xoom (competitor for Remitly)</li></ul><ul id="760054ec-30cb-442c-a4f0-3b8bf8b320cd" class="bulleted-list"><li style="list-style-type:square">joined startup</li></ul><ul id="28b411bb-a224-4a8f-8f2d-883b49e49504" class="bulleted-list"><li style="list-style-type:square">ALWAYS been in the marketing function: HOW TO GET MORE CUSTOMER IN THE DOOR &amp; HOW TO MAKE SURE THEY STAY WITH US?<ul id="021fb3f0-a890-4d5e-bce9-4e9aaa02e8e4" class="bulleted-list"><li style="list-style-type:disc">cost of acquisition is maximized → snowball → hypergrowth</li></ul><ul id="96c5df6b-f9bd-482b-99f7-42859384e489" class="bulleted-list"><li style="list-style-type:disc">Product marketing manager: be that bridge for GTM, and inisghts on what customer are looking for ← we should build feature for + make the product stickier<ul id="50a66268-239b-4fbb-aa68-067df251b863" class="bulleted-list"><li style="list-style-type:circle">run all the marketing channels for Passbook; brining all traffic to our landing pages<ul id="18a4d227-3eb7-46a1-8a81-be052b3d1b9e" class="bulleted-list"><li style="list-style-type:square">Google, Facebook, Tiktok</li></ul></li></ul></li></ul><ul id="9b69e6ae-3fb3-4d69-96e6-b35218be4169" class="bulleted-list"><li style="list-style-type:disc">The role has so much power: to help our target customer who are not that well versed in tech<ul id="0f75adb8-0343-455f-a8e9-939c38c220b7" class="bulleted-list"><li style="list-style-type:circle">e.g. if you imagine someone who don’t have ssn or bank acct because they don’t have the required docs. this is a barrier for technology (chicken/egg).<ul id="fe7a8668-a24d-4a7f-b838-0fa0841d4608" class="bulleted-list"><li style="list-style-type:square">undocumented = less likely to get a smartphone = barrier for technology ← interesting insights<ul id="1dfdafee-e8d2-4dd3-a7ad-c27d85a71b07" class="bulleted-list"><li style="list-style-type:disc">they do still want iphones<ul id="4d81409b-5622-4e3d-8385-d98c01de9489" class="bulleted-list"><li style="list-style-type:circle">looking for a sense that they MADE IT</li></ul></li></ul></li></ul></li></ul><ul id="3a96b822-5ce6-49ed-bffc-e8d35ddd7571" class="bulleted-list"><li style="list-style-type:circle">that’s why Passbook is so exciting → it gets them SOME ACCESS TO THINGS THAT THEY DON’t HAVE ACCESS TO</li></ul><ul id="26c26ea8-2f10-4a34-b36c-c7f8a71d820a" class="bulleted-list"><li style="list-style-type:circle">Financial instrument allow them to do things they can’t do before (e.g. use uber, shop on Amazon)</li></ul></li></ul><ul id="883f98ea-76f6-48b4-a1a2-17d0712700da" class="bulleted-list"><li style="list-style-type:disc">[Question] <ul id="4c2a10d0-8e07-4af7-bccd-5c451104804e" class="bulleted-list"><li style="list-style-type:circle">Cruz’s thought on our retention? <ul id="6b3e5dda-2510-44b4-a38a-64391f4de117" class="bulleted-list"><li style="list-style-type:square">the best way to retain = give them a good experience ← this come in from different touchpoint (e.g. customer support, app)<ul id="b31b2d99-c3cf-4568-ab87-861002a53483" class="bulleted-list"><li style="list-style-type:disc">ease to use</li></ul><ul id="d927de52-9fb0-4b3e-a77d-29dd74902bdb" class="bulleted-list"><li style="list-style-type:disc">discoverability</li></ul><ul id="9d0dc476-bd1f-4688-bd1a-2a89cb70243c" class="bulleted-list"><li style="list-style-type:disc">feature: freeze card</li></ul><ul id="1ce4f398-5a21-46d3-a35b-e214cdc941fd" class="bulleted-list"><li style="list-style-type:disc">transparency/over communication: peace of mind notification for every transaction</li></ul><ul id="58b84182-a488-4a1f-be0e-3f2861023b4d" class="bulleted-list"><li style="list-style-type:disc">can they self-serve for the most part?</li></ul></li></ul><ul id="ca978e2a-847e-4294-ab31-d8c586b182b8" class="bulleted-list"><li style="list-style-type:square">biggest opportunity: are we taking the time to understand the customer? it used to be challenging — a lot of focus here who may not have direct experience with undocumented immigrant experience<ul id="95f4eee4-1965-46f9-9a5a-dc34ef2f2ed2" class="bulleted-list"><li style="list-style-type:disc">which results in assumption on the level of sophistication that may be for us (instinctively wanting to build for us)<ul id="21fc9163-8540-4c9d-a7ea-56af96925658" class="bulleted-list"><li style="list-style-type:circle">? how do we build up this empathy?<ul id="bce3159f-8569-49d9-9768-119b50d35c0f" class="bulleted-list"><li style="list-style-type:square">Talk to Leah</li></ul><ul id="c34ce61f-16ae-48de-a51c-003bedafc557" class="bulleted-list"><li style="list-style-type:square">Both Diego and Cruz are Mexicans → how to get more Mexicans to use our product</li></ul><ul id="5e38d875-31b8-4618-abb1-e808975f3d3b" class="bulleted-list"><li style="list-style-type:square">📚 a book — <a href="http://www.portfoliosofthepoor.com/">portfolio of the poor</a></li></ul></li></ul></li></ul></li></ul></li></ul><ul id="d1e24770-3a94-4d09-9ee8-ce5fdd66f991" class="bulleted-list"><li style="list-style-type:circle">Competitor who share similar feature/mission?<ul id="ef24ce62-d7d2-4eaa-8559-d1d823239edc" class="bulleted-list"><li style="list-style-type:square"><a href="https://docs.google.com/document/d/1PdrRmCmaUkR9HXF-Zc6JNVaBPlLbKspRH9ZcMIA7MlI/edit#heading=h.xhdhm484ubnw">position strategy</a></li></ul><ul id="532dc0e5-c874-4464-aff7-ef76795e659a" class="bulleted-list"><li style="list-style-type:square">two types of competitor<ul id="908e8b6b-cfe3-412b-ac9c-0bef35bf1890" class="bulleted-list"><li style="list-style-type:disc">neobank (e.g. chime) who have signfiicant better banking product ← what they don’t have (in the short term) the same area of focus for persona</li></ul><ul id="3c49fc2b-69fd-49ec-9c55-0a2f795138c2" class="bulleted-list"><li style="list-style-type:disc">same target in mind (e.g. bamboo <a href="https://www.majority.com/en/">Majority</a>) — they don’t have the deep pockets of remitly or product building capability; harder for them to compete</li></ul></li></ul></li></ul><ul id="9b0ba3e4-cae8-4312-9c46-cda6cb0634b9" class="bulleted-list"><li style="list-style-type:circle">Shopping on Amazon most common activity? what are the other activities?<ul id="124dc38f-20c9-4c47-9010-958730f77e1f" class="bulleted-list"><li style="list-style-type:square">we have a list of most common uses ← e.g. folks who buy at amazon, who buy at walmart</li></ul><ul id="cf7f1917-dbfe-49e6-b0ad-26972c874b08" class="bulleted-list"><li style="list-style-type:square">“if you have this card, what would you do with it?”<ul id="3721b6a2-902a-4d2a-b319-38592b84cf87" class="bulleted-list"><li style="list-style-type:disc">*** it will give them some work mobility because they will be able to move from earning cash + earning through deposit ← being able to move to jobs that require payroll vs. informal jobs that pay in cash<ul id="66de37bc-0a77-40ce-86e5-93d1a430d09d" class="bulleted-list"><li style="list-style-type:circle">direct deposit = you have more ways to use the funds</li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

@@ -1,0 +1,708 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>5/27/22 cp &lt;&gt; pb lead</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(134, 131, 126, 1);
+	fill: rgba(134, 131, 126, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(134, 131, 126, 1);
+	fill: rgba(134, 131, 126, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="311568b3-6e94-46be-bc1d-cb30d78b1e3d" class="page sans"><header><h1 class="page-title">5/27/22 cp &lt;&gt; pb lead</h1><p class="page-description"></p><table class="properties"><tbody><tr class="property-row property-row-date"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/calendar_gray.svg" style="width:14px;height:14px;display:block"/></span>Date</th><td><time>@05/27/2022 11:30 AM</time></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/list_gray.svg" style="width:14px;height:14px;display:block"/></span>Topic</th><td></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/list_gray.svg" style="width:14px;height:14px;display:block"/></span>Reaction</th><td></td></tr></tbody></table></header><div class="page-body"><p id="839ec2e3-abf4-44ab-8931-140ae590a2dd" class="">rounds</p><ul id="74b7bd89-25da-4ac3-a835-9046a91905d0" class="bulleted-list"><li style="list-style-type:disc">pranovaa: velocity?</li></ul><ul id="a53af90c-f6cb-4508-b759-66a782d663ae" class="bulleted-list"><li style="list-style-type:disc">kris: di is stretched thin</li></ul><ul id="da1f00f1-af33-4238-a191-143db8684206" class="bulleted-list"><li style="list-style-type:disc">khushali: management changes? di is moving off of acquisition; there will be a backfill for di (in acquisition)<ul id="af83ce5a-2c5f-4188-981e-9221ed0bc35f" class="bulleted-list"><li style="list-style-type:circle">we just done with planning; strategy changing should be minimal</li></ul></li></ul><ul id="9a9c6dcf-029c-4db1-bafc-4a5bc3bfccbd" class="bulleted-list"><li style="list-style-type:disc">zade<ul id="3bd32084-b9df-4536-8086-d545b17af86f" class="bulleted-list"><li style="list-style-type:circle">positive: looking forward to working with the cp team</li></ul><ul id="f91d35b0-0246-49fd-ad3c-ab6ac8e29930" class="bulleted-list"><li style="list-style-type:circle">looking forward/concern: how we can balance foundation/velocity</li></ul></li></ul><ul id="981891b3-50f2-4637-8c9b-13cf9b8708cb" class="bulleted-list"><li style="list-style-type:disc">sara<ul id="b876809f-b1c2-4d03-ab56-414143e5e171" class="bulleted-list"><li style="list-style-type:circle">looking forward to working with di</li></ul><ul id="d7f8295b-5bb9-44d1-b076-75a81e603b9e" class="bulleted-list"><li style="list-style-type:circle">concern: <ul id="7c96a1a6-4a7a-4059-a774-09c945e2b649" class="bulleted-list"><li style="list-style-type:square">will the 6-month planning be impacted</li></ul><ul id="f1a1a214-cd1d-4d83-b44e-0bc30dde8292" class="bulleted-list"><li style="list-style-type:square">di will be managing 9~10 eng</li></ul><ul id="3093bdb6-9069-4021-baba-4f0550f2f3ee" class="bulleted-list"><li style="list-style-type:square">cp is a very broad range of things — will that be changing?</li></ul><ul id="70856682-7b0b-4049-86bb-40418bc041dd" class="bulleted-list"><li style="list-style-type:square">how’s the new pm joining will change the org/cp?</li></ul></li></ul></li></ul><ul id="9edbc821-ba2c-4fea-b3aa-662e975361f5" class="bulleted-list"><li style="list-style-type:disc">eli:<ul id="54794a53-df90-40cc-8fa3-baae84a3522d" class="bulleted-list"><li style="list-style-type:circle">we have a lot of attrition — root cause?</li></ul><ul id="55a4c4cf-5bd0-424e-8aca-2bf184fb4d8d" class="bulleted-list"><li style="list-style-type:circle">what is passbook focusing on; churn comes with change</li></ul></li></ul><ul id="6d0de790-6f29-4ca6-bdee-955f30da07b0" class="bulleted-list"><li style="list-style-type:disc">di:<ul id="db15083d-2d43-4df7-bd2b-35e5ba734e71" class="bulleted-list"><li style="list-style-type:circle">hear two things: passbook future? implication on structure<ul id="865caa60-4061-480b-a77d-650ecf372d30" class="bulleted-list"><li style="list-style-type:square">overall optimistic</li></ul></li></ul><ul id="545290d2-a07d-46e3-b977-0d9c46159aaf" class="bulleted-list"><li style="list-style-type:circle">clarity on strategy to leverage</li></ul></li></ul><ul id="2684cd5d-fd54-4b17-9ba5-57b0f0f5db7f" class="bulleted-list"><li style="list-style-type:disc">Christian<ul id="205ac93c-3aff-48a1-972b-253a254c9d56" class="bulleted-list"><li style="list-style-type:circle">velocity: forming will take hit on partnership, process<ul id="33d87946-9d20-4bae-ba05-ca9ed105c202" class="bulleted-list"><li style="list-style-type:square">relationships take time</li></ul></li></ul><ul id="36338cd4-4e47-483f-ac07-680fc36d4dcc" class="bulleted-list"><li style="list-style-type:circle">how will CP evolve with new PM?<ul id="cbfebea2-e485-4f94-82d3-176352a05fd5" class="bulleted-list"><li style="list-style-type:square">money movement/money out<ul id="125d01a1-d43e-481c-8399-8cb02ca82c74" class="bulleted-list"><li style="list-style-type:disc">money out doesn’t have a lot going on</li></ul></li></ul></li></ul><ul id="e44d36e4-ed00-4103-94ff-eef4723ea1fc" class="bulleted-list"><li style="list-style-type:circle">“there will be people who will say ‘this is not for me’.”</li></ul></li></ul><ul id="5ea57fb8-b292-4e08-bbe1-207b683db2dc" class="bulleted-list"><li style="list-style-type:disc">Puneet<ul id="2f75830f-f50f-4646-9044-d7a9d9d1a572" class="bulleted-list"><li style="list-style-type:circle">attrition: expected<ul id="4405dc1d-a11b-4d55-a077-ec8e1e67d104" class="bulleted-list"><li style="list-style-type:square">things can feel like they are related</li></ul><ul id="d97ffd9b-d4b3-4c71-b271-ac760c160cd6" class="bulleted-list"><li style="list-style-type:square">good for individual, for company, for the outgoing company<ul id="f4493982-8f12-4d23-8d85-44419f8ec04f" class="bulleted-list"><li style="list-style-type:disc">org goal x personal ambition not in same direction</li></ul></li></ul><ul id="a10d6995-3578-4fe9-99a1-b1b68942e9d5" class="bulleted-list"><li style="list-style-type:square">there has been intentionality to build up</li></ul></li></ul><ul id="facde5c4-576c-4268-83e5-59cb39db4586" class="bulleted-list"><li style="list-style-type:circle">all that you are doing will have continuity in the new strategy</li></ul><ul id="97d89c41-662b-4b30-b4d0-c92177083d29" class="bulleted-list"><li style="list-style-type:circle">are we building with scale in mind<ul id="11bb9873-c863-4b83-899c-46fb119505c0" class="bulleted-list"><li style="list-style-type:square">building for remitly-specific? passbook-specific?</li></ul><ul id="8fb6a296-e7df-4087-a799-bc2dfcbf034c" class="bulleted-list"><li style="list-style-type:square">think remitly 2.0 — beyond the current scope</li></ul></li></ul><ul id="ba424155-6aa5-4cc9-a5cd-37b7052261fa" class="bulleted-list"><li style="list-style-type:circle">new thinking<ul id="014f20ed-6bc3-44b9-8cdd-7d738d3006fb" class="bulleted-list"><li style="list-style-type:square">how to onboarding for a multi-product world</li></ul></li></ul></li></ul><ul id="0f1cba57-6d7b-4e37-ae49-bc0085299106" class="bulleted-list"><li style="list-style-type:disc">Eli<ul id="b29bafd9-9f87-4737-bda1-6268fb31dbc9" class="bulleted-list"><li style="list-style-type:circle">what do we need to be aware of before we commit and build?<ul id="73ab84ad-d21a-4de2-a30f-d40be32f46a4" class="bulleted-list"><li style="list-style-type:square">so we are building towards that goal</li></ul></li></ul><ul id="62082b07-5832-46c8-a6d3-a16e0192fc3a" class="bulleted-list"><li style="list-style-type:circle">Puneet: single → multi-product transition took time (3~4 years)<ul id="984edd5f-6ac4-4e1a-9757-255a94c9aed4" class="bulleted-list"><li style="list-style-type:square">Stripe: they were optimizing for velocity to market to ship product<ul id="38b112d3-8387-4fff-b6f5-ac2c70e703f1" class="bulleted-list"><li style="list-style-type:disc">the individual products were well-built</li></ul></li></ul><ul id="16788ad4-d110-4501-898a-42cd2cc0d5e0" class="bulleted-list"><li style="list-style-type:square">for us<ul id="1f2756e6-b519-4c66-a8eb-cf9982b11520" class="bulleted-list"><li style="list-style-type:disc">user data model; passbook; lending; remittance has one</li></ul></li></ul><ul id="91e98313-d7f6-4e4a-8f7d-505154d5970b" class="bulleted-list"><li style="list-style-type:square">judgment based on new information<ul id="189a4357-24fa-483a-9d94-a26c3e7b1c2c" class="bulleted-list"><li style="list-style-type:disc">we are not going to switch to new common profile in 6-month</li></ul></li></ul><ul id="526b2188-a26e-45b5-9518-d26f6d55f2d0" class="bulleted-list"><li style="list-style-type:square">what is changing is the direction; we are explicitly NOT doing that<ul id="05185bdd-9de2-46c4-9102-4ffba7cf3b1f" class="bulleted-list"><li style="list-style-type:disc">e.g. intentional interaction with the core team</li></ul></li></ul></li></ul></li></ul><ul id="b09ee940-4006-4204-9d04-acfc1b8f5b4e" class="bulleted-list"><li style="list-style-type:disc">Puneet<ul id="2c4d199a-376b-418e-aa08-3cdc4655f13f" class="bulleted-list"><li style="list-style-type:circle">how do we think about integrated experience<ul id="ddc8e6fc-8ffa-49e3-a741-de5feba9ee2e" class="bulleted-list"><li style="list-style-type:square"></li></ul></li></ul><ul id="d4eba316-2bec-4437-a842-a2e050d218d6" class="bulleted-list"><li style="list-style-type:circle">tech debt is contextual; where do we need to build new tech</li></ul></li></ul><p id="f81b086f-0aec-4150-98f0-a5fe62111152" class="">
+</p><p id="83998a08-e2c3-4263-a812-af92614f84fe" class="">kai:</p><ul id="22656032-d234-4c1e-8b46-91cf7ec0801a" class="bulleted-list"><li style="list-style-type:disc">top concern or hope with change?<ul id="a55cb64e-de95-48fb-ad4c-4dfea6d60760" class="bulleted-list"><li style="list-style-type:circle">Di was one of the meet and greet; enjoy our conversations so far, excited to be partnering closer together</li></ul><ul id="4b247279-a5c3-4a6d-96c3-8f0c28d5cfcf" class="bulleted-list"><li style="list-style-type:circle">initial reaction is restlessness which the point of incoming/outgoing<ul id="96ae513e-b2d1-424e-8a24-d82685b1586a" class="bulleted-list"><li style="list-style-type:square">really helpful perspective about outgoing and incoming</li></ul><ul id="1cbd2336-7f45-4ef8-a6b1-d2449155d01e" class="bulleted-list"><li style="list-style-type:square">how do we get hit momentum </li></ul></li></ul><ul id="4c087628-8fdb-47c5-8f8b-addc2aab9c54" class="bulleted-list"><li style="list-style-type:circle">+1 understanding of overarching goal/approach/direction — if that changes, which it sounds like its not</li></ul></li></ul><p id="b70f8fc2-528a-45b4-87d3-580525fb9247" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

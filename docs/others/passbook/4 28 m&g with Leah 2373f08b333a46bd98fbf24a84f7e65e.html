@@ -1,0 +1,708 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>4/28 m&amp;g with Leah</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(134, 131, 126, 1);
+	fill: rgba(134, 131, 126, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(134, 131, 126, 1);
+	fill: rgba(134, 131, 126, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="2373f08b-333a-46bd-98fb-f24a84f7e65e" class="page sans"><header><h1 class="page-title">4/28 m&amp;g with Leah</h1><p class="page-description"></p><table class="properties"><tbody><tr class="property-row property-row-date"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/calendar_gray.svg" style="width:14px;height:14px;display:block"/></span>Date</th><td><time>@04/28/2022 2:30 PM</time></td></tr><tr class="property-row property-row-relation"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/arrow-northeast_gray.svg" style="width:14px;height:14px;display:block"/></span>Attendees</th><td></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/list_gray.svg" style="width:14px;height:14px;display:block"/></span>Topic</th><td></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/list_gray.svg" style="width:14px;height:14px;display:block"/></span>Reaction</th><td></td></tr></tbody></table></header><div class="page-body"><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="836e1c9c-dfc3-4502-aa0b-4408fec71af3"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">interesting conversation around the opportunity; and what background! also interesting to see some pulling into her objectives (e.g. involving research early for generative vs. evaluative). The “soap box” opportunity to surface p2p funding is an interesting solution that solves for ____ problem/opportunity.</div></figure><ul id="a65622e5-83f5-426a-a590-8bfab942ed7d" class="bulleted-list"><li style="list-style-type:disc">intro<ul id="1fa2d6d1-65dc-4727-ac25-2f41d5bb4456" class="bulleted-list"><li style="list-style-type:circle">adira — 14 month old<ul id="adb03601-548f-44ce-9721-54bcdd675879" class="bulleted-list"><li style="list-style-type:square">nanny share</li></ul></li></ul><ul id="5766dbfc-6cc9-4b84-b257-150fd4b1dc7c" class="bulleted-list"><li style="list-style-type:circle">at remitly for 2.5 years<ul id="e8da1e8d-c05e-42ac-869b-6ba63375105c" class="bulleted-list"><li style="list-style-type:square">started on consumer insights</li></ul><ul id="24b072c9-78fd-44bb-9963-6b21f740638a" class="bulleted-list"><li style="list-style-type:square">social scientist (anthropologist)<ul id="a3d2e4ba-49d4-4afc-838e-68a5f6795411" class="bulleted-list"><li style="list-style-type:disc">previous work: applied public health: food security </li></ul><ul id="e4d15e43-c008-4dc0-928a-3c4d5081d19f" class="bulleted-list"><li style="list-style-type:disc">didn’t know much about finance, but was excited about the macro level issue (household finance)<ul id="82dba8b2-664c-4225-9a1b-13d2da1e75db" class="bulleted-list"><li style="list-style-type:circle">family that she worked with at Peru<ul id="e6f1b730-3a17-4de6-8500-730ea89e22e2" class="bulleted-list"><li style="list-style-type:square">these families had remittance from families in US</li></ul></li></ul><ul id="366835c5-bd28-4658-85b8-77412f29a8a3" class="bulleted-list"><li style="list-style-type:circle">have been thinking about finance in the international context</li></ul></li></ul></li></ul><ul id="701b0e70-5f56-4a06-9591-2f086c2d021a" class="bulleted-list"><li style="list-style-type:square">moved working with passbook <ul id="15bfe5b9-105c-4176-ab14-715924bb3a88" class="bulleted-list"><li style="list-style-type:disc">daniel escher + leah to <strong>understand the segments</strong></li></ul><ul id="550e5fb2-7af4-4236-abf0-12cda43134ad" class="bulleted-list"><li style="list-style-type:disc">localization is going to be super important ← something they were advocacating for<ul id="b8f78b38-53e5-4e29-abdd-15e702680c00" class="bulleted-list"><li style="list-style-type:circle">we weren’t able to market in spanish until we have we have spanish app</li></ul><ul id="bc598dcd-4ce2-4585-b1b7-f7c978b746ed" class="bulleted-list"><li style="list-style-type:circle">given us a good signal for product market fit</li></ul></li></ul></li></ul><ul id="030372bb-3293-48e7-b836-a2fdd1ef1326" class="bulleted-list"><li style="list-style-type:square">most successful partnership in remittance space<ul id="1f103380-8ac1-40bc-915d-b7dded0e27aa" class="bulleted-list"><li style="list-style-type:disc">close collaboration with PM and designer </li></ul><ul id="9df42eea-4fe2-4459-b688-2bc2cb12246c" class="bulleted-list"><li style="list-style-type:disc">“i’m looking for in roads with the insights that we have surfaced”<ul id="8cc3459a-e461-4cca-9894-c71361a9fa11" class="bulleted-list"><li style="list-style-type:circle">prioritized </li></ul></li></ul><ul id="1415276a-2ad8-4fcd-8a9d-a166f2ae20bb" class="bulleted-list"><li style="list-style-type:disc">where does product-market fit?<ul id="f6adc5da-3d60-432b-a537-0298323872f8" class="bulleted-list"><li style="list-style-type:circle">are we concerned about shared wallet;</li></ul><ul id="0332391d-7259-40c8-82fb-bf6c44c2ef02" class="bulleted-list"><li style="list-style-type:circle">people that we bring the most valuable<ul id="bda4fe11-c731-4748-a3a2-967a498531f5" class="bulleted-list"><li style="list-style-type:square">stability seeker = un/under-bank<ul id="e1811104-df28-4b87-bda6-faede03f0f1c" class="bulleted-list"><li style="list-style-type:disc">fund acct through mobile check or cash deposit</li></ul><ul id="b4b4117a-fa77-4b20-a09f-3ed92c9e8de5" class="bulleted-list"><li style="list-style-type:disc">might have wells fargo acct through someone before but doesn’t have an acct </li></ul><ul id="5a615e76-206d-4410-8708-27b2e3218e2f" class="bulleted-list"><li style="list-style-type:disc">un-bank % shrink</li></ul><ul id="3ff24a65-2c70-43eb-9e7c-2bb2e8b950c5" class="bulleted-list"><li style="list-style-type:disc">GROW WITH THEM</li></ul><ul id="2f3afe23-c29c-4b14-a52f-a2bfc089cacf" class="bulleted-list"><li style="list-style-type:disc">use case: wants to shop from Amazon &amp; needs a debit card</li></ul></li></ul><ul id="31c4b125-94c5-4377-b81c-d53f5cef94d8" class="bulleted-list"><li style="list-style-type:square">struggle as a research with the nuance / target<ul id="a22ffe22-bc13-4f44-ab78-385c5ab0deeb" class="bulleted-list"><li style="list-style-type:disc">glean insights frmo the un-bank edge; knowing that our growth is through these</li></ul><ul id="9f2c2d57-d289-460b-b937-f35d461c90c0" class="bulleted-list"><li style="list-style-type:disc">not satisfied with speed/tech<ul id="d16a8c07-d6aa-449a-a1fb-015ec0830b08" class="bulleted-list"><li style="list-style-type:circle">e.g. not every single bank are not available in spanish</li></ul></li></ul><ul id="b4881b2c-8d7a-4ad1-aab9-c9e16eff6bae" class="bulleted-list"><li style="list-style-type:disc">keeping up with what’s on designer/pm’s head ← <strong>not evaluative; but generative</strong><ul id="d28d1418-1753-4cdf-8fc4-91302d1ca524" class="bulleted-list"><li style="list-style-type:circle">be a leading function vs. responding to a specific feature</li></ul><ul id="0048c8e9-9c62-4069-9c25-ef440f055ddf" class="bulleted-list"><li style="list-style-type:circle">this is something we know how people think about security; this is what they feel; what does this look like in design</li></ul><ul id="05949b9f-599b-4a1f-b02f-1391cdfcb8b7" class="bulleted-list"><li style="list-style-type:circle">e.g. with project looking glass: understanding what’s <ul id="35a53336-1430-4830-82bf-c7e8280343c1" class="bulleted-list"><li style="list-style-type:square">constraints that aren’t constraints</li></ul><ul id="6c04c315-8ed4-43c6-8f6b-4d68683e08c9" class="bulleted-list"><li style="list-style-type:square">michael is great at asking these questions</li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul><ul id="498dcce5-6526-4983-9c4c-5a128eb002a0" class="bulleted-list"><li style="list-style-type:square">&lt;3 money manager PM</li></ul><p id="c66e4936-9a39-45b2-aefc-49ba33d9b4c6" class="">
+</p></li></ul></li></ul><ul id="4044c3ee-fa7c-44d0-b0ce-6b40730f9eb7" class="bulleted-list"><li style="list-style-type:disc">“Soap box”<ul id="49918b18-7d0e-4e16-8ae5-26e0f8602bd3" class="bulleted-list"><li style="list-style-type:circle">we know that a lot of people first funding with external p2p (cashapp, venmo); even if someone who is on the unbank end, its the fastest way to fund their acct<ul id="6c0187c6-bb74-4b7b-86b6-7796ec33b9f3" class="bulleted-list"><li style="list-style-type:square">its hard to figure out how to do it in our app</li></ul><ul id="6d10e864-5a7c-4e8a-b030-a2292c2a5e70" class="bulleted-list"><li style="list-style-type:square">there should be a place FUND via P2P (now you have to setup as a transfer as bank via Plaid ← which is not as discoverable)<ul id="9a8804a7-5238-4f0a-861b-00b594aaec97" class="bulleted-list"><li style="list-style-type:disc">Cashapp is easier to do; digital debit card</li></ul><ul id="8310609d-6d2a-46e4-95ee-6f1a9ee635af" class="bulleted-list"><li style="list-style-type:disc">our kb is not easy to understand</li></ul></li></ul><ul id="c5b17151-5ff7-489a-a486-179f574cb057" class="bulleted-list"><li style="list-style-type:square">its not being prioritzed ← people are already doing that on their own already</li></ul><ul id="836879b5-3d4b-4aa0-a287-7ca417947e30" class="bulleted-list"><li style="list-style-type:square">we presented some data from 2019 on P2P that has a lower usage (BUT ITS before COVID)</li></ul><ul id="4e1d7210-bdfa-451b-95af-f43d7a68921d" class="bulleted-list"><li style="list-style-type:square">P2P is a good way for people to ... fund/activate?</li></ul><ul id="ec514686-a2f3-4f7f-864d-9606ea2dc0b5" class="bulleted-list"><li style="list-style-type:square">IF GOAL IS SPEED TO ACTIVATION (DDA)</li></ul></li></ul><p id="acb00b16-3e61-4525-88ee-2f7e55f58128" class="">
+</p></li></ul><ul id="acc4caa5-e3f2-4baa-9d9d-463b5c6bd549" class="bulleted-list"><li style="list-style-type:disc">recruitment loop<ul id="513e9055-ffd5-46df-aa62-60f3924bdfdd" class="bulleted-list"><li style="list-style-type:circle">4-6 questions on the culture value guide</li></ul><ul id="c5cde8b6-03eb-4e8c-88ae-e8eee20d1b00" class="bulleted-list"><li style="list-style-type:circle">take notes</li></ul><ul id="9211c23e-5aac-4e08-b8c9-e0943157afbe" class="bulleted-list"><li style="list-style-type:circle">I have a few soap boxes</li></ul></li></ul></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

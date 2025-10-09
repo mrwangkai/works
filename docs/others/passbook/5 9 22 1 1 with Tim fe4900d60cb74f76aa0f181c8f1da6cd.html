@@ -1,0 +1,711 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>5/9/22 1:1 with Tim</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(134, 131, 126, 1);
+	fill: rgba(134, 131, 126, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(134, 131, 126, 1);
+	fill: rgba(134, 131, 126, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="fe4900d6-0cb7-4f76-aa0f-181c8f1da6cd" class="page sans"><header><h1 class="page-title">5/9/22 1:1 with Tim</h1><p class="page-description"></p><table class="properties"><tbody><tr class="property-row property-row-date"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/calendar_gray.svg" style="width:14px;height:14px;display:block"/></span>Date</th><td><time>@05/09/2022 10:30 AM</time></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/list_gray.svg" style="width:14px;height:14px;display:block"/></span>Topic</th><td></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/list_gray.svg" style="width:14px;height:14px;display:block"/></span>Reaction</th><td></td></tr></tbody></table></header><div class="page-body"><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="e6ca1b90-5e40-4dae-a21a-922374358e6a"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">Love the callout and alignment with UN’s goals (<a href="https://remitly.slack.com/archives/D03C3PELYQ3/p1652119436087899">slack</a>)</div></figure><blockquote id="72d39ec4-bb23-40b7-a4d5-de0a3d74a241" class="">By 2030, ensure that all men and women, in particular the poor and the vulnerable, have equal rights to economic resources, as well as access to basic services, ownership and control over land and other forms of property, inheritance, natural resources, appropriate new technology and financial services, including microfinance – <a href="https://sdgs.un.org/goals/goal1">source</a></blockquote><blockquote id="4aeca388-86c4-4535-9123-c3169df443d9" class="">By 2030, reduce to less than 3 per cent the transaction costs of migrant remittances and eliminate remittance corridors with costs higher than 5 per cent – <a href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=&amp;cad=rja&amp;uact=8&amp;ved=2ahUKEwj0n87mg9P3AhXqFTQIHfLNAm8QFnoECBAQAw&amp;url=https%3A%2F%2Fwww.un.org%2Fdevelopment%2Fdesa%2Fen%2Fnews%2Fpopulation%2Fremittances-matter.html&amp;usg=AOvVaw14RxnfUjK32OLtI1Ze7lT0">source</a></blockquote><ul id="2990ad57-f997-4fd5-be86-8ee308718ce5" class="bulleted-list"><li style="list-style-type:disc">put a better remittance experience to Passbook<ul id="87fcecd2-80ec-4b41-86ab-ffc92bb52808" class="bulleted-list"><li style="list-style-type:circle">RFD</li></ul></li></ul><ul id="a6b4639e-fd95-44a9-8244-280658cac21d" class="bulleted-list"><li style="list-style-type:disc">company is really great with <ul id="91024e7c-687e-4668-9067-a0ae0908f7e1" class="bulleted-list"><li style="list-style-type:circle">SaaS </li></ul><ul id="bf1a70fa-a104-45e5-9a23-605e664e117f" class="bulleted-list"><li style="list-style-type:circle">new team </li></ul></li></ul><ul id="f8f2d4a2-2c8d-4c2b-95c6-af26b96fffd9" class="bulleted-list"><li style="list-style-type:disc">not in our DNA to think about b2b 2c</li></ul><p id="675a7f57-37bf-4ed5-a127-b8a7a5670383" class="">
+</p><ul id="7d7f9d1f-c8fa-40d2-ad11-9f1b7b9f69a7" class="bulleted-list"><li style="list-style-type:disc">PMF:<ul id="3c98adba-624e-4b5e-b272-da7590a10d34" class="bulleted-list"><li style="list-style-type:circle">product is good enough to grow sustainably</li></ul><ul id="5e2f2877-07dc-4771-8b5d-8e666c5f1c6f" class="bulleted-list"><li style="list-style-type:circle">LTV ratio; payback period make sense so you can begin to invest</li></ul><ul id="701ecbca-334f-498d-8562-54000f927174" class="bulleted-list"><li style="list-style-type:circle">tech: there are certain goals</li></ul><ul id="24a07c36-9a6a-46ed-b69c-e1b5a1f267f6" class="bulleted-list"><li style="list-style-type:circle">building something that customer like to use</li></ul><ul id="dc6dd67e-e550-4bfa-b954-02d23d1689a0" class="bulleted-list"><li style="list-style-type:circle">single metrics: Customer Acqusuiition Cost / LTV<ul id="797be6f7-de2e-4956-877c-db3219114f68" class="bulleted-list"><li style="list-style-type:square">exponetial customer growth: low ltv within a short period of time<ul id="7e005e2b-4654-4d22-9e38-a25e43c20dbb" class="bulleted-list"><li style="list-style-type:disc">not customer centric enough (NPS)</li></ul><ul id="dac7f7f8-fc96-4495-8f68-155bd7cfc950" class="bulleted-list"><li style="list-style-type:disc">viral referral rate</li></ul></li></ul><ul id="afd3fa8c-8d91-407d-ab4d-e7e7eeb6937a" class="bulleted-list"><li style="list-style-type:square">that doesn’t mean that business actually works</li></ul></li></ul><ul id="ef0f02d2-3b3a-44d4-9989-7b2eb91bfb71" class="bulleted-list"><li style="list-style-type:circle">more than 1 metric<ul id="948d2c33-5f1f-4800-9702-dbce2fa1767b" class="bulleted-list"><li style="list-style-type:square">what can you use to better associate with customer experience</li></ul><p id="eb4a26eb-b88f-4b03-b14b-3b30f3f431b3" class="">
+</p></li></ul><p id="ba7bf4a9-d29b-4688-88c2-2787d115c798" class="">
+</p></li></ul><ul id="74b83024-14ef-40fa-adf2-785439e68f0a" class="bulleted-list"><li style="list-style-type:disc">coding since 1997<ul id="fb376df5-a47f-40bc-9c3f-63ff0c84ecb3" class="bulleted-list"><li style="list-style-type:circle">doing this professionally for about 10 years</li></ul><ul id="a401ce52-6189-4aa8-b5e7-384a893cab35" class="bulleted-list"><li style="list-style-type:circle">wear a lot of hats</li></ul><ul id="5e9f7af3-c3cf-491f-bd00-bf7c919eaa88" class="bulleted-list"><li style="list-style-type:circle">6 years at Remitly <ul id="10698251-235c-41c8-b5d7-a5b7955b7be8" class="bulleted-list"><li style="list-style-type:square">done a lot of stuff at the company (principal; management role: pricing and treasury)</li></ul><ul id="8bd000a6-f6bb-4428-8099-6a57a117a4fe" class="bulleted-list"><li style="list-style-type:square">been working on passbook for a year and half<ul id="7a811bfc-7ed3-4264-847a-f05a5671ed41" class="bulleted-list"><li style="list-style-type:disc">most senior IC on the team: how to use technology to succeed at the goal</li></ul></li></ul><ul id="4c1a09d8-73d7-4c80-8e17-ec602a24b72f" class="bulleted-list"><li style="list-style-type:square">mostly consulting and advising on ops (read/write a lot of docs)</li></ul></li></ul><ul id="eb300e1c-bbbb-453c-9192-5af614eaa40d" class="bulleted-list"><li style="list-style-type:circle">interaction with design:<ul id="48060f4e-0716-4ebc-998f-ed891f63d117" class="bulleted-list"><li style="list-style-type:square">is this even possible </li></ul><ul id="d4c5e120-7839-4a2a-a571-7a31eea14d94" class="bulleted-list"><li style="list-style-type:square">feasibility study</li></ul><ul id="44266cc9-7c81-45bc-95f3-8edb086b9df1" class="bulleted-list"><li style="list-style-type:square">general description of cost</li></ul><ul id="f3e2999f-159d-48b8-84fa-c313d28a7ba4" class="bulleted-list"><li style="list-style-type:square">strategic cost</li></ul></li></ul><ul id="1d9df91e-0c22-448c-af7d-45abbf5b5303" class="bulleted-list"><li style="list-style-type:circle">split between 3 teams (lending, rfd, passbook; remitly company level tech architecture ← more like a facilitator)<ul id="905cf0d6-3384-4d80-8928-44fb7d1edb24" class="bulleted-list"><li style="list-style-type:square">how that will feed new initiatives</li></ul><ul id="823ebc16-eb4c-4416-ae3d-8e896a489569" class="bulleted-list"><li style="list-style-type:square">its NEED based<ul id="1673014b-592c-42ef-b320-35474bade930" class="bulleted-list"><li style="list-style-type:disc">i go where the fire is<ul id="ab37f284-8087-4856-a865-0ac196cfdd02" class="bulleted-list"><li style="list-style-type:circle">SD3 is really opinionated</li></ul><ul id="0841dba1-006c-4c9f-a9f2-828fd809801e" class="bulleted-list"><li style="list-style-type:circle">difficult meeting having conversation </li></ul><p id="50f60035-6c81-42d9-91f7-1704e493ced2" class="">
+</p></li></ul></li></ul></li></ul></li></ul><ul id="0ccf1079-a8f0-448e-9de4-30a9db9bf2f1" class="bulleted-list"><li style="list-style-type:disc">Passbook<ul id="6e41ecb9-6d7b-4f04-95f1-d82b9a19439d" class="bulleted-list"><li style="list-style-type:circle">this will be about the people using it<ul id="68e37679-95b6-44e5-98b1-fdabdb4969f2" class="bulleted-list"><li style="list-style-type:square">enjoy using </li></ul></li></ul><ul id="50309a7a-5299-4ce7-a63d-8db8c2b2965b" class="bulleted-list"><li style="list-style-type:circle"><strong>basic banking access for UN sustainable development</strong><ul id="ddf04571-1419-4266-b88a-2f9f0ea2d2f3" class="bulleted-list"><li style="list-style-type:square">point 2 on that list</li></ul><ul id="59fd9c3e-a8af-4da9-8aee-41f0077b9322" class="bulleted-list"><li style="list-style-type:square">at a a certain basis point</li></ul><ul id="feca1f48-78f3-404c-8441-3317b7070902" class="bulleted-list"><li style="list-style-type:square">product suite inot other market with limited banking access</li></ul><ul id="686a7806-ba3e-44d8-8431-581fc5e936cc" class="bulleted-list"><li style="list-style-type:square">framework for interantiaonal aid work</li></ul></li></ul><ul id="7e214a06-ee52-43a1-b15f-9bf154c87bab" class="bulleted-list"><li style="list-style-type:circle">remitly is 10c — building business on a line item in un sustainable goals<ul id="ca01ffef-1989-4edd-bd4c-7ec6938bce62" class="bulleted-list"><li style="list-style-type:square">under a certain basis</li></ul></li></ul><ul id="0cb134aa-02af-4f0f-b50f-c1c46fa3303a" class="bulleted-list"><li style="list-style-type:circle">50% of people in pakistan have bank acct</li></ul><p id="e20b8816-ad28-4341-9cc3-5922bac4fcad" class="">
+</p><ul id="12b50ac0-f954-46c8-b32c-1f4474938201" class="bulleted-list"><li style="list-style-type:circle">we have done a lot good <ul id="9cab2b13-5acf-44b8-9734-7639eeb40245" class="bulleted-list"><li style="list-style-type:square">we put price pressure (lower cost), we were leader</li></ul><ul id="39a0ff0b-a429-4431-bfdd-88e0ab3f5031" class="bulleted-list"><li style="list-style-type:square">3% by volume on remittance</li></ul><ul id="5a0e4979-33d1-4566-b533-3e9dcbeef34c" class="bulleted-list"><li style="list-style-type:square">pricing strategy was to under cut xoom</li></ul></li></ul></li></ul></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

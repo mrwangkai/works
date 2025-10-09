@@ -1,0 +1,733 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>7/26/22 product meet</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(134, 131, 126, 1);
+	fill: rgba(134, 131, 126, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(134, 131, 126, 1);
+	fill: rgba(134, 131, 126, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="6caf83ff-416a-40b7-9696-e254f0335182" class="page sans"><header><h1 class="page-title">7/26/22 product meet</h1><p class="page-description"></p><table class="properties"><tbody><tr class="property-row property-row-date"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/calendar_gray.svg" style="width:14px;height:14px;display:block"/></span>Date</th><td><time>@07/26/2022 10:11 AM</time></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/list_gray.svg" style="width:14px;height:14px;display:block"/></span>Topic</th><td></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/list_gray.svg" style="width:14px;height:14px;display:block"/></span>Reaction</th><td></td></tr></tbody></table></header><div class="page-body"><h2 id="a10e2cbe-5b7c-470f-bace-b8f5fc82c539" class="">Rounds</h2><p id="0559073b-ba71-4121-b540-64355d452a8c" class="">David</p><ul id="cea054ea-6e21-4681-9915-ed326dc5734f" class="bulleted-list"><li style="list-style-type:disc">working well:<ul id="de839127-d787-4e59-ac34-b3f7f1f389bf" class="bulleted-list"><li style="list-style-type:circle">ongoing responsiveness from folks (q&amp;a; conversations) vs. just strategy</li></ul><ul id="b542adad-2994-4b3b-8dc6-00c1b2c6146a" class="bulleted-list"><li style="list-style-type:circle">recognizing the way it was communicated have room for improved</li></ul><ul id="78a532fb-d2da-4646-9339-7e583fb3b8f5" class="bulleted-list"><li style="list-style-type:circle">gap between now ← → strategy; how can we (product) help? </li></ul><ul id="ca5ab415-312c-4988-9ba4-fd8fa357a37e" class="bulleted-list"><li style="list-style-type:circle">e.g. standups are conversation about the gap/ambiguity</li></ul><ul id="7416b5fa-10d6-4f2a-a271-5ded5b3a702a" class="bulleted-list"><li style="list-style-type:circle">since it was annouce: challenge = opportunities to bring our view / influence direction</li></ul></li></ul><ul id="2770d7a4-291a-47dc-a756-189322ddb2e5" class="bulleted-list"><li style="list-style-type:disc">Follow up:<ul id="4626ccd6-e0b7-45fa-93cd-760601d96ed2" class="bulleted-list"><li style="list-style-type:circle">the data that leadership have to determien the new strategy hasn’t been shared. Having access = onboard; help us adopt the new strategy easier; allows us to see the process to the new strategy (i.e. RFA)</li></ul></li></ul><p id="2f2ba45b-000e-4869-be9e-66acae1f793d" class="">
+</p><p id="ca96df36-e629-4148-b1e4-2379efadc2bc" class="">Michael</p><ul id="78e09b27-d8e4-4694-99ce-c4baed135c6b" class="bulleted-list"><li style="list-style-type:disc">the most recent comm from josh to the broader team seems to be clarifying: clarifying the customer segment<ul id="67a40340-86a1-46f5-89f8-0d35f9acb4f1" class="bulleted-list"><li style="list-style-type:circle">that could have been part of the larger message</li></ul></li></ul><ul id="a0ea23b7-835d-494f-b15f-c91b4f91a6ce" class="bulleted-list"><li style="list-style-type:disc">how is the team doing?<ul id="4af35f18-97db-4124-99aa-0e4268d37a75" class="bulleted-list"><li style="list-style-type:circle">struggling a little bit; with a brainstorm session to tackle some of the meatier problem</li></ul><ul id="b6618a39-79f9-4db3-93e3-41d079ad9011" class="bulleted-list"><li style="list-style-type:circle">we (leadership) haven’t share/decided what’s coming up next yet</li></ul><p id="484997b5-8fbb-4fad-a773-0b76c4fb4d11" class="">
+</p></li></ul><p id="cadd2639-6516-404b-a79a-547af4ef3654" class="">Chris</p><ul id="f053a7d3-4694-44a4-8fcb-a929eb756af7" class="bulleted-list"><li style="list-style-type:disc">risk team is still optimistic / interested in what they are doing + excited to execute on it</li></ul><ul id="d967fa4e-9a9a-4b6c-b21e-a0b4844dc560" class="bulleted-list"><li style="list-style-type:disc">we have the benefit of having confidence on what we are building is still useful; not as much concern on where the product will fit in (we still need more robust decisioning; ML, etc ← aren’t going to go away)</li></ul><ul id="f2ef64d4-d7e3-4a80-89c5-4f6d2c18acc5" class="bulleted-list"><li style="list-style-type:disc">IF we had more clarity on organizational stuff<ul id="5c2e3017-97ed-4ce8-b72b-f2dee6311517" class="bulleted-list"><li style="list-style-type:circle">talking to arianne: a weird time to join? for Chris, even at compass: 2 month in, major shift/reorg</li></ul><ul id="5f1496b8-666e-4cdf-abe2-0b1ac9375775" class="bulleted-list"><li style="list-style-type:circle">org stuff planned before annoucement<ul id="dd6f9122-ec56-45b8-9791-790d8e8ab505" class="bulleted-list"><li style="list-style-type:square">daniel + mark they don’t want org churn within course of the year ← majority source of anxiety</li></ul></li></ul><ul id="794cefb5-6666-43f0-9f1a-89873dea8159" class="bulleted-list"><li style="list-style-type:circle">risk have the privilege of having a bit more runway than passbook; getting nailed down on passbook hypothesis to test with the core team to better understand where the risk team fit in<ul id="7e7d149f-f70d-41ea-a32a-393e86e05dc4" class="bulleted-list"><li style="list-style-type:square">mvp for check / lending is more clear</li></ul><p id="2b3535ab-175d-4c99-9727-b432882785b8" class="">
+</p></li></ul></li></ul><p id="ccdc13f1-edf7-4f67-b86d-b82038c91bd9" class="">Pranovaa</p><ul id="b9484413-8b49-43b8-9ce2-32aaffd33d78" class="bulleted-list"><li style="list-style-type:disc">team is excited about the change; we build things fast = break things</li></ul><ul id="646b3221-cc23-4ef0-8887-880e03dbed80" class="bulleted-list"><li style="list-style-type:disc">what’s not working so well<ul id="61c044c0-9a7d-42a1-bd9d-d0bcc88045de" class="bulleted-list"><li style="list-style-type:circle">timing: everyone has halted with things in the backlog</li></ul><ul id="43daec53-323f-4019-8ee4-f02b43120c9b" class="bulleted-list"><li style="list-style-type:circle">anxiety around team shuffling (split up?)</li></ul><ul id="9bbd6a52-a0c8-4128-9a39-e205f205118a" class="bulleted-list"><li style="list-style-type:circle">portability is questionable as things are (not built for scale)</li></ul></li></ul><p id="1b16b228-1273-45a5-8d7d-82825692af9e" class="">
+</p><p id="af17f7cf-c361-45c2-b0ee-91712f8452a2" class="">Buyaki</p><ul id="fac92185-bb9a-4153-9d11-f192a50692a8" class="bulleted-list"><li style="list-style-type:disc">anxiety with team member; headless chicken — don’t know if i should move vs. wanting to stay busy</li></ul><ul id="1a9fcc38-db12-48d1-82e6-36c0bca2f9c1" class="bulleted-list"><li style="list-style-type:disc">a lot of pressure on pm; looking for direction</li></ul><p id="f87d4371-08fd-45a4-bdca-1479093dd66d" class="">
+</p><p id="ffdd5b4a-5369-4845-93ab-a3ef808b7150" class="">Kai</p><ul id="cefb5296-1c76-4a83-aade-6b60e831a173" class="bulleted-list"><li style="list-style-type:disc">mixed emotion from team</li></ul><ul id="50411c1d-8008-41e3-a53d-3fe66cfce2fe" class="bulleted-list"><li style="list-style-type:disc">how can we provide short-, long-term approach</li></ul><p id="350bca86-66a0-42c6-a4cc-42285df0d363" class="">
+</p><p id="f96ffe1f-0939-46e3-a996-21edb510ddb3" class="">CO</p><ul id="d145b96c-be01-40b2-b50b-2fd6964e4bf0" class="bulleted-list"><li style="list-style-type:disc">people are looking at us; not asking people to suspend belief; if you have question — bring them up</li></ul><ul id="193bb447-438d-474b-8a74-272b78055764" class="bulleted-list"><li style="list-style-type:disc">most important thing to acknowledge: the company wants us (y’all) ← a ton of people making sure that whatever charter we land on = a meatier charter that will have an influence on the ‘future’ of the org<ul id="ba441851-e951-45ec-8764-bd9cb35162f9" class="bulleted-list"><li style="list-style-type:circle">even if its unclear on where we are going, knowing that there are people working to try to figure out/fight for our role in the charter<ul id="f5bb8b69-7b8e-4523-afe4-5cc3e3eb67d5" class="bulleted-list"><li style="list-style-type:square">is it RFA as a whole</li></ul><ul id="93b80054-bfc0-4828-b543-ea850ecb7654" class="bulleted-list"><li style="list-style-type:square">Remitly NA vs. Remitly Intl ← these are not within our control</li></ul></li></ul><ul id="494a9879-6d6f-4cb3-9868-759c8b2051e9" class="bulleted-list"><li style="list-style-type:circle">todd: redunancy? ← not going to happen</li></ul><ul id="c503af5f-145e-4909-8b6b-05ceb229f8de" class="bulleted-list"><li style="list-style-type:circle">negative outcome from the change: our charter becomes LESS interesting, which is subjective</li></ul><ul id="f9433313-b486-49b3-939d-2a44306cdaf8" class="bulleted-list"><li style="list-style-type:circle">all we can ask for is ACCESS to understand the decision</li></ul><ul id="b426df14-575c-41a6-8c94-505166efe1e9" class="bulleted-list"><li style="list-style-type:circle">NO ONE IS THINKING ABOUT LETS KILL PB OR THIS TEAM<ul id="3972a3c8-d613-497d-933e-bf1c7762dd9d" class="bulleted-list"><li style="list-style-type:square">What everyone is thinking: how do we steer the team to figure out convergence with Remittance</li></ul><ul id="dc4529af-b32c-4ae3-a57c-10e9e8ed249d" class="bulleted-list"><li style="list-style-type:square">can we build something that can compete with other neobanks? probably not esp when we can’t charge fees. the path through remittance makes sense</li></ul></li></ul></li></ul><ul id="326dce35-20d0-4829-ac2d-43118d7624b8" class="bulleted-list"><li style="list-style-type:disc">? what about dan webber</li></ul><ul id="361b5d54-3279-4171-8baf-9bad8d6f7b6c" class="bulleted-list"><li style="list-style-type:disc">Have empathy for the eng team on the tech challenges while working with vendors, PDs, etc. ← let’s give people time</li></ul><ul id="f2bc0714-e5cb-47e5-9b06-9597a73d59e6" class="bulleted-list"><li style="list-style-type:disc">“I don’t see anything in strategy that says we are killing things”<ul id="84b2b305-18f6-4ddf-82fc-21382bb30a80" class="bulleted-list"><li style="list-style-type:circle">killing marketing ≠ killing products</li></ul><ul id="179870e3-1195-4e9d-abb6-f422e981b7cd" class="bulleted-list"><li style="list-style-type:circle">we need to steer to the new world with a new roadmap ← what can we own?</li></ul></li></ul><ul id="5fe8d4f4-8548-40d5-9661-beabc7534acb" class="bulleted-list"><li style="list-style-type:disc">we have 200 DDAs on Friday after </li></ul><ul id="26cd2333-190b-4701-a295-616d8629d052" class="bulleted-list"><li style="list-style-type:disc">[CO followin David’s qn] 2 pieces of info that will make things more digestible<ul id="241fc303-fce2-4870-a6aa-03f802f3aa43" class="bulleted-list"><li style="list-style-type:circle">show us the # why economics of PB isn’t working<ul id="b5aca4b3-ced7-4555-8e29-f77b44cf3cc4" class="bulleted-list"><li style="list-style-type:square">we are currently 14% mtm growth</li></ul></li></ul><ul id="b13c8bb9-1af8-4221-ad2a-47825d649226" class="bulleted-list"><li style="list-style-type:circle">why do we believe that the integrated approach the way it was laid out — how did we land there<ul id="fb2ac9eb-6a90-4920-93fd-e72fdfbe864e" class="bulleted-list"><li style="list-style-type:square">[CO] been asking for data to understand who is the customer; there are things on the strategy that suggest we are going after similar segment<ul id="09278b13-ba48-4bb7-950d-7817140be96e" class="bulleted-list"><li style="list-style-type:disc">e.g. of overlap: there are a lot of PB sign up are underbank (vs. just unbanked)</li></ul></li></ul><ul id="46df821a-5c56-4b6c-9cd9-1d17211db253" class="bulleted-list"><li style="list-style-type:square">would love to understand customer by corridor<ul id="d5233248-880d-4fbe-a78b-7f3b9c0527f9" class="bulleted-list"><li style="list-style-type:disc">contribute to our business today + attractive to pursue (e.g. low market share with higher margin or high market share that we need to protect)</li></ul></li></ul></li></ul></li></ul><ul id="e98b7f15-1861-48b7-a4a0-00983efadd49" class="bulleted-list"><li style="list-style-type:disc">understandable strategy: <ul id="b2ac782c-7e0d-4ff0-9d20-6387fdd675ef" class="bulleted-list"><li style="list-style-type:circle">stored value + share acct + borrow and send money</li></ul><ul id="cba760f6-a50a-4ecf-879a-c841e9056b29" class="bulleted-list"><li style="list-style-type:circle">blended LTV is hgiher on multi-products vs. indepedent businesses</li></ul><p id="9301ddd9-8bb7-4da6-9f43-d316418d1b65" class="">
+</p></li></ul><ul id="9f9dc91a-cb6d-4c7f-98b1-8d3c9fb09ef7" class="bulleted-list"><li style="list-style-type:disc">tbd/clarify: the nuances and details ← this would be on us (PM)</li></ul><ul id="4271a23d-d354-4a2d-b54c-eee109ebd8b3" class="bulleted-list"><li style="list-style-type:disc">company is concerned about Philippines/India<ul id="01a8e033-99be-4393-b8e2-9415d48bb8ee" class="bulleted-list"><li style="list-style-type:circle">because penetration of wallets are high</li></ul><ul id="88b92658-856b-4967-ba14-415beb79695e" class="bulleted-list"><li style="list-style-type:circle">recipients could be downloading an app + receive $ in the app ← this is the opportunity that might be land grab by other competition</li></ul></li></ul><p id="9ef8b30e-432e-4824-9529-3efd2133eff4" class="">
+</p><ul id="6a298f3f-c829-416c-83d3-602a74f2b1e4" class="bulleted-list"><li style="list-style-type:disc">understand what they understand would be key; what assumption have been made<ul id="6bb85326-d13a-44f3-9499-eb4712840d9b" class="bulleted-list"><li style="list-style-type:circle">Dan: some of the prescriptions are hypothesis</li></ul><ul id="4523219e-d9aa-49ad-9f91-dec2b9ddcbff" class="bulleted-list"><li style="list-style-type:circle">we need to support the org in moving an ips (our ability to grow the remittance business; control cross-border money movement;) + we have to own the detail that does not exist<ul id="14bc1a07-3deb-4ad2-a124-2ba8a1da5cb3" class="bulleted-list"><li style="list-style-type:square">? what is the population for the remittance population (e.g. banked, unbank)<ul id="dbe5764c-eecb-461c-bc46-903d13b0b145" class="bulleted-list"><li style="list-style-type:disc">e.g. 6% are paid with prepaid card; assumptions that can be made?</li></ul><ul id="1599f52c-dd8a-4936-833a-90bacbac2a62" class="bulleted-list"><li style="list-style-type:disc">look at the transaction tied to insufficient fund = population that may need loans; ← we will need to figure this out</li></ul><ul id="1a7f67b7-fe1c-4199-9fc6-8c20a7f64b4e" class="bulleted-list"><li style="list-style-type:disc">kyc delta between remitly + pb → what can we pass onto CE<ul id="b7ea4995-fe07-45ce-a731-25f962589671" class="bulleted-list"><li style="list-style-type:circle">we can help CE to ingest min KYC for stored value that can then trigger other KYC</li></ul></li></ul><ul id="15bea4bc-9c3e-43fb-bb7e-6d4a4d65502c" class="bulleted-list"><li style="list-style-type:disc">Michael: “91% of US senders are Tier 1, meaning we haven&#x27;t collected enough to pass them on Passbook KYC. Still exploring more on this”</li></ul></li></ul></li></ul></li></ul><p id="a4ffdf2a-2dbd-4101-bf75-7eab87d59afe" class="">
+</p><p id="9a4cc78b-4b3d-473b-ba56-b87ea090f005" class="">Chris:</p><ul id="b34931a8-6b4a-44d9-9a91-81c29fb0d258" class="bulleted-list"><li style="list-style-type:disc">realistically, what is the timeline for us to get clarity?<ul id="9ccadf0f-210a-4f67-bd03-6f4a543ec519" class="bulleted-list"><li style="list-style-type:circle">[CO] summits happening at the end of August ← we need to make sure we have a seat on the table<ul id="57e7f991-b422-481c-9a75-7de05e0c5e2c" class="bulleted-list"><li style="list-style-type:square">org will align in August; summit is not only about IPS/RFA/Passbook — not just initiative; but how the whole company support this shift</li></ul></li></ul><p id="08e356c1-5db6-4fc9-b69f-daedc679e983" class="">
+</p></li></ul><p id="6e5f9611-97e4-46ed-87dc-85f4f6630b8f" class="">[CO]</p><ul id="c2b56832-1a8d-4b9f-a384-350c1e93beae" class="bulleted-list"><li style="list-style-type:disc">investigation to build our understand: what are some of the things we need to figure out so that we can get to summit with pov on what can/can’t be done<ul id="af9d7da2-39b8-4d0a-9462-2c8beb06cf37" class="bulleted-list"><li style="list-style-type:circle">e.g. question around galileo; folks in org doesn’t have full confidence in galileo for a global reach (some research were done 2 years ago)<ul id="8cdd4e3f-9b75-4bea-9e6a-5bffa38e67e0" class="bulleted-list"><li style="list-style-type:square">SoFi have bought galileo; so an expanded range; what does that mean since galileo now have footprint in mexico</li></ul></li></ul></li></ul><ul id="3b2ccc44-b4ff-4434-9023-9d8dedcebb0a" class="bulleted-list"><li style="list-style-type:disc">I don’t see anything we need to deprecate; will stall on iteration until we have clarity</li></ul><ul id="2f886f46-6d65-4211-b5ca-3e4c0bde1bec" class="bulleted-list"><li style="list-style-type:disc">Not focusing on a specific money movement but have a list of payment methods that can be customized by country/policy<ul id="91b5a235-c56f-4683-8f75-3fbe7d8a3d01" class="bulleted-list"><li style="list-style-type:circle">similar approach for onboarding</li></ul><ul id="d44980c8-094d-4322-af2b-26eca5a3cee7" class="bulleted-list"><li style="list-style-type:circle">its a platform play that has consumer implication</li></ul></li></ul><ul id="754af1f7-d624-479b-ac88-8aadb065f7ef" class="bulleted-list"><li style="list-style-type:disc">Paid marketing can be ran by Reina<ul id="a17528d7-7219-4726-a754-afd408a2952b" class="bulleted-list"><li style="list-style-type:circle">not just remittance value props but also stored value value props</li></ul></li></ul><ul id="b71635e8-7199-4cf7-a9cf-55f041cbe13d" class="bulleted-list"><li style="list-style-type:disc">Kill/migrate G will be a large workstream</li></ul><p id="ec4ad7cb-cb55-45f2-bebf-b659edc6484c" class="">
+</p><p id="be011545-57d6-4c40-89e0-c45ed8a78300" class="">[PVK]</p><figure id="b57b76ee-65e7-473b-83b8-8aa6205c7c57" class="image"><a href="7%2026%2022%20product%20meet%206caf83ff416a40b79696e254f0335182/IMG_8300.jpg"><img style="width:4032px" src="7%2026%2022%20product%20meet%206caf83ff416a40b79696e254f0335182/IMG_8300.jpg"/></a></figure><ul id="b1f3f321-b1ad-47b9-b1f1-2a1217d1f0b9" class="bulleted-list"><li style="list-style-type:disc">question: we want to win/increase remittance volume<ul id="bf2f4c3b-a314-4d79-8351-87fb47fc3d35" class="bulleted-list"><li style="list-style-type:circle">if stored value is just about getting money in to remit ← isn’t this exactly what we are doing now?<ul id="920b6190-a118-415f-af95-273e36adf669" class="bulleted-list"><li style="list-style-type:square">US bank acct stored value: what we are trying to capture with passbook; so are we trying to capture the international side?</li></ul><ul id="354c826b-f98c-4210-9ba5-3a43810def62" class="bulleted-list"><li style="list-style-type:square">[CO] interesting no; we don’t want to harm the relation with the banks for our remittance business</li></ul><ul id="98a5a018-5eb3-40c4-ace6-5282db5c4f91" class="bulleted-list"><li style="list-style-type:square">[CO] instead, if the customer have a wallet of sorts <ul id="fed12161-49f9-494f-afcc-7c72561d2014" class="bulleted-list"><li style="list-style-type:disc">current remittance model: cheap x slow; fast x expensive to get on the international rail</li></ul><ul id="f12301fe-079b-4dcd-b376-688a9475d118" class="bulleted-list"><li style="list-style-type:disc">future: how do we make speed and fee both 0.<ul id="487af3ac-cd42-462e-810c-5f8a36a79db1" class="bulleted-list"><li style="list-style-type:circle">How? If Joe (authorized user) has a US $ account in India that is plugged into the locally issue wallet/card, he is receiving $ from a US bank (say from Ann).<ul id="b7f4191b-56e0-4215-9a93-030f4a475d4c" class="bulleted-list"><li style="list-style-type:square">local bank earning on FX</li></ul><ul id="0d738f89-d0b7-44d0-a7c8-e29a7a67f94b" class="bulleted-list"><li style="list-style-type:square">rev generation: hedging on FX</li></ul><ul id="e0af1073-adb4-41e3-a806-2517442489b4" class="bulleted-list"><li style="list-style-type:square">for weaker currencies that are in danger of high inflation</li></ul></li></ul><ul id="e62f07e0-d863-4356-8549-3902eefd4e35" class="bulleted-list"><li style="list-style-type:circle">If you send to a local wallet = cost? Financial engineering: [T-shape debit acct] for Remitly, if the transfer happens btw our international ledger, money isn’t actually flowing; we are essentially tapping into the “pot of money” in the respective currency. at the eow, one single transaction (not volume but # of trxn)</li></ul><ul id="e839a936-fe25-4bb7-8ee2-1d5a08b33b2b" class="bulleted-list"><li style="list-style-type:circle">[PVK] if I want to spend/make trxn, I can’t do it with the Remitly wallet? Michael: we can generate debit card ← would this then cause competition with local banks?</li></ul><ul id="becac839-6923-4b5b-b317-af7a0876f140" class="bulleted-list"><li style="list-style-type:circle">[CO] Joe who lives in country B (India) has no prohibition to open an account in country A (US); the trick is issuing cards that cannabilize the local issuance bank’s interchange = bad relationship; BUT if they open them organically is ok — it cannot be a business model that we can go</li></ul></li></ul></li></ul></li></ul></li></ul><ul id="5aca7264-1aee-4f53-956c-5bf0ee8d8f57" class="bulleted-list"><li style="list-style-type:disc">Last year there was a team that looked into a Mexico wallet — it was closed within 2 month because it will compete with the Mexican bank</li></ul><ul id="ac5abcb0-bd3a-44aa-b059-5873baa4268b" class="bulleted-list"><li style="list-style-type:disc">[PVK] but can you make trxn from your bank?<ul id="8eadda79-1858-47ad-b4eb-493675343eae" class="bulleted-list"><li style="list-style-type:circle">we need partnership with local bank for issuance<ul id="4673657e-f4f9-4725-9ff2-34abb5081dc9" class="bulleted-list"><li style="list-style-type:square">[Chris] why do you need to issue the card? </li></ul></li></ul><ul id="a8d6cd45-8ee9-4375-94d9-8db2cb1273ba" class="bulleted-list"><li style="list-style-type:circle">Gerry: reloadable pre-paid card; Broxel and Wise use this VS debit card. Its on par with debit</li></ul><ul id="cf05a32c-0e5a-44bd-a82d-359dfb518e49" class="bulleted-list"><li style="list-style-type:circle">[CO] taking out money will be using the same rail</li></ul><ul id="d003e33f-6403-43cb-9be8-752b4899c9ca" class="bulleted-list"><li style="list-style-type:circle">[PVK] G-cash is popular in India/Phillipines<ul id="eea91a44-78c6-469d-8edc-f0948c682eb5" class="bulleted-list"><li style="list-style-type:square">through covid, govt sent stimulous check through g-cash</li></ul></li></ul></li></ul><ul id="e4740d7b-3efe-4086-9969-17f7c5f6ae22" class="bulleted-list"><li style="list-style-type:disc"><strong>* CRITICAL</strong>* is there a workstream to understand/talk about the financial engineering to support the above workflow? ← we need clarity<ul id="02ac0bf2-429d-4bf5-800e-78c4cc7bfbd4" class="bulleted-list"><li style="list-style-type:circle">e.g. Susan + Ann → Joe; Joe has $ in $ that he can be ‘transferred’ into rupees with low to $0 cost</li></ul></li></ul><p id="cc465ccc-756d-44c6-b1de-67fa111e44c4" class="">
+</p><p id="3cf328a3-2753-4238-9a50-e89cf1b75006" class="">*** <strong>CRITICAL</strong> *** First question to answer: can sunrise/galileo support this? </p><ul id="274c1176-c062-41a6-9e8c-2f50df4c2c11" class="bulleted-list"><li style="list-style-type:disc">can somooen in phl open us bank acct and receive it there; even if we don’t issue card; we can just lean on remitly network<ul id="4a2299b4-34df-4064-9b63-250051e37503" class="bulleted-list"><li style="list-style-type:circle">other critical corridors FOR REMITLY that we can scale to: canada-mex; uk-india corridor</li></ul><ul id="e4c39190-dc5a-4320-9867-f4731003b8e4" class="bulleted-list"><li style="list-style-type:circle">[CO] which corridors holistically (otuside of remitly) </li></ul></li></ul><p id="bba0aae1-63d7-4379-a61e-218bef2610e7" class="">
+</p><p id="955e3e09-7e72-4a2e-968b-6cbdc5c34d41" class="">[Chris] so this is based on the risk tolerance for sunrise/galileo?</p><ul id="3c2d331e-665b-4938-9280-4d24066932c0" class="bulleted-list"><li style="list-style-type:disc">it based on our current structure/agreement with sunrise that are DDA-based<ul id="4f3e47bd-0832-48ed-ba1f-7fff7a82e0dd" class="bulleted-list"><li style="list-style-type:circle">because of this, our stored of value methods = dda</li></ul><ul id="5392e516-92da-4cb8-a4a5-bc5c519c99ed" class="bulleted-list"><li style="list-style-type:circle">DDA forces trxn have to be INDIVIDUAL vs. the transfer btw pot of $ (<a href="7%2026%2022%20product%20meet%206caf83ff416a40b79696e254f0335182.html">link to reference</a>)</li></ul></li></ul><ul id="fdf30c9c-6583-4d79-89e7-eb05f988e15a" class="bulleted-list"><li style="list-style-type:disc">galileo manages the ledger</li></ul><ul id="4d0dc687-a352-45a9-8abf-609c0f998bf8" class="bulleted-list"><li style="list-style-type:disc">sunrise is providing routing/account number for each user<ul id="6f9b3d4d-6b48-4f03-aab6-62b311d1c852" class="bulleted-list"><li style="list-style-type:circle">sunrise can’t store $ in uk pound; with DDA approach, sunrise will need to have a GDP-DDA acct that they will have to setup with JP Morgan</li></ul><p id="9f4e111a-6f49-4f4c-9195-2e834e3b6a61" class="">
+</p></li></ul><ul id="f92e33e7-de74-4bbc-81d3-133956541bf8" class="bulleted-list"><li style="list-style-type:disc">[Chris] Why don’t we just establish relationships with Chase, HSBC (i.e. multi-currency bank)<ul id="5d2e82ad-cc61-4df6-94ee-4c135711e200" class="bulleted-list"><li style="list-style-type:circle">[CO] its peanuts to the larger banks — they don’t get into the world of debit cards, etc. that’s why you don’t see big banks support neobanks;</li></ul><p id="dcb9f26e-0a6a-43ea-8615-1967e8f3c1ff" class="">
+</p></li></ul><ul id="aab1e8ba-74ed-4cbf-9337-49f381466489" class="bulleted-list"><li style="list-style-type:disc">[CO] the world has been moving away from debit cards/prepaid card as they have been moving away from cash</li></ul><p id="3c275094-7e36-44c2-83c3-104046d19ac6" class="">
+</p><ul id="b33650af-0c52-458a-9c47-00e3c9f8ee32" class="bulleted-list"><li style="list-style-type:disc">[CO] markets that can handle physical vs. digital wallet (e.g. mexico can handle swipes vs. digital cards)</li></ul><p id="b2350317-4bb1-4dac-8740-04eff6dc9d0c" class="">
+</p><ul id="707bd835-b28e-4e75-b45d-586d572af8cb" class="bulleted-list"><li style="list-style-type:disc">[PVK] how can we get crispier on the user scenarios — to support the global scale approach (e.g. accounts for Joe and Ann)?<ul id="85a648ff-f491-48dc-809a-95e79ab404dc" class="bulleted-list"><li style="list-style-type:circle">#authorizeduser *** <strong>CRITICAL</strong> *** assumping galileo allow us to manage sub-ledger OTHERWISE authorized user can access prmary acct’s funds; we can’t apply debit limit</li></ul><ul id="04b47c7d-aa78-4626-8ef4-3045bc083817" class="bulleted-list"><li style="list-style-type:circle">[David] if we don’t have access to sub-ledger; they can ‘overdraft’ into primary acct’s balance</li></ul><p id="4c22d52f-b3cf-4179-b4f3-6bc299baf523" class="">
+</p></li></ul><figure id="c8e27218-c9c9-433e-8c6b-3372b9210391" class="image"><a href="7%2026%2022%20product%20meet%206caf83ff416a40b79696e254f0335182/Image_from_iOS_(4).jpg"><img style="width:3024px" src="7%2026%2022%20product%20meet%206caf83ff416a40b79696e254f0335182/Image_from_iOS_(4).jpg"/></a></figure><ul id="093ebccb-7601-4cb1-a0bb-9591026f6061" class="bulleted-list"><li style="list-style-type:disc"><strong>* CRITICAL</strong>* Authorized user — single currency / multi-currency<ol type="1" id="e94b31d1-f331-4e77-83a1-78c3e325eee6" class="numbered-list" start="1"><li>can we do overarching balance (i.e. with sub-ledger limit/control)</li></ol><ol type="1" id="00e1d9e4-b760-40e0-ab6d-e138178f4050" class="numbered-list" start="2"><li>turning US $ to MXN Pesos</li></ol><p id="eeabefe9-cd22-4bfe-ac12-d19ab1a5aa89" class="">
+</p><ul id="d664d5d0-7820-41f9-924e-7e39c2b0e3cb" class="bulleted-list"><li style="list-style-type:circle">How many path can there be? n-to-n relationships?<ul id="dc165777-7dc0-4f3f-94b9-c9a277c92033" class="bulleted-list"><li style="list-style-type:square">first: 1-to-n </li></ul><ul id="b870d93a-a615-4228-bb1d-ff160000d67b" class="bulleted-list"><li style="list-style-type:square">second: 1-to-n in multiple currencies</li></ul><ul id="8447a375-6187-4ab1-8f18-5956873e5230" class="bulleted-list"><li style="list-style-type:square">third: n-to-n/1<ul id="d83157ed-73db-435f-93b7-f7a2e397230a" class="bulleted-list"><li style="list-style-type:disc">[Michael] seems to be the hardest scenario for Galileo to handle (esp in DDA) → not about authorized user but account for every user have an account<ul id="92d5c9dc-aa19-47ae-bac3-640da0533603" class="bulleted-list"><li style="list-style-type:circle">[Kai] this moves away from DDA</li></ul><ul id="c2c084c5-5406-412d-9d1c-4e0163ba6da3" class="bulleted-list"><li style="list-style-type:circle">[CO] if we move away DDA/Galileo, we can create account with BUCKETS that other account can put money into + Joe can also</li></ul></li></ul></li></ul><ul id="2673ef55-d160-44a6-b35c-3e31b1ba1974" class="bulleted-list"><li style="list-style-type:square">fourth: n-to-n/1 in multiple currencies</li></ul><ul id="fb357007-cdd7-4100-9ffb-b22f5b542436" class="bulleted-list"><li style="list-style-type:square">are there truly n-to-n? there are no n-to-n LEDGER; </li></ul></li></ul><ul id="8411b99f-287c-4280-8e8f-b886e3b5106f" class="bulleted-list"><li style="list-style-type:circle">Beauty of the multi-currency approach: P2P between remitly acct; then the translation happens once the $ in the acct</li></ul><p id="3bc96b95-aec6-4a9d-84dc-1b8a15c7dfd4" class="">
+</p></li></ul><p id="74a5c632-5e66-4017-ac80-a2cf5ec460ae" class="">[Michael]</p><ul id="61566121-5f1e-4197-a079-12c33f4d71a5" class="bulleted-list"><li style="list-style-type:disc">it sounds like we are trying to make $ on FX hedging; <ul id="df032c14-c576-4fbe-bad2-3e27392ededf" class="bulleted-list"><li style="list-style-type:circle">we have seen others in the industry lose their shirt trying to fx trade. what’s a a reliable/stable approach</li></ul></li></ul><ul id="e4e64876-f75b-436c-a2eb-9ef818639e4f" class="bulleted-list"><li style="list-style-type:disc">[CO] I hope this is in the summit</li></ul><p id="e8395df3-5b37-4a2e-aaeb-77fa40172c9e" class="">
+</p><p id="2b3f0f77-b8f5-4605-b5b5-24a337ac7141" class="">[CO] why do we have the $2 discount applied retroactively?</p><ul id="b47cadc9-a780-422f-b436-b8d9436f7b59" class="bulleted-list"><li style="list-style-type:disc">Remitly Sunrise / Remitly US + Remitly in other currencies</li></ul><ul id="1ab976d3-0fdb-4a9d-bc4a-8a5d1b7e28b3" class="bulleted-list"><li style="list-style-type:disc">We pay fees because we are paying $ on the visa rails</li></ul><ul id="64bd1426-42ca-45be-9f5f-81fff4417512" class="bulleted-list"><li style="list-style-type:disc">Getting the per transaction cost down</li></ul><p id="1e0ee781-2d89-4fdc-b26d-60e5f69ba414" class="">
+</p><p id="7f369220-916f-4f29-b24e-8e4c1b95dbfa" class="">[Chris] how does this affect risk profile?</p><ul id="f7cf567c-77a7-400c-90a9-4c75ee6481a9" class="bulleted-list"><li style="list-style-type:disc">[CO] keeping check cashing as a funding methods — product doesn’t change, the user who receives the experience</li></ul><ul id="e2649b71-63c4-4d2e-9f73-8e7dbf9ea40f" class="bulleted-list"><li style="list-style-type:disc">[Chris] Remitly Core are confident that we can asses by user attributes — for their product? [CO] not for checks/loans<ul id="2b4ed9c0-1fd0-46dd-b0af-e4f6a6598df1" class="bulleted-list"><li style="list-style-type:circle">do we need to move away from pb signal transaction level risk to remittance transaction level risk, in order to assess risk? to go higher stream? should be both<ul id="46d4b26a-d685-4597-8311-729d97f0a6fd" class="bulleted-list"><li style="list-style-type:square">[CO] signal should be from anywhere in remitly ecosystem</li></ul><ul id="72045ad3-f861-4407-8831-4b745e6d921d" class="bulleted-list"><li style="list-style-type:square">[CO] input = take signals from any event in the remitly ecosystem; where the outputs fits in the products, it depends<ul id="9636aa23-824e-4423-a464-d1fcd6e988fa" class="bulleted-list"><li style="list-style-type:disc">there are no clear</li></ul></li></ul></li></ul><ul id="0b10fa70-089f-4ed9-a68f-9705b647b8bd" class="bulleted-list"><li style="list-style-type:circle">[CO] secondary user can be signal for risk based on their activities</li></ul><ul id="bf1f5bf7-3104-42da-a2a3-3bf0dcbd27c3" class="bulleted-list"><li style="list-style-type:circle">[Michael] onboarding team is brainstorming on what the might be done to unify under a single profile for pb user x remitly user</li></ul></li></ul><p id="02be5835-b8b8-4ca9-abff-006599e7b41d" class="">
+</p><p id="10509381-b13b-4db7-bb2d-5f9dfa64e358" class="">[CO] There are no table for recipients (for remitly) </p><p id="179f6e0c-ddde-478a-9b85-285573336b6a" class="">
+</p><p id="6dc2f2ad-f2c7-4b47-b7c0-809e6c1c5c24" class="">[PVK]</p><ul id="e9efbf24-9794-4d75-b288-0b8b3e7ae892" class="bulleted-list"><li style="list-style-type:disc">[CO] funding mechanism is still important; we are not prioritizing based on rev for pb, but on how we can build (transactional vs. relational)<ul id="b23e0999-9ad3-4824-92e8-a8800a72c837" class="bulleted-list"><li style="list-style-type:circle">tested and didn’t work is sometime lack of execution vs. problem with hypothesis</li></ul><ul id="07a7439a-e625-4d2e-ac79-552ae95191e0" class="bulleted-list"><li style="list-style-type:circle">underbanked population are highly elastic and dependent on pricing<ul id="def17a85-167b-4aaa-9c84-0e4114572e4d" class="bulleted-list"><li style="list-style-type:square">research from daniel that maybe Remitly has a retention problem?<ul id="326c433c-a8f3-4451-812e-e43102951c93" class="bulleted-list"><li style="list-style-type:disc">diving board data: e.g. 1 million acct created for mex-us corridor: qau are around 300~400k</li></ul><ul id="56b7ed31-5252-4074-ac64-ef574b188494" class="bulleted-list"><li style="list-style-type:disc">the strategy supports cross-product incentives (e.g. send 3 remittance takes a 1 bases points off loan, etc)</li></ul></li></ul></li></ul></li></ul><ul id="cd1147fb-08c9-4216-940d-93a0ae277707" class="bulleted-list"><li style="list-style-type:disc">PVK/CO: relational aspect = instrument to spend money (e.g. debit card tied to remitly acct) <em>LOCALLY</em></li></ul><p id="4e1c04a1-dba1-41c9-993d-a84fa0adea0e" class="">
+</p><ul id="19a2ea14-bced-4df1-99f0-54075fe03adb" class="bulleted-list"><li style="list-style-type:disc">[CO] thinking about the 3rd leg of the strategy: in order for <em>a</em> company to offer competitive rate — they need to ask a bunch of questions.<ul id="d8f78f19-0475-483e-94b3-1b1568bd4055" class="bulleted-list"><li style="list-style-type:circle">proactive/passive engagement (asking question before/after) on building risk profile + determine rate to offer</li></ul><ul id="25a0e89e-e089-4d12-8336-81df74e62fb7" class="bulleted-list"><li style="list-style-type:circle">dependent on trxn / behavior<ul id="0cbe90e7-a9aa-485b-9c9f-0eff957e9aa1" class="bulleted-list"><li style="list-style-type:square">DD is important to inform this behavior (earn)</li></ul></li></ul><ul id="16ec1abb-58b1-4b4f-99bf-5b1d37e379ae" class="bulleted-list"><li style="list-style-type:circle">esp for purpose-driven loans</li></ul><ul id="88529626-612f-41d8-ae3c-4cffc2131fe9" class="bulleted-list"><li style="list-style-type:circle">who is the competition? credit union</li></ul><p id="82e21988-9c66-415c-ba25-ba4659198502" class="">
+</p></li></ul><ul id="4ecced83-40df-498a-865f-278f3a88a2f3" class="bulleted-list"><li style="list-style-type:disc">[Michael] can we leverage spending behavior with the local bank → inform the signal<ul id="9e66c0a2-4282-48db-8400-339705297472" class="bulleted-list"><li style="list-style-type:circle">we know when people get money out but not necessarily what they do with the $</li></ul><ul id="395bc9ef-078a-40fa-a1fc-1c6a141d1dc8" class="bulleted-list"><li style="list-style-type:circle">[CO] our partnership with the bank: sending $ to the bank</li></ul><ul id="b20c8f5f-d08c-49fc-9013-981933e4fd46" class="bulleted-list"><li style="list-style-type:circle">in absence of FICO score in india; would india bank be forthcoming with the data;</li></ul><ul id="fe77121b-b3e3-4f33-bf27-d228b5496571" class="bulleted-list"><li style="list-style-type:circle">[David] if we don’t have that data from the bank; how can we get that from the customers</li></ul><ul id="40e8cad6-da7f-4838-ae66-2f8fe4e141f0" class="bulleted-list"><li style="list-style-type:circle">this is why authorized user who hasn’t completed KYC cannot send $ to primary acct<ul id="989b4db7-1a7d-46c6-9b8b-ce8bf874b6c1" class="bulleted-list"><li style="list-style-type:square">problem with money laudering</li></ul><ul id="98ff3a38-808a-4c29-bace-93c130d17695" class="bulleted-list"><li style="list-style-type:square">if primary receiving DD from different people; primary is responsible for taxes they have to receive as income</li></ul><p id="6bc71239-afa3-404f-bab2-ef62bedca8c0" class="">
+</p></li></ul></li></ul><hr id="dd0a9157-be7b-4c9c-ac6a-c376f0e9f06c"/><ul id="81607409-214e-4252-b4e6-937836af610c" class="bulleted-list"><li style="list-style-type:disc">meeting with eng: understand the rubik for start/stop/kill<ul id="de708b50-b971-423a-98cd-929d78327546" class="bulleted-list"><li style="list-style-type:circle">risk</li></ul><ul id="3271f8be-afa7-4599-bf2d-ceb3c90c908c" class="bulleted-list"><li style="list-style-type:circle"></li></ul></li></ul></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

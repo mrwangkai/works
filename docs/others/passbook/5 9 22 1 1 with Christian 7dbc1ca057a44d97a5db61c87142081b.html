@@ -1,0 +1,713 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>5/9/22 1:1 with Christian</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(134, 131, 126, 1);
+	fill: rgba(134, 131, 126, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(134, 131, 126, 1);
+	fill: rgba(134, 131, 126, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="7dbc1ca0-57a4-4d97-a5db-61c87142081b" class="page sans"><header><h1 class="page-title">5/9/22 1:1 with Christian</h1><p class="page-description"></p><table class="properties"><tbody><tr class="property-row property-row-date"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/calendar_gray.svg" style="width:14px;height:14px;display:block"/></span>Date</th><td><time>@05/09/2022 12:00 AM</time></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/list_gray.svg" style="width:14px;height:14px;display:block"/></span>Topic</th><td></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/list_gray.svg" style="width:14px;height:14px;display:block"/></span>Reaction</th><td></td></tr></tbody></table></header><div class="page-body"><nav id="77ddd88c-7e0d-47e0-a1a3-2882e3b7bd1f" class="block-color-gray table_of_contents"><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#96c5a7bc-d497-4bc7-9266-4642719f13ae">Account experience &gt; we are hiring for money out pm</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#78c60f07-171b-4d5c-b1f3-e8f8d890c833">Wed is on how we work together</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#2adfb465-714b-444e-b117-4109cc8a7971">Organizational changes</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#a5eca3d7-4c9a-48d8-821c-d5f87d6e748e">Metrics</a></div></nav><h3 id="96c5a7bc-d497-4bc7-9266-4642719f13ae" class="">Account experience &gt; we are hiring for money out pm</h3><ul id="5c02cf7d-be8e-44af-b0bb-64ad5bbdeab5" class="bulleted-list"><li style="list-style-type:disc">for now focus on move in / move out ← focus on account experience<ul id="4e5d70bf-c5e3-46b5-9e72-62346d3acb13" class="bulleted-list"><li style="list-style-type:circle">thought: a more holistic approach</li></ul></li></ul><ul id="5ddc5bd2-52a8-47ea-a688-7158dd779f78" class="bulleted-list"><li style="list-style-type:disc">pranovaa is focus on money in<ul id="bd7ac82d-7112-4f08-938e-3a9fe7db4286" class="bulleted-list"><li style="list-style-type:circle">current focus:  the flow is really well, the infrastructure to move money is going really well</li></ul></li></ul><ul id="ba308d5e-82ab-4f78-a992-f2502a7ab1e6" class="bulleted-list"><li style="list-style-type:disc">funding &gt; account experience<ul id="577c5d55-016a-47e9-a4ba-8e556d2aa865" class="bulleted-list"><li style="list-style-type:circle">where money movement leave</li></ul><ul id="81718e0c-8ff0-419c-abb1-3f2c155b8eb6" class="bulleted-list"><li style="list-style-type:circle">the shell of passbook as a product<ul id="aecd613c-468d-47d7-8d8e-595634b14f51" class="bulleted-list"><li style="list-style-type:square">will live under account experience: when dda is created → entire lifecycle<ul id="d8932576-c142-4ec1-a711-6f6fb44c6d51" class="bulleted-list"><li style="list-style-type:disc">including submitting problems via CS (flows)<ul id="b32d24a4-f1ab-4539-b0b8-f0db229c185d" class="bulleted-list"><li style="list-style-type:circle">e.g. when account is blocked; card is stolen</li></ul></li></ul><ul id="1c02c213-847c-40a9-95ad-371f27b15090" class="bulleted-list"><li style="list-style-type:disc">inclduing discovering features (managing balance, changing your password, checking balance)</li></ul></li></ul></li></ul><p id="e1bd8052-1e3a-4fad-8f28-8afd8a8c5380" class="">
+</p></li></ul><h3 id="78c60f07-171b-4d5c-b1f3-e8f8d890c833" class="">Wed is on how we work together</h3><ul id="18962646-93c3-43d1-922a-28e918dd681c" class="bulleted-list"><li style="list-style-type:disc">the team has gone through a lot of organizational change → different style (product development philosophy)<ul id="19c8a651-a97d-4d46-82ed-349b49ac3d0a" class="bulleted-list"><li style="list-style-type:circle">people who have been here the longest → for them building 0 to 1 is hard; at remitly is even harder (because there’s no muscle or understanding of what that means)<ul id="ff1fb6d6-5c9f-48fe-a551-7690be291634" class="bulleted-list"><li style="list-style-type:square">the founders did it 10 years ago; no one else really understand how to do this</li></ul></li></ul></li></ul><ul id="58d7a2f5-6367-43a0-8ee9-2fbc4486f238" class="bulleted-list"><li style="list-style-type:disc">the team has evolved <ul id="9a3ae0c0-969b-46c1-8a07-8fe788d9a7e5" class="bulleted-list"><li style="list-style-type:circle">we are working well</li></ul><ul id="12f419c6-2d82-4910-8e19-79b20d3de919" class="bulleted-list"><li style="list-style-type:circle">we are not a high performing team</li></ul><ul id="5950a6d6-21a0-43fb-be1d-a45f5c658915" class="bulleted-list"><li style="list-style-type:circle">trust is still building</li></ul><ul id="dd8283b8-73b5-45e9-a4be-a1f32d2b7760" class="bulleted-list"><li style="list-style-type:circle">no high trust in product</li></ul><ul id="f7d6be40-5bfd-459d-a150-bf1253d6c279" class="bulleted-list"><li style="list-style-type:circle">not high velocity </li></ul><ul id="22443baf-0fb4-4164-a224-e183a0158dbe" class="bulleted-list"><li style="list-style-type:circle">personality/form of communication</li></ul><ul id="928f1348-aceb-4923-a884-7b4149236970" class="bulleted-list"><li style="list-style-type:circle">HAVE NOT TAKEN THE TIME TO SLOW DOWN TO RECONGIZE THAT WHAT WE ARE DOING IS REALLY HARD<ul id="b1d7cb33-4b80-4c7f-987e-5dde7f42cdcb" class="bulleted-list"><li style="list-style-type:square">EMPATHIZE WITH THE DIFFERENT STYLE</li></ul><ul id="5d06de2b-6c06-45fe-bee5-26920e9a3a88" class="bulleted-list"><li style="list-style-type:square">How to work better together</li></ul><p id="0e88140f-b88a-46f0-8906-396aada135f4" class="">
+</p></li></ul></li></ul><ul id="529c3872-2847-4883-ac3e-7161db39f351" class="bulleted-list"><li style="list-style-type:disc">We are bringing leadership coach<ul id="615a5926-84b5-47ab-b40e-0e6bb5cf5ab2" class="bulleted-list"><li style="list-style-type:circle">leadership is taking on ownership</li></ul><ul id="3860e626-4331-4560-a7c4-3607951c1d9c" class="bulleted-list"><li style="list-style-type:circle">we are ALL RESPONSIBLE for culture</li></ul><p id="5752754c-9202-4a54-a82e-bc31a9c93aca" class="">
+</p></li></ul><ul id="21eaefe2-cd26-4ea7-85dc-985a4072af9f" class="bulleted-list"><li style="list-style-type:disc">How do we celebrate the wins and learn from the hits ← support each other</li></ul><p id="fc087490-e133-4fd7-bd47-f582c9a563c9" class="">
+</p><h3 id="2adfb465-714b-444e-b117-4109cc8a7971" class="">Organizational changes</h3><ul id="34cd2ff9-3e97-4101-83e0-c2a8137b83ea" class="bulleted-list"><li style="list-style-type:disc">Yes, we are not fully staffed for account experience<ul id="912aae6f-977a-4baa-ab00-f6fa080053e0" class="bulleted-list"><li style="list-style-type:circle">Pranovaa will move to account experience ← Pranovaa have desire to explore this area</li></ul></li></ul><ul id="e71aa986-4959-443d-aea7-f9dfd5707e83" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">With Pranovaa — inventory of all the things that people wants to do</span><div class="indented"><ul id="b81b1290-d00f-4386-98a2-a1261a2e525a" class="bulleted-list"><li style="list-style-type:disc">e.g. managing your profile; what is it that we can do on app vs. customer support (e.g. request a higher withdraw limit on atm)</li></ul><p id="036801de-73b8-4017-85fe-7e192d8c0b54" class="">
+</p></div></li></ul><h3 id="a5eca3d7-4c9a-48d8-821c-d5f87d6e748e" class="">Metrics</h3><ul id="109bde66-5f11-4333-8d42-07fd851dbf50" class="bulleted-list"><li style="list-style-type:disc"><strong>We definitely care about Monthly Active User</strong></li></ul><ul id="1ba83210-8b7d-4e43-b095-ea4a4a210690" class="bulleted-list"><li style="list-style-type:disc">FTT7 matters; its one indicator<ul id="5891bf03-1eb3-4f2f-ba8f-1d618c0bd723" class="bulleted-list"><li style="list-style-type:circle">you have the money ready </li></ul></li></ul><ul id="762d84f5-b841-49a4-bb34-073c4a5e72aa" class="bulleted-list"><li style="list-style-type:disc"><strong>REPEAT FUNDING</strong> ← what’s this metric?<ul id="38e58a61-3e14-44b8-9fb9-281de46bf6c7" class="bulleted-list"><li style="list-style-type:circle">if there’s a lot of friction to fund your account, people won’t come back</li></ul><ul id="3dcd9444-2962-4b9f-8b52-f6b7d590cf0f" class="bulleted-list"><li style="list-style-type:circle">that’s why direct deposit is SO IMPORTANT FOR NEOBANK</li></ul><ul id="7a79c2df-f2ba-4d79-b73b-264bc1be16d7" class="bulleted-list"><li style="list-style-type:circle">potential dashboard [<a href="https://app.periscopedata.com/app/remitly/1021709/customer-profiling-exploration">periscope</a>]</li></ul><ul id="90db44a8-b980-4f1f-9bc2-3afc324b42b1" class="bulleted-list"><li style="list-style-type:circle">WE MAY NOT BE TRACKING THIS FOR our tools</li></ul><ul id="92a824b5-212e-412d-a769-c2acd42a4c06" class="bulleted-list"><li style="list-style-type:circle">? Definition??<ul id="125f62a2-25a8-4bd7-9537-c4cc208ccbdd" class="bulleted-list"><li style="list-style-type:square">direct deposit</li></ul><ul id="95ee9dfb-4463-43ef-ba03-90ae110633d0" class="bulleted-list"><li style="list-style-type:square">as long as you are putting money in the account<ul id="e1afb00d-5876-4d9a-8c22-1bee04e7a11e" class="bulleted-list"><li style="list-style-type:disc"><strong>growth: I don’t care if LTV is $40; over time we will launch more product to grow their LTV</strong><ul id="8cee38b3-2c7a-4e97-bebf-471930b790fc" class="bulleted-list"><li style="list-style-type:circle">GROW THE CUSTOMER BASE vs. Growing primary or not (which focuses on LTV)<ul id="ce4169c0-6cf5-4699-8e8b-04cff585399c" class="bulleted-list"><li style="list-style-type:square">Optimization exercise: LTV</li></ul></li></ul></li></ul><ul id="b993bec4-97de-40ae-bc98-aeadba1ab93f" class="bulleted-list"><li style="list-style-type:disc">at scale: optimzation</li></ul></li></ul></li></ul></li></ul><p id="c805c0c0-fd66-46f1-9875-5e050312fa81" class="">
+</p><ul id="5eb4dd8f-5d21-41c0-8059-8dc5daf3cc3c" class="bulleted-list"><li style="list-style-type:disc">Focus on primary user ← Orta fundamentally disagree<ul id="18392e88-92ca-4144-9b8c-63ecba095b9b" class="bulleted-list"><li style="list-style-type:circle">the ones that retain the best are the ones that use the card (8x transactions)</li></ul><ul id="36a13254-594d-45df-93ff-8662ef8d465c" class="bulleted-list"><li style="list-style-type:circle">to christian, the $ </li></ul><p id="0c6ec2a8-340d-420c-95f4-740c7054316c" class="">
+</p></li></ul></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

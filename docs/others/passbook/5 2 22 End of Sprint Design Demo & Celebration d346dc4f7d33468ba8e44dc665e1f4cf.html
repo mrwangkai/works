@@ -1,0 +1,709 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>5/2/22 End of Sprint Design Demo &amp; Celebration</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(134, 131, 126, 1);
+	fill: rgba(134, 131, 126, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(134, 131, 126, 1);
+	fill: rgba(134, 131, 126, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="d346dc4f-7d33-468b-a8e4-4dc665e1f4cf" class="page sans"><header><h1 class="page-title">5/2/22 End of Sprint Design Demo &amp; Celebration</h1><p class="page-description"></p><table class="properties"><tbody><tr class="property-row property-row-date"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/calendar_gray.svg" style="width:14px;height:14px;display:block"/></span>Date</th><td><time>@05/02/2022 9:00 AM</time></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/list_gray.svg" style="width:14px;height:14px;display:block"/></span>Topic</th><td></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/list_gray.svg" style="width:14px;height:14px;display:block"/></span>Reaction</th><td></td></tr></tbody></table></header><div class="page-body"><nav id="9f95fcc8-e134-4d0c-a646-f2292363dcbc" class="block-color-gray table_of_contents"><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#858eeee0-ad1f-4269-9b7a-be11443f5e4f">Attendees</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#9e9f902c-9a37-4a45-a753-ecd238f724a4">Hannah: Improve KYC workflow</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#22c4ca31-f3ae-49ca-8792-891d8879f76b">John Grace: Rewards Dashboard</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#2dcdee61-6551-4725-befd-f19efe9e9995">Matt: Design System Planning</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#3ae35003-301e-45fd-9090-6994b68567fb">Fujie: Reasons for Rejection</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#ae8dc2b0-ea09-4b40-aa79-32545bb643b9">Notes</a></div></nav><h3 id="858eeee0-ad1f-4269-9b7a-be11443f5e4f" class="">Attendees</h3><figure id="256906bb-5a36-4202-93bc-369acf0da48a" class="image"><a href="5%202%2022%20End%20of%20Sprint%20Design%20Demo%20&amp;%20Celebration%20d346dc4f7d33468ba8e44dc665e1f4cf/Screen_Shot_2022-05-02_at_9.03.33_AM.png"><img style="width:1384px" src="5%202%2022%20End%20of%20Sprint%20Design%20Demo%20&amp;%20Celebration%20d346dc4f7d33468ba8e44dc665e1f4cf/Screen_Shot_2022-05-02_at_9.03.33_AM.png"/></a></figure><p id="c41558d5-e7c9-407f-b444-a758987734c7" class="">
+</p><h3 id="9e9f902c-9a37-4a45-a753-ecd238f724a4" class="">Hannah: Improve KYC workflow</h3><figure id="76e3cdee-8962-48bb-87bf-b9108d7d3d3d" class="image"><a href="5%202%2022%20End%20of%20Sprint%20Design%20Demo%20&amp;%20Celebration%20d346dc4f7d33468ba8e44dc665e1f4cf/Screen_Shot_2022-05-02_at_9.14.29_AM.png"><img style="width:2350px" src="5%202%2022%20End%20of%20Sprint%20Design%20Demo%20&amp;%20Celebration%20d346dc4f7d33468ba8e44dc665e1f4cf/Screen_Shot_2022-05-02_at_9.14.29_AM.png"/></a></figure><ul id="196a19c1-f078-41b4-ac33-9cc8a201a927" class="bulleted-list"><li style="list-style-type:disc">review kyc question: reducing number of questions<ol type="1" id="bc2d2955-1df2-479e-b06d-49812c389f8e" class="numbered-list" start="1"><li>[]</li></ol><ol type="1" id="88c8479b-e794-4f0d-821e-0dc0b9fa8802" class="numbered-list" start="2"><li>/</li></ol><ol type="1" id="bec66663-5435-43e1-98a8-c824eea8e8f4" class="numbered-list" start="3"><li>Source of income</li></ol><ol type="1" id="ee270d5c-a42c-4002-b97b-79562304c2cf" class="numbered-list" start="4"><li>Employment Status → different set of questions depending on selection<ol type="a" id="3afb3cef-133e-4bf8-8e05-fafa30c42499" class="numbered-list" start="1"><li>employed → industry, occupation, employer</li></ol><ol type="a" id="84bc85e5-c52a-4552-bd00-7de98357047a" class="numbered-list" start="2"><li>unemployed</li></ol><ul id="dbd380c4-8c96-45bf-be7a-2d2c1bc09585" class="bulleted-list"><li style="list-style-type:disc">free-form ‘other’ input field is visible to all user throughout the experience ← easier on eng</li></ul></li></ol></li></ul><ul id="ef36912b-ae3c-409e-9494-a8fa10051e41" class="bulleted-list"><li style="list-style-type:disc">Question<ul id="719486ea-401b-45b6-a152-2c7f2133789d" class="bulleted-list"><li style="list-style-type:circle">something that’s not mandatory to fill out? ← how to distinguish between optional/required?</li></ul><ul id="bfb731b7-c69d-465b-9a9d-ba09f4809741" class="bulleted-list"><li style="list-style-type:circle">Curious if ‘Other’ input can be included in the selection?</li></ul><ul id="964b5109-3bf2-4cbf-846e-91a224ccdda1" class="bulleted-list"><li style="list-style-type:circle">list of options based on common selections (historic)?<ul id="d5fd5315-f14d-416b-af5f-1aa6e4152fb6" class="bulleted-list"><li style="list-style-type:square">will the list be updated when x-number of ‘Others’ get added?</li></ul></li></ul><ul id="ccb0a858-a651-42d7-8de2-26709b7a05f1" class="bulleted-list"><li style="list-style-type:circle">language? i.e. translation? e.g. for spanish speaking users<ul id="623f4981-881c-477f-8c13-65665954f08a" class="bulleted-list"><li style="list-style-type:square"><strong>? how often are there typos? ← how are they handled?</strong></li></ul></li></ul><ul id="102556d9-4083-4acd-a325-363d86341491" class="bulleted-list"><li style="list-style-type:circle">employer ← type-ahead?</li></ul><ul id="4d4335ff-f93d-485d-b7f1-851658576384" class="bulleted-list"><li style="list-style-type:circle">[Antonio] How many fields do you need to satisfy KYC?<ul id="c3b9e46a-16fb-40c6-843f-5bff4770fd85" class="bulleted-list"><li style="list-style-type:square">[Hannah] most important for compliance: occupation and employer</li></ul><ul id="c82a408a-88f7-46ef-b119-eb08afcb344e" class="bulleted-list"><li style="list-style-type:square">[Antonio] majority of them work for cash — their employers don’t want to be listed<ul id="9a323069-611e-4b8f-a19e-ddedeeb4696b" class="bulleted-list"><li style="list-style-type:disc">both for documented &amp; undocumented</li></ul><ul id="168b2ab3-fd5b-4bb0-b305-c23b139e42c2" class="bulleted-list"><li style="list-style-type:disc">how much do you need to move forward</li></ul></li></ul></li></ul></li></ul><h3 id="22c4ca31-f3ae-49ca-8792-891d8879f76b" class="">John Grace: Rewards Dashboard</h3><ul id="dcb03515-1b24-4039-9180-5ac5861f7555" class="bulleted-list"><li style="list-style-type:disc">*** is this something we can use for Passbook?<ul id="63d39012-0ec4-4b03-a8f1-68c3f84cbbf7" class="bulleted-list"><li style="list-style-type:circle">re-skin: the only rewards we have is the referral program<ul id="ab141827-5d1f-49d8-9625-cde1f1775e14" class="bulleted-list"><li style="list-style-type:square">we can generate more shares if we show that in app</li></ul></li></ul><ul id="64f1d8c4-1376-4681-87ce-d0e18ceadd1d" class="bulleted-list"><li style="list-style-type:circle"><strong>international team is thinking about what a loyalty program would look like</strong><ul id="acb16d1b-9470-43d5-9e0d-e57d15848403" class="bulleted-list"><li style="list-style-type:square">customer insights: looking for a loyalty program</li></ul><ul id="08c7f3dd-a0ed-49d4-9124-31b0cbd2a3c5" class="bulleted-list"><li style="list-style-type:square">[#question] does competitor offer loyalty program?</li></ul></li></ul></li></ul><ul id="9697d947-dc2b-47c7-b390-103c1587ebae" class="bulleted-list"><li style="list-style-type:disc">data: every 20 seconds, someone is visiting the rewards dashboard</li></ul><ul id="000e3321-4f92-4fd1-bf5d-e34a952201ac" class="bulleted-list"><li style="list-style-type:disc">50/50 bucket test — card and dashboard</li></ul><ul id="c05d6b5e-88b9-4eda-9fc5-3c02508f6c01" class="bulleted-list"><li style="list-style-type:disc">there’s now a rewards section </li></ul><ul id="fc534f65-2315-4f7b-ac48-56dfe8b67770" class="bulleted-list"><li style="list-style-type:disc">+ accessible color</li></ul><ul id="fa5efb3a-1310-4b92-bde6-aa55c7463691" class="bulleted-list"><li style="list-style-type:disc">[Matthew] Eng resource?<ul id="c995c39e-26e1-4ded-a122-a64e9be1228a" class="bulleted-list"><li style="list-style-type:circle">John: eng who worked with Dan who needed to find components</li></ul><ul id="f4f63e71-4d88-4c7a-b4b7-1ce0491d989c" class="bulleted-list"><li style="list-style-type:circle">(Narwal? Narwhal?)</li></ul></li></ul><ul id="f3bb2aaf-cd35-49c3-88e3-985f9547ed7f" class="bulleted-list"><li style="list-style-type:disc">zero-touch ← reducing marketing team’s effort when they need to update offers, translations. To optimize for internal customers.<ul id="552badd6-c07b-48b3-b294-5105523bb33f" class="bulleted-list"><li style="list-style-type:circle">e.g. how internal customer look up details on referral</li></ul></li></ul><h3 id="2dcdee61-6551-4725-befd-f19efe9e9995" class="">Matt: Design System Planning</h3><figure id="3e01a1cb-3b76-45bb-ad4b-6b1122a5c0f0" class="image"><a href="5%202%2022%20End%20of%20Sprint%20Design%20Demo%20&amp;%20Celebration%20d346dc4f7d33468ba8e44dc665e1f4cf/Screen_Shot_2022-05-02_at_9.40.42_AM.png"><img style="width:1497px" src="5%202%2022%20End%20of%20Sprint%20Design%20Demo%20&amp;%20Celebration%20d346dc4f7d33468ba8e44dc665e1f4cf/Screen_Shot_2022-05-02_at_9.40.42_AM.png"/></a></figure><p id="9be2dfd0-3e2a-451a-bb1e-c80ed2421d3d" class="">
+</p><h3 id="3ae35003-301e-45fd-9090-6994b68567fb" class="">Fujie: Reasons for Rejection</h3><figure id="85ec8c88-7e46-434f-8b22-488ae3e07b3c" class="image"><a href="5%202%2022%20End%20of%20Sprint%20Design%20Demo%20&amp;%20Celebration%20d346dc4f7d33468ba8e44dc665e1f4cf/Screen_Shot_2022-05-02_at_9.59.32_AM.png"><img style="width:2258px" src="5%202%2022%20End%20of%20Sprint%20Design%20Demo%20&amp;%20Celebration%20d346dc4f7d33468ba8e44dc665e1f4cf/Screen_Shot_2022-05-02_at_9.59.32_AM.png"/></a></figure><ul id="58821a66-7aa2-469d-bd4f-adeeb91368b2" class="bulleted-list"><li style="list-style-type:disc">moving away from generic reason to rejection</li></ul><ul id="3aa53d15-fe17-4489-8a2d-6096929efe44" class="bulleted-list"><li style="list-style-type:disc">make changes in CRM, it shows some recommendation<ul id="6f56c42e-527b-47e2-8387-a389a5b85dd6" class="bulleted-list"><li style="list-style-type:circle">we would like to let customer know that their recent doc wasn’t accurate — provide option to try again + messaging</li></ul></li></ul><ul id="85343a0c-8933-462b-82e3-708bf373d5e4" class="bulleted-list"><li style="list-style-type:disc">split out difference between policy-related rejection vs. erronseous</li></ul><ul id="1892fdf4-464f-483e-8cf5-de9266f56c95" class="bulleted-list"><li style="list-style-type:disc">next step: understand how often the reasons are provided for rejection &amp; how its handled </li></ul><ul id="fcf81a48-600a-4766-98c7-5d98f669d317" class="bulleted-list"><li style="list-style-type:disc">[Question] would solving one solve others? E.g. if doc was blur and was recognized as incorrect doc, that when a clearer picture was taken clear out both rejection reason?<ul id="01cb218c-1c49-428c-8872-cb8a71af9d6a" class="bulleted-list"><li style="list-style-type:circle">Is it possible for one ‘solution’ to clear out multiple rejection reasons?</li></ul></li></ul><ul id="19d49fa4-5edf-4340-a349-fe5c379c1502" class="bulleted-list"><li style="list-style-type:disc">Inconsistent pattern:<figure id="17a05541-27cd-4e1d-9907-ff70b264e888" class="image"><a href="5%202%2022%20End%20of%20Sprint%20Design%20Demo%20&amp;%20Celebration%20d346dc4f7d33468ba8e44dc665e1f4cf/Screen_Shot_2022-05-02_at_10.01.22_AM.png"><img style="width:2320px" src="5%202%2022%20End%20of%20Sprint%20Design%20Demo%20&amp;%20Celebration%20d346dc4f7d33468ba8e44dc665e1f4cf/Screen_Shot_2022-05-02_at_10.01.22_AM.png"/></a></figure></li></ul><ul id="ecc09cc5-95bd-459a-b9fe-880377b6248e" class="bulleted-list"><li style="list-style-type:disc">security team to provide hacker who upload ‘pretend’ doc<figure id="c37f4266-e9d2-4aee-ba25-7fe0e881e68a" class="image"><a href="5%202%2022%20End%20of%20Sprint%20Design%20Demo%20&amp;%20Celebration%20d346dc4f7d33468ba8e44dc665e1f4cf/Screen_Shot_2022-05-02_at_10.02.23_AM.png"><img style="width:2482px" src="5%202%2022%20End%20of%20Sprint%20Design%20Demo%20&amp;%20Celebration%20d346dc4f7d33468ba8e44dc665e1f4cf/Screen_Shot_2022-05-02_at_10.02.23_AM.png"/></a></figure><ul id="58c7e2a6-1d8a-4632-82bc-77eb560f9e32" class="bulleted-list"><li style="list-style-type:circle">e.g. file size, file format (e.g. zip), bot action (too many file upload in a short period of time)<ul id="d6a8da91-932c-4913-ac1e-7cb6970b1f24" class="bulleted-list"><li style="list-style-type:square">error code → escalation</li></ul></li></ul></li></ul><ul id="bf0c5192-edf8-40fa-a970-7c1a033e5315" class="bulleted-list"><li style="list-style-type:disc">that’s a huge green check </li></ul><h3 id="ae8dc2b0-ea09-4b40-aa79-32545bb643b9" class="">Notes</h3><ul id="ada08aad-c457-4984-8e71-244e615bb283" class="bulleted-list"><li style="list-style-type:disc">[Question] there’s a jira of all the design backlog?</li></ul><p id="9395212a-9e09-4898-8ea1-97a475228ef7" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

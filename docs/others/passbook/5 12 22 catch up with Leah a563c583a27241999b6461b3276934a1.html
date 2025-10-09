@@ -1,0 +1,709 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>5/12/22 catch up with Leah</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(134, 131, 126, 1);
+	fill: rgba(134, 131, 126, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(134, 131, 126, 1);
+	fill: rgba(134, 131, 126, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="a563c583-a272-4199-9b64-61b3276934a1" class="page sans"><header><h1 class="page-title">5/12/22 catch up with Leah</h1><p class="page-description"></p><table class="properties"><tbody><tr class="property-row property-row-date"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/calendar_gray.svg" style="width:14px;height:14px;display:block"/></span>Date</th><td><time>@05/12/2022 2:30 PM</time></td></tr><tr class="property-row property-row-relation"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/arrow-northeast_gray.svg" style="width:14px;height:14px;display:block"/></span>Attendees</th><td></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/list_gray.svg" style="width:14px;height:14px;display:block"/></span>Topic</th><td></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/list_gray.svg" style="width:14px;height:14px;display:block"/></span>Reaction</th><td></td></tr></tbody></table></header><div class="page-body"><ul id="7b3bea7a-066c-4783-8f06-cad4c3147607" class="bulleted-list"><li style="list-style-type:disc">working models<ul id="f94e36bd-a0ec-4cbb-8f0c-a65afebf705b" class="bulleted-list"><li style="list-style-type:circle">work with PM+eng+design → figure out what we are doing w/ analytics support</li></ul></li></ul><ul id="01c26820-79b7-4ddc-a37a-45b188da3e4c" class="bulleted-list"><li style="list-style-type:disc">learning from LA trip<figure id="56cdc15c-b029-44b2-acde-7d7fc55017b9"><div class="source"><a href="5%2012%2022%20catch%20up%20with%20Leah%20a563c583a27241999b6461b3276934a1/LA_Field_Trip_Insights_5_10-5_11.pdf">LA Field Trip Insights 5_10-5_11.pdf</a></div></figure><ul id="915a41f4-9d08-414a-9014-9cbd309bbd0b" class="bulleted-list"><li style="list-style-type:circle">a good one</li></ul><ul id="2e449c71-a665-496b-9346-a7ac85bf5576" class="bulleted-list"><li style="list-style-type:circle">objective: try to do some evaluative design work by kyle/diego/michael (e.g. gps locator feature; doc upload); setting wasn’t great at generating insights</li></ul><ul id="c244ac50-35c2-41aa-a6b7-f90799cecd85" class="bulleted-list"><li style="list-style-type:circle">learnings notes (<a href="https://docs.google.com/document/d/1deQ4F_S_cbnb-L8FilZyrQcxrvEioLvgTSfGiQwpht0/edit">docs</a>)<blockquote id="d18589fc-dabc-4363-8b16-d9e90dcb06d2" class="">$2 cash back isn’t enticing enough reason ← exactly</blockquote><ul id="181a71bb-bc9d-42ba-a7e0-5a9b9c755c48" class="bulleted-list"><li style="list-style-type:square">unknown neobank</li></ul><ul id="e6d9a8bd-dfc2-4d38-b84a-1aeef45d51f5" class="bulleted-list"><li style="list-style-type:square">communicating SECURITY FEATURES ← building it into value prop + end to end experience</li></ul><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="6ddced34-3306-48ad-80d1-a759d7ebeae3"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">WE ARE SECURE enough for you to re-FUND; <br/>for this segment: its not about privacy but the security of the data</div></figure><ul id="4bc9e8a8-b7b9-4612-92f8-301d15284200" class="bulleted-list"><li style="list-style-type:square">biggest predictor for churn: does not re-fund<ul id="f5e162c5-17b2-499c-b1f5-62df1c88e325" class="bulleted-list"><li style="list-style-type:disc">hired as a single job to done (e.g. open new card to shop online)</li></ul><ul id="f8629f56-2a0e-4c7b-8f0f-346773f8e08a" class="bulleted-list"><li style="list-style-type:disc">doesn’t rehire<ul id="3cd3da85-1c96-416d-b9ad-40d5618b43f7" class="bulleted-list"><li style="list-style-type:circle">don’t trust us with more of our wallet<ul id="c16d9758-df47-482b-b11b-3f1ef66399c3" class="bulleted-list"><li style="list-style-type:square">open end to main source of income; open end to the openess of the internet</li></ul></li></ul></li></ul></li></ul><ul id="d7375ddb-29fe-40da-98ce-63872a621bdd" class="bulleted-list"><li style="list-style-type:square">Best way to approach generating problem<ul id="5000c62f-ba1d-4a46-af77-3d7d7bc8156a" class="bulleted-list"><li style="list-style-type:disc">customer: “CAN I USE A PREPAID CARD” ← why? I only want the amount of $ that I want to send to mexico <ul id="81b18625-ff89-45d2-b5dc-44d68cf2ad34" class="bulleted-list"><li style="list-style-type:circle">narrow funnel to put money in</li></ul><ul id="eb759f69-d5c5-41cb-9a8a-3127ef5c66b7" class="bulleted-list"><li style="list-style-type:circle">reduce risk</li></ul><ul id="96a66707-1637-407a-8d1e-e0c4fca8de82" class="bulleted-list"><li style="list-style-type:circle">Feel safer with paypal with the stored value</li></ul><ul id="8906b05a-8d15-41e3-bd25-30087d255e70" class="bulleted-list"><li style="list-style-type:circle">? is this compartmentalization/division (reminds me of envelope)<ul id="ba615661-b865-4c91-8be6-6b7bdd033877" class="bulleted-list"><li style="list-style-type:square">! challenges the notion of direct deposit</li></ul><ul id="182b6ac1-f14f-4810-a571-1682307e6c3a" class="bulleted-list"><li style="list-style-type:square">pocket (positas)</li></ul><ul id="3464876f-d798-4fe2-bab8-d6bc7fe70e15" class="bulleted-list"><li style="list-style-type:square">even if they do put in $1000; create compartments </li></ul></li></ul><ul id="4789fd93-f06d-4eb1-8a54-3a760fd69b97" class="bulleted-list"><li style="list-style-type:circle">using Cashapp through someone else ← do they have $ in cashapp</li></ul></li></ul><ul id="6fb5011a-0c62-48ed-94ae-6c608f41b07b" class="bulleted-list"><li style="list-style-type:disc">customer feels safer with STORED VALUE ← what are the stored value? paypal?</li></ul><ul id="10007c31-2fae-4c79-b555-85220b3e7baa" class="bulleted-list"><li style="list-style-type:disc">safety for virtual cards</li></ul><ul id="507ac342-6a3a-4c7c-81d8-bced5d0ff61e" class="bulleted-list"><li style="list-style-type:disc">LONGER CONTACT TIME = building trust<ul id="0fa97db4-9df8-4f37-b840-80327b2d54e2" class="bulleted-list"><li style="list-style-type:circle">e.g. notification of use; opening app = same </li></ul><ul id="b13a6b43-198d-48ca-9c2e-b1ec6398d539" class="bulleted-list"><li style="list-style-type:circle">we don’t have the luxury of time: we lose most of our customer in the first 14 days</li></ul></li></ul></li></ul><ul id="b51c0a18-ee87-4663-ac5b-9a4a154015c9" class="bulleted-list"><li style="list-style-type:square">WE THROW EVERYTHING AT THEM AT ONCE<ul id="0c1160b0-3617-4215-80e6-801e416ea7ef" class="bulleted-list"><li style="list-style-type:disc">how to design for tiny steps</li></ul><ul id="438fcd73-4e56-4c7c-8f4b-47fded164dca" class="bulleted-list"><li style="list-style-type:disc">why did they even consider opening an acct with us ← </li></ul><ul id="16b83c94-8779-4fef-8b7c-ae343df1ae0e" class="bulleted-list"><li style="list-style-type:disc">what are their first transactions = e.g. amazon<ul id="9875ddb5-9302-457b-82e2-cedfa17a7bab" class="bulleted-list"><li style="list-style-type:circle">“they are hiring us for a very specific job... even at $1”</li></ul></li></ul><ul id="49ed091d-7c46-4411-9cd9-f62026ef67c2" class="bulleted-list"><li style="list-style-type:disc">what is likely next step we should guide them to take; mini steps</li></ul></li></ul><ul id="4b6574ca-02c4-47e4-800f-04ed2dd4ca62" class="bulleted-list"><li style="list-style-type:square">close system = ? ← this is how we are thinking about it<ul id="907a9b41-6977-4c07-bffe-d8255965be00" class="bulleted-list"><li style="list-style-type:disc">direct deposit, or...</li></ul></li></ul><ul id="d56ed71b-a7d8-48c0-8b35-31ca7c67c162" class="bulleted-list"><li style="list-style-type:square">Messaging about REMITLY branding &amp;&amp;&amp;&amp; Integration → will help with retention</li></ul><ul id="f00c94e7-24de-4fd9-b2ea-4b91c1d808e2" class="bulleted-list"><li style="list-style-type:square">How do we draft on the security side of remitly<ul id="c2307b71-fac0-45de-ae36-9b2a26c9e162" class="bulleted-list"><li style="list-style-type:disc">Fujie thought a lot about security/validation as a value add </li></ul><ul id="57c13786-fab7-4e9e-a2ec-4383c6ddca26" class="bulleted-list"><li style="list-style-type:disc">? for US-MEX have the product experience match what we are telling them<ul id="d33ec8d3-7415-48d6-996f-17a42757ad4e" class="bulleted-list"><li style="list-style-type:circle">e.g. match the idea of FDIC with their $</li></ul></li></ul><ul id="d25a2dde-efe3-42f1-8bb1-012a58b57bf5" class="bulleted-list"><li style="list-style-type:disc">test amount is low ($20 average ←)<ul id="aad5bd47-b7aa-4bca-8737-b7a9eb5a1f54" class="bulleted-list"><li style="list-style-type:circle">they are worried about moving more?</li></ul><p id="87bd03fa-34da-4f61-b225-bff1c4130bf9" class="">
+</p></li></ul></li></ul></li></ul><ul id="aa99c4f2-562b-4f42-a8f4-8ee28fb5e652" class="bulleted-list"><li style="list-style-type:circle">fundamental: “Someone can pick up my phone and I lose ALL MY MONEY”<ul id="da132582-bc07-491f-a292-dea94e5a5b40" class="bulleted-list"><li style="list-style-type:square">building a mental model for this design target</li></ul><p id="9e5d7798-ab96-4996-9430-a083ba8da844" class="">
+</p></li></ul></li></ul><ul id="e4e25f53-f385-4ecc-a1db-83f6a0f7629c" class="bulleted-list"><li style="list-style-type:disc">what is their definition of “secured”? / what feels “safe”? (from remittance side: faster = safer; not sure about the stored component of it)<ul id="4df9abcd-6f00-4dd6-b39b-8225c683ee33" class="bulleted-list"><li style="list-style-type:circle">the metrics of p2p<ul id="1e553272-62d0-4a60-9bf7-421e2c242ec1" class="bulleted-list"><li style="list-style-type:square">60% of stability seekers (banked/unbanked)<ul id="5b2e2448-4ff9-4ae6-8719-54f9c1091b4a" class="bulleted-list"><li style="list-style-type:disc">e.g. house cleaner getting paid via PayPal or Venmo</li></ul><ul id="194ef56f-b1d1-47e0-9c6d-4ad0d4aaca5b" class="bulleted-list"><li style="list-style-type:disc">? how do they feel about money in their Venmo — do they feel </li></ul></li></ul><ul id="b2e7f742-6e7c-4127-b9ca-8e061b08b951" class="bulleted-list"><li style="list-style-type:square">have not talked to anyone who are p2p that are unbanked<ul id="37554cfd-6f0e-493b-8a2f-b6309b072d89" class="bulleted-list"><li style="list-style-type:disc">smaller percentage with cash deposit </li></ul></li></ul></li></ul><p id="c3847b58-3fbd-4af9-aa95-d05f85eb35de" class="">
+</p></li></ul><ul id="2b85d449-6834-4266-92ae-44d114d48195" class="bulleted-list"><li style="list-style-type:disc">usertesting.com</li></ul><ul id="2b094037-c640-4df8-9922-28855369b483" class="bulleted-list"><li style="list-style-type:disc">generative research?<ul id="e7cae6da-dd76-445b-9276-2e5ed53e749a" class="bulleted-list"><li style="list-style-type:circle">feeding into product? ← insight generation/brainstorming session?<ul id="545b8e91-e7d6-4d54-b8eb-b417698b54e8" class="bulleted-list"><li style="list-style-type:square">e.g. improve engagement with customers = understanding what the customers are looking for</li></ul></li></ul></li></ul></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
