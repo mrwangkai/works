@@ -1,0 +1,706 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>4/27/22 Christine 1:1</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(134, 131, 126, 1);
+	fill: rgba(134, 131, 126, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(134, 131, 126, 1);
+	fill: rgba(134, 131, 126, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="6d033183-d944-40f5-b64a-06e53d45ec69" class="page sans"><header><h1 class="page-title">4/27/22 Christine 1:1</h1><p class="page-description"></p><table class="properties"><tbody><tr class="property-row property-row-date"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/calendar_gray.svg" style="width:14px;height:14px;display:block"/></span>Date</th><td><time>@04/27/2022 1:30 PM</time></td></tr><tr class="property-row property-row-relation"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/arrow-northeast_gray.svg" style="width:14px;height:14px;display:block"/></span>Attendees</th><td></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/list_gray.svg" style="width:14px;height:14px;display:block"/></span>Topic</th><td><span class="selected-value select-value-color-orange">Meet and Greet</span></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/list_gray.svg" style="width:14px;height:14px;display:block"/></span>Reaction</th><td></td></tr></tbody></table></header><div class="page-body"><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="cd37b7b8-52f6-4bea-8fa7-39fa21d936fc"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%"><p id="01994509-6c9a-4b9f-9056-cc9afd5803dc" class="">some really helpful ideas + insights from this convo, especially around understanding of partners</p></div></figure><ul id="f639da56-59d4-4f5a-8897-93d636c85f2f" class="bulleted-list"><li style="list-style-type:disc">based in NYC<ul id="2c63bc0e-7478-44d6-aee2-85dbc870801a" class="bulleted-list"><li style="list-style-type:circle">hour: flexible/random [10am end around 7 or 8pm EST]</li></ul><ul id="918b2536-3de2-4d99-a2e2-6b862cf27ea6" class="bulleted-list"><li style="list-style-type:circle">bank in CST/MST; partners in EST</li></ul></li></ul><ul id="42d925a8-0eaf-4681-9602-d203180d0e1a" class="bulleted-list"><li style="list-style-type:disc">experience at remitly<ul id="fe7e2a50-0e0f-454c-a661-bd4ebf5d69e8" class="bulleted-list"><li style="list-style-type:circle"><a href="https://docs.google.com/document/d/1Irya90wRYRQgJU83Z7CcID38e-MAt2Q3v1KXV-zuzlM/edit#heading=h.kl8k2vgo0qp4">Sunrise and Galileo Partner Guide</a></li></ul><ul id="f5cf406e-6f36-40f0-a88c-4d2e073f4fcd" class="bulleted-list"><li style="list-style-type:circle">a year ago (march 2021) on the partnership<ul id="3f05ce7a-eaaa-40b8-b4a5-42075aa496d1" class="bulleted-list"><li style="list-style-type:square">sunrise bank; galileo; chukle?</li></ul><ul id="6970bfeb-22af-4a3d-af2f-a133c9854e60" class="bulleted-list"><li style="list-style-type:square">no consolidation, no way for partner to prioritize ← hard to know how to manage the partner</li></ul><ul id="c03e9a1a-ff6d-4ce4-9808-85124fce554d" class="bulleted-list"><li style="list-style-type:square">work w/ PM and eng to provide a source of truth (when contacting with partners)</li></ul><ul id="fb79c87d-2005-4dcf-b993-5e2e6396f954" class="bulleted-list"><li style="list-style-type:square">we were a lot smaller as a team</li></ul><ul id="e0b7dc1b-233d-4d87-b0c1-b3f5eb3e8e40" class="bulleted-list"><li style="list-style-type:square">worked with team to submit flow to sunrise bank</li></ul><ul id="308ed21e-91c2-4737-be3e-d92e17e0aeb9" class="bulleted-list"><li style="list-style-type:square">new partner search</li></ul></li></ul><ul id="8bbcbfb1-7dde-452b-ab7e-23ee2be2c2e9" class="bulleted-list"><li style="list-style-type:circle">june/july 2021 look at what partner that remitly can work with<ul id="28c8744b-a1e7-4c66-9c48-0b6ff4cbd137" class="bulleted-list"><li style="list-style-type:square">vendor search ← e.g. if PM wants to build out a new feature, which vendor we should use<ul id="961a6929-e94c-432b-956a-8a84896f5ede" class="bulleted-list"><li style="list-style-type:disc">API doc; pricing</li></ul><ul id="8c203fb1-0279-45b1-92e9-142317e0afa2" class="bulleted-list"><li style="list-style-type:disc">procument, etc.</li></ul><ul id="efcecfe0-6e7c-4f0f-b2b6-b7c623885b46" class="bulleted-list"><li style="list-style-type:disc">example for this? </li></ul><ul id="abf7d005-26bb-4f45-b611-4da3209680aa" class="bulleted-list"><li style="list-style-type:disc">more of the work that Christine do today</li></ul></li></ul></li></ul><ul id="d85fc6d8-2072-4473-909c-7f79afeb1026" class="bulleted-list"><li style="list-style-type:circle">cash deposit / check deposit / direct deposit product ← for passbook partners?<ul id="19c81ac8-f555-4baa-9054-7cf59f6f93d5" class="bulleted-list"><li style="list-style-type:square">we landed on a partner we are happy with</li></ul><ul id="df5b542d-1c65-432f-9323-1a5424aed909" class="bulleted-list"><li style="list-style-type:square">different from sunrise bank; sunrise bank = they manage the entire passbook deposit acct (DDA); legal entity behind passbook<ul id="7a4fe382-a10e-42cb-b743-97f81e2af20f" class="bulleted-list"><li style="list-style-type:disc">“collateral review” — goes through sunrise</li></ul><ul id="276d66e3-eecb-4a1c-a6ce-bf82a1ae4813" class="bulleted-list"><li style="list-style-type:disc">e.g. limit for our customer</li></ul></li></ul><ul id="f41b82fa-1460-4228-8310-36c4d30cb4eb" class="bulleted-list"><li style="list-style-type:square">everythign build on top of the account above sunrise<ul id="1e9a2ec4-a3ef-4ab7-8029-eb8f5241dd7d" class="bulleted-list"><li style="list-style-type:disc">for us: our money sits in sunrise; feature </li></ul></li></ul><ul id="2add9583-fd1f-47ce-8214-f3bb5f00433c" class="bulleted-list"><li style="list-style-type:square">greendot is cash deposit → still goes into </li></ul></li></ul><ul id="164ae3bd-bac6-49ca-b036-cd35b1a15aec" class="bulleted-list"><li style="list-style-type:circle">IDB / better KYC and onboarding</li></ul><ul id="b3cc2d7d-ec57-4c0b-84b4-e36bdef71c1c" class="bulleted-list"><li style="list-style-type:circle">manage all the operations</li></ul></li></ul><ul id="c45f705c-3a2e-4566-a4d2-492c0d5ad02e" class="bulleted-list"><li style="list-style-type:disc">experience working w/ design and eng?</li></ul><ul id="cb40b824-b908-41d8-9410-e2a94b6366dc" class="bulleted-list"><li style="list-style-type:disc">experience<ul id="b1153cf6-af1b-4bd4-8fad-942037b248de" class="bulleted-list"><li style="list-style-type:circle">uber payments &amp; mastercard<ul id="fc43fd5d-461a-434d-b372-f3a47021c3fc" class="bulleted-list"><li style="list-style-type:square">MA planning: year-long vision — work with all bank/merchant ← everything they do is very careful; tend to be slower<ul id="d2f1b577-fbd9-4443-885b-7744680b9fed" class="bulleted-list"><li style="list-style-type:disc">worked on Apple Pay ← make sure things work ✅</li></ul></li></ul><ul id="cc358e1d-0536-4118-b7d3-1bfb798626b4" class="bulleted-list"><li style="list-style-type:square">uber is completely opposite<ul id="f5f701e1-9181-4ff1-853f-3df302edd464" class="bulleted-list"><li style="list-style-type:disc">driver &amp; restaurant payment ← making sure they get paid on-time<ul id="943068de-ba46-4f0a-a284-96851db1334d" class="bulleted-list"><li style="list-style-type:circle">there’s not a lot of companies that does this</li></ul><ul id="e95280fb-42f9-4a6e-a0d5-d14dcb062200" class="bulleted-list"><li style="list-style-type:circle">the frequency (weekly or instantly)</li></ul><ul id="c4f8b0fd-d806-44af-96d9-45841b8012b9" class="bulleted-list"><li style="list-style-type:circle">challenges were unique to uber ← push bank to do things that they have not done before</li></ul></li></ul></li></ul><ul id="b8a18c7e-e598-46e4-a638-272a3af64aae" class="bulleted-list"><li style="list-style-type:square">passbook/remitly ← no leverage due to volume<ul id="26fdc08a-15c0-44f7-af96-6f7d003bd88e" class="bulleted-list"><li style="list-style-type:disc">move faster, to try</li></ul><ul id="11f23b66-7663-4f82-a3b6-fd48b244ce6f" class="bulleted-list"><li style="list-style-type:disc">how has passbook evolved?<ul id="edc027d3-7a5d-4746-ac2d-4973b79b6b20" class="bulleted-list"><li style="list-style-type:circle">we got a lot better</li></ul><ul id="45196c34-6a29-4775-8005-1173d4452189" class="bulleted-list"><li style="list-style-type:circle">we didn’t have a vision ← still trying to figure out pmf</li></ul><ul id="5b306460-9fc0-4754-bdbc-417611a4474d" class="bulleted-list"><li style="list-style-type:circle">you can still see some of the reminance</li></ul><ul id="4c1de79c-423f-4f03-bd00-5bec0eee482b" class="bulleted-list"><li style="list-style-type:circle">move from a scrappy (1~2 PM + few eng) → puneet building out a strong eng team; christian setting vision<ul id="7b7801ab-fc05-488b-8ad9-8da152c560ed" class="bulleted-list"><li style="list-style-type:square">gerry (legal) — amazing hire that changed the landscape</li></ul><ul id="1139a4e0-99af-4ebe-84ab-486819b08f89" class="bulleted-list"><li style="list-style-type:square">half the team came from Uber</li></ul></li></ul><ul id="e5ce4ff1-fbc3-4004-a1b8-0f1a3af40375" class="bulleted-list"><li style="list-style-type:circle">I’m clear with where we are going ← where are we going?<ul id="4c4582d6-2407-467e-9e09-f0cd4a20504d" class="bulleted-list"><li style="list-style-type:square">connection with remitly/lending</li></ul><ul id="7c145409-7eea-4564-a3ba-1d3995e23280" class="bulleted-list"><li style="list-style-type:square">just about execution</li></ul><ul id="b42c2f7b-0056-463a-ab7d-0142fb470343" class="bulleted-list"><li style="list-style-type:square">what is the vision that you have more clarity on?<ul id="be347cdc-91a9-4623-b9f1-0f16c36aa87e" class="bulleted-list"><li style="list-style-type:disc">christian has help to build more clarity; how passbook plays into the role of Remitly; we should get really good at delivering the basics of banking through passbook (p2p) / foundation of banking be really solid; so that when we tie to other services (like lending and remittance), it creates a cohesive experience for our user<ul id="0ccc40c1-d211-4f6f-9707-ed5fbde7d7dc" class="bulleted-list"><li style="list-style-type:circle">would love to add on rewards</li></ul><ul id="d1b8f496-a4a8-41e9-9a45-6805049eb01c" class="bulleted-list"><li style="list-style-type:circle">we can be niche with the way we do partnership + rewards</li></ul></li></ul><ul id="363162c8-0cda-4d92-9f76-4d260349d07b" class="bulleted-list"><li style="list-style-type:disc">if we can be all-in-one → future/future</li></ul><ul id="ce24cd6b-997a-4963-b74a-d5514e005a32" class="bulleted-list"><li style="list-style-type:disc">near term future: passbook be a really solid product where everything work as expected ← where we currently struggles with<ul id="ed027bd9-1b41-4356-92af-9c516e2bfdc9" class="bulleted-list"><li style="list-style-type:circle">we have features but not all work well</li></ul></li></ul><ul id="e3777f5a-7466-4099-bb9f-a375360cd76e" class="bulleted-list"><li style="list-style-type:disc">view from partnership pov</li></ul><ul id="9b49e74d-2e8e-4453-b052-32a62633f15f" class="bulleted-list"><li style="list-style-type:disc">i think a lot about using passbook as acquisition for remitly (or vice verse)</li></ul><ul id="22a8b945-5d57-44dc-bdb1-0c645a37fd91" class="bulleted-list"><li style="list-style-type:disc">when it all flows together = golden future</li></ul><ul id="d59820d9-f2f8-4301-a463-1961395ab135" class="bulleted-list"><li style="list-style-type:disc">that will define how we look at FRAUD ← interesting; e.g. if you metric is on acqusitiion, you will look at fraud differently than conversion from remitly to passbook<ul id="978c1290-4dc3-4b49-b2dc-3bbe653526aa" class="bulleted-list"><li style="list-style-type:circle">vs. passbook is primary product; fraud can be looked at differently</li></ul></li></ul></li></ul></li></ul></li></ul></li></ul><ul id="27240093-a3c7-4f2b-b812-4029cc672a7c" class="bulleted-list"><li style="list-style-type:square">Christine: I came from a HCI background<ul id="4d6d9618-8ca6-429d-a602-a9d4eb0d4c28" class="bulleted-list"><li style="list-style-type:disc">there’s a lot we can do; a lot of opportunities with design</li></ul><ul id="e1528806-6a1b-4c45-a1ec-5b486ced8f55" class="bulleted-list"><li style="list-style-type:disc">because I work across the different squads — i can understand how the different products tied togehter <ul id="3d22986e-3669-4115-ae5a-3668b9c269b0" class="bulleted-list"><li style="list-style-type:circle">how to integrate all of that with remitly (product / design)</li></ul></li></ul><ul id="18ad116b-9904-43e6-9410-13057c3937a6" class="bulleted-list"><li style="list-style-type:disc">passbook/remitly<ul id="5f44dc3c-9496-4138-ac08-e64729361e4b" class="bulleted-list"><li style="list-style-type:circle">silo</li></ul><ul id="708300e4-fe16-4e3c-a0b7-534346dc1347" class="bulleted-list"><li style="list-style-type:circle">it still feels small </li></ul><ul id="fc21a87c-7b25-4de0-8a9d-0e8601948ff3" class="bulleted-list"><li style="list-style-type:circle">but have funding</li></ul><ul id="4330302d-4e3a-4bf3-827b-5f4af570f57b" class="bulleted-list"><li style="list-style-type:circle">we can entertain certain ideas</li></ul></li></ul></li></ul><ul id="bbdf9b32-aa99-4698-9a4b-da179fee7d27" class="bulleted-list"><li style="list-style-type:square">christine can provide more context on:<ul id="94f3147d-a6c6-4c5e-a2f2-39a2501fa549" class="bulleted-list"><li style="list-style-type:disc">partnership</li></ul><ul id="9ad8b0de-cbb0-41ab-8cfe-ed1154615520" class="bulleted-list"><li style="list-style-type:disc">processing related </li></ul></li></ul></li></ul></li></ul></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

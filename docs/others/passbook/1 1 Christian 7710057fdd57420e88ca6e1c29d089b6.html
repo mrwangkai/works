@@ -1,0 +1,708 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>1:1 Christian</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(134, 131, 126, 1);
+	fill: rgba(134, 131, 126, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(134, 131, 126, 1);
+	fill: rgba(134, 131, 126, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="7710057f-dd57-420e-88ca-6e1c29d089b6" class="page sans"><header><h1 class="page-title">1:1 Christian</h1><p class="page-description"></p><table class="properties"><tbody><tr class="property-row property-row-date"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/calendar_gray.svg" style="width:14px;height:14px;display:block"/></span>Date</th><td><time>@04/22/2022</time></td></tr><tr class="property-row property-row-relation"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/arrow-northeast_gray.svg" style="width:14px;height:14px;display:block"/></span>Attendees</th><td></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/list_gray.svg" style="width:14px;height:14px;display:block"/></span>Topic</th><td></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/list_gray.svg" style="width:14px;height:14px;display:block"/></span>Reaction</th><td></td></tr></tbody></table></header><div class="page-body"><h3 id="5888f5aa-4c2d-4ec2-ad4e-4bb231f3ff14" class="">On design org</h3><ul id="4e690097-afbb-4509-8788-adf3e403fbdf" class="bulleted-list"><li style="list-style-type:disc">“you are part of a new wave of design hires that we believe can help transform the way that the org perceive design”<ul id="4eb88c23-ce8c-429c-835e-489320ad5f3d" class="bulleted-list"><li style="list-style-type:circle">persuading executive team on design ← design cannot be an afterthought<ul id="ac505d5c-c3de-474c-940b-f592aabdc843" class="bulleted-list"><li style="list-style-type:square">make product sticky, rewarding, easy to use</li></ul><ul id="a04877bb-8be4-4464-b4b1-eb5f2a9eb2fa" class="bulleted-list"><li style="list-style-type:square">“lauren is fighting a good fight” + we now have tailwind<ul id="7a604e60-a3aa-465d-a068-939e72574ee7" class="bulleted-list"><li style="list-style-type:disc">new CTO came from Google, understand the value of the triad (eng/pm/design)</li></ul></li></ul></li></ul><ul id="96b1a6fa-5066-415f-b12c-47d166c8e1a1" class="bulleted-list"><li style="list-style-type:circle">why heidi left? she wasn’t put a place where she could be successful</li></ul><ul id="ddf56380-57ce-4c6d-a9ad-869ede1d43d1" class="bulleted-list"><li style="list-style-type:circle">heidi was only leading design remitly core<ul id="0a0f5a5c-c8c8-4a91-81b2-a4182ec2d332" class="bulleted-list"><li style="list-style-type:square">we have the opportunity to bring in someone from place like Google — someone who can think about design/design system holistically, from remitly/other product (e.g. if remitly has a halo effect)<ul id="e79097ae-82c6-4ed7-afe3-5b6b5b3f31ef" class="bulleted-list"><li style="list-style-type:disc">customer needs to understand that we are of the same brand; doesn’t make sense to build a passbook brand that is absent of remitly </li></ul></li></ul></li></ul><ul id="2b939aae-304b-447a-9c8f-1fb0ce327bec" class="bulleted-list"><li style="list-style-type:circle">we are making design org better</li></ul></li></ul><ul id="6799e00f-cc35-46ff-bddd-b2fbc566c567" class="bulleted-list"><li style="list-style-type:disc">? question: the design org structure feels more loosely<ul id="e7b8ec61-f5f2-4bb9-8059-bdf880bc3788" class="bulleted-list"><li style="list-style-type:circle">we want to create a function/leadership/reporting structure where there designers reporting to designer</li></ul><ul id="8bb6e712-8dbe-4fbc-b3a3-2c52fbe87f7e" class="bulleted-list"><li style="list-style-type:circle">ideally you have a seasoned design leadership who you can learn from</li></ul><ul id="dfecdc68-1d2a-4762-b9f3-e648740eeca6" class="bulleted-list"><li style="list-style-type:circle">Christian: my job is to find those leader to build that design leadership<ul id="05db9d4d-2903-4fbf-b1a1-cd8b69ebab90" class="bulleted-list"><li style="list-style-type:square">this is the same for all functions: there is no chief product officer → its changing w/ the new CTO hire</li></ul></li></ul></li></ul><ul id="86a3f9bf-12fe-4a9c-ba66-dec43f14a24c" class="bulleted-list"><li style="list-style-type:disc">Not setup for a multi-product structure<ul id="66399b5a-fe3a-404a-b74d-5b82a4ed0c35" class="bulleted-list"><li style="list-style-type:circle">setup for remitly expansion</li></ul><ul id="9c9b8b8d-e790-4d4e-89fe-d3c5b66c37bb" class="bulleted-list"><li style="list-style-type:circle">growth came from </li></ul></li></ul><h3 id="159b69c5-8e61-4144-ae7d-563aba4b4064" class="">On product</h3><ul id="1047fd29-b018-4af7-8d18-008e10367b5e" class="bulleted-list"><li style="list-style-type:disc">dog food the product</li></ul><ul id="45beebf4-8ad5-468f-a2ca-cea4a748ee1b" class="bulleted-list"><li style="list-style-type:disc">“once you have the debit card...”</li></ul><p id="29350d01-aafd-44d2-aefc-7fb8ef163545" class="">
+</p><h3 id="df4965da-8070-473e-80cf-0df16396057b" class="">On revenue</h3><ul id="e272f0cc-54f8-454e-a4ef-ed8374c65f65" class="bulleted-list"><li style="list-style-type:disc">We make money when they make remittance / use their debit card</li></ul><ul id="d5ac0a35-5fe0-4aef-a8f7-74c1c695ce13" class="bulleted-list"><li style="list-style-type:disc">Passbook in the next 3~4 years, there will be 0 goal to make passbook profitable (no pressure from wall street / board)<ul id="94b983ad-8f2a-4217-aa6a-b0a4e95956cd" class="bulleted-list"><li style="list-style-type:circle">if a good portion of passbook remits, we make money</li></ul><ul id="47f7d9cb-115f-41d4-bbe9-d08152c29d78" class="bulleted-list"><li style="list-style-type:circle">we can be a loss leader and still generate greater earning/revenue for remitly</li></ul></li></ul><ul id="4310af61-36b3-42d3-a16c-fc814d1f975a" class="bulleted-list"><li style="list-style-type:disc">cost: unit economics/overhead<ul id="8bac1f92-3590-41ae-94a1-969aacd5e25d" class="bulleted-list"><li style="list-style-type:circle">fee for check-cashing: nominal<ul id="644f3aef-508e-426b-adba-347a8489fb70" class="bulleted-list"><li style="list-style-type:square">check may be disappearing in the next couple of decade</li></ul><ul id="d88f8215-3906-4ffc-865f-ca02f7fabd5d" class="bulleted-list"><li style="list-style-type:square">its to show to people that we are being competitive</li></ul></li></ul></li></ul><ul id="2da2309e-d709-49d2-b478-fade31b8a830" class="bulleted-list"><li style="list-style-type:disc">Christian: our north star metric should be — be the fastest to get people their money regardless (creates delight); fast/cheap<ul id="b58d78ed-9220-4647-8c07-dfbf0cd18bc1" class="bulleted-list"><li style="list-style-type:circle">fast is relative/vague <ul id="4ae561f2-2d7d-4e9d-8afe-801b079b6f48" class="bulleted-list"><li style="list-style-type:square">e.g. going to WU today (personal check — check cashing): they will tell you 3~5 days<ul id="1ee2217e-6857-4dcb-8e8a-98bf40dec2d8" class="bulleted-list"><li style="list-style-type:disc">transparency ← control; tell me the status</li></ul><ul id="a2843251-335a-45de-ae3d-9deaa129f78c" class="bulleted-list"><li style="list-style-type:disc">how does this turn into measurement? e.g. they don’t complain; they come back to the app; how can we tell that “they are feeling ok”<ul id="12fc9ea8-98c6-4192-b85a-d523c23d1f27" class="bulleted-list"><li style="list-style-type:circle">customer satisfactory survey</li></ul><ul id="2cdf7b08-c4e0-42f0-b819-37439bf7280c" class="bulleted-list"><li style="list-style-type:circle">Leah ← ux researcher; a panel that we are building</li></ul></li></ul></li></ul></li></ul></li></ul><ul id="f8be25d9-9250-4b53-aa60-9cdfe4a0530d" class="bulleted-list"><li style="list-style-type:disc">expectation setting ← delivery [perception of speed]<ul id="b6612179-3c8e-46c9-8723-7baad9cf65d0" class="bulleted-list"><li style="list-style-type:circle">“it will take up to 24 hours, but it actually </li></ul><ul id="3609a761-1735-46d8-b520-7d67a8738c43" class="bulleted-list"><li style="list-style-type:circle">idea: building out the process to reduce time?<ul id="d73e38d6-8a42-4c6a-89a8-682fb0796cf3" class="bulleted-list"><li style="list-style-type:square">e.g. fraud detection process</li></ul><ul id="b6160e7a-08a6-4ffc-81e9-88e39088d4ef" class="bulleted-list"><li style="list-style-type:square">idea: a list of companies that meets the criteria<ul id="7c5949bb-42e4-44d8-a43f-2d99ec1d83b5" class="bulleted-list"><li style="list-style-type:disc">MICR line shows who the check is from ← <ul id="2a2f833f-4057-4486-b9eb-3e555df70928" class="bulleted-list"><li style="list-style-type:circle">e.g. unemployment, cashier check has guarantee fund</li></ul></li></ul></li></ul><ul id="8c954574-8948-4955-b304-7d850508bb51" class="bulleted-list"><li style="list-style-type:square">idea: building up trustworthiness of the MICR </li></ul></li></ul><ul id="75a0e48b-19dc-475d-bc69-97ffd63322ca" class="bulleted-list"><li style="list-style-type:circle">2 steps to cash a check:<ul id="83d3034a-becd-4dba-9c33-e1c76282409b" class="bulleted-list"><li style="list-style-type:square">is the artifact fraudulent</li></ul><ul id="3af45019-ce69-44c2-9e22-9c827467b8b4" class="bulleted-list"><li style="list-style-type:square">is there money in this account</li></ul></li></ul></li></ul><ul id="4e28da71-6a5b-473c-a260-bcb5e900adf1" class="bulleted-list"><li style="list-style-type:disc">metric: <ul id="54e3dc6f-e40b-4628-9521-232d99b37908" class="bulleted-list"><li style="list-style-type:circle">active user growth<ul id="44ae1d15-ee6d-4caa-9bde-e8d36d078083" class="bulleted-list"><li style="list-style-type:square">top performer growth</li></ul><ul id="4424d3ba-6c56-4932-aac6-362ed3675db6" class="bulleted-list"><li style="list-style-type:square">retention: sticky; not look for alternatives<ul id="16cf8280-dc38-48cf-a7ae-ff12b430aa93" class="bulleted-list"><li style="list-style-type:disc">our retention # are not great because it takes too long; we are charging $5 to deposit cash </li></ul></li></ul></li></ul></li></ul><ul id="c748473e-b10f-4174-b378-0ed9e04fc5eb" class="bulleted-list"><li style="list-style-type:disc">running experiment<ul id="b89fd0a4-e153-43cc-9612-4c33b4fcadac" class="bulleted-list"><li style="list-style-type:circle">we were groomed in a company with extreme velocity<ul id="4f7e3c16-638d-4f53-9094-5c8ffd7f49d0" class="bulleted-list"><li style="list-style-type:square">decisions that are hard to reverse (1-way door; 2-way door w/ resource investment; expensive)<ul id="d45dd545-e36f-48cc-98dc-c16a2c49d056" class="bulleted-list"><li style="list-style-type:disc">1-way door: test/experimentation is warrant</li></ul><ul id="a825b6e4-d341-48f9-887a-68017b399f2c" class="bulleted-list"><li style="list-style-type:disc">HOWEVER if the decision you can reverse AND/OR you can learn by observing<ul id="83daabd6-e5f6-4b28-b246-c86e303a0a70" class="bulleted-list"><li style="list-style-type:circle">just ship &amp; learn; don’t slow down and create experiment<ul id="d5063ff0-a2cb-46c5-8ab9-6b8f25323a86" class="bulleted-list"><li style="list-style-type:square">my thought: <ul id="22453376-9fdd-4269-8cd8-8d80e3042fb4" class="bulleted-list"><li style="list-style-type:disc">2-way door: test assumption w/ prototype, make a decision, ship, learn, and reiterate<ul id="47dac52d-bd1f-46f9-a01c-4f59d8f0142e" class="bulleted-list"><li style="list-style-type:circle">e.g. visual updates; interaction updates</li></ul></li></ul><ul id="209d9df0-9b9a-4a56-b1d8-5fcaa07bb791" class="bulleted-list"><li style="list-style-type:disc">1-way door: test and run experiment</li></ul></li></ul></li></ul></li></ul><ul id="0ddcaafe-1448-474e-9145-fbe9f929de54" class="bulleted-list"><li style="list-style-type:disc">There were great hypothesis have been shelved, killed by poor execution</li></ul></li></ul></li></ul></li></ul><ul id="c398fd29-5668-4767-878f-0497fa498e13" class="bulleted-list"><li style="list-style-type:disc">STRATEGY: </li></ul><p id="031f9a06-881b-4c02-9b3f-f7b1992424c5" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

@@ -1,0 +1,719 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>5/13/22 1:1 with Leslie Kwoh</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(134, 131, 126, 1);
+	fill: rgba(134, 131, 126, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(134, 131, 126, 1);
+	fill: rgba(134, 131, 126, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="6bf1df6f-cbc3-414b-9efd-472738bc6be9" class="page sans"><header><h1 class="page-title">5/13/22 1:1 with Leslie Kwoh</h1><p class="page-description"></p><table class="properties"><tbody><tr class="property-row property-row-date"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/calendar_gray.svg" style="width:14px;height:14px;display:block"/></span>Date</th><td><time>@05/13/2022 2:30 PM</time></td></tr><tr class="property-row property-row-relation"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/arrow-northeast_gray.svg" style="width:14px;height:14px;display:block"/></span>Attendees</th><td></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/list_gray.svg" style="width:14px;height:14px;display:block"/></span>Topic</th><td></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/list_gray.svg" style="width:14px;height:14px;display:block"/></span>Reaction</th><td></td></tr></tbody></table></header><div class="page-body"><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="179b9b1d-7c59-4aae-b5f7-7589e64e8630"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">super sharp person that really helped me understand why we want to do something and how they have been approached</div></figure><p id="ed2f3d06-8a1d-4208-939d-6ff02d26552f" class="">
+</p><ul id="a84e731d-c064-492e-9c93-64af938c264f" class="bulleted-list"><li style="list-style-type:disc">partnership with design<ul id="98354d1a-9b5b-42a3-84b3-30502d6331f2" class="bulleted-list"><li style="list-style-type:circle">miguel — side by side</li></ul></li></ul><ul id="08747a10-66cd-4d29-971b-8735a11c952f" class="bulleted-list"><li style="list-style-type:disc">how to better understand/address needs for pmm</li></ul><p id="f43d4224-e219-4d54-88f9-451f3d970f59" class="">
+</p><ul id="4b8047e8-47bf-4332-b314-a423c1e72e95" class="bulleted-list"><li style="list-style-type:disc">so new to debrief<ul id="c2dc109c-afa9-4f9e-b8ad-ee3a4ac63d0a" class="bulleted-list"><li style="list-style-type:circle">quick to solutioning</li></ul><p id="792a77b9-3054-4e59-bc65-26d155759f7d" class="">
+</p></li></ul><ul id="a1ae660b-8df8-4331-83e4-73fd6e382c84" class="bulleted-list"><li style="list-style-type:disc">evolution of design at passbook<ul id="f7e64386-bace-4e18-acbb-b93942eeb4d1" class="bulleted-list"><li style="list-style-type:circle">passbook was GA in 2020<ul id="b5bc7f0b-12dc-40cf-8d3c-5d319b794e11" class="bulleted-list"><li style="list-style-type:square">Sean covered the app + ads, landing page, debit card ← not how a lot of the design orgs were setup</li></ul><ul id="4ab57c99-d334-4775-acfb-169ff8f975c6" class="bulleted-list"><li style="list-style-type:square">great = everything was integrated (experience)</li></ul><ul id="1c1fb354-019b-4bde-ac50-933343cfda76" class="bulleted-list"><li style="list-style-type:square">Not so great = challenge, in very high demand <ul id="2d5f0e51-c3df-4830-989e-fbdf6c662bc2" class="bulleted-list"><li style="list-style-type:disc">sat w/ acquisiton squad, with app</li></ul><ul id="4c433625-f4e3-4c00-931d-e144107c9951" class="bulleted-list"><li style="list-style-type:disc">difficult for him to get ahead with design cycles</li></ul><ul id="81002a5c-40be-452a-874f-1a1447dfcf8c" class="bulleted-list"><li style="list-style-type:disc">biggest pain point: making sure that he was loop in early enough to map out concepts before handing off to eng<ul id="0935d143-d2fd-469f-8770-bb60f127a541" class="bulleted-list"><li style="list-style-type:circle">eng will start building before design is done </li></ul><ul id="7d979815-ff80-4e52-8471-ce8bcea030ca" class="bulleted-list"><li style="list-style-type:circle">purely on bandwidth</li></ul></li></ul></li></ul><ul id="d0f5c17a-5b1d-456f-a598-f1cbb4199782" class="bulleted-list"><li style="list-style-type:square">left in november</li></ul><ul id="b027c693-ad93-4f19-9571-5c9032d9e640" class="bulleted-list"><li style="list-style-type:square">in the interim try to hire for my role<ul id="23a6898f-90a0-4ee1-9d1f-fea83e8b43cb" class="bulleted-list"><li style="list-style-type:disc">maybe moving kyle → full-time<ul id="4d6036bf-bcbc-484c-a40a-cda11b7eebbb" class="bulleted-list"><li style="list-style-type:circle">focus on ads</li></ul></li></ul><ul id="81567113-c0c3-4e88-96f9-48ba8fedecc4" class="bulleted-list"><li style="list-style-type:disc">getting good at figma;</li></ul><ul id="b931930b-8a11-41a4-80db-3c6add9baac8" class="bulleted-list"><li style="list-style-type:disc">not able to architect the flow</li></ul></li></ul><ul id="f3bb8195-a08c-4f44-be6f-278c3c9910fa" class="bulleted-list"><li style="list-style-type:square">we had to ship something for the onboarding/lending workflow </li></ul></li></ul><ul id="b2657867-fb1f-4497-9fc0-5e47069328f9" class="bulleted-list"><li style="list-style-type:circle">hit passbook fits in the remitly brand<ul id="270cbb4d-67de-4ed0-9061-4205fca82d22" class="bulleted-list"><li style="list-style-type:square">the app looks really different</li></ul><ul id="52696aeb-622d-45e0-885a-24f39778cae4" class="bulleted-list"><li style="list-style-type:square">“unapproachable” ← </li></ul><ul id="44b136b9-7b58-4d94-b1be-39b60dbf8fa1" class="bulleted-list"><li style="list-style-type:square">when sean + john launched passbook they wanted to keep it separate from remitly; like a startup<ul id="6d9ee84a-e7b0-4f87-a598-a8646a8dae11" class="bulleted-list"><li style="list-style-type:disc">pro of being separated: make us move faster;<ul id="82601da1-abfd-4e49-a2e7-67dc8cd345fb" class="bulleted-list"><li style="list-style-type:circle">design can be slow (many layers, takes too long)</li></ul></li></ul><ul id="37bf27d6-e45b-4ab0-93c4-6a142d363b76" class="bulleted-list"><li style="list-style-type:disc">con:<ul id="08cbb5c7-7366-489a-adb6-22e7b1616d24" class="bulleted-list"><li style="list-style-type:circle">we have not leverage core component/platform<ul id="a3b4daeb-460f-483d-aa9a-ee80cd8b1457" class="bulleted-list"><li style="list-style-type:square">e.g. KYC</li></ul><ul id="5e41406e-f4e0-407d-8975-5b21fa66d1ee" class="bulleted-list"><li style="list-style-type:square">and design<ul id="1ee3b811-cd6e-4632-9e82-16785627a4cc" class="bulleted-list"><li style="list-style-type:disc">e.g. last june (leslie + head of strategy) → remittance is targeting all immigrants <ul id="70251894-36c6-4ffb-845c-94582f1db33b" class="bulleted-list"><li style="list-style-type:circle">we were stretched thin</li></ul><ul id="927cea6f-a308-4379-802d-4102c76c1e7d" class="bulleted-list"><li style="list-style-type:circle">REMITLY targets that group but did not always start there</li></ul><ul id="16af819f-2081-4f40-98fb-8078388ff4b4" class="bulleted-list"><li style="list-style-type:circle">“we did an exercise to get crisp and identify the beachhead segment” → landed on the mexican segment<ul id="e3ba6b40-a26f-47a5-b708-5df8976fd421" class="bulleted-list"><li style="list-style-type:square">largest immigrant population</li></ul></li></ul></li></ul><ul id="e7c6e51b-a145-4467-a129-e65939fcc04a" class="bulleted-list"><li style="list-style-type:disc">? question how did that transition/conversation went (must be uncomfortable)?<ul id="1d22d00d-bc1d-4721-95c2-9b892420fd63" class="bulleted-list"><li style="list-style-type:circle">then expand to hispanic segment</li></ul></li></ul></li></ul><ul id="0677adea-8dd3-4d83-9f2b-3c8e7e4a9e5e" class="bulleted-list"><li style="list-style-type:square">the population doesn’t speak english<ul id="6ab6a164-1d34-40be-9bc1-37cf2f382c88" class="bulleted-list"><li style="list-style-type:disc">localize to spanish</li></ul><ul id="1fa68aa0-1542-47f1-93f3-bf989fe99b39" class="bulleted-list"><li style="list-style-type:disc">95% speaks spanish at hoem</li></ul></li></ul><ul id="cc59dc08-630f-4af7-b496-c449332619e4" class="bulleted-list"><li style="list-style-type:square"><strong>THINGS NEEDS TO BE SIMPLE AND CLEAN/APPROACHABLE TO THEM</strong><ul id="d10b78c4-6650-47f1-a74f-eb03ff965d3e" class="bulleted-list"><li style="list-style-type:disc"><strong>NEED TO UNDERSTAND WHAT WE ARE DOING IN A SIMPLE AND NON-CLUTTER WAY</strong></li></ul></li></ul><ul id="bf6c5cf9-d86c-4d86-a70c-898656682305" class="bulleted-list"><li style="list-style-type:square">When they have question, they prefer to call and talk to our agent in Spanish</li></ul><ul id="41cb1d22-f987-4f9b-80ec-d3a18bb144af" class="bulleted-list"><li style="list-style-type:square">With that in mind, Sean: We should model after cash app<ul id="76b0d76d-7680-4723-92a6-118411a4d4f7" class="bulleted-list"><li style="list-style-type:disc">led to the current design in the app</li></ul><ul id="78c63c19-4ad5-440a-9578-4cde3c7b3263" class="bulleted-list"><li style="list-style-type:disc"><strong>the font is model after the fine point in the banking statement</strong></li></ul></li></ul><ul id="c7acd0c5-f0f0-42c3-a1a6-b3607365510a" class="bulleted-list"><li style="list-style-type:square">before november → project estrella<ul id="3729fc29-814d-403f-b457-ea43a6de2cee" class="bulleted-list"><li style="list-style-type:disc">how to make it simple/intuitive/dynamic</li></ul><ul id="cc75fb86-c2c1-4ee0-8d97-0c06fc95f8e3" class="bulleted-list"><li style="list-style-type:disc">how to model after the remitly brand</li></ul><ul id="1f914d2a-51bc-4881-a482-53b0a6bd0ea6" class="bulleted-list"><li style="list-style-type:disc">using components similar to remitly<ul id="4b4839f0-8491-47dc-9454-66d5a2824d2b" class="bulleted-list"><li style="list-style-type:circle">mascala in head font</li></ul><ul id="10a50cce-f7fb-4b51-806d-298fc9225ade" class="bulleted-list"><li style="list-style-type:circle">remitly color palette</li></ul></li></ul><ul id="5c93beb1-8ee8-4995-b2c8-5d76ab208482" class="bulleted-list"><li style="list-style-type:disc">marketing team in the last 2 months: update the landing page (new — 50/50 test right now)<ul id="ec163564-44d1-40f3-abaa-458326561907" class="bulleted-list"><li style="list-style-type:circle">Kyle + helpful human (for implementation)</li></ul><ul id="b02285ed-70b0-48fc-8f51-88fc9bb0544c" class="bulleted-list"><li style="list-style-type:circle">Kyle used Estrella as inspiration</li></ul></li></ul><ul id="1ec0b55b-8564-488c-8fa8-7c28fed4654a" class="bulleted-list"><li style="list-style-type:disc">for our landing page: color palette is VERY MUTED, we used our flashes of color</li></ul></li></ul></li></ul></li></ul></li></ul></li></ul><ul id="1dcdbe54-b34d-4588-9cd5-9bce4c81ff94" class="bulleted-list"><li style="list-style-type:circle">who was the designer/what did the ydo</li></ul><ul id="7bfa4668-e632-4a49-990d-288e9af3f109" class="bulleted-list"><li style="list-style-type:circle">biggest gap</li></ul><p id="2101cedf-0b8b-47fb-9bf0-34c34806286a" class="">
+</p><h3 id="80be6cad-ef5f-4165-bacb-a44dcbe8d06a" class="">Notes</h3><ul id="a01bb715-f37e-42aa-b4e4-2604662836bf" class="bulleted-list"><li style="list-style-type:circle">re-branding with remittance<ul id="1256198d-7689-4b39-88d2-a168cac949ef" class="bulleted-list"><li style="list-style-type:square">our landing page is ahead of them</li></ul><ul id="c7154612-60b7-4ba6-b2be-a24e44f8894c" class="bulleted-list"><li style="list-style-type:square">relationship: we never had to ask for approval from them on anything<ul id="eda14e81-b803-42d2-bda3-371489d1e833" class="bulleted-list"><li style="list-style-type:disc">we have maintain independence</li></ul><ul id="b6a81efe-deb0-4503-81ab-248734271ff5" class="bulleted-list"><li style="list-style-type:disc">taking guidance as needed (kathy, head of brand)</li></ul><ul id="cf7d5495-1574-4f9a-8353-70e9904a6b4b" class="bulleted-list"><li style="list-style-type:disc">we should have flexibility </li></ul><ul id="19116cfe-ad55-4357-b6b1-4aa0e5c4ada2" class="bulleted-list"><li style="list-style-type:disc">Remitly are building common components</li></ul><ul id="b17f5962-ac56-46d2-9d24-faf13763dc74" class="bulleted-list"><li style="list-style-type:disc">TALKING TO MATT AND JOEL FROM </li></ul><p id="6c76ccc2-466e-46b3-b4d0-f25a9dd60696" class="">
+</p></li></ul></li></ul><ul id="9235d449-ba94-40e7-b212-20088fafddad" class="bulleted-list"><li style="list-style-type:circle">one word of caution<ul id="0d6ba1b7-dbde-4a3f-a433-c1cd04dd6d5f" class="bulleted-list"><li style="list-style-type:square">with remittance: partnering is good; leverage is good but don’t get slow down<ul id="6d6813e0-0d1c-4a41-86a8-615c83991771" class="bulleted-list"><li style="list-style-type:disc">Josh aircover: don’t slow down</li></ul></li></ul><ul id="5eefd7d2-700b-4943-8a53-7083986b4dfb" class="bulleted-list"><li style="list-style-type:square">working with Gerry</li></ul><p id="e9708fbb-981a-47a7-8305-1f61a5d5e221" class="">
+</p></li></ul><ul id="52fcff18-4fe9-4b46-ad08-56f0783f122b" class="bulleted-list"><li style="list-style-type:circle">email lifecycle campagin ← took 3 months</li></ul><p id="d6a810f0-7e18-4185-83e8-9cc12bccf8bf" class="">
+</p><ul id="c4b87a08-6a8e-451b-ab0e-4ce6e0d9ef07" class="bulleted-list"><li style="list-style-type:circle">inspiration for estrella?<ul id="9aa79162-b7cb-4a28-aecf-682f481d673d" class="bulleted-list"><li style="list-style-type:square">design target: construction work w/o ssn<ul id="917e4cab-20d4-43b5-8178-019f5b34abd8" class="bulleted-list"><li style="list-style-type:disc">mental model in mexico  vs. mental model in us</li></ul><ul id="3dc71cb2-7033-4615-966a-18646cad68e6" class="bulleted-list"><li style="list-style-type:disc">onboarding flow needs to account for people to sign up with docs from their country<ul id="9a569c12-ffb5-47ba-909f-fb0f04c6ca2e" class="bulleted-list"><li style="list-style-type:circle">top advantage</li></ul><ul id="5d19c228-1a2f-4d98-ac81-89a649974464" class="bulleted-list"><li style="list-style-type:circle">? approval flow takes how long?</li></ul><ul id="e5ca5fa1-e2c6-4c63-a1f6-612d830fd099" class="bulleted-list"><li style="list-style-type:circle">VERY WORRIED ABOUT DEPORTED</li></ul><ul id="8fd62a06-cc10-47fd-95d4-cf44ec7fa40b" class="bulleted-list"><li style="list-style-type:circle">TRADITIONALLY HELD ONTO $ at BANK</li></ul></li></ul><ul id="3c9db893-7395-4ca3-bfcf-491092de33c9" class="bulleted-list"><li style="list-style-type:disc">bank in mexico is there to serve wealthy people only<ul id="5c73c7d5-2058-4588-a593-ff9b30796839" class="bulleted-list"><li style="list-style-type:circle">if you walk out of bank you are a target to be robbed</li></ul></li></ul><ul id="f0aa89a0-a8b6-4574-ae6c-1c031e6e84b5" class="bulleted-list"><li style="list-style-type:disc">convient store = their bank</li></ul><ul id="0d169205-d344-4531-8f7f-fcec191de468" class="bulleted-list"><li style="list-style-type:disc">*** docs will be shared with ICE<ul id="9a74bdf5-217f-4d6c-a1ff-cc9a03598f7f" class="bulleted-list"><li style="list-style-type:circle">its been a challenge to instill trust as early as possible — there’s only so much you can do with copy ← ? how do you communicate, clean<ul id="2a8d80ea-8154-4f1d-87f2-c273ff62a524" class="bulleted-list"><li style="list-style-type:square">there’s a lot more room to show with design, NOTHINNG IS HIDDEN; what you see = what you get</li></ul></li></ul></li></ul><ul id="be96df72-f8db-449e-bc8e-bc9974e30b51" class="bulleted-list"><li style="list-style-type:disc">they get gauge by fees all the time</li></ul><p id="aa83ce8b-d192-4a00-93f0-7a0907114ee1" class="">
+</p></li></ul><ul id="09d799d4-a55a-4d13-934d-9cd095ceab94" class="bulleted-list"><li style="list-style-type:square">Wells Fargo/Chase have a min balance to avoid fee → does not breed a lot of trust</li></ul><ul id="1b7bb9b8-bf3e-44ad-bdab-e18e8b8e0239" class="bulleted-list"><li style="list-style-type:square">BANKING IS SCARY and doesn’t instill trust</li></ul><ul id="56fde29a-0fff-42e1-b6b5-e4fcfd314b6e" class="bulleted-list"><li style="list-style-type:square">In the US: <ul id="8a1a23b3-239f-47a9-831d-7c21f0e8d9d4" class="bulleted-list"><li style="list-style-type:disc">go to check cashing store every thursday or friday</li></ul></li></ul><ul id="8fe93838-2bf7-431d-adf8-ab741268b99e" class="bulleted-list"><li style="list-style-type:square"><strong>TIME SENSITIVE!</strong></li></ul><p id="c4ee8198-6eba-4dbc-9bdb-1f97b35ea1ce" class="">
+</p><p id="77ad062c-37fb-4d14-8fac-7ea313cb3e5e" class=""><strong>“They JUST GOT PAID” → and what do they do? they get charged fee</strong></p><figure id="da01046b-301a-493a-ad08-58ccf7e5b0bc" class="image"><a href="5%2013%2022%201%201%20with%20Leslie%20Kwoh%206bf1df6fcbc3414b9efd472738bc6be9/Screen_Shot_2022-05-13_at_2.58.35_PM.png"><img style="width:1364px" src="5%2013%2022%201%201%20with%20Leslie%20Kwoh%206bf1df6fcbc3414b9efd472738bc6be9/Screen_Shot_2022-05-13_at_2.58.35_PM.png"/></a></figure><figure id="284acbfa-e918-49f0-9110-e0d1c0597971" class="image"><a href="5%2013%2022%201%201%20with%20Leslie%20Kwoh%206bf1df6fcbc3414b9efd472738bc6be9/Screen_Shot_2022-05-13_at_3.00.21_PM.png"><img style="width:1363px" src="5%2013%2022%201%201%20with%20Leslie%20Kwoh%206bf1df6fcbc3414b9efd472738bc6be9/Screen_Shot_2022-05-13_at_3.00.21_PM.png"/></a></figure><ul id="8d46f4c1-915d-40c5-8559-cd8c68b33579" class="bulleted-list"><li style="list-style-type:square">time sensitive job<ul id="777e850e-a1d3-48fa-b828-586c7cf82232" class="bulleted-list"><li style="list-style-type:disc">e.g. after you cash a check, prompt them with the other activities they are used to in their mental model</li></ul></li></ul><ul id="e4a51ff3-4177-42fc-a918-482d48037a92" class="bulleted-list"><li style="list-style-type:square">vision for passbook: one stop shop — replace all the other services + remitly<ul id="8c0c7377-1a07-4d9b-86c2-fbb150fd2e05" class="bulleted-list"><li style="list-style-type:disc">we can afford to talk about the loss leader, because its all under one roof</li></ul></li></ul><ul id="a0abae88-8826-4514-8add-1961ab4d43c7" class="bulleted-list"><li style="list-style-type:square">one window: <ul id="d20cdf85-624c-48f9-a374-aa6e963ee028" class="bulleted-list"><li style="list-style-type:disc">cash the check, pay a fee (up to $10)</li></ul><ul id="c0334089-18a0-4c90-b5dd-edc654752107" class="bulleted-list"><li style="list-style-type:disc">take the cash to WU at the other counter to send money to mexico (another fee)<ul id="50ff3d01-3eba-4d60-bfb4-e8d9785a364b" class="bulleted-list"><li style="list-style-type:circle">Remitly data shared: mexico is the lowest income corridor that sent the most $ ← mexican care</li></ul></li></ul><ul id="9dfa2317-353c-4a4b-b888-3adbe04dafe5" class="bulleted-list"><li style="list-style-type:disc">pay their bill</li></ul><ul id="0e85a1fa-4c72-4652-9af1-fe099ebb69d6" class="bulleted-list"><li style="list-style-type:disc">top up their mobile phone</li></ul><p id="668349b3-284d-4214-8b0b-ac5ccaab2da2" class="">
+</p><p id="b81daf93-1d55-425a-aae9-d5ab90f362d3" class="">THATS WHY OUR CURRENT EXPERIENCE IS SO PAINFUL</p><ul id="19f33aff-10b4-435b-abfe-73fd3f7a7908" class="bulleted-list"><li style="list-style-type:disc">every step = not being time sensitive</li></ul><ul id="7bbdc5dc-932d-4f76-810a-289553399e87" class="bulleted-list"><li style="list-style-type:disc">project looking glass:<ul id="71e641ca-060a-4a41-9d80-f660999fac0b" class="bulleted-list"><li style="list-style-type:circle">70% of our customer do not have a ssn</li></ul><ul id="8c8a53a3-6001-4666-887c-f10b6215d20f" class="bulleted-list"><li style="list-style-type:circle">remove proof of address (as long as there’s no contradiction): send a photo doc + utility bill<ul id="57f47f40-c1c4-4b90-9e06-a48f4119c47e" class="bulleted-list"><li style="list-style-type:square">they don’t own their home</li></ul><ul id="96512a80-99f8-4e75-a6dd-82a2820804a9" class="bulleted-list"><li style="list-style-type:square">GPS ← you are close enough</li></ul></li></ul></li></ul><ul id="7a023486-25a7-4250-84eb-feb84f0dd331" class="bulleted-list"><li style="list-style-type:disc">account approved then?<ul id="a6db3d94-b76c-47c5-8927-7137d4e3acf1" class="bulleted-list"><li style="list-style-type:circle">deposit card = needing to wait for the card to come<ul id="a77c87c8-7a8b-486e-8914-e01d53e3d0cb" class="bulleted-list"><li style="list-style-type:square">because of manual doc review</li></ul></li></ul><ul id="6fbfc88d-70a8-419a-8df6-4c7a900c3e52" class="bulleted-list"><li style="list-style-type:circle">deposit cash = waiting for the card then spend $6 fee for the deposit<ul id="f99e2599-588f-45e5-b124-911335768675" class="bulleted-list"><li style="list-style-type:square">location finder</li></ul><ul id="4217ffc4-7cde-4898-8457-d34204066936" class="bulleted-list"><li style="list-style-type:square">cardless cash deposit</li></ul></li></ul><ul id="70c17c47-376b-4b30-9257-8b58b281d236" class="bulleted-list"><li style="list-style-type:circle">shorten the time </li></ul><p id="214d585a-d636-48f8-9b5b-89a8b2850f5b" class="">
+</p></li></ul><p id="5f198f56-fac0-45f2-a16f-8aa806aae973" class="">WEIGHING ON LESLIE AND CHRISTIAN (v2 of redesign)</p><ul id="14c72174-ab71-4176-bfe8-425c8959698c" class="bulleted-list"><li style="list-style-type:disc">there are a lot of limit in the app<ul id="036826b9-6c75-4a2b-abe6-c09dfeef202c" class="bulleted-list"><li style="list-style-type:circle">even if someone want to deposit a lot of $, they can’t</li></ul><ul id="2fd60026-e39f-4665-8b7a-85b1a1228bc6" class="bulleted-list"><li style="list-style-type:circle">we give every customer the same experience</li></ul></li></ul><ul id="d15da8b0-aabe-40fa-97f1-f00b279f4a5f" class="bulleted-list"><li style="list-style-type:disc">THERES SO MUCH FRAUD<ul id="b7c2b7ad-976c-4148-b3fc-5cc4e1d69d68" class="bulleted-list"><li style="list-style-type:circle">cashapp bonus</li></ul><ul id="4bd7f0b3-ae2c-4358-ae7d-8b2e41c365ee" class="bulleted-list"><li style="list-style-type:circle">we don’t have a good fraud system<ul id="1144c042-e95b-4b36-ad12-b9265a727768" class="bulleted-list"><li style="list-style-type:square">cuscat — basic</li></ul></li></ul><ul id="5c9c7ed3-c3fe-41dc-be75-f7eecd0b4bca" class="bulleted-list"><li style="list-style-type:circle">we are catering to the lowest denominator; we are not catering to the top/most engaged customer</li></ul></li></ul><ul id="f221f6fa-a04e-4804-ba39-d2817f8451ec" class="bulleted-list"><li style="list-style-type:disc">We can gamify — unlock instant check cashing<ul id="ce627400-cb14-4df2-9cfd-f296bcef4318" class="bulleted-list"><li style="list-style-type:circle">e.g. level-up for these customer</li></ul><p id="5d192784-f9de-4beb-af2b-35ae173e9aa3" class="">
+</p><p id="9e7d8093-0937-445e-9ab5-f01e01be7bfc" class="">
+</p><p id="09997eef-df2b-48a6-b28e-36db382c9537" class="">HURDLES TO ADOPTION</p></li></ul><ul id="94f3f4c0-02dc-4c10-8fd6-fe0bf5895c06" class="bulleted-list"><li style="list-style-type:disc">map to their mental model</li></ul></li></ul></li></ul></li></ul></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

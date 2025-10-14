@@ -1,0 +1,712 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>5/25/22 with Leslie</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(134, 131, 126, 1);
+	fill: rgba(134, 131, 126, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(134, 131, 126, 1);
+	fill: rgba(134, 131, 126, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="3d024d0c-cb56-4749-b68d-cd0491e930e6" class="page sans"><header><h1 class="page-title">5/25/22 with Leslie</h1><p class="page-description"></p><table class="properties"><tbody><tr class="property-row property-row-date"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/calendar_gray.svg" style="width:14px;height:14px;display:block"/></span>Date</th><td><time>@05/25/2022 10:30 AM</time></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/list_gray.svg" style="width:14px;height:14px;display:block"/></span>Topic</th><td></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/list_gray.svg" style="width:14px;height:14px;display:block"/></span>Reaction</th><td></td></tr></tbody></table></header><div class="page-body"><ul id="33b6a070-7c0b-4074-9340-04e553e72392" class="bulleted-list"><li style="list-style-type:disc">share out of IA progress<ul id="39e5a140-5ca3-4bcb-8814-578fe808ce88" class="bulleted-list"><li style="list-style-type:circle">jobs to be done</li></ul><ul id="d30c8f9f-bfd9-4da5-8c9b-31e72312b445" class="bulleted-list"><li style="list-style-type:circle">+ spectrum of experience </li></ul><ul id="3f904260-6da0-4b92-a783-692b8d66c7d9" class="bulleted-list"><li style="list-style-type:circle">&lt;3 that starting with the problem<ul id="a2e21d14-a12e-4353-a0de-71d1e2f68e49" class="bulleted-list"><li style="list-style-type:square">loyalty is a p3</li></ul></li></ul><ul id="accd9b3a-79f2-4d70-82cb-de80a6da56ef" class="bulleted-list"><li style="list-style-type:circle">q: have you had a chance to chat with amibugity with the shift<ul id="0db1390c-8aad-48e7-8231-d12fac7c235a" class="bulleted-list"><li style="list-style-type:square">stored value + wallet + lending</li></ul><ul id="6f9ee8fa-eabe-4990-ae56-f72c49ad665e" class="bulleted-list"><li style="list-style-type:square">integration</li></ul><ul id="a25ea890-d65f-4452-95c6-2255ca9c9dab" class="bulleted-list"><li style="list-style-type:square">with dan’s annoucement: josh — the team needs to work together</li></ul><ul id="aac3d6b0-52b3-42e0-a822-02f807fe5b76" class="bulleted-list"><li style="list-style-type:square">[lw] your vision to inform the roadmap<ul id="4f9c5e06-018c-4a16-a945-1dd743d5cfa5" class="bulleted-list"><li style="list-style-type:disc">passbook being US deposit account <ul id="c44d8eab-14a1-46ff-bde1-ad5cffff6209" class="bulleted-list"><li style="list-style-type:circle">with new strategic ← what IF PASSBOOK IS A GLOBAL ACCT; regulation to expand into a remitly’s footprint<ul id="2fd8267b-6f63-480f-8667-3ff859355986" class="bulleted-list"><li style="list-style-type:square">e.g. passbook accounts in us/mexico</li></ul></li></ul><ul id="131534fe-34f8-4fae-a052-e0da31289945" class="bulleted-list"><li style="list-style-type:circle">we know immigrant family share finances (e.g. siblings send money to their parents)<ul id="aafac856-db8a-42f8-9a41-22d9804a0274" class="bulleted-list"><li style="list-style-type:square">what is the flow like?</li></ul><ul id="cda8716a-d4ea-4695-8cf6-69541ddf6ef1" class="bulleted-list"><li style="list-style-type:square">what if we can transfer from one bucket to another</li></ul></li></ul><ul id="b027c8d4-e1af-443e-bcbf-0cbe8feb812f" class="bulleted-list"><li style="list-style-type:circle">5% of transaction are in mexico<ul id="b2d45532-3b01-47eb-979a-b7b865ecc5f8" class="bulleted-list"><li style="list-style-type:square">some are border city cross over</li></ul><ul id="acfccc3f-0465-4167-a286-24637b93eb46" class="bulleted-list"><li style="list-style-type:square">uber doesn’t require physical card ← how many people are sharing these info <ul id="723053fc-4c6a-4981-a4a6-bee9d8e69888" class="bulleted-list"><li style="list-style-type:disc">? how are folks</li></ul></li></ul><ul id="01f3d08c-9fe9-4b96-b3ab-5b4b909daa04" class="bulleted-list"><li style="list-style-type:square">save remittance fee ← there’s something there</li></ul><ul id="b2e8f285-b17c-4083-aeba-d3807af4916d" class="bulleted-list"><li style="list-style-type:square">How do we empower them by going global<ul id="6f3c7849-c972-4807-bcce-a514f97d226b" class="bulleted-list"><li style="list-style-type:disc">that include all the jobs to be done → how will this impact the functionality</li></ul></li></ul></li></ul><ul id="9339e9a0-eaca-4626-adfe-c950ce6c8811" class="bulleted-list"><li style="list-style-type:circle">= authorized user? hacky way to do it</li></ul></li></ul></li></ul><ul id="37ebd600-5cb3-4457-bdd0-283d8c2e3538" class="bulleted-list"><li style="list-style-type:square">[kw] side conversations around branding</li></ul></li></ul></li></ul><p id="2399346e-e781-4715-8a4c-6ca08a83de2b" class="">
+</p><ul id="939becb6-3bf5-43f2-9491-d5f5fe7663e4" class="bulleted-list"><li style="list-style-type:disc">passbook positioning<ul id="2b143708-7a7f-418b-af50-15d09b0ad15e" class="bulleted-list"><li style="list-style-type:circle">hopes and fears?<ul id="377154b7-e98c-4c93-b972-e3a20238ac80" class="bulleted-list"><li style="list-style-type:square">context: tied to remitly as a whole<ul id="e989b6a6-8477-4f1a-ae0f-314213f9aeb2" class="bulleted-list"><li style="list-style-type:disc">remitly will not win against competitors if we treat the products (lending, etc) separately</li></ul><ul id="20cc009e-7d8d-4174-903b-fd1f448c0642" class="bulleted-list"><li style="list-style-type:disc">to leapfrog = integration</li></ul><ul id="aa4cc2a1-9504-404c-9a9c-4a339a6cdfc2" class="bulleted-list"><li style="list-style-type:disc">AS IF THEY WERE 3 SEPARATE CUSTOMERS</li></ul></li></ul><ul id="dd0dfc4f-14dc-4e3d-a21a-3d8703e449ae" class="bulleted-list"><li style="list-style-type:square">vision: everything should feel seamless + <ul id="917a65db-f6f8-4fa0-9e82-206f1c5a08ef" class="bulleted-list"><li style="list-style-type:disc">I’m a believer in super app – let customer choose the journey; give them the optionality;<ul id="853dc76e-d40d-4647-9488-0676d8e76c42" class="bulleted-list"><li style="list-style-type:circle">Others: “not all user use remittance”</li></ul><ul id="e87591c1-63b5-4b29-8ede-f86e598151f0" class="bulleted-list"><li style="list-style-type:circle">Leslie: but I use chase app; which has features that I don’t use </li></ul></li></ul><ul id="a0b66162-eb6f-47b3-963e-f9b88915c20a" class="bulleted-list"><li style="list-style-type:disc">how do we build the vision</li></ul><ul id="fdadd891-5771-4cd2-8817-5e67f0889781" class="bulleted-list"><li style="list-style-type:disc">how do we mobilize the epople together to go after the shared vision <ul id="93277f9f-6360-476d-aa97-fe4e7004234c" class="bulleted-list"><li style="list-style-type:circle">shared jtbd </li></ul><ul id="a188669a-3184-48ff-b781-e2e3f8f58ee8" class="bulleted-list"><li style="list-style-type:circle">one customer with shared needs</li></ul></li></ul></li></ul><ul id="743d8daa-4f9a-4070-9942-47a357f12cea" class="bulleted-list"><li style="list-style-type:square">christian have different philsoophy vs. leslie<ul id="535b55fe-16dd-44d3-90dd-30ac43d74507" class="bulleted-list"><li style="list-style-type:disc">lw: retention starts with the upper funnel<ul id="3cd7452b-68da-4182-8471-a768603723f9" class="bulleted-list"><li style="list-style-type:circle">design is in an unique position to think about the continusou journey</li></ul><ul id="45b5fc36-8894-47f0-9409-059bffd1e250" class="bulleted-list"><li style="list-style-type:circle">are they the right customer; do they need passbook<ul id="2f9615e4-ae0d-4b97-b220-a341f5314266" class="bulleted-list"><li style="list-style-type:square">knowing they don’t have identity info</li></ul></li></ul><ul id="5b7a7cd1-7d4e-4fd0-9392-f58e5811643f" class="bulleted-list"><li style="list-style-type:circle">looking across the app seem continusouy and not disjointed</li></ul><ul id="d4c65e73-9788-4a7f-ba17-f97b1cd0c4b8" class="bulleted-list"><li style="list-style-type:circle">coming in from landing page → app was different<ul id="9d6cbe98-3155-4175-87a0-1e777223cab9" class="bulleted-list"><li style="list-style-type:square">we couldn’t wait to update it; disparity with sean left; we want to communicate modern<ul id="806ca2b6-ddb1-4056-a863-fbaf02062798" class="bulleted-list"><li style="list-style-type:disc">bring them through the funnel; then we will wait for designer come to update the app</li></ul></li></ul><ul id="5010f2a8-58b2-4699-bd43-51b400e8b5b8" class="bulleted-list"><li style="list-style-type:square">kyle looked at estrella to at least as close as possible as it — at least in the same ball park</li></ul><ul id="4df63856-d388-45da-8a34-cb5be0a3c696" class="bulleted-list"><li style="list-style-type:square">esp if its hurting our goal<ul id="6ce2852e-1186-4a88-bcf9-7464a21c9348" class="bulleted-list"><li style="list-style-type:disc">does not instill confidence</li></ul><ul id="330c29f3-3fa8-4956-aa60-f7e8b5c203cd" class="bulleted-list"><li style="list-style-type:disc">forced sequencing to build up <ul id="aaddc39c-238d-4657-8529-59e5202e571b" class="bulleted-list"><li style="list-style-type:circle">once they are in the app, show them how easy it is</li></ul></li></ul></li></ul><ul id="b5ce9246-625a-43ad-b666-466b6930c2d8" class="bulleted-list"><li style="list-style-type:square">landing page should match </li></ul><ul id="56c0f17d-7db6-4599-8f89-1263e2931daa" class="bulleted-list"><li style="list-style-type:square">IF you read the landing page on the value prop<ul id="90f64e6c-15ab-4f1d-9b16-d42a905844ad" class="bulleted-list"><li style="list-style-type:disc">informed by the research with the segment ← capture research from past year<ul id="fb0d6a47-0771-42b9-922f-71572c28acae" class="bulleted-list"><li style="list-style-type:circle">no fee</li></ul><ul id="9a38ef0e-ed5f-4a58-9f39-87c3bf80dc16" class="bulleted-list"><li style="list-style-type:circle">compare with other app<ul id="0f65f6a0-10d1-4a42-8fc7-cce526c13ee1" class="bulleted-list"><li style="list-style-type:square">matricular</li></ul></li></ul><ul id="4280295d-30a0-4478-91a5-6469a8ac235c" class="bulleted-list"><li style="list-style-type:circle">easy to onboard</li></ul><ul id="7bec3d63-ab40-4ecc-ba84-2b70ca0ea8ea" class="bulleted-list"><li style="list-style-type:circle">mismatch with our onboarding carousel </li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul><p id="74862736-2cc9-4cc7-ac1f-1c39a490a061" class="">
+</p></li></ul><ul id="d8479a96-48bb-4d9e-b843-c5a91e774adc" class="bulleted-list"><li style="list-style-type:disc">venmo mail pack<ul id="1d786d84-5e22-4be7-b7b2-0d11228c9402" class="bulleted-list"><li style="list-style-type:circle">why are we not doing it anymore?<ul id="1e614f5d-1e42-4eb6-8448-73ff37ab958f" class="bulleted-list"><li style="list-style-type:square">when we started serving the hispanic audience (80~90% of our user are using spanish)<ul id="5264cf07-8533-4c09-8d1a-0758a80934ea" class="bulleted-list"><li style="list-style-type:disc">requirement from sunrise, if we make an app available in esp, our marketing collateral needs to be esp<ul id="de39c5b7-2c41-4545-8ef3-7109ef7eef2d" class="bulleted-list"><li style="list-style-type:circle">phone setting — app will default to spanish<ul id="2a022453-b311-46cd-814b-cffa72b191c3" class="bulleted-list"><li style="list-style-type:square">50% may select englihs</li></ul></li></ul><ul id="3cca8ec0-525e-4f69-94b4-13c7200ae0e3" class="bulleted-list"><li style="list-style-type:circle">once they choose to use app to be esp; backend (braze) = esp</li></ul><ul id="9dde930d-c5b6-47ad-8cf4-b1310d1b7f8b" class="bulleted-list"><li style="list-style-type:circle">for card carrier, let’s keep it simple <ul id="d3cf5f84-4380-467e-bec1-883931b2e2e1" class="bulleted-list"><li style="list-style-type:square">customer service team, manual to look</li></ul><ul id="747c5395-f823-44f4-b214-310d2525759b" class="bulleted-list"><li style="list-style-type:square">make the carrier bilingual? esp if there are no plan to expand other languages</li></ul></li></ul><ul id="4eb8e077-408c-43f8-8ebd-ee3924ec28df" class="bulleted-list"><li style="list-style-type:circle">new mailer: to include check deposit</li></ul></li></ul><ul id="010377e7-ebcf-4ea1-b0f9-7a1c25c49a43" class="bulleted-list"><li style="list-style-type:disc">no data <ul id="248594a8-d8f7-43dd-b60a-f17a55dbf676" class="bulleted-list"><li style="list-style-type:circle">only 10% with dd for mexican customers</li></ul></li></ul><ul id="10845bb2-b77d-405a-9827-e9aa9ba0c90e" class="bulleted-list"><li style="list-style-type:disc">now dd team has found that 30% have setup dd with another bank<ul id="806d8546-4cc5-4ae0-b634-e9e7a4b3e80a" class="bulleted-list"><li style="list-style-type:circle">we can definitely put the form back, BUT we should do some user study on who will use this form</li></ul><ul id="995c3204-fd77-40b3-8b39-17731ce84935" class="bulleted-list"><li style="list-style-type:circle">just to print the new card carrier ← the conversation has taken since last July ← turn around is <ul id="313037d4-f185-4396-a38b-dbf38bf676a3" class="bulleted-list"><li style="list-style-type:square">not even design / sunrise approval</li></ul></li></ul><ul id="5006cf8d-b4a2-4629-b540-18063a6ca5bd" class="bulleted-list"><li style="list-style-type:circle">very careful on iteration</li></ul><ul id="862b61a7-6600-4107-80d0-6bdb1f55ca9f" class="bulleted-list"><li style="list-style-type:circle">prepare for 6-month from start to finish ← is it worth it?<ul id="c4ae9c1a-4ede-4c26-80f6-f5629eca1a15" class="bulleted-list"><li style="list-style-type:square">or are there other ways</li></ul><ul id="7a83e31b-2b8b-4fa3-a7d4-667ba1e778b3" class="bulleted-list"><li style="list-style-type:square">balance: between value and effort</li></ul></li></ul></li></ul><ul id="525dcbea-8543-4f04-9bb5-a009b4fc6e7f" class="bulleted-list"><li style="list-style-type:disc">not about discouragement </li></ul><ul id="26dd64ba-28b4-4fbc-9762-8ba9041b9147" class="bulleted-list"><li style="list-style-type:disc">POC: <ul id="29b3047b-2ab4-4ce8-abbb-79ef87b9790c" class="bulleted-list"><li style="list-style-type:circle">pm: diego</li></ul><ul id="b89557b7-79d8-4d5e-982b-6d80f79c17eb" class="bulleted-list"><li style="list-style-type:circle">design: kyle</li></ul><ul id="00ffdeb6-0e17-4cc7-92c2-2ceb1af6b3d6" class="bulleted-list"><li style="list-style-type:circle">jafferfue ← carlos is his replacment </li></ul></li></ul><ul id="2d74db01-ebd6-4d54-a7f5-a27d2c191057" class="bulleted-list"><li style="list-style-type:disc">we already gave the # on how many to print based on demand for this year<ul id="5cbd9085-bf52-4d4f-92b0-22b7131df0e4" class="bulleted-list"><li style="list-style-type:circle">we are good for rest of the year</li></ul><ul id="c668c827-9904-40bd-aa38-ea8f9fe31179" class="bulleted-list"><li style="list-style-type:circle">time it for next year</li></ul></li></ul></li></ul></li></ul></li></ul><p id="765e15cb-73d8-42ce-82b3-305b3fa9456b" class="">
+</p><ul id="8617b515-3468-4920-9178-b908c6563e3b" class="bulleted-list"><li style="list-style-type:disc">dan’s emails are coming out something are more ambiguous than i’d like to leave it<ul id="c034e69c-5b1c-44fa-9f66-bfd39f49944a" class="bulleted-list"><li style="list-style-type:circle">make sure that diego has a clear manager to report to</li></ul><p id="4f3a9789-9d8a-4c64-a471-42e9aebff8f6" class="">
+</p></li></ul><ul id="557c6315-0889-4221-92b0-7c3716d7744f" class="bulleted-list"><li style="list-style-type:disc"><del>question from conversation with </del><del><a href="5%2018%2022%20Diego%20Balbuena%20e4bcc02eeac941218cd3b2fea94393b8.html">Diego</a></del><del>? </del><ul id="e7e723d6-8c0a-44fc-926e-2f7f0834ad22" class="bulleted-list"><li style="list-style-type:circle">lending side partnership in terms of customer segment mental model overlap?</li></ul><p id="5124a71f-2fc5-4825-8543-69da2cb3692d" class="">
+</p></li></ul><ul id="62cb28e0-54fd-4b50-8e74-717c5e8eb3d7" class="bulleted-list"><li style="list-style-type:disc">follow up based on conversation with branding<ul id="e10ee1bc-46d7-48ae-b55a-c280b6da4c99" class="bulleted-list"><li style="list-style-type:circle">status of the 3 initiatives — matt and team (mary, joel) tasked with rolling out the new remitly guideline</li></ul><ul id="4b274df7-6353-47cb-b504-9b3756e99bb1" class="bulleted-list"><li style="list-style-type:circle">poc: diego (setting req) + michael (PM) + kyle<ul id="48e1e3ae-e385-4392-a683-3d313000bd9b" class="bulleted-list"><li style="list-style-type:square">landing page – green<ul id="c198261f-2495-491b-be41-56b92ee73b86" class="bulleted-list"><li style="list-style-type:disc">we changed the headline font to mascara</li></ul><ul id="df1609b3-917b-4e0d-91d7-8f09d9fb0ce2" class="bulleted-list"><li style="list-style-type:disc">pulling in from the shared photo library</li></ul><ul id="3d3c3332-26b7-469c-99af-53b930453b4b" class="bulleted-list"><li style="list-style-type:disc">they were concerned with the # of illustration</li></ul><ul id="bdff7e7f-0b15-45d1-9ad4-a94cdc4407b7" class="bulleted-list"><li style="list-style-type:disc">to leslie: we can pull when there’s an illustration library;<ul id="2f118f3b-4e6b-47ca-814d-881d31cfa798" class="bulleted-list"><li style="list-style-type:circle">avoid perfecting the page to align with the branding guideline</li></ul></li></ul><ul id="a176ba0f-6347-45ff-b0be-2f9d681e44e6" class="bulleted-list"><li style="list-style-type:disc">100% rollout: we are missing some data</li></ul><ul id="2dd8a34a-80f7-4395-a30a-50fde0a9beed" class="bulleted-list"><li style="list-style-type:disc">they are not approval/block</li></ul></li></ul><ul id="23f7e6df-5497-42ad-9529-9b5a5e80f113" class="bulleted-list"><li style="list-style-type:square">old → new ads – green<ul id="2d898c9f-26b6-4fb1-a338-2ce0f50f7645" class="bulleted-list"><li style="list-style-type:disc">inline with remitly color/font</li></ul><ul id="c67e6e42-c8a2-4770-b34c-9bf7f2356c53" class="bulleted-list"><li style="list-style-type:disc">remitly ads aren’t great looking</li></ul><ul id="ded2f165-5f75-4de6-8ab9-64041f56af47" class="bulleted-list"><li style="list-style-type:disc">unless there’s a hard guideline</li></ul></li></ul><ul id="0a95f7f9-1c22-48f3-aaac-3180f78b991b" class="bulleted-list"><li style="list-style-type:square">estrella: <ul id="ba30c9ab-b4de-44ce-bdba-f07dfa97a0b1" class="bulleted-list"><li style="list-style-type:disc">not fully formed yet</li></ul><ul id="72aaebf3-f182-48e4-a92a-4efc79f7ae01" class="bulleted-list"><li style="list-style-type:disc">if its a super app ← how do we incorporate </li></ul></li></ul><figure id="9cd968e8-ce71-4bd2-a34b-1ab1e67367d9" class="image"><a href="5%2025%2022%20with%20Leslie%203d024d0ccb564749b68dcd0491e930e6/Screen_Shot_2022-05-20_at_12.06.11_PM.png"><img style="width:2004px" src="5%2025%2022%20with%20Leslie%203d024d0ccb564749b68dcd0491e930e6/Screen_Shot_2022-05-20_at_12.06.11_PM.png"/></a></figure></li></ul></li></ul><p id="d6779fbe-da44-4a16-aa2a-057e5ad3dee2" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

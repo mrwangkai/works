@@ -1,0 +1,711 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>4/28 scrum of scrum</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(134, 131, 126, 1);
+	fill: rgba(134, 131, 126, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(134, 131, 126, 1);
+	fill: rgba(134, 131, 126, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="f01b6057-2050-4428-a121-c6211d7a58c8" class="page sans"><header><h1 class="page-title">4/28 scrum of scrum</h1><p class="page-description"></p><table class="properties"><tbody><tr class="property-row property-row-date"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/calendar_gray.svg" style="width:14px;height:14px;display:block"/></span>Date</th><td><time>@04/28/2022 1:00 PM</time></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/list_gray.svg" style="width:14px;height:14px;display:block"/></span>Topic</th><td></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/list_gray.svg" style="width:14px;height:14px;display:block"/></span>Reaction</th><td></td></tr></tbody></table></header><div class="page-body"><nav id="0104c1e9-03c4-44dd-8961-91e4a4fb3dbc" class="block-color-gray table_of_contents"><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#33a88bdc-622f-4409-ba59-9f9830d6ef0a">Attendees</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#55a0dcdb-2c8d-449b-ac10-25487274de6e">Onboarding</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#8a078375-cc3e-4220-be90-e891a2e19312">Lending</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#28209d24-2034-4b1d-b03c-95807e587954">Consumer Product (CP)</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#0f9e7051-6e78-4965-bbad-954235a04802">Customer Obsession (CO)</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#b0ede834-3516-4945-883e-d4f1437a2812">Marketing Channels</a></div></nav><h3 id="33a88bdc-622f-4409-ba59-9f9830d6ef0a" class="">Attendees</h3><figure id="2b7ec77b-024c-4ec0-96df-52331db92b6a" class="image"><a href="4%2028%20scrum%20of%20scrum%20f01b605720504428a121c6211d7a58c8/Screen_Shot_2022-04-28_at_1.17.26_PM.png"><img style="width:1843px" src="4%2028%20scrum%20of%20scrum%20f01b605720504428a121c6211d7a58c8/Screen_Shot_2022-04-28_at_1.17.26_PM.png"/></a></figure><h3 id="55a0dcdb-2c8d-449b-ac10-25487274de6e" class="">Onboarding</h3><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="a7011772-3726-4dbf-b769-41c86bfaa156"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">my questions: the OKR doesn’t seem to be 1:1 match to the ‘actively working on’ (?). </div></figure><ul id="955f3f61-ab17-4401-be54-830a4d043595" class="bulleted-list"><li style="list-style-type:disc">OKRs<ul id="114bda82-35f4-448e-92b8-4e0c85ee9976" class="bulleted-list"><li style="list-style-type:circle">OKR 1: signup to CIP</li></ul><ul id="31d6c1e1-89c7-4d36-a7c0-f52fd7f520ae" class="bulleted-list"><li style="list-style-type:circle">OKR 2: CIP Complete</li></ul><ul id="881295d2-e6c8-44d4-9ec9-43ed1ea80642" class="bulleted-list"><li style="list-style-type:circle">actively working on<ul id="de739ff0-2614-4374-b52b-750f8339de70" class="bulleted-list"><li style="list-style-type:square">Visual doc instruction<ul id="5cd5e518-8f85-4329-9354-e159149b6936" class="bulleted-list"><li style="list-style-type:disc">in design for visual doc instructions</li></ul></li></ul><ul id="4694a380-6d92-42ee-80a4-4c0278fd68fc" class="bulleted-list"><li style="list-style-type:square">💭 Electronic address ← I don’t understand this<ul id="94233b05-d82c-4364-8ba7-adb5ee19727b" class="bulleted-list"><li style="list-style-type:disc">what i think this is: <ul id="bdc25deb-acb5-4251-a71c-8274341b180f" class="bulleted-list"><li style="list-style-type:circle">gps for onboarding and address validation<ul id="87432cce-6a70-476b-820d-aa79bc402663" class="bulleted-list"><li style="list-style-type:square">for document validation</li></ul><ul id="9c0abf22-3c92-4205-af09-167191c00016" class="bulleted-list"><li style="list-style-type:square">if a doc validation is triggered, we will ask for GPS<ul id="1b847407-25f2-4dcd-b5af-2edfa7ec467a" class="bulleted-list"><li style="list-style-type:disc">its a system prompt</li></ul></li></ul></li></ul><ul id="ec76faf1-369e-44c2-ae59-18d2ccf89d16" class="bulleted-list"><li style="list-style-type:circle">gerry: udap concern</li></ul></li></ul><ul id="0b521b1d-a533-4914-932f-cfccad7d3a7f" class="bulleted-list"><li style="list-style-type:disc">word snippets<ul id="481c260a-a137-47b6-880d-24d4d4cc7abb" class="bulleted-list"><li style="list-style-type:circle">gps flow</li></ul><ul id="d1cd8d5a-84a2-472b-b6e6-51e23f102393" class="bulleted-list"><li style="list-style-type:circle">christian: “are we killing or fixing post cards”</li></ul></li></ul></li></ul></li></ul><ul id="2f0283aa-7062-40dc-bb1d-b5858fa91432" class="bulleted-list"><li style="list-style-type:circle">doc service<ul id="d046889e-2c8e-43be-a991-88d39b7e7dc1" class="bulleted-list"><li style="list-style-type:square">1st milestone = doc service is prepared for us to connect to it; now only connects with remitly</li></ul><ul id="ff64579f-61b7-4c82-8085-671be4487e89" class="bulleted-list"><li style="list-style-type:square">then, we will send docs and get back meta data for the docs<ul id="910a4c5e-ec3f-41c2-8a04-ad23ac754904" class="bulleted-list"><li style="list-style-type:disc">make automated decision on if KYC have been satisfied</li></ul><ul id="cfa9e9dc-d61a-42ac-a6a2-8c991f2ad818" class="bulleted-list"><li style="list-style-type:disc">Q: does the API for remittance ← it does exist but not setup for ‘multiple tendancy (?)’</li></ul></li></ul></li></ul></li></ul><p id="f6725059-e9b0-49c7-8e72-048a8b800a40" class="">
+</p><h3 id="8a078375-cc3e-4220-be90-e891a2e19312" class="">Lending</h3><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="e33f17f5-9504-4b2b-a9b3-8e9468329b45"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">what’s the .x?</div></figure><ul id="54481ba7-072c-487b-8b71-8dee03dcaafc" class="bulleted-list"><li style="list-style-type:disc">Build and lending MVP <ul id="b2cf46b1-8188-4a7d-a89c-9960fb671b20" class="bulleted-list"><li style="list-style-type:circle">held back by backend integration</li></ul><ul id="176fce93-d2ae-4978-9467-e29cb655f56f" class="bulleted-list"><li style="list-style-type:circle"><strong>Servicing</strong> ← provisioning up and running</li></ul><ul id="e0039478-7f8d-4bbb-9ebd-dd587ce45f81" class="bulleted-list"><li style="list-style-type:circle">Bank Integration/Accounting/Treasury<ul id="04ba69c8-34ba-4b64-9b95-81baf3f2be9e" class="bulleted-list"><li style="list-style-type:square">We have <mark class="highlight-teal_background"><strong>board approval from Coastal</strong></mark></li></ul><ul id="26feae86-d826-4c83-b1e2-1dc205db7095" class="bulleted-list"><li style="list-style-type:square">New POC for accounting</li></ul></li></ul></li></ul><figure id="5576e1ec-41d4-4b48-b04f-5017b30aaf03" class="image"><a href="4%2028%20scrum%20of%20scrum%20f01b605720504428a121c6211d7a58c8/Screen_Shot_2022-04-28_at_1.18.03_PM.png"><img style="width:2381px" src="4%2028%20scrum%20of%20scrum%20f01b605720504428a121c6211d7a58c8/Screen_Shot_2022-04-28_at_1.18.03_PM.png"/></a></figure><figure id="451567a2-d7ad-411e-a6f8-d07cfcd36fba" class="image"><a href="4%2028%20scrum%20of%20scrum%20f01b605720504428a121c6211d7a58c8/Screen_Shot_2022-04-28_at_1.18.30_PM.png"><img style="width:2340px" src="4%2028%20scrum%20of%20scrum%20f01b605720504428a121c6211d7a58c8/Screen_Shot_2022-04-28_at_1.18.30_PM.png"/></a></figure><p id="7947beb6-19de-4d5f-b749-1e9985f3e40e" class="">
+</p><h3 id="28209d24-2034-4b1d-b03c-95807e587954" class="">Consumer Product (CP)</h3><ul id="0b7a7488-b952-4b68-ba95-4703036039f8" class="bulleted-list"><li style="list-style-type:disc">Reference: conversation with <a href="4%2022%2022%201%201%20with%20Jarred%207db58db87cba43bfbaa0a2bd4d95ed64.html">Jarred</a></li></ul><figure id="93825e00-47f2-4386-b0fe-1889c9dea254" class="image"><a href="4%2028%20scrum%20of%20scrum%20f01b605720504428a121c6211d7a58c8/Screen_Shot_2022-04-28_at_1.30.17_PM.png"><img style="width:2470px" src="4%2028%20scrum%20of%20scrum%20f01b605720504428a121c6211d7a58c8/Screen_Shot_2022-04-28_at_1.30.17_PM.png"/></a></figure><figure id="1d299915-2133-4931-8e3f-658ff80c6e36" class="image"><a href="4%2028%20scrum%20of%20scrum%20f01b605720504428a121c6211d7a58c8/Screen_Shot_2022-04-28_at_1.30.32_PM.png"><img style="width:2444px" src="4%2028%20scrum%20of%20scrum%20f01b605720504428a121c6211d7a58c8/Screen_Shot_2022-04-28_at_1.30.32_PM.png"/></a></figure><figure id="13779145-2967-4c3b-870a-5f5d1512dfc0" class="image"><a href="4%2028%20scrum%20of%20scrum%20f01b605720504428a121c6211d7a58c8/Screen_Shot_2022-04-28_at_1.32.46_PM.png"><img style="width:2460px" src="4%2028%20scrum%20of%20scrum%20f01b605720504428a121c6211d7a58c8/Screen_Shot_2022-04-28_at_1.32.46_PM.png"/></a></figure><figure id="e5ccffd0-4d7c-48ef-8c92-ac1089f39149" class="image"><a href="4%2028%20scrum%20of%20scrum%20f01b605720504428a121c6211d7a58c8/Screen_Shot_2022-04-28_at_1.33.40_PM.png"><img style="width:2458px" src="4%2028%20scrum%20of%20scrum%20f01b605720504428a121c6211d7a58c8/Screen_Shot_2022-04-28_at_1.33.40_PM.png"/></a></figure><p id="a348d27f-ea95-4252-aaed-68dfe9ad285b" class=""><strong>Questions</strong></p><ul id="b33933bd-7d1a-4f17-9cc6-0744e9838c1a" class="bulleted-list"><li style="list-style-type:disc">What is coral?</li></ul><ul id="81a8e950-47b4-4d4f-a6cb-93059659f0bc" class="bulleted-list"><li style="list-style-type:disc">the cumulation of the check deposit, check cashing and cash deposit was something I had chatted with <a href="4%2027%2022%20Christine%201%201%206d033183d94440f5b64a06e53d45ec69.html">Christine</a> about (or vice verse) — get more context from that convo</li></ul><ul id="17f8b835-3a6c-47a4-9030-405829d885cd" class="bulleted-list"><li style="list-style-type:disc">Adoption update on express check cashing ← awesome 10% lift in 2 weeks!<ul id="b02c6951-ee26-46e9-8558-74f3496c8b1e" class="bulleted-list"><li style="list-style-type:circle"><strong>assumptions on why its slowing down?</strong></li></ul><ul id="bdf6e80a-4383-4266-a340-a66b75d92f4e" class="bulleted-list"><li style="list-style-type:circle">clarify: something about x% of check cashing getting done in under 2 mins <ul id="6a7cb8d7-3761-410a-8ba7-b48fdf827400" class="bulleted-list"><li style="list-style-type:square">is this a metric?</li></ul></li></ul><ul id="b8e68c00-69c3-4746-b31e-779e4087b03c" class="bulleted-list"><li style="list-style-type:circle">upper funnel growth ← </li></ul></li></ul><ul id="eebb14e6-068f-4b80-aeb2-cf03f4ad4d2a" class="bulleted-list"><li style="list-style-type:disc">Puneet Iteration on check cashing (standard + express) ← what do planning look like?<ul id="51d116ac-c5e8-43b8-8e1d-58e07869f184" class="bulleted-list"><li style="list-style-type:circle"><a href="https://www.figma.com/proto/9L2kejsV2oOGmDamS0jf32/Passbook-App---Mobile-Cash-and-Check-Deposit?node-id=29%3A8709&amp;scaling=scale-down&amp;page-id=29%3A6056&amp;starting-point-node-id=29%3A8709">prototype</a></li></ul><ul id="efcfa042-032f-4b28-9690-014351aadd2f" class="bulleted-list"><li style="list-style-type:circle">combine the two check deposit </li></ul><ul id="361400a5-e15d-4e03-a838-79949dded0c3" class="bulleted-list"><li style="list-style-type:circle">make it easier</li></ul><ul id="06bed80c-8a1c-404c-b20f-6ae4da127989" class="bulleted-list"><li style="list-style-type:circle">lower fees</li></ul><ul id="3c6b569e-8eba-4499-a741-8a8418b124f2" class="bulleted-list"><li style="list-style-type:circle">offer standard and express to everyone + doing 404 test on the express<ul id="07d76063-5403-4d57-956e-798164ca21ef" class="bulleted-list"><li style="list-style-type:square">everyone will see it, but not everyone will get the experience<ul id="62762776-a759-4b37-96e6-173c24061c16" class="bulleted-list"><li style="list-style-type:disc">what’s the rule? who gets its for real?</li></ul></li></ul><figure id="13e5d45e-b4cb-4453-8366-01a41387933e"><div class="source">https://www.figma.com/proto/9L2kejsV2oOGmDamS0jf32/Passbook-App---Mobile-Cash-and-Check-Deposit?node-id=29%3A8709&amp;scaling=scale-down&amp;page-id=29%3A6056&amp;starting-point-node-id=29%3A8709</div></figure></li></ul><ul id="ff19ebd8-4b59-47e5-94bc-dec24c671f20" class="bulleted-list"><li style="list-style-type:circle">Gerry: if we go outside the pilot, we need to provide 21 days notice on the terms</li></ul><p id="56b311f0-fe66-44e4-8984-fe8922817ea8" class="">
+</p></li></ul><h3 id="0f9e7051-6e78-4965-bbad-954235a04802" class="">Customer Obsession (CO)</h3><figure id="0097d112-8087-44d0-88d9-43d7399340ec" class="image"><a href="4%2028%20scrum%20of%20scrum%20f01b605720504428a121c6211d7a58c8/Screen_Shot_2022-04-28_at_1.50.27_PM.png"><img style="width:1478px" src="4%2028%20scrum%20of%20scrum%20f01b605720504428a121c6211d7a58c8/Screen_Shot_2022-04-28_at_1.50.27_PM.png"/></a></figure><ul id="63e67d60-4148-41d3-a2c4-4911689a67e1" class="bulleted-list"><li style="list-style-type:disc">Puneet: what does not working well for Galileo migration = ?<ul id="24805e27-a311-44af-8f04-2c717bc690e1" class="bulleted-list"><li style="list-style-type:circle">ZADE: user who are old product ID that do not support digital first (e.g. being able to use their card even when physical card is lost/replaced)</li></ul><ul id="b4abd2be-02e1-4acf-961c-22eaf5ea48a5" class="bulleted-list"><li style="list-style-type:circle">phased rollout: closed acct → our acct → smaller chunk<ul id="5591bb16-104d-410b-a067-f5303b369346" class="bulleted-list"><li style="list-style-type:square">concentration circle rollout plan?</li></ul></li></ul></li></ul><figure id="0038d6b5-771f-4c64-a33e-92c9918dc062" class="image"><a href="4%2028%20scrum%20of%20scrum%20f01b605720504428a121c6211d7a58c8/Screen_Shot_2022-04-28_at_1.45.12_PM.png"><img style="width:2484px" src="4%2028%20scrum%20of%20scrum%20f01b605720504428a121c6211d7a58c8/Screen_Shot_2022-04-28_at_1.45.12_PM.png"/></a></figure><ul id="57828f24-d08b-4639-b9c4-f4aea16be75b" class="bulleted-list"><li style="list-style-type:disc">Ramon Saenz<ul id="55d6810c-d586-437b-b9c1-2b9df5e1c296" class="bulleted-list"><li style="list-style-type:circle">average window closing time = ? (4 mins → 2 mins)</li></ul><ul id="13b43895-8929-4984-bcfd-faef357dca99" class="bulleted-list"><li style="list-style-type:circle">Puneet: 19 contacts for “no agents available” — baseline = ?<ul id="d81c8c21-5680-4591-9750-70ec707251ac" class="bulleted-list"><li style="list-style-type:square">Di: <a href="https://www.notion.so/28306f82cc92442c8939d8b69859b592?pvs=21">Jarred</a> is making improvement for this space; we have ran into this issue twice — we have a quick follow-up from product side.</li></ul></li></ul><ul id="e6a05537-eb1d-4910-b510-8fe7e024e4ac" class="bulleted-list"><li style="list-style-type:circle">Puneet: 100% rollout include help center?<ul id="222c3899-1d92-4ca9-a85f-be598d5c6384" class="bulleted-list"><li style="list-style-type:square">there’s no chat in help center web page</li></ul><ul id="3176643a-e5d3-4980-839d-31424928f2c5" class="bulleted-list"><li style="list-style-type:square">launch point is through the help menu — you can initiate chat from there<ul id="196d82d4-61ae-4620-9b44-bcbe1d7d537d" class="bulleted-list"><li style="list-style-type:disc">if you click on ‘help center’ — it will take you to the full screen web page</li></ul><ul id="225f5fc2-c94f-4961-9738-38464c96d0b7" class="bulleted-list"><li style="list-style-type:disc">does not have a way to get to chat from there</li></ul></li></ul></li></ul></li></ul><figure id="aa191c03-cced-495e-84b1-dfdb6108e4db" class="image"><a href="4%2028%20scrum%20of%20scrum%20f01b605720504428a121c6211d7a58c8/Screen_Shot_2022-04-28_at_1.58.31_PM.png"><img style="width:496px" src="4%2028%20scrum%20of%20scrum%20f01b605720504428a121c6211d7a58c8/Screen_Shot_2022-04-28_at_1.58.31_PM.png"/></a></figure><ul id="c102e2c9-8256-47a8-b980-447e97c43a17" class="bulleted-list"><li style="list-style-type:disc">transaction-level fraud alert is awesome</li></ul><p id="8866dfcc-720d-4a83-b699-7675700f5e7b" class="">#<strong>Questions</strong></p><ul id="00c66b36-a3ae-4a17-be09-c44c92ce6e57" class="bulleted-list"><li style="list-style-type:disc">what is RTM, what is FIR OKR, what is Cuscat?</li></ul><ul id="b759803e-3ebb-464c-a791-67292ebd444b" class="bulleted-list"><li style="list-style-type:disc">how many customers are on passbook right now? active rate?</li></ul><p id="0c022010-94fe-4238-93d8-55f02611618e" class="">
+</p><h3 id="b0ede834-3516-4945-883e-d4f1437a2812" class="">Marketing Channels</h3><figure id="cd4d7e9c-4781-4f79-b310-c3b348beed4a" class="image"><a href="4%2028%20scrum%20of%20scrum%20f01b605720504428a121c6211d7a58c8/Screen_Shot_2022-04-28_at_2.03.01_PM.png"><img style="width:1702px" src="4%2028%20scrum%20of%20scrum%20f01b605720504428a121c6211d7a58c8/Screen_Shot_2022-04-28_at_2.03.01_PM.png"/></a></figure><ul id="311f4ad5-7a0f-4eea-bff2-6fafdb8ad41f" class="bulleted-list"><li style="list-style-type:disc">DDA increased from 800 → 1009<ul id="6476c792-75b8-42db-a662-1ecbc21b2315" class="bulleted-list"><li style="list-style-type:circle">need to dig into that to see how we can contribute the 20% increase to?<ul id="63c87f25-3754-4394-8e05-4f4e66b8c25b" class="bulleted-list"><li style="list-style-type:square">Cruz: we increase signup for ~200 corresponding to ~200 DDA</li></ul><ul id="2e977748-e6f3-4d5c-9ed9-098b867702f4" class="bulleted-list"><li style="list-style-type:square">reason: potentially due to the move to google traffic with HIGH INTENT</li></ul></li></ul><ul id="0912963a-3124-43d7-898a-3d62f1e0b83b" class="bulleted-list"><li style="list-style-type:circle">organic?<ul id="e9a68ea1-fe05-4a21-a035-66d4de1c0608" class="bulleted-list"><li style="list-style-type:square">should we ramp up spend more</li></ul><ul id="cd8a3163-20c5-4b5f-a3fd-0c3616a35885" class="bulleted-list"><li style="list-style-type:square">Dan: cost go down/acct number go up, we should increase the spending</li></ul></li></ul></li></ul><p id="cefde659-2bfc-4cf2-9ad8-411eb83b1330" class="">
+</p><figure id="55f401e2-5270-4a9e-9e9f-87e1bc164aae" class="image"><a href="4%2028%20scrum%20of%20scrum%20f01b605720504428a121c6211d7a58c8/Screen_Shot_2022-04-28_at_2.06.52_PM.png"><img style="width:1094px" src="4%2028%20scrum%20of%20scrum%20f01b605720504428a121c6211d7a58c8/Screen_Shot_2022-04-28_at_2.06.52_PM.png"/></a></figure><ul id="b5b56e1a-233b-4d76-946f-199a52d9f98a" class="bulleted-list"><li style="list-style-type:disc">green = MX DDAs</li></ul><ul id="f655e4ab-8e7b-4b8a-b4df-1769e94f12d8" class="bulleted-list"><li style="list-style-type:disc">(Google) language targeting vs. (Facebook) country-based targeting </li></ul><figure id="8cbb4ebd-9112-4b1c-be09-bc78755b90c1" class="image"><a href="4%2028%20scrum%20of%20scrum%20f01b605720504428a121c6211d7a58c8/Screen_Shot_2022-04-28_at_2.07.37_PM.png"><img style="width:1354px" src="4%2028%20scrum%20of%20scrum%20f01b605720504428a121c6211d7a58c8/Screen_Shot_2022-04-28_at_2.07.37_PM.png"/></a></figure><figure id="ee304170-d2bb-4d91-bb05-c5bcbce6f6e6" class="image"><a href="4%2028%20scrum%20of%20scrum%20f01b605720504428a121c6211d7a58c8/Screen_Shot_2022-04-28_at_2.08.30_PM.png"><img style="width:1546px" src="4%2028%20scrum%20of%20scrum%20f01b605720504428a121c6211d7a58c8/Screen_Shot_2022-04-28_at_2.08.30_PM.png"/></a></figure><figure id="a5dd950d-6a21-4107-b45a-eab66309496f" class="image"><a href="4%2028%20scrum%20of%20scrum%20f01b605720504428a121c6211d7a58c8/Screen_Shot_2022-04-28_at_2.08.52_PM.png"><img style="width:1056px" src="4%2028%20scrum%20of%20scrum%20f01b605720504428a121c6211d7a58c8/Screen_Shot_2022-04-28_at_2.08.52_PM.png"/></a></figure><ul id="9bd85bb7-c12b-42af-8709-843067fa39db" class="bulleted-list"><li style="list-style-type:disc">Landing page is live<ul id="551ec9fc-c8a2-4035-b5e3-1d5e5379530b" class="bulleted-list"><li style="list-style-type:circle">we have a split test to understand new/old landing page ← additional campaigns to send traffic</li></ul><ul id="b52d461c-0e6e-44d4-b2d7-bf8dfea7eea3" class="bulleted-list"><li style="list-style-type:circle">new landing page’s start isn’t great; but it’s catching up</li></ul><ul id="d771f9a5-a0cb-4909-bf2c-6cc2c55e0a3c" class="bulleted-list"><li style="list-style-type:circle">facebook campaign was launched on monday<ul id="570ac42e-44cd-404f-a91c-1d868b39d929" class="bulleted-list"><li style="list-style-type:square">bounce rate dropped by 10% across english/spanish = better engagement</li></ul><ul id="3fc7e8b5-359e-4df0-a597-1de70cacbca0" class="bulleted-list"><li style="list-style-type:square">awaiting result for DDA sign ups + other metrics</li></ul></li></ul></li></ul><p id="237ee1ae-3991-4792-8770-1a1183151bf6" class="">#question:</p><ul id="3d5f5d51-b35a-4d1c-880a-884864c72027" class="bulleted-list"><li style="list-style-type:disc">what does “windowed” referencing?</li></ul></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

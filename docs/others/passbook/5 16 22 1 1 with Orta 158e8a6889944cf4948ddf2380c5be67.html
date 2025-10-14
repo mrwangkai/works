@@ -1,0 +1,707 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>5/16/22 1:1 with Orta</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(134, 131, 126, 1);
+	fill: rgba(134, 131, 126, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(134, 131, 126, 1);
+	fill: rgba(134, 131, 126, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="158e8a68-8994-4cf4-948d-df2380c5be67" class="page sans"><header><h1 class="page-title">5/16/22 1:1 with Orta</h1><p class="page-description"></p><table class="properties"><tbody><tr class="property-row property-row-date"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/calendar_gray.svg" style="width:14px;height:14px;display:block"/></span>Date</th><td><time>@05/16/2022 2:00 PM</time></td></tr><tr class="property-row property-row-relation"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/arrow-northeast_gray.svg" style="width:14px;height:14px;display:block"/></span>Attendees</th><td></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/list_gray.svg" style="width:14px;height:14px;display:block"/></span>Topic</th><td></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/list_gray.svg" style="width:14px;height:14px;display:block"/></span>Reaction</th><td></td></tr></tbody></table></header><div class="page-body"><ul id="8f8d78be-ef7d-423a-beae-61d62714d493" class="bulleted-list"><li style="list-style-type:disc">talked with : CP is an algomratiation for money in / money out</li></ul><ul id="dd5ee159-310a-4575-8c8a-84e378f246ae" class="bulleted-list"><li style="list-style-type:disc">future scope? to account for them in the IA (e.g. how to represent funding)</li></ul><ul id="fdecd7be-4bac-4c71-bf1b-f4cfee000422" class="bulleted-list"><li style="list-style-type:disc">the reason we haven’t been able to evangelize a strategy for passbook<ul id="22e22f6c-500e-4061-a00a-0fa59678a37a" class="bulleted-list"><li style="list-style-type:circle">strategy for passbook x remitly (tightly coupled) — refined at the c-level</li></ul><ul id="f613436a-16c4-41e3-b5e6-05390f0844af" class="bulleted-list"><li style="list-style-type:circle">the trick is not to do it all at once! should be trying to incremental improvement with intentional plans to leave space #InterviewQuestion<ul id="d9e6e461-3dc0-497f-b160-0de5eddf4668" class="bulleted-list"><li style="list-style-type:square">conceptualize where do we want to go (↓ “what will be true”)<ul id="2592c22a-55e7-41f9-bfc8-cf93a8367aba" class="bulleted-list"><li style="list-style-type:disc">how can I consider these to plan out the next few sprints? road map ← ☹️<ul id="160bca59-1597-4f53-abdf-7fc545e3e6ed" class="bulleted-list"><li style="list-style-type:circle">shell of the product → the things that we want to do tomorrow<ul id="69d09f64-d663-4419-bbb3-becb6b3c05ef" class="bulleted-list"><li style="list-style-type:square">user needs to understand “...”<ul id="2334228b-773f-4394-869c-b44a8edd9f87" class="bulleted-list"><li style="list-style-type:disc">move in, move out, account balance = </li></ul></li></ul><ul id="a870ef0b-9764-4def-9914-5a2d183f49d8" class="bulleted-list"><li style="list-style-type:square">what are the building blocks<ul id="5aca61c9-7a1e-4e8f-b932-2b63c9d51cb3" class="bulleted-list"><li style="list-style-type:disc">primary, secondary</li></ul><ul id="3665ef37-8269-4409-a95a-2d65b42bc0a7" class="bulleted-list"><li style="list-style-type:disc">e.g. account setup: people can’t change email; card management; account funding tools</li></ul><ul id="767a52aa-9b66-47d2-99f0-9d3268427dfc" class="bulleted-list"><li style="list-style-type:disc">remittance should stand alone<ul id="66c8a93f-dfce-43c9-8ab8-8e08d459b25d" class="bulleted-list"><li style="list-style-type:circle">its a form of SEND</li></ul></li></ul><ul id="10a373e7-bb07-48bb-a7d5-b9f552e30369" class="bulleted-list"><li style="list-style-type:disc">underlying platform = ? component tree, nested modal that we are using</li></ul></li></ul></li></ul></li></ul><ul id="10a254ef-6054-4cd7-bb40-66bc49f16ee7" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">spend some time to create a plan to audit → re-imagining components (including the future looking) → reimaging existing flow into new design kit #interview</span><div class="indented"><ul id="3cea1926-aa51-4e13-92a0-a0199d0bca3d" class="bulleted-list"><li style="list-style-type:disc">in partnership/milestone with lauren</li></ul><ul id="f4d81393-ddd3-401c-b4a0-8ebb1f1c37c9" class="bulleted-list"><li style="list-style-type:disc">What is the OUTCOME at different steps?</li></ul><ul id="57bcc70d-4870-441e-8a5f-fe1da9d06296" class="bulleted-list"><li style="list-style-type:disc">invest 20% of eng in Q4 in doing all “these things” → ending the year with the new experience</li></ul></div></li></ul><ul id="3d47c81d-e42e-4dee-b989-8573c435ec47" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Run a WORKSHOP — meet in Seattle, 3 hours</span><div class="indented"><ul id="f6d90aae-60bd-4ff6-9a2a-d59152977cd9" class="bulleted-list"><li style="list-style-type:disc">EXCITE THE TEAM </li></ul></div></li></ul><ul id="5bc4c885-0ed7-49b1-ac0e-405d78eeff10" class="bulleted-list"><li style="list-style-type:disc">tying these features with a problem<ul id="d2e005c5-8c09-47ab-94d4-ecc3f07ed27a" class="bulleted-list"><li style="list-style-type:circle">super app is top → down 😄 but others </li></ul></li></ul></li></ul><ul id="0ebe6470-e081-45f4-a691-dcc1b4cfaa0e" class="bulleted-list"><li style="list-style-type:square">how do we migrate</li></ul></li></ul><ul id="2b9fc1c0-5426-404b-9833-1bc58958fbfb" class="bulleted-list"><li style="list-style-type:circle">Orta thoughts (<a href="https://docs.google.com/document/d/1BCOKY26XrJlxnriJWbHEvG_CKozwuADo-mzMVIki5dQ/edit">docs</a>)</li></ul><ul id="d0b1f63a-1684-4211-ac0c-a697b78c1da8" class="bulleted-list"><li style="list-style-type:circle">what will be true (regardless)<ol type="1" id="bad31f35-1698-4fa8-9506-4d2da75a0f2c" class="numbered-list" start="1"><li><strong>SUPER APP </strong>now: passbook and lending are separate; but lending will be offered into passbook, including other financial instructments on offer:<ul id="53435a35-9241-4fc4-94d0-3a45daa3daf7" class="bulleted-list"><li style="list-style-type:disc">single app with all the financial services → using this as a context to what we are trying to do<ul id="0a6e2ec1-603d-4ed9-8074-2c2befbface2" class="bulleted-list"><li style="list-style-type:circle">reality: features are evolving, we are offering new feature, we are embedding new business line (lending) ← the current app does not lend itself to all these new info<ul id="b71f597c-7053-436a-a9da-020503096511" class="bulleted-list"><li style="list-style-type:square">the app we have today was built 18-month ago for a different customer segment (we were going after the Chime/Remitly customer)<ul id="9dd1c3ec-871e-4df4-b330-12d40cfd2fa5" class="bulleted-list"><li style="list-style-type:disc">for unbank/underbank → making it playful/fun (e.g. Majority)</li></ul><ul id="bc8b9e03-0d50-4678-b0f8-7c2daa16c457" class="bulleted-list"><li style="list-style-type:disc">with clear problem statement → drive redesign → gtm plan (eng/prod/design) to measure impact</li></ul><ul id="3be52f2d-5271-4de2-828e-d52004aaf6eb" class="bulleted-list"><li style="list-style-type:disc">active user of 12k</li></ul></li></ul></li></ul></li></ul><ul id="8b675d91-8650-4ce8-a1d5-a5141b00173c" class="bulleted-list"><li style="list-style-type:disc">fully integrated remittance, lending</li></ul><ul id="aae7ec60-2753-432e-a1b7-3638e85f9337" class="bulleted-list"><li style="list-style-type:disc">credit card, savings, <strong>gusto wallet</strong></li></ul><ul id="f74f5d81-3736-479a-8cc8-036337dc9a4c" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked"><strong>gusto wallet</strong></span><div class="indented"><ul id="cebf1fb4-fd06-4070-b11b-474f76f264d7" class="bulleted-list"><li style="list-style-type:disc">putting money away for uses ← creating pockets of money (no interest rate) ← indicate interest to create envelope</li></ul><ul id="ef05890d-c5b5-4a89-8c6d-74527ee698f6" class="bulleted-list"><li style="list-style-type:disc">Q: how does this map to our customer segment and their behavior (e.g. having $ leftover after going through check)</li></ul></div></li></ul><ul id="41534bf0-52b5-48e1-bb72-1158c6574368" class="bulleted-list"><li style="list-style-type:disc">NOT JUST MONEY IN/OUT; but also saving; access to credit</li></ul></li></ol><ol type="1" id="c6bbde7f-fa38-46ed-94e2-9b751bbe1654" class="numbered-list" start="2"><li><strong>authorized users?</strong><ul id="e0994abb-b4fc-4b83-b195-20c04fe5da67" class="bulleted-list"><li style="list-style-type:disc">invite spouse to have access to the account</li></ul><ul id="b6e4bc70-40ae-405e-af90-66f770165582" class="bulleted-list"><li style="list-style-type:disc">Question: does this address the asks to change/add email?</li></ul></li></ol><ol type="1" id="a79e8d3e-2daa-42a3-af0c-4272ab015def" class="numbered-list" start="3"><li><strong>separate account vs. bank account</strong><ul id="c3331305-ad23-4bc1-9559-8ed3d4efcc72" class="bulleted-list"><li style="list-style-type:disc">no KYC → “passbook lite” with limited feature (not dda) such as remittance with cash or pay with check</li></ul><ul id="47dec850-9231-4fe1-9155-65350637e633" class="bulleted-list"><li style="list-style-type:disc">different types of account </li></ul></li></ol><ul id="72272912-fbc0-411e-bb17-4ce93531e68d" class="bulleted-list"><li style="list-style-type:square">our messages are ephermal</li></ul><ol type="1" id="74148826-2e01-49fc-8f0f-ca2057659c05" class="numbered-list" start="4"><li><strong>certain feature applies to certain group of customer</strong> ← this will be super powerful<ul id="c4459b22-86e0-45c9-8d89-167cdebaccb3" class="bulleted-list"><li style="list-style-type:disc">exposing features to </li></ul></li></ol><ol type="1" id="4601f709-bf53-4b24-94fc-0cdc699cfafb" class="numbered-list" start="5"><li><strong>how to increase visibility of new feature</strong><ol type="a" id="69fbeb97-a4fc-4425-bb08-fd08f13677e8" class="numbered-list" start="1"><li>features in partnership with marketing (<a href="https://docs.google.com/document/d/1s1XstvzeXbYN4X4vHS5KUs-_xsV_q-gmfr_xKUcGlJQ/edit">docs</a>)</li></ol></li></ol><ul id="3ed9ac62-8b92-416b-bb82-adbf27f3caf7" class="bulleted-list"><li style="list-style-type:square">*** multiple offering including authorized users</li></ul><ul id="8cae6ad8-2ed7-4d51-8c6f-3eec969c3638" class="bulleted-list"><li style="list-style-type:square"><strong>COACHING CUES</strong><ul id="61707f71-0c8d-40a8-923f-d5374a28ecb2" class="bulleted-list"><li style="list-style-type:disc">they are not comfortable clicking through</li></ul><ul id="c658c8a6-eb61-436b-af9e-f4b7027c28a8" class="bulleted-list"><li style="list-style-type:disc">they are afraid/intimidated by clicking out of a coaching cue</li></ul></li></ul><ol type="1" id="2011577c-c61a-40cd-92f4-a12e7cc28470" class="numbered-list" start="6"><li>Q4 or Q1 (2023) — invest in loyalty<ol type="a" id="0f0dfa0b-d189-4069-a5d3-cbf523ae0da6" class="numbered-list" start="1"><li>if you do these things, you move to a different tier ← no one has spent a lot of time thinking about it</li></ol><ol type="a" id="d91fc3d4-5e76-4ea2-a5e9-44cbbe31db5d" class="numbered-list" start="2"><li>give people carrots to more frequent users (or higher LTV)</li></ol><ol type="a" id="66cc22ce-29a5-4336-ad1c-b85186cbbfc1" class="numbered-list" start="3"><li>carrots: higher limit on withdraw, loans, check cashing</li></ol><ol type="a" id="a103a26e-762a-4a98-922a-9029dd87b85b" class="numbered-list" start="4"><li>activities that increase return for us vs. activities that increase engagement for user</li></ol><ol type="a" id="608f1c35-37cf-4977-86cc-7cd4626ce848" class="numbered-list" start="5"><li>inspiration: flight miles; BOA loyalty (tiered?)</li></ol></li></ol></li></ul></li></ul><p id="d9650a1d-0380-419a-95ea-ebd44ff30f59" class="">
+</p><h3 id="1b53b864-9301-4408-b064-431fcccef301" class="">Reference</h3><p id="6bb24b5b-e8f6-40db-b32f-1ce91fd57200" class="">Estrella <a href="https://docs.google.com/document/d/1tbQDVlpfmcdBSEAFosgV4XVe4625oIGcj-D0RjPB-KU/edit#heading=h.4mkzze48zw6f">reference doc</a></p><ul id="016dd0c3-a546-456b-93df-a38fdbdfe2c8" class="bulleted-list"><li style="list-style-type:disc">redesign isn’t to service the product vision / the product vision is to service the redesign</li></ul></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

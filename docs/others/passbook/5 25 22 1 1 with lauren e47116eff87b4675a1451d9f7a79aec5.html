@@ -1,0 +1,715 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>5/25/22 1:1 with lauren</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(134, 131, 126, 1);
+	fill: rgba(134, 131, 126, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(134, 131, 126, 1);
+	fill: rgba(134, 131, 126, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="e47116ef-f87b-4675-a145-1d9f7a79aec5" class="page sans"><header><h1 class="page-title">5/25/22 1:1 with lauren</h1><p class="page-description"></p><table class="properties"><tbody><tr class="property-row property-row-date"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/calendar_gray.svg" style="width:14px;height:14px;display:block"/></span>Date</th><td><time>@05/25/2022 10:00 AM</time></td></tr><tr class="property-row property-row-relation"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/arrow-northeast_gray.svg" style="width:14px;height:14px;display:block"/></span>Attendees</th><td></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/list_gray.svg" style="width:14px;height:14px;display:block"/></span>Topic</th><td><span class="selected-value select-value-color-brown">Design System</span></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/list_gray.svg" style="width:14px;height:14px;display:block"/></span>Reaction</th><td><span class="selected-value select-value-color-green">Good 😄</span></td></tr></tbody></table></header><div class="page-body"><p id="409b95b3-7437-44bc-87c2-27e3cbdb8014" class="">#designSystem</p><p id="12ea56b8-423c-4451-88f9-fc414b154551" class="">
+</p><p id="12d6aa63-09b6-4e2b-a45d-2737a0ae16da" class="">design system gantt chart (<a href="https://www.figma.com/file/vhlIpNERKES0zwIBRd4mNu/Brand-%26-Design-System?node-id=0%3A1">figjam</a>)</p><p id="f290efd3-d97e-4929-ba58-9d36d109fd69" class="">
+</p><ul id="d3764177-8ec6-4ae5-a6d6-535f657a7a14" class="bulleted-list"><li style="list-style-type:disc">milestone check-in: <ul id="5f80f70e-221a-46f3-b08b-268d1e4b053f" class="bulleted-list"><li style="list-style-type:circle">everybody has been finding benefit</li></ul><ul id="806a8c8d-d758-47b5-877c-7318694ab61c" class="bulleted-list"><li style="list-style-type:circle">new brand in the product has been going on for a while</li></ul><ul id="207940f0-ad51-405a-9373-896b3f234fe2" class="bulleted-list"><li style="list-style-type:circle">every 2 weeks</li></ul><ul id="37d6d629-67bd-47a1-abab-287d6dc48789" class="bulleted-list"><li style="list-style-type:circle">actions?<ul id="a0269c02-9b31-4ac8-ac46-aaee4fd036e4" class="bulleted-list"><li style="list-style-type:square">start making decision: <ul id="4f398cd2-8236-4c72-909a-83b057161750" class="bulleted-list"><li style="list-style-type:disc">shipping updates to brand<ul id="1e4b83fe-2ad9-4721-87a6-3ee1954b64fd" class="bulleted-list"><li style="list-style-type:circle">we should get closer for passbook &amp; remitly app</li></ul></li></ul><ul id="9e9343ff-8bbd-4d83-a3cc-b5281dcf3ac2" class="bulleted-list"><li style="list-style-type:disc">lending is becoming its own service</li></ul><ul id="89ada89f-02cb-447d-9ad0-c806ed9c26eb" class="bulleted-list"><li style="list-style-type:disc">IDB and Fraud should be the same</li></ul><ul id="1031506d-d9d6-4d7d-a29f-02ac4939a1ff" class="bulleted-list"><li style="list-style-type:disc">what’s needed for banking/remittance should be the same</li></ul><ul id="c3845875-6b13-4965-b7d1-f35d9a50d69f" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-yellow_background"><strong>how does the brand feel the same but not EXACT</strong></mark></li></ul></li></ul><ul id="108901cc-6f22-47ab-8c19-32d4a0b8ad28" class="bulleted-list"><li style="list-style-type:square">long-term design system x brand<ul id="e9d39390-aeb3-4ccb-96de-c1f465bb9889" class="bulleted-list"><li style="list-style-type:disc">2 different things</li></ul><ul id="2a542533-cbd4-4234-9b33-c506dae9fe3e" class="bulleted-list"><li style="list-style-type:disc">brand AND design system</li></ul></li></ul><ul id="dd0a2ea4-b0a7-4f6b-ae91-7ce51df28d2e" class="bulleted-list"><li style="list-style-type:square">Q3 (sept 2022) get color updates out</li></ul><ul id="37d2cacb-273f-43b8-a339-81ed260d7d03" class="bulleted-list"><li style="list-style-type:square">how far can we go w/o eng support?<ul id="cca4121b-dcba-43b4-bdfe-c47502e4a825" class="bulleted-list"><li style="list-style-type:disc">external design system that remitly/passbook can use</li></ul><ul id="23375450-839d-40d2-848e-ccf12877cfa2" class="bulleted-list"><li style="list-style-type:disc">matt talked to aukar from tech side: it will take twice as long<ul id="a0d3bdf2-95be-47ca-949c-96fb3cae187d" class="bulleted-list"><li style="list-style-type:circle">john scrafano + dan = design system</li></ul></li></ul></li></ul><ul id="345b4143-ce64-4c7f-ab77-81d09136ac14" class="bulleted-list"><li style="list-style-type:square">we have support from leadership; not 100% from eng</li></ul></li></ul></li></ul><ul id="6cbb6e1f-d0ad-40d6-a53d-15a4d231d414" class="bulleted-list"><li style="list-style-type:disc">My reaction<ul id="84d0500c-7fb7-42e6-8255-bbbe67a7d99c" class="bulleted-list"><li style="list-style-type:circle">dan sent a message about strategy</li></ul><ul id="fc130fd9-59c9-4e76-b42b-968f15a49e5f" class="bulleted-list"><li style="list-style-type:circle">start with color make sense</li></ul><ul id="771fc6c6-0be9-41aa-a4f6-637fdb351905" class="bulleted-list"><li style="list-style-type:circle">passbook going through redesign</li></ul><ul id="188243e5-d7ef-45c9-a074-53b2da53b3b9" class="bulleted-list"><li style="list-style-type:circle">brand convo:<ul id="0da39a0c-f613-4367-8e4e-8f50737ce518" class="bulleted-list"><li style="list-style-type:square">color</li></ul><ul id="18e9beb4-9b8c-44f3-bb0d-c7adcfcbd85a" class="bulleted-list"><li style="list-style-type:square">typeface</li></ul><ul id="d3c0bf95-2b40-43d9-b37f-00d2a424eda7" class="bulleted-list"><li style="list-style-type:square">will be chatting with Joel in June</li></ul><p id="917266af-4be1-4bbc-a0e4-1dd77c7b5a1e" class="">
+</p></li></ul></li></ul><ul id="1a78910b-d6e9-42bb-b487-4e9a84c9a3d1" class="bulleted-list"><li style="list-style-type:disc">bethany proposing new color palette → brighter<ul id="90750d25-0396-49b7-9330-d7ee3468f7a0" class="bulleted-list"><li style="list-style-type:circle">question: dark mode?<ul id="cde5575b-25b9-46ce-a778-bab7b5232fbd" class="bulleted-list"><li style="list-style-type:square">we can ship them &amp; call out light theme</li></ul><ul id="5c31752a-2d74-4ede-8ab3-eea76507228b" class="bulleted-list"><li style="list-style-type:square">github design system has a nice example for light/dark theme</li></ul></li></ul></li></ul><p id="8f95c164-4b79-4cd1-a516-54d6bb8a6c78" class="">
+</p><ul id="bf29f041-9f20-4ae0-a28a-8b4656f062dd" class="bulleted-list"><li style="list-style-type:disc">material design:<ul id="2ff86415-3246-490c-95aa-515549a17a89" class="bulleted-list"><li style="list-style-type:circle">layers through shadow</li></ul><ul id="63426e87-f399-4973-9ad8-704cded8f64b" class="bulleted-list"><li style="list-style-type:circle">gradient?</li></ul></li></ul><ul id="31aa0082-e01c-41c3-b037-b74516eb8d04" class="bulleted-list"><li style="list-style-type:disc">color ← this is what the meeting is for<ul id="419e1abf-a723-4ab0-bdb0-b8f90bb1918c" class="bulleted-list"><li style="list-style-type:circle">dark blue = neutral = addendum</li></ul><ul id="ca7aa99a-6fa2-4639-814a-13c22f3e9bf0" class="bulleted-list"><li style="list-style-type:circle">use bright color to draw attention</li></ul><p id="4fe2e9dc-f781-4efe-929e-19b6c4ff8d71" class="">
+</p></li></ul><ul id="33117032-1442-4d26-9809-7c7cc4a50fda" class="bulleted-list"><li style="list-style-type:disc">with a token system <ul id="3162ffe5-b7ce-4b98-86f3-50e3bd236337" class="bulleted-list"><li style="list-style-type:circle"><a href="https://m3.material.io/foundations/design-tokens/overview">https://m3.material.io/foundations/design-tokens/overview</a></li></ul><ul id="25381f91-1302-4e0e-a1a4-bffff4943a0e" class="bulleted-list"><li style="list-style-type:circle">going above using a hex value <code>0000FF</code> → takes a step further from <code>blue-10</code> → <code>primary-cta</code><ul id="71e69306-58bc-4677-ba9d-14803bc331ee" class="bulleted-list"><li style="list-style-type:square">allows another layer for themes (light/dark)</li></ul><p id="4236a826-e99c-428c-9aa3-d1125e7c48ea" class="">
+</p></li></ul></li></ul><ul id="f8fbfe02-ebd8-46cc-97a1-c4e6193e5bab" class="bulleted-list"><li style="list-style-type:disc">component status</li></ul><p id="0d4ab323-1edb-4fcf-9cd4-a62c70744cf7" class="">
+</p><ul id="86be4ae0-ca6d-4d0a-a2c9-0f1167d3bbc8" class="bulleted-list"><li style="list-style-type:disc">referencing the figjam: brand update for remitly + brand updates for passbook</li></ul><p id="36a60342-4cb4-4b97-8ba1-6e41fe518402" class="">
+</p><ul id="b59d8689-a0bf-4641-b239-18594d21723a" class="bulleted-list"><li style="list-style-type:disc">expectation for the design review?</li></ul><ul id="61067759-d768-4c56-baf4-8ff4799ab04d" class="bulleted-list"><li style="list-style-type:disc">1:1 for design review on what’s going on?<ul id="6fb814a8-04ca-492f-ac47-44a46d1ec3b1" class="bulleted-list"><li style="list-style-type:circle">set up separate time</li></ul><ul id="8b748a98-a79f-45d7-8776-49b4a2b2e3c7" class="bulleted-list"><li style="list-style-type:circle">1:1 should be career development</li></ul></li></ul><p id="fc3b7f66-8d6e-4ebd-83a8-7a55802d703f" class="">
+</p><ul id="a2250ac1-80a0-4db0-bb08-a9fee0f96383" class="bulleted-list"><li style="list-style-type:disc">justin has been starting to think about IA for remitly<ul id="a1fdba22-861b-40ed-ba42-37374a005132" class="bulleted-list"><li style="list-style-type:circle">should ia be the same</li></ul><ul id="b1324dbe-c45d-453f-ad0f-cbb4494dbb8f" class="bulleted-list"><li style="list-style-type:circle">bi-weekly ia meeting</li></ul><ul id="640cf536-cf83-40ed-8fe8-32bb8da31ecd" class="bulleted-list"><li style="list-style-type:circle">john is working on the homepage ← beginning of the ia work<ul id="af5d3aa0-8e52-4fca-a418-a9b53f27396b" class="bulleted-list"><li style="list-style-type:square">a pain the past 2 years</li></ul><ul id="cfa8f8b0-8311-442c-94dd-1544d6d58245" class="bulleted-list"><li style="list-style-type:square">fix homepage first</li></ul></li></ul></li></ul></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

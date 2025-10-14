@@ -1,0 +1,709 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Rachel / Kai 1:1</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(134, 131, 126, 1);
+	fill: rgba(134, 131, 126, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(134, 131, 126, 1);
+	fill: rgba(134, 131, 126, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="2e8ae83d-7a68-4191-a378-8d6dcc5d6afa" class="page sans"><header><h1 class="page-title">Rachel / Kai 1:1</h1><p class="page-description"></p><table class="properties"><tbody><tr class="property-row property-row-date"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/calendar_gray.svg" style="width:14px;height:14px;display:block"/></span>Date</th><td><time>@04/25/2022 10:32 AM</time></td></tr><tr class="property-row property-row-relation"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/arrow-northeast_gray.svg" style="width:14px;height:14px;display:block"/></span>Attendees</th><td></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/list_gray.svg" style="width:14px;height:14px;display:block"/></span>Topic</th><td></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/list_gray.svg" style="width:14px;height:14px;display:block"/></span>Reaction</th><td></td></tr></tbody></table></header><div class="page-body"><ul id="72264781-86cc-484d-83fb-c85d6f4b3568" class="bulleted-list"><li style="list-style-type:disc">Link to <a href="https://app.charthop.com/remitly/person/5ff4f73e4d17ed4079562052/rachel-cooper">charthop</a></li></ul><ul id="3e3e66ca-75f9-48b5-abc1-9431b27b62a5" class="bulleted-list"><li style="list-style-type:disc">was going to move; but husband didn’t find anything</li></ul><ul id="7800feb1-fccd-4066-bcfe-03e4e35b261e" class="bulleted-list"><li style="list-style-type:disc">congratulations!</li></ul><ul id="068e2091-e6f6-4519-93a5-6e2b7042e76d" class="bulleted-list"><li style="list-style-type:disc">experience at remitly<ul id="5fa322ff-4392-40fd-bf59-0ebad1533e3d" class="bulleted-list"><li style="list-style-type:circle">joined about 2 years ago</li></ul></li></ul><ul id="ed97f9cb-48e3-4acc-96c6-355a292e4fc5" class="bulleted-list"><li style="list-style-type:disc">“I&#x27;m really small (5&#x27;1&quot;)”</li></ul><p id="a9e8ed62-ee73-433e-8f88-c3144fe0f6b0" class="">
+</p><ul id="cc3fd7cb-e1c8-44f3-9323-73489303b6ba" class="bulleted-list"><li style="list-style-type:disc">I came from finance (bank → hedge fund)<ul id="b7566d3f-9039-46d7-af14-e57a1cd68d67" class="bulleted-list"><li style="list-style-type:circle">almost left to become a UX designer (general assembly)</li></ul><ul id="450411a3-bbeb-4a82-8395-529ebe0d1318" class="bulleted-list"><li style="list-style-type:circle">analytics team </li></ul><ul id="3ee5087d-565d-4f4a-8105-e65d6f48f1b5" class="bulleted-list"><li style="list-style-type:circle">joined remitly (treasury engineering team) in apr 2020<ul id="63844b50-c75b-43e5-b88d-112f878e79fa" class="bulleted-list"><li style="list-style-type:square">different perspective on remitly (core remittance), platform team</li></ul><ul id="88c268f9-d39d-45d8-86dd-dc60cb14aab2" class="bulleted-list"><li style="list-style-type:square">6-month in, worked with John as a mentee because of interest in Passbook and what he has shared<ul id="1971be0a-5c31-4f5b-b0e1-5ebe61fcc6fd" class="bulleted-list"><li style="list-style-type:disc">lending ever since</li></ul><ul id="d296bde9-5737-44db-b696-21c03acca387" class="bulleted-list"><li style="list-style-type:disc">staffed eng team since q4 last year</li></ul><ul id="503eb3d7-4889-414e-adcb-a93eec042c2d" class="bulleted-list"><li style="list-style-type:disc">hoping to launch in july</li></ul></li></ul><ul id="e7844658-f4b5-4f16-8361-5fa44f56d590" class="bulleted-list"><li style="list-style-type:square">passbook / lending ← same thing?<ul id="69e78992-edc4-4154-8e37-91fa08f28847" class="bulleted-list"><li style="list-style-type:disc">lending used to be a feature in passbook (to improve engagement in passbook)</li></ul><ul id="8479a4f2-6e6b-45b8-916b-05d62cd68baf" class="bulleted-list"><li style="list-style-type:disc">over time, the hype behind lending; it became remitly’s strategy as a whole</li></ul><ul id="4516ff27-989f-49a7-8544-833b37463134" class="bulleted-list"><li style="list-style-type:disc">still following passbook process + working with the team<ul id="e9737045-bb5f-4961-a073-e92a7c265d13" class="bulleted-list"><li style="list-style-type:circle">vp of lending product </li></ul><ul id="8bdb012f-f05f-4aad-9958-d5a059e68ca3" class="bulleted-list"><li style="list-style-type:circle">goal: maybe later this year/early next year launch as lending</li></ul></li></ul></li></ul></li></ul></li></ul><p id="8d9a9f79-6af3-4ad7-9cf4-7bbdf5e39186" class="">
+</p><figure id="b45b632f-6224-43c3-b1d2-78e72838210f" class="image"><a href="Rachel%20Kai%201%201%202e8ae83d7a684191a3788d6dcc5d6afa/Screen_Shot_2022-04-25_at_10.42.42_AM.png"><img style="width:1524px" src="Rachel%20Kai%201%201%202e8ae83d7a684191a3788d6dcc5d6afa/Screen_Shot_2022-04-25_at_10.42.42_AM.png"/></a></figure><figure id="8781bdeb-5f36-4e96-8127-b27d7a35bb4a" class="image"><a href="Rachel%20Kai%201%201%202e8ae83d7a684191a3788d6dcc5d6afa/Screen_Shot_2022-04-25_at_10.46.09_AM.png"><img style="width:1524px" src="Rachel%20Kai%201%201%202e8ae83d7a684191a3788d6dcc5d6afa/Screen_Shot_2022-04-25_at_10.46.09_AM.png"/></a></figure><ul id="992f33b9-358a-4a36-b16f-23428b27bf21" class="bulleted-list"><li style="list-style-type:disc">created ads for deposit/saving account (under the origen brand) into facebook → discovered that the winning click through rate was deposit acct for immigrant w/o ssn<ul id="8c6be7df-ea9f-4435-9e79-b47e7805465c" class="bulleted-list"><li style="list-style-type:circle">goal was to build half the time/half the cost<ul id="e21096af-550f-4681-a3d6-37af55dc7706" class="bulleted-list"><li style="list-style-type:square">then in q1 2020 beta</li></ul><ul id="0dac6f84-6c87-4e62-b5d5-a84d845b88fd" class="bulleted-list"><li style="list-style-type:square">? what was learned and changed <ul id="7bf82998-87cb-4631-bd6e-542213d78027" class="bulleted-list"><li style="list-style-type:disc">originally target at immigrants in general</li></ul><ul id="80858285-81d7-4467-8dfd-9b53a78bba72" class="bulleted-list"><li style="list-style-type:disc">the adoption early on wasn’t there</li></ul><ul id="884de40d-b8ee-47b7-9876-73bd58989bd2" class="bulleted-list"><li style="list-style-type:disc">which pivoted: <ul id="86d0202d-aca1-4b8a-ad7d-76d24803ad47" class="bulleted-list"><li style="list-style-type:circle">broke passbook team into squad ← why?</li></ul></li></ul><ul id="723b2266-bcef-408b-a06a-9565c0baf1c9" class="bulleted-list"><li style="list-style-type:disc">early 2021 — pivoted to focus on mexican-american immigrants</li></ul></li></ul><ul id="eb63e09a-ff9e-4a0e-8f2b-7080c093f86e" class="bulleted-list"><li style="list-style-type:square">Leah: consumer insights team who is embedded in passbook<ul id="87f561fc-f07f-4ebf-8e84-b8b79b459e60" class="bulleted-list"><li style="list-style-type:disc">create segment (stability seekers)</li></ul><ul id="89a5d05a-f0a2-4701-8ecd-3cb8f84a9bdd" class="bulleted-list"><li style="list-style-type:disc">help us with the strategy</li></ul></li></ul><ul id="c6e705fa-c2e6-4f43-a678-20eebfc7113e" class="bulleted-list"><li style="list-style-type:square">goals for q4 2021: localize, check cashing, bill pay, app redesign (created by Sean)<figure id="3d555fad-1230-47eb-bab7-25b1d8b84b50" class="image"><a href="Rachel%20Kai%201%201%202e8ae83d7a684191a3788d6dcc5d6afa/Screen_Shot_2022-04-25_at_10.46.09_AM%201.png"><img style="width:1524px" src="Rachel%20Kai%201%201%202e8ae83d7a684191a3788d6dcc5d6afa/Screen_Shot_2022-04-25_at_10.46.09_AM%201.png"/></a></figure></li></ul></li></ul></li></ul><ul id="955c06c3-097d-4dca-afba-04f2ad9e931d" class="bulleted-list"><li style="list-style-type:disc">christian joined in q4<ul id="216bad9e-c4fb-46b5-a16a-64758ba46492" class="bulleted-list"><li style="list-style-type:circle">all the product/design was under John</li></ul><ul id="182dad30-8041-443c-8065-8ef692f07bd3" class="bulleted-list"><li style="list-style-type:circle">John started shifting out of it; Christian + Puneet have instituted new processes that the team will follow (end of last year)</li></ul><ul id="38c6408a-4394-4dfa-988c-8c9162c6e4fd" class="bulleted-list"><li style="list-style-type:circle">a month ago, switched to a 6-month planning cycle (vs. quarter)</li></ul></li></ul><ul id="5c6e2f28-1db0-4fdf-872e-314b718f460c" class="bulleted-list"><li style="list-style-type:disc">? problem mapping<ul id="78026548-61e2-4861-86aa-050a26a68348" class="bulleted-list"><li style="list-style-type:circle">things arise in different ways (e.g. lending — everyone knew we want to work on lending; how we want to go into the <ul id="93a6b70d-d27e-4b09-b2f2-d53d7974b5a7" class="bulleted-list"><li style="list-style-type:square">qual / quant ← solutioning ideation and design</li></ul></li></ul><ul id="2e5038cf-3d48-4b18-9979-8b44de5c73b2" class="bulleted-list"><li style="list-style-type:circle">some come up from PM → write into a problem brief (gleaning from </li></ul><ul id="3783b344-65bb-4b4c-84e2-4c2ba1d1d5b8" class="bulleted-list"><li style="list-style-type:circle">e.g. cash deposit by Pravnovaa (<a href="https://docs.google.com/document/d/18Kl6a5MeJbZfldY2biYVacNx0ct5z7WorXBQd3NjBDU/edit">brief</a>)</li></ul><ul id="7487cf36-61ba-4592-9941-3d39864ac7d7" class="bulleted-list"><li style="list-style-type:circle">Leah provide the framework/context/research → informing the next steps</li></ul><ul id="842b2177-ed18-44d6-bc87-7c40c054f25f" class="bulleted-list"><li style="list-style-type:circle">IDEA SITUATION: generalize research, what should we dig into more ← setup those session<ul id="beded477-1c4a-4d53-a32f-f4c115a92d08" class="bulleted-list"><li style="list-style-type:square">talk to Leah at the opportunity level</li></ul></li></ul><ul id="ceb85b6d-7044-4b7b-b171-85596bcbf00a" class="bulleted-list"><li style="list-style-type:circle">parallel with opportunity solution tree<ul id="2462d22a-cf9f-4ab7-b2cf-8c3d7f3851f9" class="bulleted-list"><li style="list-style-type:square">non-structure approach</li></ul><ul id="0d6765fc-757e-472e-b8d8-4759ccd53684" class="bulleted-list"><li style="list-style-type:square">christian has instituted a problem tree (big/small problems)<ul id="761b9f68-bf6a-490e-a747-040ac0e6774a" class="bulleted-list"><li style="list-style-type:disc">create problem brief; only after everyone has aligned on the specific problem that you want to solve before you move</li></ul><ul id="6b0954e5-fd0d-44ee-b799-63b5856f8f00" class="bulleted-list"><li style="list-style-type:disc">there’s plenty of problem tree</li></ul></li></ul></li></ul></li></ul><ul id="ea15b992-e06d-47b9-a6e4-ac851b350590" class="bulleted-list"><li style="list-style-type:disc">? partnership between pm/eng and design?<ul id="dc86960b-11cd-479c-957e-d061175e666f" class="bulleted-list"><li style="list-style-type:circle">what does that look like</li></ul><ul id="fea6cd2e-923c-45a9-ab24-62895c4a4b2f" class="bulleted-list"><li style="list-style-type:circle">what has changed</li></ul><ul id="ee702bba-b0df-4c5e-8d64-82ddc5778eac" class="bulleted-list"><li style="list-style-type:circle">what is ideal for you?</li></ul><ul id="28028e01-85e1-4d1a-bce0-d7ca25956234" class="bulleted-list"><li style="list-style-type:circle">I haven’t really had access to design resource consistently throughout my time (we did the first round of design on consulting + rachel did the research)<ul id="8cb6327e-dddb-43be-9866-a19edb8ff2e3" class="bulleted-list"><li style="list-style-type:square">Sean came in and re-did the design entirely</li></ul></li></ul></li></ul><p id="9c4febd3-4b53-4c5e-b714-464670134fd8" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

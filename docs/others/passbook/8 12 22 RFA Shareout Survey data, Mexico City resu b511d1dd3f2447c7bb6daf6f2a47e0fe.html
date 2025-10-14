@@ -1,0 +1,715 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>8/12/22 RFA Shareout: Survey data, Mexico City results</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(134, 131, 126, 1);
+	fill: rgba(134, 131, 126, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(134, 131, 126, 1);
+	fill: rgba(134, 131, 126, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="b511d1dd-3f24-47c7-bb6d-af6f2a47e0fe" class="page sans"><header><h1 class="page-title">8/12/22 RFA Shareout: Survey data, Mexico City results</h1><p class="page-description"></p><table class="properties"><tbody><tr class="property-row property-row-date"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/calendar_gray.svg" style="width:14px;height:14px;display:block"/></span>Date</th><td><time>@08/12/2022</time></td></tr><tr class="property-row property-row-relation"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/arrow-northeast_gray.svg" style="width:14px;height:14px;display:block"/></span>Attendees</th><td>, , </td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/list_gray.svg" style="width:14px;height:14px;display:block"/></span>Topic</th><td></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/list_gray.svg" style="width:14px;height:14px;display:block"/></span>Reaction</th><td></td></tr></tbody></table></header><div class="page-body"><h3 id="2e943752-c3b8-4913-b66a-82de636ef0c5" class="">Intro</h3><ul id="69ed03ef-6839-4080-ac67-303df69b9818" class="bulleted-list"><li style="list-style-type:disc">Daniel to share research; Ian to share prototype<ul id="f3222d7a-fe7a-4367-a972-1aadd028e433" class="bulleted-list"><li style="list-style-type:circle">setting the mood/tone</li></ul><ul id="24f25338-ae92-4b6c-b0ba-280941699b74" class="bulleted-list"><li style="list-style-type:circle">attitude: putting our thoughts together</li></ul></li></ul><ul id="faf09fcc-bdde-401b-8679-d154de6fa9fa" class="bulleted-list"><li style="list-style-type:disc">Schedule<ul id="30d91c9f-9e0e-4bdb-84b8-b31bd86ab09f" class="bulleted-list"><li style="list-style-type:circle">core customer problem we are solving for/thinking about based on the prototype that Ian has put together<ul id="8eb438e6-fb83-4a3f-b2e5-8d9017644524" class="bulleted-list"><li style="list-style-type:square">survey data/insights</li></ul></li></ul><ul id="a582c2cf-68cb-4b19-b360-77ec069efe26" class="bulleted-list"><li style="list-style-type:circle">break</li></ul><ul id="6893b37b-5e35-43fb-bb41-3e5881a76b14" class="bulleted-list"><li style="list-style-type:circle">implication + fresh thinking from research</li></ul></li></ul><ul id="a96889c4-9202-440f-b221-22c261cc3d00" class="bulleted-list"><li style="list-style-type:disc">[CO]: should we do a quick round of intro<ul id="2c94e882-0190-485d-86fe-d31b1d6c4066" class="bulleted-list"><li style="list-style-type:circle">kai: product designer on passbook focusing on cp squad; been here for about 4-month</li></ul><ul id="d5ccd7c3-0c6f-4419-a35d-4d104e8effb0" class="bulleted-list"><li style="list-style-type:circle">Ian: heading up design effort for RFA + stored value</li></ul></li></ul><p id="8be65e5d-5c99-4f17-ac2b-796d246e0a4e" class="">
+</p><h3 id="2a0c175e-03f6-4984-9794-12844e179eda" class="">01 Customer Problems</h3><figure id="fc39731a-3162-469a-a155-2675bf82d406" class="image"><a href="8%2012%2022%20RFA%20Shareout%20Survey%20data,%20Mexico%20City%20resu%20b511d1dd3f2447c7bb6daf6f2a47e0fe/Screen_Shot_2022-08-12_at_10.17.43_AM.png"><img style="width:1416px" src="8%2012%2022%20RFA%20Shareout%20Survey%20data,%20Mexico%20City%20resu%20b511d1dd3f2447c7bb6daf6f2a47e0fe/Screen_Shot_2022-08-12_at_10.17.43_AM.png"/></a></figure><ol type="1" id="2634bc64-d97b-4f2a-b805-df3b8f302231" class="numbered-list" start="1"><li><strong>Delay</strong> customers are looking for instant money movement; customers are bringing expectation from P2P domestic → international remittance<ul id="017fb735-9d17-4573-a429-8d19077b8ac5" class="bulleted-list"><li style="list-style-type:disc">customers = sender / receiver</li></ul></li></ol><ol type="1" id="2f5efeea-9172-4a8f-be5a-fbabb7682dd9" class="numbered-list" start="2"><li><strong>Slow/cost</strong> Costly to move across platform<ul id="ba42953b-73dc-4cd1-935f-0d8da817e49f" class="bulleted-list"><li style="list-style-type:disc">friction: e.g. carrying cash</li></ul><ul id="e527064f-1877-4f0d-90fc-d3e5adc1fbd9" class="bulleted-list"><li style="list-style-type:disc">money movement: ability to spend</li></ul></li></ol><ol type="1" id="7db86d13-4ec7-4254-b607-3aa5eb5ee074" class="numbered-list" start="3"><li><strong>Inflation</strong> protect currency</li></ol><ol type="1" id="de71f288-15df-4af3-acba-8156cf4524fc" class="numbered-list" start="4"><li><strong>Cost</strong> to move money across border</li></ol><ul id="3f98fa10-b812-4a71-8e76-b4624b0ba1b4" class="bulleted-list"><li style="list-style-type:disc">#1 and #4 are more general; #2 and #3 are more specific to customer segment</li></ul><p id="5d70b987-a6ba-43f1-9498-e9f7eed4fbe6" class="">
+</p><h3 id="af5b6555-e399-432b-8eb4-a58d1687cceb" class="">02 Survey data</h3><ul id="26180049-478c-4f91-a99b-c88a5878cc0b" class="bulleted-list"><li style="list-style-type:disc">target audience: early adopters and users of digital products</li></ul><ul id="a5f25b99-c467-444b-913d-af0f9f889527" class="bulleted-list"><li style="list-style-type:disc">analysis:<ul id="6cf4f797-d889-479b-99f0-4d046165ebe4" class="bulleted-list"><li style="list-style-type:circle">who are the recipients?</li></ul></li></ul><ul id="87eee723-edd8-471e-b451-3e6e6fd51b57" class="bulleted-list"><li style="list-style-type:disc">wallet / shared family account ← interesting separation<ul id="2170e5a0-35d7-43b2-b3b6-f4e389596e58" class="bulleted-list"><li style="list-style-type:circle">splitting for market? e.g. phl may be familiar with the idea of wallet so we want to make sure we are not competing </li></ul><ul id="7fd0b245-72ec-4bd8-b308-6a20b90ca19e" class="bulleted-list"><li style="list-style-type:circle">competitors (for wallet)</li></ul></li></ul><ul id="c3c1cce4-88c6-4f05-9f80-9e0e751ea02c" class="bulleted-list"><li style="list-style-type:disc">interest decline when recipients need to bear/pay for the fee<ul id="0b399be4-2c9f-4d1a-9e88-9c7f537ce119" class="bulleted-list"><li style="list-style-type:circle">implication: our pricing structure = ?</li></ul><ul id="cdb6087f-9c57-4078-a29a-c82576705f2f" class="bulleted-list"><li style="list-style-type:circle">mental model: sender pay; recipient should just enjoy the money received </li></ul></li></ul><ul id="eb315d68-e182-4a73-a318-93380efa45c7" class="bulleted-list"><li style="list-style-type:disc">asked about the 11 features based on hypothesis <ul id="3ba733a5-8e34-4516-bfb7-39190fb92cd6" class="bulleted-list"><li style="list-style-type:circle">features relevance vary by country</li></ul></li></ul><p id="6f1b2329-db3a-469c-8fdd-7bd7904b9236" class="">
+</p><h3 id="d8527132-75a6-4149-bd0b-255f5328335b" class="">Paying for things</h3><ul id="68a177a7-26d1-4f6d-a3b5-d7436dd0c4d0" class="bulleted-list"><li style="list-style-type:disc">fragmentation of payment infrastrcuture: the fact that you have to have cash app for certain things<ul id="a68a7cfd-535f-46ac-b33a-49f86a0c27d5" class="bulleted-list"><li style="list-style-type:circle">an app to handle different modality</li></ul></li></ul><ul id="85933a56-c876-4212-b34f-c9c1058312ba" class="bulleted-list"><li style="list-style-type:disc">fees for using cards<ul id="ddebb712-8e6d-4302-8e76-61c8f526381e" class="bulleted-list"><li style="list-style-type:circle">e.g. 90% of merchants uses discover cards; on the ground, for non-tourist, locals</li></ul><p id="a6614971-9c15-4a27-8db9-94fca232960a" class="">
+</p></li></ul><p id="aad79541-796a-4ac3-a384-340c410e19de" class="">Mock</p><ul id="0166229e-b2be-48eb-8fa2-07885c3d7a72" class="bulleted-list"><li style="list-style-type:disc">q: do they see the training screens after receiving the $200 transfer?</li></ul><ul id="35a14874-9bba-47fe-ae69-5e4c142cbf1a" class="bulleted-list"><li style="list-style-type:disc">thoughts: shaped like a card, is it a card? (yes, visa; ability to view info)</li></ul><ul id="1f056ba5-0e12-4423-84ea-689221b2d9cb" class="bulleted-list"><li style="list-style-type:disc">thought: Daniel is receiving the $; relevance to show exchange rate?</li></ul><ul id="efc9399a-eb9d-4a0d-9386-7dbfce1bfeb3" class="bulleted-list"><li style="list-style-type:disc">promoting withdraw makes sense</li></ul><ul id="07e9dac3-59d7-40c9-8225-be5e5785b774" class="bulleted-list"><li style="list-style-type:disc">banking options <ul id="7e81285c-77c2-4bea-8aa5-c61765b2fe5e" class="bulleted-list"><li style="list-style-type:circle">we are pushing sender info to the recipients</li></ul></li></ul><ul id="054fbcf2-900f-4d7c-8f83-402bb574dc91" class="bulleted-list"><li style="list-style-type:disc">questions: transfer history? (a: listing in activity?)</li></ul><p id="eced6371-a15b-4a10-aa1d-98734888b506" class="">
+</p><h3 id="5ba8006c-6e2f-4bc3-9ddf-c9857ecbd3bd" class="">Observations from CDMX</h3><ul id="47f94352-0d6b-41f6-8061-6f77f32e0143" class="bulleted-list"><li style="list-style-type:disc">kinks to work out with mobile wallet — trust</li></ul><ul id="cb70c329-cc32-4351-8397-10b6556d5d74" class="bulleted-list"><li style="list-style-type:disc">NFC usage is VERY RARE</li></ul><ul id="1dd9e14c-d9f6-44e2-a6cd-33e2fc9833e9" class="bulleted-list"><li style="list-style-type:disc">insights = ? Paying by barcode — immediate?<ul id="7d8f8f31-bc6f-484a-90f5-116b286560cd" class="bulleted-list"><li style="list-style-type:circle">QR codes are “mildly present” vs. making payments</li></ul></li></ul><ul id="5fabee67-cf90-4c11-97c3-eca6f57a118b" class="bulleted-list"><li style="list-style-type:disc">Companies are actively trying to change behavior<ul id="9e332631-79d3-4ea2-889c-3597b971110a" class="bulleted-list"><li style="list-style-type:circle">bonus to use card, QR code </li></ul><ul id="8389e585-5bfe-4777-b4da-c183e20a3f57" class="bulleted-list"><li style="list-style-type:circle">active push to switch behavior</li></ul></li></ul><ul id="0335b821-33d0-4606-ac6d-57e02841de99" class="bulleted-list"><li style="list-style-type:disc">social economical status split where remittance is not necessary<ul id="663144cd-759b-4fcc-a0e5-0a231b298aec" class="bulleted-list"><li style="list-style-type:circle">making enough money without needing remittance</li></ul><ul id="e124547c-3bc2-4187-9e02-7d33ee235186" class="bulleted-list"><li style="list-style-type:circle">what is this split? location/profession</li></ul><ul id="aa904de1-5ad2-4ce2-bb46-16d226ae285e" class="bulleted-list"><li style="list-style-type:circle">how is the geo-graphic neighborhood in mexico city</li></ul></li></ul><ul id="cd46314e-8792-4bd1-ba27-cecd53b80a31" class="bulleted-list"><li style="list-style-type:disc">question from participant: Where will the money be held?<ul id="5e16909d-16c0-4d65-95ff-3eaece89539d" class="bulleted-list"><li style="list-style-type:circle">low trust for bank in Mexico; there’s a certain cache for money stored in the US<ul id="5af1fc61-7f97-49bb-ab8b-d5ff7376e72d" class="bulleted-list"><li style="list-style-type:square">marketing: promoting US held fund</li></ul><p id="8476930b-c53e-4ed1-9d62-5ecc223bc969" class="">
+</p></li></ul></li></ul><h3 id="f565d86f-ab97-487a-a5d4-e36b507d3100" class="">Overall feedback</h3><ul id="6794cf75-1e21-4608-a779-6c28d2779d9e" class="bulleted-list"><li style="list-style-type:disc">overall idea of a shared account (part 1)<figure id="18ee4244-68c1-488e-a190-91dafc2203cf" class="image"><a href="8%2012%2022%20RFA%20Shareout%20Survey%20data,%20Mexico%20City%20resu%20b511d1dd3f2447c7bb6daf6f2a47e0fe/Screen_Shot_2022-08-12_at_11.37.43_AM.png"><img style="width:1294px" src="8%2012%2022%20RFA%20Shareout%20Survey%20data,%20Mexico%20City%20resu%20b511d1dd3f2447c7bb6daf6f2a47e0fe/Screen_Shot_2022-08-12_at_11.37.43_AM.png"/></a></figure><ul id="2397fc53-7465-4b7d-8bcc-a6138523b934" class="bulleted-list"><li style="list-style-type:circle">positive reaction<ul id="483cd437-603c-4363-92d7-b0b589e2fa78" class="bulleted-list"><li style="list-style-type:square">fits in the mental model of how remittance work</li></ul></li></ul><ul id="845a618c-fdec-46b4-a766-4b7c92316621" class="bulleted-list"><li style="list-style-type:circle">skeptical on the controls of their fund in relation with the account owner</li></ul><p id="69af173e-3682-4f30-9034-9fdcdb223f46" class="">
+</p><figure id="883ee8b8-d75a-498b-9a4b-c8da500dc306" class="image"><a href="8%2012%2022%20RFA%20Shareout%20Survey%20data,%20Mexico%20City%20resu%20b511d1dd3f2447c7bb6daf6f2a47e0fe/Screen_Shot_2022-08-12_at_11.39.19_AM.png"><img style="width:1293px" src="8%2012%2022%20RFA%20Shareout%20Survey%20data,%20Mexico%20City%20resu%20b511d1dd3f2447c7bb6daf6f2a47e0fe/Screen_Shot_2022-08-12_at_11.39.19_AM.png"/></a></figure><ul id="7aa76d3a-4280-4369-ab66-aeac3e77eccb" class="bulleted-list"><li style="list-style-type:circle">no current behavior of monitoring financial activities or desire to know among current senders or recipients (after received, its up to the recipients); they only care about the fact that the fund has been sent/received successfully</li></ul><ul id="7096d557-c594-476b-9d2e-1ce658092998" class="bulleted-list"><li style="list-style-type:circle">ok with parent-child relationship</li></ul><ul id="c8f7454d-14a9-4372-9d85-a46cd4be1222" class="bulleted-list"><li style="list-style-type:circle">doesn’t match existing social relationship<ul id="372e3f40-1bba-4c60-9f57-55708320a99d" class="bulleted-list"><li style="list-style-type:square">participants couldn’t understand why that should be the case</li></ul><ul id="e3d8a553-04a3-4000-808e-87e6d4c36e52" class="bulleted-list"><li style="list-style-type:square">Q: what’s the mental model for ‘authorized user’ ← they may not be similar</li></ul></li></ul></li></ul><p id="172f889c-bff4-40b3-80bb-ec6497f8e27d" class="">
+</p><h3 id="9d9168b8-febd-47fc-b85c-7488d6297c85" class="">Fresh thinking</h3><ul id="c7cf129a-c853-4289-893f-c11e27d25107" class="bulleted-list"><li style="list-style-type:disc">Daniel is trying to “push us forward” + happy with “push backs”</li></ul><figure id="54673cc8-4a27-4a69-8094-ba3dccf8c510" class="image"><a href="8%2012%2022%20RFA%20Shareout%20Survey%20data,%20Mexico%20City%20resu%20b511d1dd3f2447c7bb6daf6f2a47e0fe/Screen_Shot_2022-08-12_at_11.47.39_AM.png"><img style="width:1150px" src="8%2012%2022%20RFA%20Shareout%20Survey%20data,%20Mexico%20City%20resu%20b511d1dd3f2447c7bb6daf6f2a47e0fe/Screen_Shot_2022-08-12_at_11.47.39_AM.png"/></a></figure><ul id="ed5e6bc7-d785-4131-a5f5-eeb03629a96f" class="bulleted-list"><li style="list-style-type:disc">we are designing for the recipients of remittance; we need to design for their mental model to improve adoption<ul id="9d866696-3d68-4de1-a09e-19a84ad1afd8" class="bulleted-list"><li style="list-style-type:circle">thought: thinking about joint acct</li></ul><ul id="6a1719b8-ebf4-431d-9efe-50e2c47b780c" class="bulleted-list"><li style="list-style-type:circle">[CO] what is the pairing persona?<ul id="37bc6a9e-b57d-458b-81ed-20b06a34efb0" class="bulleted-list"><li style="list-style-type:square">targeting persona: fully banked US – mexico customer who are not tech savvy + older generation</li></ul><ul id="1dfceaa4-2dc0-4250-b371-b4a15a6fbda3" class="bulleted-list"><li style="list-style-type:square">50% of money to remittance is going to bank acct; vs. 70% 2 years ago going to cash pick up</li></ul></li></ul></li></ul><figure id="87e821f1-096e-4f23-8ae6-7a4937d8e875" class="image"><a href="8%2012%2022%20RFA%20Shareout%20Survey%20data,%20Mexico%20City%20resu%20b511d1dd3f2447c7bb6daf6f2a47e0fe/Screen_Shot_2022-08-12_at_11.49.33_AM.png"><img style="width:1157px" src="8%2012%2022%20RFA%20Shareout%20Survey%20data,%20Mexico%20City%20resu%20b511d1dd3f2447c7bb6daf6f2a47e0fe/Screen_Shot_2022-08-12_at_11.49.33_AM.png"/></a></figure><h3 id="8e7c0281-83fb-430b-a4d5-70af8e73a4bb" class="">Feasible segment options in Mexico</h3><p id="05c592ea-17b8-44a4-a2d8-0689fecca0c4" class="">Thinking about the recipients.</p><ul id="a7a2c704-f07f-4c6d-80c2-a0810fbf915e" class="bulleted-list"><li style="list-style-type:disc">Option 1: <ul id="f20db2b9-980b-4e47-9add-50e2b34c2b91" class="bulleted-list"><li style="list-style-type:circle">challenges to overcome</li></ul><ul id="00e02590-3d06-43f5-9a76-8f320046d36b" class="bulleted-list"><li style="list-style-type:circle">separating card &amp; app ← what does this mean?<ul id="16d4947c-7a7a-4341-bcdd-2608fde9e364" class="bulleted-list"><li style="list-style-type:square">receive a physical card</li></ul></li></ul></li></ul><ul id="b508c8c6-9e3b-4df3-8dcd-415eb118d719" class="bulleted-list"><li style="list-style-type:disc">Option 2: </li></ul><p id="e547c9d5-f02a-42d0-929f-0e10494debb1" class="">
+</p><h3 id="1f346f13-ca92-429b-98b9-74ad3d81d639" class="">My questions</h3><ul id="04b251e2-7d0a-4a52-909d-94cc80d9d572" class="bulleted-list"><li style="list-style-type:disc">i know that the term “digital wallet&quot; has certain connotation in certain markets; how do we delineate that difference between our questions/product offering vs. that specific definition?</li></ul><ul id="87267002-9e15-469a-ac48-581edf6b6e70" class="bulleted-list"><li style="list-style-type:disc">q: joint acct/authorized user notion in mexico<ul id="b9856c44-2b73-48f2-8c8f-6dd2cdbc0b76" class="bulleted-list"><li style="list-style-type:circle">10% have joint acct</li></ul><ul id="f484a47f-9ebb-4faa-bec4-df54e0fff203" class="bulleted-list"><li style="list-style-type:circle">why i asked: mental model on the expectations </li></ul></li></ul></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

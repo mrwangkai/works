@@ -1,0 +1,707 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>4/29 1:1 with Christian</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(134, 131, 126, 1);
+	fill: rgba(134, 131, 126, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(134, 131, 126, 1);
+	fill: rgba(134, 131, 126, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="de0dc856-42bb-453a-8e28-1919de5b2344" class="page sans"><header><h1 class="page-title">4/29 1:1 with Christian</h1><p class="page-description"></p><table class="properties"><tbody><tr class="property-row property-row-date"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/calendar_gray.svg" style="width:14px;height:14px;display:block"/></span>Date</th><td><time>@04/29/2022 10:00 AM</time></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/list_gray.svg" style="width:14px;height:14px;display:block"/></span>Topic</th><td></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/list_gray.svg" style="width:14px;height:14px;display:block"/></span>Reaction</th><td></td></tr></tbody></table></header><div class="page-body"><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="53207aca-e76a-4150-b3bf-5494b2afb371"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">1. retention features are low hanging fruits ← what are these? how many of them have been tackled? 2. PM role definition </div></figure><ul id="81eb29de-6294-4d7e-a9e6-84410b8487d4" class="bulleted-list"><li style="list-style-type:disc">[Question] How to be mindful of Passbook as a whole while focusing on a squad?<ul id="3d470487-58d1-4afd-aced-797edc276267" class="bulleted-list"><li style="list-style-type:circle">E.g. design system; ideas for other squads/customer journey</li></ul><ul id="c5501e48-3d14-4e73-bf5e-e4d4a065372e" class="bulleted-list"><li style="list-style-type:circle">different degrees of needs / agency <ul id="b2a8b3a3-9924-4136-85a6-6f961e6892ec" class="bulleted-list"><li style="list-style-type:square">e.g. areas where we need to be more pragmatic (speed) vs. start being more thoughtful with what we are doing</li></ul><ul id="78d5dfb5-af4b-429a-905f-137338dcc1b6" class="bulleted-list"><li style="list-style-type:square">Passbook as a whole is primarily CP<ul id="d39f45aa-94fc-47f1-8d37-86300af205ef" class="bulleted-list"><li style="list-style-type:disc">Design language in onboarding vs. with CP</li></ul><ul id="57006058-239e-4e9b-b0da-8877c3b5b1d9" class="bulleted-list"><li style="list-style-type:disc">The org is very marketing driven ← how to steer away/rebalance</li></ul><ul id="89a87b8f-f7c3-4596-a16b-070fa595082c" class="bulleted-list"><li style="list-style-type:disc">That’s why the next 6-month is retention BECAUSE WE DONT HAVE PROBLEM TO GET PEOPLE THROUGH THE DOOR</li></ul><ul id="46b696c2-d9a8-4695-862b-955c61eed907" class="bulleted-list"><li style="list-style-type:disc">How Remitly have won (through partnership + marketing)<ul id="6b3f4f1a-a9a5-459c-b2f7-b110b297a3f9" class="bulleted-list"><li style="list-style-type:circle">vs. passbook<ul id="855567e2-ca7a-47aa-a454-4a4d7feb055b" class="bulleted-list"><li style="list-style-type:square">the product / experience isn’t quite there — not only in term of feature; but how to communicate things to people, and feature sets</li></ul><ul id="4c615a97-2680-4959-b80d-3ad7dfbc228d" class="bulleted-list"><li style="list-style-type:square">including IA of the app (e.g. money in / money out) — if we lean on remittance, should we go with something different there<ul id="e76f82f9-79f8-4450-babd-806ff1492ff4" class="bulleted-list"><li style="list-style-type:disc">the objective for Estrella; still in conceptual step<ul id="116422e4-3e6c-42c8-8843-44052b6020a5" class="bulleted-list"><li style="list-style-type:circle">would love for you to rethink our landing page; how we access the different features / journey</li></ul><ul id="5f4cce18-18e5-4c40-8c49-07ee54471fb0" class="bulleted-list"><li style="list-style-type:circle">in parallel we need to support launching new feature ← this is very similar to what Devin said about buckets of features</li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul><ul id="f4f057cc-441f-402e-8af5-a8548ea7939b" class="bulleted-list"><li style="list-style-type:circle">Marketing is lead now because its easier; but product needs to drive; they will adjust language to the value prop we have discovered and to solve for</li></ul><ul id="39341f9e-68d2-44b0-af3b-3f781c9e84fa" class="bulleted-list"><li style="list-style-type:circle">If you think about passbook as a whole, CP should be 70% of it<ul id="b8926e8c-52ff-4fbd-9c7f-f12a848d8d8b" class="bulleted-list"><li style="list-style-type:square">how people get money into their acct</li></ul><ul id="408b3c0c-7d28-40df-a58e-e35ddb865ff5" class="bulleted-list"><li style="list-style-type:square">analogy: onboarding is how you open the car; cp is how you drive</li></ul></li></ul><ul id="9f16e66b-40e4-43fb-ad3f-725ec4cbccf9" class="bulleted-list"><li style="list-style-type:circle">Dan does not come from product bg; but a marketing bg</li></ul><ul id="0c2012a7-0e90-46d2-9463-5df07bbaa123" class="bulleted-list"><li style="list-style-type:circle">Investing in onboarding is a wrong use of resource</li></ul></li></ul><ul id="bd825a31-2b4e-4917-afe4-17fee70e2fa7" class="bulleted-list"><li style="list-style-type:disc">Barrier to entry for neobank is very low<ul id="ac409455-dfba-4c72-a98f-c0bdeec130bc" class="bulleted-list"><li style="list-style-type:circle">e.g. Sable raised $5m looking for a niche; it doesn’t mean they are doing really well</li></ul><ul id="aaae3c3f-7297-4d5a-a635-20bf45ab97f6" class="bulleted-list"><li style="list-style-type:circle">e.g. Robinhood/Chime, they are doing things well from design stand point</li></ul></li></ul><ul id="3068017c-508d-426e-88e8-8b7f5bc5f54f" class="bulleted-list"><li style="list-style-type:disc">Current features are initimdating to our customers<ul id="d3f56781-dc95-4af1-a203-919504c2ae96" class="bulleted-list"><li style="list-style-type:circle">“we can only do cash deposit if i can provide ID”</li></ul><ul id="4c156501-e6cb-4b42-aebd-1429cdc63325" class="bulleted-list"><li style="list-style-type:circle">turn on/off debit card ← what’s the copy?<ul id="787e2da1-1785-4556-baa4-44ebea2c6a72" class="bulleted-list"><li style="list-style-type:square">no mention of add to your wallet for recurring usage</li></ul><ul id="a4575340-19d7-473b-a65b-5056e8f9e2c8" class="bulleted-list"><li style="list-style-type:square">SO MUCH LOW HANGING FRUIT</li></ul><ul id="f3828b32-2763-4494-921a-a35966a07129" class="bulleted-list"><li style="list-style-type:square">vs. rewards/rebates ← observation vs. things we should chase</li></ul></li></ul></li></ul><ul id="f798e793-1b80-4d31-a647-9699976e0d7b" class="bulleted-list"><li style="list-style-type:disc">Retention is not lack of feature; but to build a solid feature<ul id="5bc24ae9-9639-498e-b5b5-d7fa7d6bb758" class="bulleted-list"><li style="list-style-type:circle">we are losing customer with our current feature<ul id="46acf0ba-8424-4efb-ad61-c4fb3628c203" class="bulleted-list"><li style="list-style-type:square">its hard to discover</li></ul></li></ul><ul id="5d6dd7c9-79f7-4049-b02e-0ae64aae7c1e" class="bulleted-list"><li style="list-style-type:circle">Pay bills infuriates people <ul id="98949d72-aa24-455b-ae26-85a699ab3be8" class="bulleted-list"><li style="list-style-type:square">“its a painted window test”</li></ul><ul id="99ca2aa7-1378-4470-855f-a377a0885639" class="bulleted-list"><li style="list-style-type:square">we are building a bank is not a new concept</li></ul><ul id="85546746-1136-4d63-9cee-f9ca244f84ee" class="bulleted-list"><li style="list-style-type:square">getting people to deposit money quickly → does not hypothesis <ul id="86e25809-9e2e-420f-be8b-d7b5f74efb17" class="bulleted-list"><li style="list-style-type:disc">e.g. going into wells fargo with $20 with a passport, you can get an acct with debit card (that has money in it) ← this is a standard that we are measuring (metric)</li></ul></li></ul><ul id="41fcf9a1-af01-4cb3-ad38-ab790e5b12e7" class="bulleted-list"><li style="list-style-type:square">allowing people to use my money<ul id="08053b53-349f-4a3b-a025-f890e72ca0b8" class="bulleted-list"><li style="list-style-type:disc">p2p — require user to have passbook</li></ul><ul id="79717b0b-b6be-4ec1-a994-29eaba822970" class="bulleted-list"><li style="list-style-type:disc">pay bill</li></ul><ul id="9449a868-a82b-41ea-9776-ee3353e5e016" class="bulleted-list"><li style="list-style-type:disc">transfer money: download a separate app</li></ul></li></ul></li></ul><ul id="38edb3e3-fab3-4510-b370-b038515c9f77" class="bulleted-list"><li style="list-style-type:circle">We are trying to recruit money out PMs</li></ul><ul id="01a46009-0876-4149-b4d7-8091bb8a988c" class="bulleted-list"><li style="list-style-type:circle">First priority</li></ul><p id="6a5c2be4-a6a5-4644-b726-346a4e30a405" class="">
+</p></li></ul><ul id="fcc0fc22-932f-4439-a4bf-4d350b3d47e6" class="bulleted-list"><li style="list-style-type:disc"><a href="https://docs.google.com/document/d/1ScAh5-ep2aI2nqfQcEsHoXWzDzIbqFiVt5RpppGcsBs/edit#heading=h.gddo4k4vxpqc">Operating guide</a> for product development process (uber, google, facebook): the model of the triad<ul id="7a1cc2bb-df5b-4537-b58a-cfbdc683489c" class="bulleted-list"><li style="list-style-type:circle">reflect on the role of design + how we plan </li></ul><ul id="a53fcf2b-b9f7-4015-869d-dfed15d7a7c2" class="bulleted-list"><li style="list-style-type:circle">discovery → ideation → delivery/shipping</li></ul><ul id="746bdc09-c3c0-43d3-9ee6-c8eacf4c65af" class="bulleted-list"><li style="list-style-type:circle">product’s role isn’t to discover all the problem<ul id="16118fe4-a077-46b6-b5ca-18b084c67912" class="bulleted-list"><li style="list-style-type:square">work with data x design x research x other functions to understand all the problem we need to solve</li></ul><ul id="6ec38a1d-175a-4ef3-9d3c-0199b95277dd" class="bulleted-list"><li style="list-style-type:square">clarify: the priority on the product we solve today/tomorrow ← one function that’s doing this (with context) = defined by product; direct individuals for setting the priority (with context from the team)<ul id="92baf958-5cd0-43d4-ae28-b288d87b8871" class="bulleted-list"><li style="list-style-type:disc">output: artifact = problem brief ← not done in isolation</li></ul></li></ul></li></ul><ul id="8adb8eaa-3220-48d9-b638-05639da955d8" class="bulleted-list"><li style="list-style-type:circle">e.g. as head of product, the problem that we want to solve is defined by me. Ideation and solution is where product takes a backseat<ul id="da1eb567-0485-4368-8a72-33f1a02ee684" class="bulleted-list"><li style="list-style-type:square">we are losing 50% or more in the 6-month that they open the acct</li></ul><ul id="d9fba18a-8aab-41f6-a188-2a8bcb7ef705" class="bulleted-list"><li style="list-style-type:square">the people leading should be design + eng</li></ul></li></ul></li></ul></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

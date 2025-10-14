@@ -1,0 +1,712 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>4/29 Michael catch up</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(134, 131, 126, 1);
+	fill: rgba(134, 131, 126, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(134, 131, 126, 1);
+	fill: rgba(134, 131, 126, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="64071696-bac6-42e7-b418-53a343ead1d9" class="page sans"><header><h1 class="page-title">4/29 Michael catch up</h1><p class="page-description"></p><table class="properties"><tbody><tr class="property-row property-row-date"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/calendar_gray.svg" style="width:14px;height:14px;display:block"/></span>Date</th><td><time>@04/29/2022 2:30 PM</time></td></tr><tr class="property-row property-row-relation"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/arrow-northeast_gray.svg" style="width:14px;height:14px;display:block"/></span>Attendees</th><td></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/list_gray.svg" style="width:14px;height:14px;display:block"/></span>Topic</th><td></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/list_gray.svg" style="width:14px;height:14px;display:block"/></span>Reaction</th><td></td></tr></tbody></table></header><div class="page-body"><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="3f029ad7-d53a-4fac-910b-a6fc6b973623"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%"></div></figure><ul id="51ad4645-653b-423d-9151-a7e87ef20cd0" class="bulleted-list"><li style="list-style-type:disc">jarred on acquistion → now on loan to CP<ul id="c5b1af51-a1b2-4953-9725-ab916c378233" class="bulleted-list"><li style="list-style-type:circle">he can speak from acqusition</li></ul><p id="3bd005b9-2304-4f1e-9496-a02d7ad5f408" class="">
+</p></li></ul><ul id="00b45eb8-78af-4b66-bd42-06e5f21885fe" class="bulleted-list"><li style="list-style-type:disc">what’s been done — audit</li></ul><ul id="327e4e9a-36ed-4cfc-ae1a-1edf50f6f971" class="bulleted-list"><li style="list-style-type:disc">good to have for him w/ design?<ul id="666f39ca-372d-47b6-8cf7-ef7445595cb7" class="bulleted-list"><li style="list-style-type:circle">will be working with Kyle to create a figma to production mapping</li></ul><ul id="541ca991-2daf-4f3d-af5e-75d3bb685bb1" class="bulleted-list"><li style="list-style-type:circle">figma / prod in sync<ul id="0c3e7a00-9380-4018-a605-8429a044220a" class="bulleted-list"><li style="list-style-type:square">we are getting ready to do a user study<ul id="e32fac9a-be43-4b5f-9d40-bef8a3eeb91f" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">build out the flow as is, as prototype [design]</span><div class="indented"><ul id="eb0885a8-a9e4-4fd8-bea1-2f03821799a4" class="bulleted-list"><li style="list-style-type:disc">p0 screens</li></ul><ul id="0d3e7cfc-efdc-4cc9-8051-6b53fe6f583a" class="bulleted-list"><li style="list-style-type:disc">p1 prototype</li></ul></div></li></ul><ul id="67f31b73-d1a1-4568-aeaa-5effcea7cc43" class="bulleted-list"><li style="list-style-type:disc">user study timeline? by week of <time>@May 9, 2022</time> </li></ul><ul id="f69bb980-05e9-4704-b201-25c92b76705f" class="bulleted-list"><li style="list-style-type:disc">what is user study about?<ul id="028c5940-e9a4-499e-b272-383366dc52d6" class="bulleted-list"><li style="list-style-type:circle">multiple component</li></ul><ul id="52fd928a-684e-4aa1-b186-840bc4dbc39b" class="bulleted-list"><li style="list-style-type:circle">generate feedback on onboarding ← what are we trying to learn?<ul id="2f2e253d-1905-4895-94f3-594a3a0630a5" class="bulleted-list"><li style="list-style-type:square">we have a long enough funnel; there’s a 30% drop off from sign up → difficult stuff ← ?</li></ul><ul id="52bd443f-feb5-4f56-a06f-2d860973b165" class="bulleted-list"><li style="list-style-type:square">e.g. for carousel ← what info are they considering even after they have downloaded the app</li></ul><ul id="97c7b376-2fd1-472f-b797-bb55760b7a77" class="bulleted-list"><li style="list-style-type:square">align w/ leah’s research goal to better understand month 0 retention<ul id="42989dbd-9d14-40f9-9942-9bddfaf95d2d" class="bulleted-list"><li style="list-style-type:disc">this is dependent on their onboarding</li></ul></li></ul></li></ul><ul id="e4074066-a7a8-4c1a-8181-bbe08ef3c8dd" class="bulleted-list"><li style="list-style-type:circle">specific goals the two experiences that we have planned to launch<ul id="b9d43d05-414e-404b-8227-9a1c68899985" class="bulleted-list"><li style="list-style-type:square">a new doc upload flow<ul id="cc62f378-8efc-40b2-b4fa-1c3206f76545" class="bulleted-list"><li style="list-style-type:disc">currently simple text + taking a picture</li></ul><ul id="d9efba78-2cb5-4efb-b163-18a619786587" class="bulleted-list"><li style="list-style-type:disc">proposed: illustration + bullet things of things to look for<ul id="b9052a4d-11f9-45a7-a1ca-11100a19c9b3" class="bulleted-list"><li style="list-style-type:circle">review screen</li></ul><ul id="7ced6f7e-d4db-4705-8db4-f4980600c199" class="bulleted-list"><li style="list-style-type:circle">action: take/retake ← self identify</li></ul><ul id="6cbf1255-222c-4bfb-b363-a03c6e2a1122" class="bulleted-list"><li style="list-style-type:circle">goal is to track first-time approvals</li></ul><ul id="096b3f30-01ad-492b-bd2b-2be6bc5a25bc" class="bulleted-list"><li style="list-style-type:circle">get feedback on illustration, checklist content, visual info we should show that would help</li></ul></li></ul></li></ul><ul id="6b09e6ab-f27f-4190-bc84-cbc639b13dce" class="bulleted-list"><li style="list-style-type:square">for some docs that contains address (in your first doc)<ul id="4824ac27-d202-419d-9ded-cb7d7e8af9d5" class="bulleted-list"><li style="list-style-type:disc">if the doc that doesn’t match hte address provided, you will ask for evidence, which is to ask for GPS location</li></ul><ul id="5484c1fa-161e-42e6-afda-966d80a5bcb8" class="bulleted-list"><li style="list-style-type:disc">how to handle different use case<ul id="45232a1d-6f6c-4204-aad7-a513ea8bf741" class="bulleted-list"><li style="list-style-type:circle">if you are not going to be home</li></ul></li></ul><ul id="7e7daab3-c89e-430d-91fc-cb6949f78ac2" class="bulleted-list"><li style="list-style-type:disc">experience make sense + proper messaging to reduce anxiety</li></ul></li></ul></li></ul><ul id="f9399006-19f9-4fcf-91de-6e1e4da7748a" class="bulleted-list"><li style="list-style-type:circle">Leah is going to take point in putting together the study<ul id="93b390f5-3c91-4733-8522-029c941a77b2" class="bulleted-list"><li style="list-style-type:square">Michael + Diego: user research</li></ul><ul id="b476937c-5e9f-46bb-972f-6a82ef077882" class="bulleted-list"><li style="list-style-type:square">Kyle: design</li></ul></li></ul></li></ul></li></ul></li></ul></li></ul><p id="c82cdc65-977c-45f5-a2ec-5552d92ce10a" class="">
+</p><ul id="fe1f0f22-67db-42c7-950d-cb601fdf4d10" class="bulleted-list"><li style="list-style-type:disc">opinions on low hanging fruit for passbook?<ul id="a90f9c94-aea0-44e8-81da-de1dee8350f4" class="bulleted-list"><li style="list-style-type:circle">assumptions on drop off in retention ← well documented?</li></ul><ul id="8c52574c-5a28-419e-a042-c0ee2c8208d6" class="bulleted-list"><li style="list-style-type:circle">“block retentive customers from onboarding” </li></ul><ul id="2a31bf73-3f2f-40f2-9107-0a21e4f9623a" class="bulleted-list"><li style="list-style-type:circle">the idea of quality lead</li></ul><ul id="39ac05a9-1654-4d1b-9379-c65a42c9db7b" class="bulleted-list"><li style="list-style-type:circle">“the fact you can’t do things w/o the physical card = lost in momentum”<ul id="ef31a089-4902-49a1-aaec-1d4663aaed8d" class="bulleted-list"><li style="list-style-type:square">this include us not doing KYC fast enough (e.g. not able to create acct in the first hour), espeically if they have a check on hand</li></ul><ul id="79620b4f-26da-497a-8fea-9a4b6a213bc2" class="bulleted-list"><li style="list-style-type:square">** speed to money in account <ul id="59ca69b3-ee26-437b-8041-55ea4cd10a86" class="bulleted-list"><li style="list-style-type:disc">time between download app → first deposit needs to be as short as possible</li></ul></li></ul><ul id="797eb607-b171-41bf-be8a-b3a8e223b579" class="bulleted-list"><li style="list-style-type:square">make sure stuff works</li></ul></li></ul><ul id="7ea18f33-b608-4318-8e30-727b9c40e34e" class="bulleted-list"><li style="list-style-type:circle">JTBD<ul id="b05dfd5b-8beb-4a59-b69f-f5b43949c62d" class="bulleted-list"><li style="list-style-type:square">people get their paycheck &amp; want to use the $ in from the paycheck<ul id="84a60993-2463-4cfb-8e30-ea4b34c3cbe0" class="bulleted-list"><li style="list-style-type:disc">cash, direct, check deposit</li></ul></li></ul><ul id="8ce5b9ad-9de4-42fc-9aff-022c9779e7ff" class="bulleted-list"><li style="list-style-type:square">If I’m at a check deposit counter → remittance; they can put money right away<ul id="d5d0be07-0f6f-4c3e-8f02-763bca954528" class="bulleted-list"><li style="list-style-type:disc">i.e. you cash something, you can do bill pay or remittance right away</li></ul></li></ul><ul id="351e7ebe-b4e7-4cb9-a49b-4233c1a2f398" class="bulleted-list"><li style="list-style-type:square">if people can’t do basic job, they won’t retain</li></ul><ul id="9ee2f0bd-f321-4462-92ed-99d0cbf1fbf0" class="bulleted-list"><li style="list-style-type:square">what about the 30% that we are retaining — what are their behaviors like? why are they sticking around?<ul id="c5598ee3-d325-402f-a810-33e8b3d9069e" class="bulleted-list"><li style="list-style-type:disc">michael: our user base are used to work around</li></ul></li></ul><ul id="65c94447-e612-41d5-bc5c-193d38a2741c" class="bulleted-list"><li style="list-style-type:square">P2P outside of passbook to pay rent, etc.</li></ul><ul id="e75dc761-da28-4992-8910-99631ddaf0c3" class="bulleted-list"><li style="list-style-type:square">paying your rent = proxy for moving enough $ to your <ul id="d3a745ea-f319-4b33-8924-762dbea34a6a" class="bulleted-list"><li style="list-style-type:disc">options to pay rent: pay with debit card options is not available to a lot of landlord</li></ul><p id="670b7901-b3a5-4fa2-b75e-7cd47c74fdf7" class="">
+</p><p id="95d29e66-7419-4bdf-9945-02525fbb9bc8" class="">
+</p></li></ul></li></ul></li></ul><ul id="e06b6837-9361-42ad-ad6c-6e81eeff8116" class="bulleted-list"><li style="list-style-type:disc">a reason for splitting out different CTA ← compliance: fraudster from trying to blast us with login<ul id="0c44e39d-80ea-401f-b66f-4b0d7b73b05b" class="bulleted-list"><li style="list-style-type:circle">we lose 25% of people from sign-in</li></ul><p id="bac28634-50be-4761-8e2e-09874e3bf52b" class="">
+</p></li></ul><ul id="abccdf81-119e-4401-8319-1cbd91158d55" class="bulleted-list"><li style="list-style-type:disc">Move to CO in Jan → a new place May 12<ul id="eac438c7-ab66-4711-8a8b-a41c98f50e02" class="bulleted-list"><li style="list-style-type:circle">60 day rent back</li></ul></li></ul><p id="d903805f-ece6-4943-be97-0569a498a8ee" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

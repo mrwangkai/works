@@ -1411,6 +1411,20 @@ footer {
     align-items: center;
 }
 
+.resume-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.resume-image {
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
 .resume-button {
     display: inline-flex;
     align-items: center;
