@@ -779,6 +779,15 @@ footer .footer-separator {
     max-width: 1200px;
 }
 
+/* Hide navbar on project detail pages */
+body:has(.project-detail) .navbar {
+    display: none;
+}
+
+body:has(.project-detail) .mobile-progress-bar {
+    top: 0;
+}
+
 .back-link {
     display: inline-block;
     color: var(--primary-color);
@@ -1026,12 +1035,52 @@ footer .footer-separator {
 }
 
 .project-navigation {
+    display: none;
+}
+
+/* Floating Project Navigation */
+.floating-project-nav {
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
-    justify-content: space-between;
-    gap: 2rem;
-    margin: 4rem 0 2rem;
-    padding-top: 2rem;
-    border-top: 2px solid var(--border-color);
+    gap: 1rem;
+    z-index: 1000;
+}
+
+.floating-nav-btn {
+    background: rgba(26, 26, 26, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--border-color);
+    border-radius: 50px;
+    padding: 0.75rem 1.5rem;
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.floating-nav-btn:hover {
+    color: var(--text-color);
+    border-color: var(--text-light);
+    transform: translateY(-2px);
+}
+
+.floating-nav-btn.prev::before {
+    content: '←';
+    font-size: 1.1rem;
+}
+
+.floating-nav-btn.next::after {
+    content: '→';
+    font-size: 1.1rem;
 }
 
 .nav-project {
