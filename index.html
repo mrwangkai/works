@@ -3,45 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Design Portfolio</title>
+    <title>Kai Wang - Product Designer</title>
     <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script data-goatcounter="https://wang-kai.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="logo">
-                <img src="images/kai logo3.png" alt="Logo" class="logo-image">
-                <div class="logo-text">
-                    <span class="logo-name">Kai Wang</span>
-                    <span class="logo-subtitle">Product Designer</span>
-                </div>
-            </a>
-            <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link active">Projects</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="resume.html" class="nav-link">Resume</a></li>
-                <li><a href="connect.html" class="nav-link">Connect</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+    <!-- About Section -->
+    <section id="about" class="page-section">
+        <div class="section-intro">
+            <h1>Hi, I'm Kai Wang</h1>
+            <p>Product designer based in Seattle. I craft experiences that balance user needs with business impact, specializing in fintech and consumer products. My focus is on understanding problems first, then designing solutions that feel inevitable—working closely with cross-functional teams to solve real business and customer challenges.</p>
         </div>
-    </nav>
+    </section>
 
-    <main class="container">
-        <section class="hero">
-            <h1>Projects</h1>
-        </section>
+    <!-- Works Section -->
+    <section id="works" class="page-section">
+        <div class="section-intro">
+            <h1>Selected Works</h1>
+            <p>Projects I've led at Remitly and CarMax, working across mobile and web platforms.</p>
+        </div>
 
-        <section class="projects-grid">
+        <div class="works-grid">
             <a href="projects/project-self-service-amendment.html" class="project-card">
                 <div class="project-image">
                     <img src="images/selfserviceamendment/ssa-hero.png" alt="Self Service Amendment">
@@ -49,10 +35,6 @@
                 <div class="project-content">
                     <h3>Self Service Amendment</h3>
                     <p>Empowering Remitly users to modify their transfers independently, reducing support burden and improving satisfaction.</p>
-                    <div class="project-tags">
-                        <span class="tag">Remitly</span>
-                        <span class="tag">Mobile</span>
-                    </div>
                 </div>
             </a>
 
@@ -63,52 +45,26 @@
                 <div class="project-content">
                     <h3>Recipient Quick Send</h3>
                     <p>Streamlined repeat transfer experience for Remitly users, enabling faster transactions to saved recipients.</p>
-                    <div class="project-tags">
-                        <span class="tag">Remitly</span>
-                        <span class="tag">UX Design</span>
-                    </div>
                 </div>
             </a>
 
-            <a href="projects/remitly-circle-money-movement.html" class="project-card">
+            <a href="projects/project-5.html" class="project-card">
                 <div class="project-image">
-                    <img src="images/mxa/hero960x600_2x.png" alt="Remitly Circle: Money Movement">
+                    <img src="images/mxa/01.png" alt="Remitly Circle: Money Movement">
                 </div>
                 <div class="project-content">
                     <h3>Remitly Circle: Money Movement</h3>
-                    <p>End-to-end money movement experience for global shared wallet.</p>
-                    <div class="project-tags">
-                        <span class="tag">Visual Design</span>
-                        <span class="tag">Branding</span>
-                    </div>
-                </div>
-            </a>
-
-            <a href="projects/project-6.html" class="project-card">
-                <div class="project-image">
-                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop" alt="Passbook">
-                </div>
-                <div class="project-content">
-                    <h3>Passbook</h3>
-                    <p>Digital wallet for the underbanked offering money transfers, debit card, and cash deposit capabilities—designed to provide banking services without requiring a traditional bank account.</p>
-                    <div class="project-tags">
-                        <span class="tag">Remitly</span>
-                        <span class="tag">Mobile</span>
-                    </div>
+                    <p>End-to-end money movement experience for US customers, enabling seamless deposits and withdrawals with zero fees.</p>
                 </div>
             </a>
 
             <a href="projects/project-360-viewer.html" class="project-card">
                 <div class="project-image">
-                    <img src="images/360viewer/360viewer.gif" alt="360 Degrees Viewer" style="object-fit: cover; object-position: center;">
+                    <img src="images/360viewer/360viewer.gif" alt="360 Degrees Viewer">
                 </div>
                 <div class="project-content">
                     <h3>360 Degrees Viewer</h3>
                     <p>Interactive vehicle viewing experience for CarMax customers, providing comprehensive visual inspection online.</p>
-                    <div class="project-tags">
-                        <span class="tag">CarMax</span>
-                        <span class="tag">Web</span>
-                    </div>
                 </div>
             </a>
 
@@ -119,25 +75,79 @@
                 <div class="project-content">
                     <h3>Finance Based Shopping</h3>
                     <p>Redesigned CarMax shopping experience centered around monthly payments and financing options.</p>
-                    <div class="project-tags">
-                        <span class="tag">CarMax</span>
-                        <span class="tag">Product Strategy</span>
-                    </div>
                 </div>
             </a>
+        </div>
+    </section>
 
-        </section>
+    <!-- Others Section (Resume) -->
+    <section id="others" class="page-section">
+        <div class="section-intro">
+            <h1>Experience</h1>
+            <p>10+ years designing products that solve real problems.</p>
+            <div class="resume-links">
+                <a href="#" class="resume-link">View Resume <span class="external-icon">↗</span></a>
+                <a href="https://www.linkedin.com/in/mrwangkai/" target="_blank" rel="noopener noreferrer" class="resume-link">LinkedIn <span class="external-icon">↗</span></a>
+            </div>
+        </div>
 
-                <div class="cta-section">
-                    <p class="cta-text">Interested in discussing more?</p>
-                    <button class="cta-button" onclick="openContactModal()">Let's connect!</button>
-                </div>
-            </main>
+        <div class="resume-section">
+            <div class="resume-item">
+                <h3>Angel investor + Design Consultant</h3>
+                <p class="company">2025 - Present</p>
+            </div>
 
-    <footer>
-        <p>&copy; 2025 Product Design Portfolio. All rights reserved.</p>
-    </footer>
+            <div class="resume-item">
+                <h3>Product Designer at <a href="">Remitly ↗</a></h3>
+                <p class="company">2022 - 2025</p>
+            </div>
 
+            <div class="resume-item">
+                <h3>Senior Product Designer at <a href="">Iteratively ↗</a> → <a href="">Amplitude ↗</a></h3>
+                <p class="company">2021 - 2022</p>
+            </div>
+
+            <div class="resume-item">
+                <h3>Principal Product Designer at <a href="">Capital One ↗</a></h3>
+                <p class="company">2020 - 2021</p>
+            </div>
+
+            <div class="resume-item">
+                <h3>Product Designer at <a href="">CarMax ↗</a></h3>
+                <p class="company">2017 - 2020</p>
+            </div>
+
+            <div class="resume-item">
+                <h3>UX at <a href="">Indiana University ↗</a></h3>
+                <p class="company">2014 - 2017</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <p class="cta-text">Interested in discussing further?</p>
+        <button class="cta-button" onclick="openContactModal()">Let's connect!</button>
+    </section>
+
+    <!-- Project Slide-in Panel -->
+    <div id="projectPanel" class="project-panel">
+        <iframe id="projectFrame" class="project-frame"></iframe>
+    </div>
+
+    <!-- Floating Bottom Navigation -->
+    <nav class="bottom-nav">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#works" class="nav-link">Works</a>
+        <a href="#others" class="nav-link">Others</a>
+    </nav>
+
+    <!-- Go to Top Button -->
+    <button class="go-to-top" id="goToTop">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+        </svg>
+    </button>
 
     <!-- Contact Modal -->
     <div id="contactModal" class="modal">
@@ -162,5 +172,135 @@
     </div>
 
     <script src="script.js"></script>
+    <script>
+        // Smooth scroll for navigation
+        document.querySelectorAll('.bottom-nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Update active nav link on scroll
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('.page-section');
+            const navLinks = document.querySelectorAll('.bottom-nav .nav-link');
+
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Project slide-in functionality
+        function openProject(url) {
+            const panel = document.getElementById('projectPanel');
+            const frame = document.getElementById('projectFrame');
+
+            frame.src = url;
+            panel.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeProject() {
+            const panel = document.getElementById('projectPanel');
+            const frame = document.getElementById('projectFrame');
+
+            panel.classList.remove('active');
+            document.body.style.overflow = '';
+
+            // Clear iframe after animation
+            setTimeout(() => {
+                frame.src = '';
+            }, 300);
+        }
+
+        // Intercept project card clicks
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.project-card').forEach(card => {
+                card.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const url = card.getAttribute('href');
+                    openProject(url);
+                });
+            });
+        });
+
+        // Handle escape key to close project
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeProject();
+            }
+        });
+
+        // Listen for messages from iframe (back button clicks)
+        window.addEventListener('message', (event) => {
+            if (event.data.action === 'closeProjectAndScrollToWorks') {
+                // Close the project panel
+                closeProject();
+
+                // Wait for panel to close, then scroll to works section
+                setTimeout(() => {
+                    const worksSection = document.getElementById('works');
+                    if (worksSection) {
+                        worksSection.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                }, 400); // Match the panel transition duration
+            }
+        });
+
+        // Go to Top Button functionality
+        const goToTopBtn = document.getElementById('goToTop');
+        const sectionIntro = document.querySelector('.section-intro');
+
+        // Show/hide button based on scroll position
+        window.addEventListener('scroll', () => {
+            if (sectionIntro) {
+                const introBottom = sectionIntro.offsetTop + sectionIntro.offsetHeight;
+                if (window.scrollY > introBottom) {
+                    goToTopBtn.classList.add('visible');
+                } else {
+                    goToTopBtn.classList.remove('visible');
+                }
+            }
+        });
+
+        // Scroll to top when button is clicked
+        goToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+
+    <footer>
+        <div class="footer-left">Kai Wang · Product Designer</div>
+        <div class="footer-right">
+            <a href="https://www.linkedin.com/in/mrwangkai/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+            <span class="footer-separator">·</span>
+            <a href="#" onclick="openContactModal(); return false;">Connect</a>
+        </div>
+    </footer>
 </body>
 </html>

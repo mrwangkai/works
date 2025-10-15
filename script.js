@@ -229,6 +229,24 @@ function toggleExplorations() {
     }
 }
 
+// Detect if page is in iframe and handle back button
+document.addEventListener('DOMContentLoaded', () => {
+    if (window.self !== window.top) {
+        // Page is in iframe
+        document.body.classList.add('in-iframe');
+
+        // Handle back link click
+        const backLink = document.querySelector('.back-link');
+        if (backLink) {
+            backLink.addEventListener('click', (e) => {
+                e.preventDefault();
+                // Send message to parent window to close panel and scroll to works
+                window.parent.postMessage({ action: 'closeProjectAndScrollToWorks' }, '*');
+            });
+        }
+    }
+});
+
 // Mobile Progress Bar Navigation
 document.addEventListener('DOMContentLoaded', () => {
     const progressBar = document.querySelector('.mobile-progress-bar');
