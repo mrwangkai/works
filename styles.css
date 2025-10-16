@@ -2654,6 +2654,12 @@ flex-shrink: 0;
     .project-listing {
         grid-template-columns: 1fr;
         gap: 1.5rem;
+        padding-bottom: 4rem;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .project-listing:last-child {
+        border-bottom: none;
     }
 
     .project-listing-content h2 {
