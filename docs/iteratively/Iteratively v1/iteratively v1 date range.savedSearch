@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CompatibleVersion</key>
+	<integer>1</integer>
+	<key>RawQuery</key>
+	<string>(((InRange(kMDItemContentCreationDate,$time.iso(2021-01-01T00:00:00),$time.iso(2022-01-01T00:00:00)) || InRange(kMDItemContentModificationDate,$time.iso(2021-01-01T00:00:00),$time.iso(2022-01-01T00:00:00)))) || ((InRange(*,$time.absolute(631180800),$time.absolute(662716800))) || (** = "2021*"cdw)) &amp;&amp; (kMDItemContentCreationDate &lt; 644223600) &amp;&amp; (kMDItemContentCreationDate &gt; 631267200))</string>
+	<key>RawQueryDict</key>
+	<dict>
+		<key>FinderFilesOnly</key>
+		<true/>
+		<key>RawQuery</key>
+		<string>(((InRange(kMDItemContentCreationDate,$time.iso(2021-01-01T00:00:00),$time.iso(2022-01-01T00:00:00)) || InRange(kMDItemContentModificationDate,$time.iso(2021-01-01T00:00:00),$time.iso(2022-01-01T00:00:00)))) || ((InRange(*,$time.absolute(631180800),$time.absolute(662716800))) || (** = "2021*"cdw)) &amp;&amp; (kMDItemContentCreationDate &lt; 644223600) &amp;&amp; (kMDItemContentCreationDate &gt; 631267200))</string>
+		<key>SearchScopes</key>
+		<array>
+			<string>/System/Volumes/Data/Users/kai/Library/Mobile Documents/com~apple~CloudDocs/Pictures 🖼/Screenshots</string>
+		</array>
+		<key>UserFilesOnly</key>
+		<true/>
+	</dict>
+	<key>SearchCriteria</key>
+	<dict>
+		<key>CurrentFolderPath</key>
+		<array>
+			<string>/Users/kai/Library/Mobile Documents/com~apple~CloudDocs/Pictures 🖼/Screenshots</string>
+		</array>
+		<key>FXCriteriaSlices</key>
+		<array>
+			<dict>
+				<key>criteria</key>
+				<array>
+					<string>com_apple_UserSearchStringAttribute</string>
+					<integer>104</integer>
+				</array>
+				<key>displayValues</key>
+				<array>
+					<string>Items matching text</string>
+					<string>2021</string>
+				</array>
+				<key>rowType</key>
+				<integer>0</integer>
+				<key>subrows</key>
+				<array/>
+			</dict>
+			<dict>
+				<key>criteria</key>
+				<array>
+					<string>kMDItemContentCreationDate</string>
+					<integer>800</integer>
+					<integer>803</integer>
+					<integer>1000</integer>
+				</array>
+				<key>displayValues</key>
+				<array>
+					<string>Created date</string>
+					<string>is</string>
+					<string>before</string>
+					<date>2021-06-01T07:00:00Z</date>
+				</array>
+				<key>rowType</key>
+				<integer>0</integer>
+				<key>subrows</key>
+				<array/>
+			</dict>
+			<dict>
+				<key>criteria</key>
+				<array>
+					<string>kMDItemContentCreationDate</string>
+					<integer>800</integer>
+					<integer>804</integer>
+					<integer>1000</integer>
+				</array>
+				<key>displayValues</key>
+				<array>
+					<string>Created date</string>
+					<string>is</string>
+					<string>after</string>
+					<date>2021-01-01T08:00:00Z</date>
+				</array>
+				<key>rowType</key>
+				<integer>0</integer>
+				<key>subrows</key>
+				<array/>
+			</dict>
+		</array>
+		<key>FXScope</key>
+		<integer>1396925286</integer>
+		<key>FXScopeArrayOfPaths</key>
+		<array>
+			<string>/Users/kai/Library/Mobile Documents/com~apple~CloudDocs/Pictures 🖼/Screenshots</string>
+		</array>
+	</dict>
+	<key>SuggestedAttributes</key>
+	<array/>
+	<key>ViewSettings</key>
+	<dict>
+		<key>IconViewSettings</key>
+		<dict>
+			<key>arrangeBy</key>
+			<string>dateCreated</string>
+			<key>backgroundColorBlue</key>
+			<real>1</real>
+			<key>backgroundColorGreen</key>
+			<real>1</real>
+			<key>backgroundColorRed</key>
+			<real>1</real>
+			<key>backgroundType</key>
+			<integer>0</integer>
+			<key>gridOffsetX</key>
+			<real>0.0</real>
+			<key>gridOffsetY</key>
+			<real>0.0</real>
+			<key>gridSpacing</key>
+			<real>54</real>
+			<key>iconSize</key>
+			<real>84</real>
+			<key>labelOnBottom</key>
+			<true/>
+			<key>showIconPreview</key>
+			<true/>
+			<key>showItemInfo</key>
+			<false/>
+			<key>textSize</key>
+			<real>12</real>
+			<key>viewOptionsVersion</key>
+			<integer>1</integer>
+		</dict>
+		<key>WindowState</key>
+		<dict>
+			<key>ContainerShowSidebar</key>
+			<true/>
+			<key>ShowSidebar</key>
+			<true/>
+			<key>ShowStatusBar</key>
+			<true/>
+			<key>ShowTabView</key>
+			<false/>
+			<key>ShowToolbar</key>
+			<true/>
+			<key>WindowBounds</key>
+			<string>{{43, 179}, {920, 833}}</string>
+		</dict>
+	</dict>
+</dict>
+</plist>
