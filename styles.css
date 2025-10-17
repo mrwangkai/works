@@ -1453,7 +1453,7 @@ body:has(.project-detail) .mobile-progress-bar {
 /* Go to Top Button */
 .go-to-top {
     position: fixed;
-    bottom: 2rem;
+    bottom: calc(2rem + 0.75rem);
     right: 2rem;
     width: 48px;
     height: 48px;
@@ -2647,7 +2647,7 @@ flex-shrink: 0;
     }
 
     .go-to-top {
-        bottom: 1rem;
+        bottom: calc(1rem + 0.5rem);
     }
 
     .page-section {
