@@ -354,3 +354,76 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initial update
     updateProgress();
 });
+
+// Image Modal Functionality
+document.addEventListener('DOMContentLoaded', () => {
+    // Create modal elements if they don't exist
+    let imageModal = document.getElementById('imageModal');
+
+    if (!imageModal) {
+        imageModal = document.createElement('div');
+        imageModal.id = 'imageModal';
+        imageModal.className = 'image-modal';
+
+        const closeButton = document.createElement('span');
+        closeButton.className = 'image-modal-close';
+        closeButton.innerHTML = '&times;';
+
+        const modalImage = document.createElement('img');
+        modalImage.className = 'image-modal-content';
+        modalImage.id = 'modalImage';
+
+        imageModal.appendChild(closeButton);
+        imageModal.appendChild(modalImage);
+        document.body.appendChild(imageModal);
+
+        // Close modal when clicking X or outside image
+        closeButton.addEventListener('click', (e) => {
+            e.stopPropagation();
+            closeImageModal();
+        });
+
+        imageModal.addEventListener('click', (e) => {
+            if (e.target === imageModal) {
+                closeImageModal();
+            }
+        });
+
+        // Close modal on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && imageModal.classList.contains('active')) {
+                closeImageModal();
+            }
+        });
+    }
+
+    // Add click handlers to all images in content sections
+    const contentImages = document.querySelectorAll('.content-section img, .design-gallery img');
+
+    contentImages.forEach(img => {
+        img.style.cursor = 'pointer';
+        img.addEventListener('click', () => {
+            openImageModal(img.src, img.alt);
+        });
+    });
+});
+
+function openImageModal(imageSrc, imageAlt) {
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImage');
+
+    if (modal && modalImg) {
+        modalImg.src = imageSrc;
+        modalImg.alt = imageAlt || '';
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+}
+
+function closeImageModal() {
+    const modal = document.getElementById('imageModal');
+    if (modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+}

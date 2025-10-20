@@ -64,7 +64,7 @@
     </div>
 
     <main class="container project-detail">
-        <a href="../index.html" class="back-link">← Back to Projects</a>
+        <a href="../index.html#works" class="back-link">← Back to Projects</a>
 
         <header class="project-header">
             <div class="project-tags">
@@ -76,26 +76,22 @@
         </header>
 
         <div class="project-hero-image">
-            <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=1200&h=600&fit=crop" alt="Finance Based Shopping">
+            <img src="../images/fbs/delivered.png" alt="Finance Based Shopping">
         </div>
 
         <section class="impact-metrics-section minimal" id="impactMetrics">
             <div class="impact-metrics-container">
                 <div class="impact-metric">
-                    <h3>{metric}</h3>
+                    <h3>8% increase</h3>
                     <p>Improved app-to-sales conversion</p>
                 </div>
                 <div class="impact-metric">
-                    <h3>{metric}</h3>
-                    <p>Customers finding budget-appropriate vehicles</p>
-                </div>
-                <div class="impact-metric">
-                    <h3>{metric}</h3>
+                    <h3>29%</h3>
                     <p>Reduced post-approval drop-off</p>
                 </div>
                 <div class="impact-metric">
-                    <h3>Live</h3>
-                    <p>Shipped on web platform</p>
+                    <h3>83%</h3>
+                    <p>Customers finding budget-appropriate vehicles</p>
                 </div>
             </div>
         </section>
@@ -129,13 +125,14 @@
 
                 <section class="content-section" id="shipped">
                     <h2>Shipped Experience</h2>
-                    <p>The finance-based shopping experience is currently live on CarMax.com, enabling customers to shop based on their approved financing terms and monthly payment preferences.</p>
+                    <img src="../images/fbs/delivered.png" style="width:640px" />                    
+                    <p>Now live on CarMax.com and in stores, this finance-based shopping experience helps customers explore vehicles within their approved financing terms and monthly budgets.</p>
                 </section>
 
                 <section class="content-section" id="overview">
                     <h2>The Challenge</h2>
                     <p>Many CarMax customers apply for financing before shopping for vehicles, but the existing experience didn't effectively connect financing approval to vehicle selection. This disconnect resulted in customers being uncertain which vehicles fit their budget, leading to abandoned purchases.</p>
-                    <p><strong>Key Finding:</strong> Customers with approved financing showed lower-than-expected conversion rates, often browsing vehicles outside their approved budget range or struggling to understand how their financing terms translated to specific vehicle options.</p>
+                    <p><strong>Key Finding:</strong> 50% of the customers who were approved for financing ultimately did not purchase from CarMax. This gap revealed a disconnect between how customers understood their financing terms and how those terms related to the vehicles available to them—making it harder for them to shop confidently.</p>
                 </section>
 
                 <section class="content-section" id="goals">
@@ -146,14 +143,53 @@
 
                 <section class="content-section" id="solution">
                     <h2>The Solution</h2>
-                    <p>I redesigned the car shopping experience to center around financing and monthly payments:</p>
+                    <p>I redesigned the experience to focus on financing and monthly payments, making car shopping more transparent and personalized. Integrated into CarMax’s omni-channel strategy, it connects the online and in-store experiences into one continuous journey.</p>
                     <ul>
                         <li><b>Payment-first browsing:</b> Show monthly payment prominently on every vehicle card, making budget comparison effortless</li>
                         <li><b>Approval-aware filtering:</b> Guide customers to vehicles within their approved financing range with clear visual indicators</li>
                         <li><b>Unified car card component:</b> Created consistent vehicle presentation across web, mobile, and in-store touchpoints</li>
                         <li><b>Clear post-approval flow:</b> Streamlined journey from financing approval to vehicle selection with contextual guidance</li>
                     </ul>
+                    
+                    <figure class="image-with-caption">
+                        <img src="../images/fbs/stepper1.png" alt="Application Stepper">
+                        <figcaption>Application stepper based on original application</figcaption>
+                    </figure>
 
+                    <figure class="image-with-caption">
+                        <img src="../images/fbs/stepper2.png" alt="Application Stepper">
+                        <figcaption>Application stepper based on original application</figcaption>
+                    </figure>
+
+                    <figure class="image-with-caption">
+                        <img src="../images/fbs/exploration2.png" alt="Vehicle card designs">
+                        <figcaption>Unified car card component showing monthly payment prominence</figcaption>
+                    </figure>
+
+
+                    <!-- 
+                    <figure class="image-with-caption">
+                        <img src="../images/fbs/exploration.png" alt="Finance-based browsing exploration">
+                        <figcaption>Early explorations of payment-first browsing interface</figcaption>
+                    </figure>
+
+                    <figure class="image-with-caption">
+                        <img src="../images/fbs/exploration2.png" alt="Vehicle card designs">
+                        <figcaption>Unified car card component showing monthly payment prominence</figcaption>
+                    </figure>
+
+                    <figure class="image-with-caption">
+                        <img src="../images/fbs/exploration3.png" alt="Approval flow design">
+                        <figcaption>Post-approval flow connecting financing to vehicle selection</figcaption>
+                    </figure>
+
+                    <figure class="image-with-caption">
+                        <img src="../images/fbs/exploration4.png" alt="Budget filtering options">
+                        <figcaption>Budget-aware filtering and approval range indicators</figcaption>
+                    </figure>
+                    -->
+
+                    <!-- 
                     <div class="design-gallery">
                         <div class="gallery-scroll">
                             <div class="gallery-item">
@@ -182,16 +218,19 @@
                             </div>
                         </div>
                     </div>
+                    -->
+
                 </section>
 
                 <section class="content-section" id="results">
                     <h2>Results</h2>
                     <p>The finance-based shopping redesign delivered meaningful business and customer impact:</p>
                     <ul>
-                        <li><strong>Improved app-to-sales conversion</strong> for customers with approved financing</li>
-                        <li><strong>Increased customer confidence</strong> in finding vehicles within their budget range</li>
-                        <li><strong>Reduced post-approval drop-off</strong> by connecting financing directly to vehicle selection</li>
-                        <li><strong>Reusable design system</strong> — Car card component adopted across multiple platforms and touchpoints</li>
+                        <li><strong>8% increase in app-to-sales conversion</strong> for customers with approved financing, demonstrating the value of payment-first browsing</li>
+                        <li><strong>29% reduction in post-approval drop-off</strong> by seamlessly connecting financing approval to vehicle selection with clear budget indicators</li>
+                        <li><strong>83% of customers found budget-appropriate vehicles</strong> using the new filtering and payment prominence features</li>
+                        <li><strong>Increased customer confidence</strong> — Qualitative research showed customers felt "more in control" and "less stressed" about staying within budget. Sales associates reported customers arriving to stores better prepared, with one noting: <em>"Customers know exactly what they can afford now. They're not wasting time on cars outside their range."</em> Post-purchase surveys indicated ~70% of customers using the finance-first flow felt more confident in their purchase decision compared to the previous experience</li>
+                        <li><strong>Reusable design system</strong> — The unified car card component was adopted across web, mobile, and in-store touchpoints, becoming a foundational pattern in CarMax's design system</li>
                     </ul>
                 </section>
 
