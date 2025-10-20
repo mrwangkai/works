@@ -197,20 +197,71 @@ window.addEventListener('click', (event) => {
 // Handle modal form submission
 document.addEventListener('DOMContentLoaded', () => {
     const modalForm = document.getElementById('modalContactForm');
+    const formMessage = document.getElementById('formMessage');
+    const submitButton = document.getElementById('submitButton');
 
     if (modalForm) {
-        modalForm.addEventListener('submit', (e) => {
+        modalForm.addEventListener('submit', async (e) => {
             e.preventDefault();
 
-            const formData = {
-                email: document.getElementById('modalEmail').value,
-                message: document.getElementById('modalMessage').value
-            };
+            // Get form data
+            const email = document.getElementById('modalEmail').value;
+            const message = document.getElementById('modalMessage').value;
 
-            console.log('Form submitted:', formData);
-            alert('Thank you for your message! I will get back to you soon.');
-            closeContactModal();
-            modalForm.reset();
+            // Clear previous messages
+            formMessage.className = 'form-message';
+            formMessage.textContent = '';
+
+            // Disable submit button and show loading state
+            submitButton.disabled = true;
+            submitButton.textContent = 'Sending...';
+
+            try {
+                const response = await fetch('https://formspree.io/f/xnngyjge', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        email: email,
+                        message: message
+                    })
+                });
+
+                if (response.ok) {
+                    // Success
+                    formMessage.className = 'form-message success';
+                    formMessage.textContent = 'Thank you for your message! I\'ll get back to you soon.';
+                    modalForm.reset();
+
+                    // Close modal after 3 seconds
+                    setTimeout(() => {
+                        closeContactModal();
+                        formMessage.className = 'form-message';
+                        formMessage.textContent = '';
+                    }, 3000);
+                } else {
+                    // Error from server
+                    const errorData = await response.json().catch(() => ({}));
+                    console.error('Formspree error:', response.status, errorData);
+
+                    if (response.status === 403) {
+                        formMessage.className = 'form-message error';
+                        formMessage.textContent = 'Form not activated. Please check your email to confirm the Formspree form.';
+                    } else {
+                        formMessage.className = 'form-message error';
+                        formMessage.textContent = 'Oops! There was a problem sending your message. Please try again.';
+                    }
+                }
+            } catch (error) {
+                // Network error
+                formMessage.className = 'form-message error';
+                formMessage.textContent = 'Network error. Please check your connection and try again.';
+            } finally {
+                // Re-enable submit button
+                submitButton.disabled = false;
+                submitButton.textContent = 'Send Message';
+            }
         });
     }
 });
