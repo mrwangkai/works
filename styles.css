@@ -2411,6 +2411,21 @@ font-size: 20px;
     color: var(--text-light);
 }
 
+.project-company {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text-light);
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    margin-top: -0.5rem;
+    margin-bottom: 0.5rem;
+    width: fit-content;
+}
+
 .project-listing-content p {
     font-size: 1.1rem;
     line-height: 1.7;
@@ -2723,6 +2738,11 @@ flex-shrink: 0;
 
     .project-listing-content h2 {
         font-size: 1.5rem;
+    }
+
+    .project-company {
+        font-size: 0.8rem;
+        padding: 0.2rem 0.6rem;
     }
 
     .project-listing-content p {
