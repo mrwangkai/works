@@ -478,3 +478,57 @@ function closeImageModal() {
         document.body.style.overflow = '';
     }
 }
+
+// Go to Top Button functionality
+document.addEventListener('DOMContentLoaded', () => {
+    const goToTopBtn = document.getElementById('goToTop');
+
+    if (!goToTopBtn) return; // Only run on pages with go-to-top button
+
+    // Show/hide button based on scroll position
+    // For project pages, we'll show it after scrolling past the first section
+    const firstSection = document.querySelector('.content-section') || document.querySelector('.project-detail') || document.querySelector('main');
+
+    if (firstSection) {
+        // Calculate the fold line (bottom of the first section or viewport)
+        const getFoldThreshold = () => {
+            const sectionHeight = firstSection.offsetHeight;
+            const sectionTop = firstSection.offsetTop;
+            return sectionTop + sectionHeight;
+        };
+
+        const updateButtonVisibility = () => {
+            const scrollPosition = window.scrollY;
+            const foldThreshold = getFoldThreshold();
+
+            if (scrollPosition > foldThreshold) {
+                goToTopBtn.classList.add('visible');
+            } else {
+                goToTopBtn.classList.remove('visible');
+            }
+        };
+
+        // Throttle scroll events for better performance
+        let ticking = false;
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    updateButtonVisibility();
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        });
+
+        // Scroll to top when button is clicked
+        goToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Initial check
+        updateButtonVisibility();
+    }
+});
