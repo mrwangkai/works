@@ -197,20 +197,71 @@ window.addEventListener('click', (event) => {
 // Handle modal form submission
 document.addEventListener('DOMContentLoaded', () => {
     const modalForm = document.getElementById('modalContactForm');
+    const formMessage = document.getElementById('formMessage');
+    const submitButton = document.getElementById('submitButton');
 
     if (modalForm) {
-        modalForm.addEventListener('submit', (e) => {
+        modalForm.addEventListener('submit', async (e) => {
             e.preventDefault();
 
-            const formData = {
-                email: document.getElementById('modalEmail').value,
-                message: document.getElementById('modalMessage').value
-            };
+            // Get form data
+            const email = document.getElementById('modalEmail').value;
+            const message = document.getElementById('modalMessage').value;
 
-            console.log('Form submitted:', formData);
-            alert('Thank you for your message! I will get back to you soon.');
-            closeContactModal();
-            modalForm.reset();
+            // Clear previous messages
+            formMessage.className = 'form-message';
+            formMessage.textContent = '';
+
+            // Disable submit button and show loading state
+            submitButton.disabled = true;
+            submitButton.textContent = 'Sending...';
+
+            try {
+                const response = await fetch('https://formspree.io/f/xnngyjge', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        email: email,
+                        message: message
+                    })
+                });
+
+                if (response.ok) {
+                    // Success
+                    formMessage.className = 'form-message success';
+                    formMessage.textContent = 'Thank you for your message! I\'ll get back to you soon.';
+                    modalForm.reset();
+
+                    // Close modal after 3 seconds
+                    setTimeout(() => {
+                        closeContactModal();
+                        formMessage.className = 'form-message';
+                        formMessage.textContent = '';
+                    }, 3000);
+                } else {
+                    // Error from server
+                    const errorData = await response.json().catch(() => ({}));
+                    console.error('Formspree error:', response.status, errorData);
+
+                    if (response.status === 403) {
+                        formMessage.className = 'form-message error';
+                        formMessage.textContent = 'Form not activated. Please check your email to confirm the Formspree form.';
+                    } else {
+                        formMessage.className = 'form-message error';
+                        formMessage.textContent = 'Oops! There was a problem sending your message. Please try again.';
+                    }
+                }
+            } catch (error) {
+                // Network error
+                formMessage.className = 'form-message error';
+                formMessage.textContent = 'Network error. Please check your connection and try again.';
+            } finally {
+                // Re-enable submit button
+                submitButton.disabled = false;
+                submitButton.textContent = 'Send Message';
+            }
         });
     }
 });
@@ -353,4 +404,131 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initial update
     updateProgress();
+});
+
+// Image Modal Functionality
+document.addEventListener('DOMContentLoaded', () => {
+    // Create modal elements if they don't exist
+    let imageModal = document.getElementById('imageModal');
+
+    if (!imageModal) {
+        imageModal = document.createElement('div');
+        imageModal.id = 'imageModal';
+        imageModal.className = 'image-modal';
+
+        const closeButton = document.createElement('span');
+        closeButton.className = 'image-modal-close';
+        closeButton.innerHTML = '&times;';
+
+        const modalImage = document.createElement('img');
+        modalImage.className = 'image-modal-content';
+        modalImage.id = 'modalImage';
+
+        imageModal.appendChild(closeButton);
+        imageModal.appendChild(modalImage);
+        document.body.appendChild(imageModal);
+
+        // Close modal when clicking X or outside image
+        closeButton.addEventListener('click', (e) => {
+            e.stopPropagation();
+            closeImageModal();
+        });
+
+        imageModal.addEventListener('click', (e) => {
+            if (e.target === imageModal) {
+                closeImageModal();
+            }
+        });
+
+        // Close modal on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && imageModal.classList.contains('active')) {
+                closeImageModal();
+            }
+        });
+    }
+
+    // Add click handlers to all images in content sections
+    const contentImages = document.querySelectorAll('.content-section img, .design-gallery img');
+
+    contentImages.forEach(img => {
+        img.style.cursor = 'pointer';
+        img.addEventListener('click', () => {
+            openImageModal(img.src, img.alt);
+        });
+    });
+});
+
+function openImageModal(imageSrc, imageAlt) {
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImage');
+
+    if (modal && modalImg) {
+        modalImg.src = imageSrc;
+        modalImg.alt = imageAlt || '';
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+}
+
+function closeImageModal() {
+    const modal = document.getElementById('imageModal');
+    if (modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+}
+
+// Go to Top Button functionality
+document.addEventListener('DOMContentLoaded', () => {
+    const goToTopBtn = document.getElementById('goToTop');
+
+    if (!goToTopBtn) return; // Only run on pages with go-to-top button
+
+    // Show/hide button based on scroll position
+    // For project pages, we'll show it after scrolling past the first section
+    const firstSection = document.querySelector('.content-section') || document.querySelector('.project-detail') || document.querySelector('main');
+
+    if (firstSection) {
+        // Calculate the fold line (bottom of the first section or viewport)
+        const getFoldThreshold = () => {
+            const sectionHeight = firstSection.offsetHeight;
+            const sectionTop = firstSection.offsetTop;
+            return sectionTop + sectionHeight;
+        };
+
+        const updateButtonVisibility = () => {
+            const scrollPosition = window.scrollY;
+            const foldThreshold = getFoldThreshold();
+
+            if (scrollPosition > foldThreshold) {
+                goToTopBtn.classList.add('visible');
+            } else {
+                goToTopBtn.classList.remove('visible');
+            }
+        };
+
+        // Throttle scroll events for better performance
+        let ticking = false;
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    updateButtonVisibility();
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        });
+
+        // Scroll to top when button is clicked
+        goToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Initial check
+        updateButtonVisibility();
+    }
 });
